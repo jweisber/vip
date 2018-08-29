@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="the-monty-hall-problem" class="section level1">
+<h1><span class="header-section-number">1</span> The Monty Hall Problem</h1>
+<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">Gardner attributes the quoted sentiment to <a href="https://en.wikipedia.org/wiki/Charles_Sanders_Peirce">Charles Sanders Peirce</a>. The source in Peirce’s writings is unknown.</span></span></p>
+<div class="epigraph">
+<p>
+…in no other branch of mathematics is it so easy for experts to blunder as in probability theory.<br />
+—Martin Gardner
+</p>
+</div>
+<p><span class="newthought">Imagine</span> you’re on a game show. There are three doors, one with a prize behind it. You’re allowed to pick any door, so you choose the first one at random, door A.</p>
+<p><label for="tufte-mn-2" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle"><span class="marginnote"><span style="display: block;"><img src="img/lets_make_a_deal.png" /> The Monty Hall problem is named after the creator and host of the game show <em>Let’s Make a Deal</em>.</span></span></p>
+<p>Now the rules of the game require the host to open one of the other doors and let you switch your choice if you want. Because the host doesn’t want to give away the game, they always open an empty door.</p>
+<p>In your case, the host opens door C: no prize, as expected. “Do you want to switch to door B?”, the host asks.</p>
+<p>Pause a moment to think about your answer before reading on.</p>
+<p><span class="newthought">What</span> did you decide? Did you conclude it doesn’t matter whether you stick with door A or switch to door B?</p>
+<p><label for="tufte-mn-3" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle"><span class="marginnote"><span style="display: block;"><img src="img/marilyn_vos_savant.png" /> Marilyn vos Savant made the Monty Hall problem famous when she solved it correctly in her “Ask Marilyn” column for <em>Parade</em> magazine. Read more about it in <a href="https://www.nytimes.com/1991/07/21/us/behind-monty-hall-s-doors-puzzle-debate-and-answer.html"><em>The New York Times</em></a>.</span></span></p>
+<p>If so, you’re in good company. Most people find this answer sensible, including some professors of statistics and mathematics. They figure there are only two possibilities remaining, door A and door B, each with the same one-in-two chance of being the winner. So it doesn’t matter which one you pick.</p>
+<p>But the right answer is you should switch. Door B is now twice as likely to be the winner as door A. Why?</p>
+<p>The reason is subtle. One way to think about it is that the host’s choice of which door to open is a bit of a tell. Maybe they <em>had</em> to open door C, because the prize is behind door B and they didn’t want to give that away. Of course, it could be behind door A instead, so maybe they just picked door C at random. But there was only a one-in-three chance the prize would be behind door A. Which means there’s a two-in-three chance they didn’t really have a choice, they had to open door C to avoid showing you the prize behind door B.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:montygrid"></span>
+<img src="_main_files/figure-html/montygrid-1.png" alt="The hundred-door version of the Monty Hall problem, suggested by Marilyn vos Savant" width="480"  />
+<!--
+<p class="caption marginnote">-->Figure 1.1: The hundred-door version of the Monty Hall problem, suggested by Marilyn vos Savant<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Here’s another way to think about it. Imagine the game had a hundred doors instead of just three. And suppose again you start by picking the first door at random. Then the host opens <em>all the other doors but one</em>, door <span class="math inline">\(59\)</span> let’s say. You have to ask yourself: why did they pick door <span class="math inline">\(59\)</span> to leave closed?? Almost certainly because that’s where the prize is hidden! Maybe you got really lucky and picked right with the first door at the beginning. But it’s way more likely you didn’t, and the host had to keep door <span class="math inline">\(59\)</span> closed to avoid giving away the game.</p>
+<div id="diagramming-the-solution" class="section level2">
+<h2><span class="header-section-number">1.1</span> Diagramming the Solution</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:montytree1"></span>
+<img src="_main_files/figure-html/montytree1-1.png" alt="First stage of a tree diagram for the Monty Hall problem" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 1.2: First stage of a tree diagram for the Monty Hall problem<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:montytree2"></span>
+<img src="_main_files/figure-html/montytree2-1.png" alt="Second stage" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 1.3: Second stage<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:montytree3"></span>
+<img src="_main_files/figure-html/montytree3-1.png" alt="Third and final stage" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 1.4: Third and final stage<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">A</span> picture helps clarify things. At first the prize could be behind any of the three doors, with equal probability each way. So we draw a tree with three branches, each labeled with a probability of <span class="math inline">\(1/3\)</span>. Figure <a href="the-monty-hall-problem.html#fig:montytree1">1.2</a> shows the result.</p>
+<p>Now, which door the host opens may depend on where the prize is, i.e. which branch we’re on. If it’s behind door C, they won’t show you by opening that door. They would have to open door B in this case.</p>
+<p>Likewise, if the prize is behind door C, then opening door B is their only option.</p>
+<p>Only if the prize is behind door A do they have a choice: open either door B or door C. In that case it’s a tossup which door they’ll open, so each of those possibilities has a 1/2 chance. Check out Figure <a href="the-monty-hall-problem.html#fig:montytree2">1.3</a>.</p>
+<p>Now imagine playing the game over and over. A third of the time things will follow the top path; a third of the time they’ll follow the middle one; and the remaining third they’ll follow one of the two bottom paths.</p>
+<p>When things follow the bottom branches, half of those times the host will open door B, and half the time they’ll open door C. So one in every six plays will follow the <em>A-and-Open-B</em> path. And one in every six plays will follow the <em>A-and-Open-C</em> path. See Figure <a href="the-monty-hall-problem.html#fig:montytree3">1.4</a>.</p>
+<p>Now we can understand what happens when the host opens door C. Usually it’s because the prize is behind door B. Sometimes they open door C because the prize is behind door A instead. But that’s only a sixth of the time, compared to a third of the time where they open door C because the prize is behind door B.</p>
+<p>So when you see the host open door C, you should think it’s more likely you’re on the middle branch, with the prize behind door B. Switch!</p>
+</div>
+<div id="lessons" class="section level2">
+<h2><span class="header-section-number">1.2</span> Lessons Learned</h2>
+<p><span class="newthought">Tree</span> diagrams are a handy tool for solving probability problems. They also illustrate some central concepts of probability.</p>
+<p>Probabilities are numbers assigned to possibilities. In the Monty Hall problem, there are three possibilities for where the prize is: door A, door B, and door C. Each of these possibilities has the same probability: 1/3.</p>
+<p><span class="newthought">Some</span> possibilities are <strong><em>mutually exclusive</em></strong>, meaning only one of them can obtain. The prize can’t be behind door A and door B, for example. Here are more examples of mutually exclusive possibilities:</p>
+<ul>
+<li>A coin can land heads or tails, but it can’t do both on the same toss.</li>
+<li>A card drawn from a standard deck could be either an ace or a queen, but it can’t be both.</li>
+<li>The temperature at noon tomorrow could be 20 degrees, or it could be 25 degrees, but it can’t be both.</li>
+</ul>
+<p>When possibilities are mutually exclusive, their probabilities add up. For example, the initial probability the prize will be behind either door A or door B is <span class="math inline">\(1/3 + 1/3 = 2/3\)</span>. And the probability a card drawn from a standard deck will be either an ace or a queen is <span class="math inline">\(4/52 + 4/52 = 8/52 = 2/13\)</span>.</p>
+<p><span class="newthought">Another</span> key concept is possibilities that are <strong><em>exhaustive</em></strong>. In the Monty Hall problem, the prize has to be behind one of the three doors, so A, B, and C “exhaust” all the possibilities. Here are more examples of exhaustive possibilities:</p>
+<ul>
+<li>A card drawn from a standard deck must be either red or black.</li>
+<li>The temperature at noon tomorrow must be either above zero, below zero, or zero.</li>
+</ul>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-5"></span>
+<img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="Three  partitions for a card drawn from a standard deck" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 1.5: Three partitions for a card drawn from a standard deck<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">In</span> our tree diagrams, each branch-point always uses a set of possibilities that is <em>both</em> exclusive <em>and</em> exhaustive. The first split on the three doors covers all the possibilities for where the prize might be, and only one of those possibilities can be the actual location of the prize. Likewise for the second stage of the diagram. On the bottom branch for example, the host must open either door B or door C given the rules, but he will only open one or the other.</p>
+<p>When a set of possibilities is both exclusive and exhaustive, it’s called a <strong><em>partition</em></strong>. A partition “carves up” the space of possibilities into distinct, non-overlapping units.</p>
+<p>There can be more than one way to partition the space of possibilities. For example, a randomly drawn playing card could be black or red; it could be a face card or not; and it could be any of the four suits (<span class="math inline">\(\heartsuit\)</span>, <span class="math inline">\(\diamondsuit\)</span>, <span class="math inline">\(\clubsuit\)</span>, <span class="math inline">\(\spadesuit\)</span>).</p>
+<p><span class="newthought">When</span> possibilities form a partition, their probabilities must add up to 1. Initially, the probability the prize will be behind one of the three doors is <span class="math inline">\(1/3 + 1/3 + 1/3 = 1\)</span>. And the probability that a card drawn from a standard deck at random will be either red or black is <span class="math inline">\(1/2 + 1/2 = 1\)</span>.</p>
+<p>In a way, the fundamental principle of probability is that probabilities over a partition must add up to 1.</p>
+<p><span class="newthought">Tree</span> diagrams follow a few simple rules based on these concepts. The parts of a tree are called <em>nodes</em>, <em>branches</em>, and <em>leaves</em>: see Figure <a href="the-monty-hall-problem.html#fig:treeparts">1.6</a>.</p>
+<div class="figure"><span id="fig:treeparts"></span>
+<p class="caption marginnote shownote">
+Figure 1.6: The parts of a tree diagram: nodes, branches, and leaves
+</p>
+<img src="_main_files/figure-html/treeparts-1.png" alt="The parts of a tree diagram: nodes, branches, and leaves" width="672"  />
+</div>
+<p>The rules for a tree are as follows:</p>
+<p><em>Rule 1.</em> Each node must use a partition. The branches coming out of it must be mutually exclusive possibilities, and they must cover all the possibilities.</p>
+<p><em>Rule 2.</em> The probabilities at each node must add up to <span class="math inline">\(1\)</span>.</p>
+<p><em>Rule 3.</em> The probability on a branch is <em>conditional</em> on the branches leading up to it.</p>
+<ul>
+<li>For example, consider the bottom path in the Monty Hall problem. The probability the host will open door C is <span class="math inline">\(1/2\)</span> there because we’re assuming the prize is behind door A.</li>
+</ul>
+<p><em>Rule 4.</em> The probability of a leaf is calculated by multiplying across the branches on the path leading to it. This number represents the probability that all possibilities on that path occur.</p>
+<p>Notice, Rule 4 is how we got the final probabilities (the numbers in bold) we used to solve the Monty Hall problem.</p>
+</div>
+<div id="exercises" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>True or false: in the Monty Hall problem, it’s essential to the puzzle that the host doesn’t want to expose the prize. If they didn’t care about giving away the location of the prize, there would be no reason to switch when they open door C.</p></li>
+<li><p>In the version of the Monty Hall problem with a hundred doors, after the host opens every door except door 1 (your door) and door 59, the chance the car is behind door 59 is:</p>
+<ol style="list-style-type: lower-alpha">
+<li>1/100</li>
+<li>1/99</li>
+<li>1/2</li>
+<li>99/100</li>
+</ol></li>
+<li><p>Imagine three prisoners, A, B, and C, are condemned to die in the morning. But the king decides to pardon one of them first. He makes his choice at random and communicates it to the guard, who is sworn to secrecy. She can only tell the prisoners that one of them will be released at dawn, she can’t say who.</p>
+<p>Prisoner A welcomes the news, as he now has a <span class="math inline">\(1/3\)</span> chance of survival. Hoping to go even further, he says to the guard, “I know you can’t tell me whether I am condemned or pardoned. But at least one other prisoner must still be condemned, so can you just name one who is?”. The guard tells him that B is still condemned. “Ok”, says A, “then it’s either me or C who was pardoned. So my chance of survival has gone up to 1/2”.</p>
+<p>Is prisoner A’s reasoning correct? Use a probability tree to explain why/why not.</p></li>
+<li><p>In a probability tree, each branch point should split into possibilities that are:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Mutually exclusive.</li>
+<li>Exhaustive.</li>
+<li>Both mutually exclusive and exhaustive.</li>
+<li>None of the above.</li>
+</ol></li>
+<li><p>Suppose you have two urns. The first has two black marbles and two white marbles. The second has three black marbles and one white marble. You are going to flip a fair coin to select one of the urns at random, and then draw one marble at random. What is the chance you will select a black marble?</p>
+<p>Hint: draw a probability tree and ask yourself, “if I did this experiment over and over again, how often would I draw a black marble in the long run?”</p>
+<ol style="list-style-type: lower-alpha">
+<li>5/8</li>
+<li>3/8</li>
+<li>1/2</li>
+<li>1/4</li>
+</ol></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="index.html"><button class="btn btn-default">Previous</button></a>
+<a href="logic.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

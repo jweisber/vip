@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="infinity-beyond" class="section level1">
+<h1><span class="header-section-number">14</span> Infinity &amp; Beyond</h1>
+<p><span class="newthought">Infinity</span> poses a different sort of challenge to expected utility, and in this chapter we’ll meet two famous examples.</p>
+<div id="the-st.petersburg-paradox" class="section level2">
+<h2><span class="header-section-number">14.1</span> The St. Petersburg Paradox</h2>
+<p><span class="newthought">Suppose</span> I’m going to flip a fair coin, and I’m going to keep flipping it until it lands heads. When it does, the game is over.</p>
+<ul>
+<li>If it comes up heads on the first flip, you win <span class="math inline">\(\$2\)</span>.</li>
+<li>If it comes up heads on the second flip, you win <span class="math inline">\(\$4\)</span>.</li>
+<li>If it comes up heads on the third flip, you win <span class="math inline">\(\$8\)</span>.</li>
+<li>Etc.</li>
+</ul>
+<p>How much would you be willing to pay to play this game? Most people aren’t willing to pay very much. After all, you probably won’t win more than a few dollars. Most likely you’ll only win <span class="math inline">\(\$2\)</span> or <span class="math inline">\(\$4\)</span> dollars. The chance you’ll win more than say <span class="math inline">\(\$32\)</span> is only about <span class="math inline">\(.03\)</span>.</p>
+<p>And yet, bizarrely, the expected value of this game is infinite! There’s a <span class="math inline">\(1/2\)</span> chance you’ll win <span class="math inline">\(\$2\)</span>, a <span class="math inline">\(1/4\)</span> chance you’ll win <span class="math inline">\(\$4\)</span>, a <span class="math inline">\(1/8\)</span> chance you’ll win <span class="math inline">\(\$8\)</span>, and so on. So:
+<span class="math display">\[
+  \begin{aligned}
+    \E(G) &amp;= \p(\$2) \times \$2 + \p(\$4) \times \$4 + \p(\$8) \times \$8 + \ldots\\
+          &amp;= (1/2)(\$2) + (1/4)(\$4) + (1/8)(\$8) + \ldots\\
+          &amp;= \$1 + \$1 + \$1 + \ldots\\
+          &amp;= \$\infty.
+  \end{aligned}
+\]</span>
+And doesn’t that mean a fair price for the game would be infinity dollars? So even if you only have a finite bankroll, you should be willing to stake it all to play!</p>
+<p><span class="newthought">Visually</span>, the St. Petersburg game looks something like Figure <a href="infinity-beyond.html#fig:stp">14.1</a>. We can’t show every possible outcome, because the payoffs get larger and larger without limit. So we have to cut things off at some point. But we can get the general idea by displaying just the first few possible outcomes. (The rest are shown faded and only partially.)</p>
+<div class="figure"><span id="fig:stp"></span>
+<p class="caption marginnote shownote">
+Figure 14.1: The St. Petersburg game’s first seven outcomes. The rest extend off the chart and are shown faded.
+</p>
+<img src="_main_files/figure-html/stp-1.png" alt="The St. Petersburg game's first seven outcomes. The rest extend off the chart and are shown faded." width="672"  />
+</div>
+<p>As the number of potential flips grows, the rectangles get narrower because the outcomes become less probable. But they also get taller. The payoff doubles every time the probability is cut in half. The result is an infinite sequence of rectangles, each with the same area, namely <span class="math inline">\(1\)</span>. So the total area of all the rectangles is infinite.</p>
+<p><span class="newthought">Most</span> people, when they first encounter this puzzle, try to take the easy way out. “The game is impossible,” they say. “Nobody could actually fund this game in real life. No casino has unlimited money, not even the government does. Besides, the coin would wear out after a while. So the house couldn’t even guarantee they’d be able to finish the game.”</p>
+<p>There are two serious problems with this answer.</p>
+<p>First, consider whether you’d be willing to risk your life to play the St. Petersburg game if the casino did have enough cash on hand, and enough coins to keep the game going as long as it takes? Imagine if God descended from heaven and offered to run the game. Would you gamble your life to play then?</p>
+<p>Second, even if the game had a finite limit—let’s suppose it was <span class="math inline">\(100\)</span> flips—would you be willing to pay <span class="math inline">\(\$100\)</span> to play? The chance you’d make any money at all is less than 1%.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:bernoulli"></span>
+<img src="img/daniel_bernoulli.png" alt="Daniel Bernoulli ($1700$--$1782$)" width="200"  />
+<!--
+<p class="caption marginnote">-->Figure 14.2: Daniel Bernoulli (<span class="math inline">\(1700\)</span>–<span class="math inline">\(1782\)</span>)<!--</p>-->
+<!--</div>--></span>
+</p>
+</div>
+<div id="bernoullis-solution" class="section level2">
+<h2><span class="header-section-number">14.2</span> Bernoulli’s Solution</h2>
+<p><span class="newthought">The</span> St. Petersburg game was invented by the mathematician Nicolaus Bernoulli in the <span class="math inline">\(18\)</span>th Century. He discussed it with his cousin Daniel Bernoulli, who published a famous solution in the <em>St. Petersburg Academy Proceedings</em>. (Hence the name of the game.)</p>
+<p>His solution: replace monetary value with real value, <em>utility</em> in other words. <a href="utility.html#utility">Recall</a> that the more money you have, the less value additional money brings. So even though the payoffs in the St. Petersburg game double from <span class="math inline">\(\$2\)</span> to <span class="math inline">\(\$4\)</span> to <span class="math inline">\(\$8\)</span> etc., the <em>real</em> value doesn’t double. It grows more slowly.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:logutil"></span>
+<img src="_main_files/figure-html/logutil-1.png" alt="Bernoulli's logarithmic utility function" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 14.3: Bernoulli’s logarithmic utility function<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>What is the real value of money then? How much utility does a gain of <span class="math inline">\(\$x\)</span> bring? Bernoulli proposed that utility increases “logarithmically” with money. In terms of dollars, <span class="math inline">\(\u(\$x)=\log(x)\)</span>. Look at Figure <a href="infinity-beyond.html#fig:logutil">14.3</a> to see what this looks like.</p>
+<p>Notice how, for example, <span class="math inline">\(\$16\)</span> doesn’t have twice the utility of <span class="math inline">\(\$8\)</span>. In fact you have to go all the way up to <span class="math inline">\(\$64\)</span> to get twice the utility of <span class="math inline">\(\$8\)</span>. That’s because <span class="math inline">\(64 = 8^2\)</span>, and logarithms have the property that <span class="math inline">\(\log(a^b) = b \times \log(a)\)</span>.</p>
+<p>The difference this makes to the St. Petersburg game is displayed in Figure <a href="infinity-beyond.html#fig:logstp">14.4</a>. The rectangles don’t all have the same area of <span class="math inline">\(1\)</span> anymore, they get smaller instead. In fact, Bernoulli showed that the total area of all the rectangles is only about <span class="math inline">\(1.39\)</span>. In other words, the expected utility of the St. Petersburg game is about <span class="math inline">\(1.39\)</span>, the equivalent of a <span class="math inline">\(\$4\)</span> gain (because <span class="math inline">\(\log(4) \approx 1.39\)</span>).</p>
+<div class="figure"><span id="fig:logstp"></span>
+<p class="caption marginnote shownote">
+Figure 14.4: Dollars vs. utils in the St. Petersburg game
+</p>
+<img src="_main_files/figure-html/logstp-1.png" alt="Dollars vs. utils in the St. Petersburg game" width="672"  />
+</div>
+<p>So if Bernoulli is right about the utility of money, the fair price for the St. Petersburg game is only about <span class="math inline">\(\$4\)</span>. And in fact that’s about what most people say they would pay.</p>
+</div>
+<div id="st.petersburgs-revenge" class="section level2">
+<h2><span class="header-section-number">14.3</span> St. Petersburg’s Revenge</h2>
+<p><span class="newthought">Unfortunately,</span> although Bernoulli was probably right that money decreases in value the more of it you have, that doesn’t actually solve the paradox. Because we can just modify the game so that the monetary payoffs grow even faster.</p>
+<p><label for="tufte-mn-21" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-21" class="margin-toggle"><span class="marginnote"><span style="display: block;"><img src="img/xfiles.png" /> The decimal value of <span class="math inline"><span class="math inline">\(e\)</span></span> was used as the key code for a locked room in the <em>X-Files</em> episode “Paper Clip” (except they seem to have forgotten the 1). The same scene also references Monty Hall.</span></span></p>
+<p>Instead of the payoffs increasing like this:
+<span class="math display">\[ \$2, \$4, \$8, \ldots \]</span>
+Let’s change the game so they increase like this:
+<span class="math display">\[ \$e^2, \$e^4, \$e^8, \ldots \]</span>
+You may remember from math class that <span class="math inline">\(e\)</span> is a special number, approximately equal to <span class="math inline">\(2.71828\)</span>. It has the special property that:
+<span class="math display">\[ \log(e^x) = x. \]</span>
+So the utility of winning <span class="math inline">\(\$e^2\)</span> is <span class="math inline">\(\u(\$e^2) = 2\)</span>. The utility of winning <span class="math inline">\(\$e^4\)</span> is <span class="math inline">\(\u(\$e^4) = 4\)</span>. And so on.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:expstp"></span>
+<img src="_main_files/figure-html/expstp-1.png" alt="St. Petersburg's revenge" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 14.5: St. Petersburg’s revenge<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Now the utilities are the same as the dollar payoffs were in the original version of the game:
+<span class="math display">\[ 2, 4, 8, \ldots \]</span>
+So the expected <em>utility</em> is the same as the expected monetary value of the original game, namely infinite:
+<span class="math display">\[
+  \begin{aligned}
+     \E(G) &amp;= \p(\$e^2) \u(\$e^2) + \p(\$e^4) \u(\$e^4) + \p(\$8) \u(\$e^8) + \ldots\\
+          &amp;= (1/2)(2) + (1/4)(4) + (1/8)(8) + \ldots\\
+          &amp;= 1 + 1 + 1 + \ldots\\
+          &amp;= \infty.
+  \end{aligned}
+\]</span></p>
+<p>So, once again, you should be willing to give anything to play. Or so the expected utility rule seems to demand.<label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> Still worried there’s not enough money in the world to guarantee this game? Try another variation. Imagine God offers to substitute days in heaven for dollars. Unlike dollars, days in heaven don’t lose value the more you have.</span></p>
+<p><span class="newthought">What’s the right solution</span> to the St. Petersburg paradox then? Nobody knows, really. Once infinities get involved, the whole expected value framework seems to go off the rails.</p>
+<p>Some decision theorists respond by insisting that there’s a finite limit on utility. There’s only so good an outcome can be, they say.</p>
+<p>But others don’t find this response plausible. There may be a limit on how much good you can get out of money, because there’s only so much money can buy. But money is only a means to an end, a medium we can exchange for the things we really want—things of intrinsic value like pleasure, happiness, beauty, and love. Is there really a finite limit on how much value these things can bring into the world? If so, what is that limit, and why?</p>
+</div>
+<div id="pascals-wager" class="section level2">
+<h2><span class="header-section-number">14.4</span> Pascal’s Wager</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-120"></span>
+<img src="img/pascal.png" alt="Blaise Pascal ($1623$--$1662$)" width="150"  />
+<!--
+<p class="caption marginnote">-->Figure 14.6: Blaise Pascal (<span class="math inline">\(1623\)</span>–<span class="math inline">\(1662\)</span>)<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">The</span> modern theory of probability has a curious origin. It started with Blaise Pascal, a French mathematician and philosopher living in the <span class="math inline">\(1600\)</span>s. Pascal had a friend who has an avid gambler, and who came to him for advice on gambling problems. Pascal discussed these problems in letters with another famous mathematician, Pierre de Fermat. Out of their correspondence, the concept of expected value was born.</p>
+<p>Pascal was a devout Catholic. So, once he developed the tools of decision theory, he applied them to religious questions. Like: is it rational to believe in God?</p>
+<p>Pascal realized he could think of this question as a decision problem. If God exists, then believing gets you into heaven, which is very good. Whereas not believing gets you a one-way ticket to hell, which is terribly bad. So believing in God looks like the better option.</p>
+<p>But Pascal also realized that probabilities matter as much as the potential payoffs when making decisions. Playing the lottery might win you millions, but the odds are very poor. So spending your money on a cup of coffee might be the smarter choice.</p>
+<p>Likewise, believing in God might be such a long shot that it’s not worth it, even if the potential payoff of heaven is fantastic. Of course, Pascal himself already believed in God. But he wanted to convince others to do the same, even if they thought it very unlikely that God exists.</p>
+<p>The potential payoff of believing in God is special though, Pascal realized: it’s not just very good, it’s <em>infinitely</em> good. If you believe in God and you’re right, you go to heaven for eternity, a neverending existence of pure ecstacy. Whereas if you don’t believe in God and you’re wrong, the payoff is infinitely bad: an eternity in hell.</p>
+<p>So Pascal figured the decision problem looks something like this:</p>
+<p><!--
+<caption>--><span class="marginnote shownote"><span id="tab:wager2x2">Table 14.1: </span>Pascal’s Wager</span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">God Exists</th>
+<th align="center">God Doesn’t Exist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Believe</td>
+<td align="center"><span class="math inline">\(+\infty\)</span></td>
+<td align="center"><span class="math inline">\(-10\)</span></td>
+</tr>
+<tr class="even">
+<td>Don’t Believe</td>
+<td align="center"><span class="math inline">\(-\infty\)</span></td>
+<td align="center"><span class="math inline">\(+10\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The <span class="math inline">\(-10\)</span> in the top-right cell is somewhat arbitrary. There’s some finite cost to believing in God if he doesn’t exist. People generally prefer to believe the truth. And if there’s no God, many people would prefer not to spend their time and energy on religious matters. But is <span class="math inline">\(-10\)</span> a good representation of these losses?</p>
+<p>It doesn’t matter, as it turns out. Whether we use <span class="math inline">\(-10\)</span>, <span class="math inline">\(-20\)</span>, or any other finite number for those losses, it ends up getting drowned out by the <span class="math inline">\(+\infty\)</span> in the neighbouring cell. And likewise for the <span class="math inline">\(+10\)</span> in the bottom-right (which represents the value of being right about God’s existence, and maybe also of living life your own way).</p>
+<p>Why do these finite values not matter in the end? How do they get drowned out?</p>
+<p>Well, said Pascal, even atheists must admit that there’s some small chance God exists. Nobody can be 100% sure there is no God. So when we calculate the expected utility of believing in God, we get the following result:
+<span class="math display">\[
+  \begin{aligned}
+    \E(\mbox{Believe}) &amp;= \p(G) \times \infty + \p(\neg G) \times -10\\
+                       &amp;= \infty - \mbox{something finite}\\
+                       &amp;= \infty.
+  \end{aligned}
+\]</span>
+As long as <span class="math inline">\(\p(G)\)</span> is some positive number, multiplying it by <span class="math inline">\(\infty\)</span> results in <span class="math inline">\(\infty\)</span>. No matter how small a number is, adding it to itself infinitely many times results in an infinite quantity. No matter how small your steps, if you take infinitely many of them, you can travel any distance.</p>
+<p>Also, <span class="math inline">\(\infty\)</span> minus any finite quantity is still <span class="math inline">\(\infty\)</span>. If I start with an infinite collection of objects, say an infinite list of numbers for example:
+<span class="math display">\[ 1, 2, 3, 4, 5, \ldots \]</span>
+and I remove finitely many of them, say the numbers <span class="math inline">\(1\)</span> throught <span class="math inline">\(10\)</span>, I’m still left with an infinite list:
+<span class="math display">\[ 11, 12, 13, 14, 15, \ldots \]</span>
+Therefore, Pascal argued, believing in God has infinite expected value.</p>
+<p>What about not believing? It has infinitely negative expected value:
+<span class="math display">\[
+\begin{aligned}
+    \E(\mbox{Don&#39;t Believe}) &amp;= \p(G) \times -\infty + \p(\neg G) \times 10\\
+                             &amp;= -\infty + \mbox{something finite}\\
+                             &amp;= -\infty.
+  \end{aligned}
+\]</span>
+So believing in God is an infinitely better decision than not believing! Or so Pascal thought.</p>
+</div>
+<div id="responses-to-pascals-wager" class="section level2">
+<h2><span class="header-section-number">14.5</span> Responses to Pascal’s Wager</h2>
+<p><span class="newthought">Some</span> people criticized Pascal’s argument on the grounds that belief is not a decision. Whether you believe in something isn’t voluntary, like deciding what shirt to wear in the morning. You can’t just decide to believe in God, you can only believe what seems plausible to you based on what you know.</p>
+<p>But, Pascal famously replied, you can decide how you spend your days. And you can decide to spend them with religious people, reading religious books, and going to a house of worship. So you can decide to take steps that will, eventually, make you a believer. And since believing is so much better than not, that’s how you should spend your days.</p>
+<p><span class="newthought">A</span> more serious problem with Pascal’s argument is known as <em>the many gods</em> problem.</p>
+<p>In Pascal’s day, in France, Catholicism dominatd the religious landscape. So for him, believing in God just meant believing in <em>Catholicism’s</em> conception of God. But there are many possible gods besides the Catholic god, like the god of Islam, the god of Judaism, the gods of Hinduism, and so on.</p>
+<p>What happens if you choose the wrong God? You might go to hell! The god of Mormonism might send you to hell for believing in Catholicism, for example. There might even be an anti-Catholic god, who sends all Catholics to hell and everyone else to heaven!</p>
+<p>So the correct decision table looks more like this:</p>
+<p><!--
+<caption>--><span class="marginnote shownote"><span id="tab:manygods">Table 14.2: </span>Pascal’s Wager with many gods. The … stands in for the many different gods that might exist, each of which has its own column. There is also a row for each of these possible gods, since we have the option to believe in that god.</span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Catholic God Exists</th>
+<th align="center">Anti-Catholic God Exists</th>
+<th align="center">…</th>
+<th align="center">No God Exists</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Believe Catholic</td>
+<td align="center"><span class="math inline">\(+\infty\)</span></td>
+<td align="center"><span class="math inline">\(-\infty\)</span></td>
+<td align="center">…</td>
+<td align="center"><span class="math inline">\(-10\)</span></td>
+</tr>
+<tr class="even">
+<td>Believe Anti-Catholic</td>
+<td align="center"><span class="math inline">\(-\infty\)</span></td>
+<td align="center"><span class="math inline">\(+\infty\)</span></td>
+<td align="center">…</td>
+<td align="center"><span class="math inline">\(-10\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\ddots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td>Don’t Believe</td>
+<td align="center"><span class="math inline">\(-\infty\)</span></td>
+<td align="center"><span class="math inline">\(+\infty\)</span></td>
+<td align="center">…</td>
+<td align="center"><span class="math inline">\(+10\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>What’s the expected utility of believing in the Catholic god now? It turns out there’s no answer! The calculation comes out undefined:
+<span class="math display">\[
+  \begin{aligned}
+  \E(\mbox{Believe Catholic}) %
+    &amp;= \p(\mbox{Catholic})\u(\mbox{Catholic}) +%
+       \p(\mbox{Anti-Catholic})\u(\mbox{Anti-Catholic}) + \ldots\\
+    &amp;= \p(\mbox{Catholic}) \times \infty + \p(\mbox{Anti-Catholic}) \times%
+        -\infty + \ldots\\
+    &amp;= \infty - \infty + \ldots\\
+    &amp;= \mbox{undefined}
+  \end{aligned}
+\]</span>
+Why is this undefined? Why isn’t <span class="math inline">\(\infty - \infty = 0\)</span>? Because taking an infinite quantity away from an infinite quantity can result in any quantity left over.</p>
+<p>Imagine we start with an infinite list, a list of all the counting numbers for example:
+<span class="math display">\[ 1, 2, 3, 4, 5 \ldots \]</span>
+Now remove all the even numbers from that list. There’s still an infinite list of numbers remaining:
+<span class="math display">\[ 1, 3, 5 \ldots \]</span>
+After removing an infinite quantity from an infinite quantity, we still have a neverending list left over. So it <em>looks</em> at first as though <span class="math inline">\(\infty - \infty = \infty\)</span>.</p>
+<p>But not so fast! Suppose we start again with all the counting numbers:
+<span class="math display">\[ 1, 2, 3, 4, 5 \ldots \]</span>
+But this time we remove <em>all</em> the numbers. Not just the evens, but the odds too. Then there would be nothing left on our list. So now it looks like <span class="math inline">\(\infty - \infty = 0\)</span> instead of <span class="math inline">\(\infty\)</span>!</p>
+<p>The moral: there are many ways to take an infinite quantity away from an infinite quantity. Some of these leave an infinite quantity remaining. Others leave nothing remaining. There are still others that would leave just one, two, or three items remaining. (Can you think of your own examples here?)</p>
+<p>So <span class="math inline">\(\infty - \infty\)</span> is not a well-defined quantity.</p>
+<p><span class="newthought">The</span> expected value framework doesn’t seem to work well when infinities show up. The St. Petersburg problem gave us similar trouble. Researchers are still trying to figure out how to make decisions that involve infinite quantities.</p>
+</div>
+<div id="exercises-11" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>In the St. Petersburg game, what is the probability of winning <span class="math inline">\(\$16\)</span> or less?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(1/16\)</span></li>
+<li><span class="math inline">\(1/2\)</span></li>
+<li><span class="math inline">\(7/8\)</span></li>
+<li><span class="math inline">\(15/16\)</span></li>
+</ol></li>
+<li><p>Suppose we modify the St. Petersburg game by capping the number of flips at <span class="math inline">\(50\)</span>: if the coin lands tails <span class="math inline">\(50\)</span> times in a row, the game is over and you win nothing. What is the expected <em>monetary</em> value of this game?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\$25\)</span></li>
+<li><span class="math inline">\(\$50\)</span></li>
+<li><span class="math inline">\(\$100\)</span></li>
+<li><span class="math inline">\(\$2^{50}\)</span></li>
+</ol></li>
+<li><p>According to Daniel Bernoulli’s solution to the St. Petersburg paradox, the utility of the coin landing heads on the <span class="math inline">\((n+1)\)</span>-th flip isn’t twice that of landing on the <span class="math inline">\(n\)</span>-th flip, because…</p>
+<ol style="list-style-type: lower-alpha">
+<li>when the payouts get very large, it becomes less and less likely you’ll actually be paid the amount promised.</li>
+<li>the longer the game goes on, the greater the chance it will be interrupted before the <span class="math inline">\((n+1)\)</span>-th flip can happen.</li>
+<li>infinity isn’t a real number.</li>
+<li>the more money you have, the less value additional money adds.</li>
+</ol></li>
+<li><p>According to Daniel Bernoulli, the utility of <span class="math inline">\(\$2x\)</span> is not twice that of <span class="math inline">\(\$x\)</span> because utility is logarithmic: <span class="math inline">\(U(\$x) = \log (\$x)\)</span>. So the expected monetary value of the St. Petersburg game may be infinite, but its expected utility is finite.</p>
+<p>In the text we discussed one reason this doesn’t resolve the paradox. What was the reason?</p>
+<ol style="list-style-type: lower-alpha">
+<li>It’s not very plausible that utility is logarithmic.</li>
+<li>Even on a logarithmic scale, the expected utility is still infinite.</li>
+<li>Even if Bernoulli is right, the expected monetary value is still infinite.</li>
+<li>The paradox appears all over again when we double the utilities instead of the dollar amounts.</li>
+</ol></li>
+<li><p>Some people respond to the St. Petersburg paradox by arguing that there’s a limit on how good an outcome can be. Utilities have an upper bound, they say.</p>
+<p>Bernoulli’s logarithmic utility function does not have an upper bound. In other words: for any real number <span class="math inline">\(y\)</span>, no matter how large, there is some real number <span class="math inline">\(x\)</span> such that <span class="math inline">\(\log(x) = y\)</span>. Give a formula for <span class="math inline">\(y\)</span> in terms of <span class="math inline">\(x\)</span>. In other words, what is the function <span class="math inline">\(f\)</span> such that <span class="math inline">\(x = f(y)\)</span>, if <span class="math inline">\(y = \log(x)\)</span>?</p></li>
+<li><p>Consider the first form of Pascal’s Wager, displayed in Table <a href="infinity-beyond.html#tab:wager2x2">14.1</a>. What is the expected utility of believing in God if the probability God exists is <span class="math inline">\(0\)</span>?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(-10\)</span></li>
+<li><span class="math inline">\(0\)</span></li>
+<li><span class="math inline">\(\infty\)</span></li>
+<li>Undefined</li>
+</ol></li>
+<li><p>Consider the first form of Pascal’s Wager, displayed in Table <a href="infinity-beyond.html#tab:wager2x2">14.1</a>. Suppose the probability God exists is almost zero, but not quite: one in ten trillion. What is the expected utility of believing in God?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\infty\)</span></li>
+<li><span class="math inline">\(-\infty\)</span></li>
+<li><span class="math inline">\(0\)</span></li>
+<li>one in ten trillion</li>
+</ol></li>
+<li><p>According to the many gods objection, Pascal’s Wager argument fails to account for the possibility of other gods besides the Catholic conception. What happens to Pascal’s decision table when other gods are included? Circle one answer.</p>
+<ol style="list-style-type: lower-alpha">
+<li>The expected utilities can’t be calculated because there are infinitely many possible Gods.</li>
+<li>The expected utilities can’t be calculated because you can’t subtract <span class="math inline">\(\infty\)</span> from <span class="math inline">\(\infty\)</span>.</li>
+<li>The expected utilities can’t be calculated because we don’t know the probabilities.</li>
+<li>The expected utility of believing in God ends up being the same as the expected utility of not believing in God.</li>
+</ol></li>
+<li><p>Consider the “many gods” version of Pascal’s Wager, displayed in Table <a href="infinity-beyond.html#tab:manygods">14.2</a>. What is the expected utility of believing in Catholicism?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\infty\)</span></li>
+<li><span class="math inline">\(-\infty\)</span></li>
+<li>Undefined</li>
+<li><span class="math inline">\(0\)</span></li>
+</ol></li>
+<li><p>Suppose an atheist responds to Pascal’s Wager as follows: “Belief isn’t something we choose. I can’t just decide to believe in God any more than you can decide to believe unicorns exist.”</p>
+<p>How would Pascal reply?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Belief <em>is</em> a choice when it comes to abstract questions, like the existence of God. Because such questions can’t be settled by just looking and seeing.</li>
+<li>Belief <em>is</em> a choice when it comes to questions where the evidence is conflicting. And the evidence for/against God’s existence does conflict.</li>
+<li>Maybe you can’t control what you believe (descriptive), but it’s still true that you <em>should</em> believe (normative).</li>
+<li>Maybe you can’t control what you believe directly. But you can influence your beliefs indirectly, by choosing how and where you spend your time.</li>
+</ol></li>
+<li><p>Explain why the expected utility of believing in God is undefined in Pascal’s Wager, if we include other possible gods like the “anti-Catholic” god.</p>
+<p>Write your answer using complete sentences. You can include equations, tables, or diagrams, but you must explain what they mean in words. Your answer should include an explanation why <span class="math inline">\(\infty - \infty\)</span> is undefined.</p></li>
+</ol>
+
+</div>
+</div>
+
+
+
+<p style="text-align: center;">
+<a href="challenges-to-expected-utility.html"><button class="btn btn-default">Previous</button></a>
+<a href="two-schools.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

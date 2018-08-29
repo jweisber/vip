@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="chbayes" class="section level1">
+<h1><span class="header-section-number">8</span> Bayes’ Theorem</h1>
+<p><label for="tufte-mn-11" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-11" class="margin-toggle"><span class="marginnote"><span style="display: block;">The experiment was first published in 1971. It was performed by <a href="https://en.wikipedia.org/wiki/Daniel_Kahneman">Daniel Kahneman</a> and <a href="https://en.wikipedia.org/wiki/Amos_Tversky">Amos Tversky</a>. Their work on human reasoning reshaped the field of psychology, and eventually won a Nobel prize in 2002.</span></span></p>
+<p><span class="newthought">In</span> a famous psychology experiment, subjects were asked to solve the following problem.</p>
+<div class="problem">
+<p>
+A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. You are given the following data:
+</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline"><span class="math inline">\(85\%\)</span></span> of the cabs in the city are Green and <span class="math inline"><span class="math inline">\(15\%\)</span></span> are Blue.
+</li>
+<li>
+A witness identified the cab as Blue. The court tested the reliability of the witness under the same circumstances that existed on the night of the accident and concluded that the witness correctly identified each one of the two colors <span class="math inline"><span class="math inline">\(80\%\)</span></span> of the time and failed <span class="math inline"><span class="math inline">\(20\%\)</span></span> of the time.
+</li>
+</ol>
+<p>
+What is the probability that the cab involved in the accident was blue rather green?
+</p>
+</div>
+<p>Most people answer <span class="math inline">\(80\%\)</span>, because the witness is <span class="math inline">\(80\%\)</span> reliable. But the right answer is <span class="math inline">\(12/29\)</span>, or about <span class="math inline">\(41\%\)</span>.</p>
+<p>How could the probability be so low when the witness is <span class="math inline">\(80\%\)</span> reliable? The short answer is: because blue cabs are rare. So most of the time, when the witness says a cab is blue, it’s one of the <span class="math inline">\(20\%\)</span> of green cabs they mistakenly identify as blue.</p>
+<p>But this answer still needs some explaining. Let’s use a diagram.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:taxigrid"></span>
+<img src="_main_files/figure-html/taxigrid-1.png" alt="The taxicab problem. There are $85$ blue cabs, $15$ green. The dashed region indicates those cabs the witness identifies as &quot;blue&quot;. It includes $80\%$ of the blue cabs ($12$), and only $20\%$ of the green ones ($17$). Yet it includes more green cabs than blue." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 8.1: The taxicab problem. There are <span class="math inline">\(85\)</span> blue cabs, <span class="math inline">\(15\)</span> green. The dashed region indicates those cabs the witness identifies as “blue”. It includes <span class="math inline">\(80\%\)</span> of the blue cabs (<span class="math inline">\(12\)</span>), and only <span class="math inline">\(20\%\)</span> of the green ones (<span class="math inline">\(17\)</span>). Yet it includes more green cabs than blue.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Imagine there are just <span class="math inline">\(100\)</span> cabs in town, <span class="math inline">\(85\)</span> green and <span class="math inline">\(15\)</span> blue. The dashed blue line represents the cabs the witness identifies as
+“blue”, both right or wrong. Because the witness is <span class="math inline">\(80\%\)</span> accurate, that line encompasses <span class="math inline">\(80\%\)</span> of the blue cabs, which is <span class="math inline">\(12\)</span> cabs. But it also encompasses <span class="math inline">\(20\%\)</span> of the green cabs, which is <span class="math inline">\(17\)</span>. That’s a total of <span class="math inline">\(29\)</span> cabs identified as “blue”, only <span class="math inline">\(12\)</span> of which actually are blue.</p>
+<p>So out of the <span class="math inline">\(29\)</span> cabs the witness calls “blue”, only <span class="math inline">\(12\)</span> really are blue. The probability a cab really is blue given the witness says so is only <span class="math inline">\(12/29\)</span>, about <span class="math inline">\(41\%\)</span>.</p>
+<p>Another way to think about the problem is that there are <em>two</em> pieces of information relevant to whether the cab is blue. The witness says the cab is blue, but also, most cabs are not blue. So there’s evidence for the cab being blue, but also strong evidence against it. The diagram in Figure <a href="chbayes.html#fig:taxigrid">8.1</a> shows us how to balance these two, competing pieces of evidence and come to the correct answer.</p>
+<p>What trips people up so much in the taxicab problem? Remember how order matters with conditional probability. In this problem, we’re asked to find <span class="math inline">\(\p(B \given W)\)</span>, the probability the cab is blue given that the witness says it is. That’s not the same as <span class="math inline">\(\p(W \given B)\)</span>, the probability the witness will say the cab is blue if it really is. The problem tells us <span class="math inline">\(\p(W \given B) = 8/10\)</span>, but it doesn’t tell us a number for <span class="math inline">\(\p(B \given W)\)</span>. We have to figure that out.</p>
+<p>We saw back in <a href="conditional-probability.html#conditional-probability">Chapter 6</a> that <span class="math inline">\(\p(A \given B)\)</span> is usually a different number from <span class="math inline">\(\p(B \given A)\)</span>. A university student will probably be young, but a young person will probably not be a university student. That’s an example where it’s easy to see that order matters. The taxicab example makes it much less obvious, in fact it tempts us to confuse <span class="math inline">\(\p(B \given W)\)</span> with <span class="math inline">\(\p(W \given B)\)</span>.</p>
+<div id="bayes-theorem" class="section level2">
+<h2><span class="header-section-number">8.1</span> Bayes’ Theorem</h2>
+<p><span class="newthought">Problems</span> where we’re given <span class="math inline">\(\p(B \given A)\)</span> and we have to figure out <span class="math inline">\(\p(A \given B)\)</span> are extremely common. Luckily, there’s a famous formula for solving them.</p>
+<p><label for="tufte-mn-12" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-12" class="margin-toggle"><span class="marginnote"><span style="display: block;"><a href="https://en.wikipedia.org/wiki/Thomas_Bayes">Thomas Bayes</a> (1701–1761) was an English minister and mathematician, the first to formulate the theorem that now bears his name.</span></span></p>
+<dl>
+<dt>Bayes’ Theorem</dt>
+<dd><p>If <span class="math inline">\(\p(A),\p(B)&gt;0\)</span>, then
+<span class="math display">\[ \p(A \given B) = \frac{\p(A)\p(B \given A)}{\p(B)}. \]</span></p>
+</dd>
+</dl>
+<p>Notice two things here. First, we need <span class="math inline">\(\p(A)\)</span> and <span class="math inline">\(\p(B)\)</span> to both be positive, because otherwise <span class="math inline">\(\p(A \given B)\)</span> and <span class="math inline">\(\p(B \given A)\)</span> aren’t well-defined. Second, we need to know more than just <span class="math inline">\(\p(B \given A)\)</span> to apply the formula. We also need numbers for <span class="math inline">\(\p(A)\)</span> and <span class="math inline">\(\p(B)\)</span>.</p>
+<p>In the taxicab problem we’re given two of the three pieces of information we need. Here’s Bayes’ theorem for the taxicab example:
+<span class="math display">\[ \p(B \given W) = \frac{\p(B) \p(W \given B)}{\p(W)}. \]</span>
+Whereas the problem gives us the following information:</p>
+<ul>
+<li><span class="math inline">\(\p(W \given B) = 80/100\)</span>.</li>
+<li><span class="math inline">\(\p(W \given \neg B) = 20/100\)</span>.</li>
+<li><span class="math inline">\(\p(B) = 15/100\)</span>.</li>
+<li><span class="math inline">\(\p(\neg B) = 85/100\)</span>.</li>
+</ul>
+<p>What’s missing for Bayes’ Theorem is <span class="math inline">\(\p(W)\)</span>. Fortunately, we can calculate it with the Law of Total Probability!
+<span class="math display">\[
+  \begin{aligned}
+    \p(W) &amp;= \p(W \given B)\p(B) + \p(W \given \neg B)\p(\neg B)\\
+          &amp;= (80/100)(15/100) + (20/100)(85/100\\
+          &amp;= 29/100.
+  \end{aligned}
+\]</span>
+And now we have everything we need to plug into Bayes’ Theorem:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B \given W) &amp;= \frac{\p(B) \p(W \given B)}{\p(W)}\\
+                   &amp;= \frac{(15/100)(80/100)}{29/100}\\
+                   &amp;= 12/29.
+  \end{aligned}
+\]</span>
+This is the same answer we got with our grid diagram (Figure <a href="chbayes.html#fig:taxigrid">8.1</a>). And notice, it’s also the answer we’d get from a tree diagram too (Figure <a href="chbayes.html#fig:taxitree">8.2</a>).</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:taxitree"></span>
+<img src="_main_files/figure-html/taxitree-1.png" alt="Tree diagram for the taxicab problem. Since $\p(B \wedge W) = .12$ and $\p(W) = .12 + .17$, the definition of conditional probability yields $\p(B \given W) = 12/29$." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 8.2: Tree diagram for the taxicab problem. Since <span class="math inline">\(\p(B \wedge W) = .12\)</span> and <span class="math inline">\(\p(W) = .12 + .17\)</span>, the definition of conditional probability yields <span class="math inline">\(\p(B \given W) = 12/29\)</span>.<!--</p>-->
+<!--</div>--></span>
+</p>
+</div>
+<div id="understanding-bayes-theorem" class="section level2">
+<h2><span class="header-section-number">8.2</span> Understanding Bayes’ Theorem</h2>
+<p><span class="newthought">Why</span> does Bayes’ theorem work? One way to think about it is to start by recalling the definition of conditional probability:
+<span class="math display">\[ \p(A \given B) = \frac{\p(A \wedge B)}{\p(B)}. \]</span>
+Then apply the General Multiplication Rule to the numerator:
+<span class="math display">\[ \p(A \wedge B) = \p(B \given A)\p(A).\]</span>
+And plug that back into the first equation:
+<span class="math display">\[ \p(A \given B) = \frac{\p(A) \p(B \given A)}{\p(B)}. \]</span>
+This proves that Bayes’ theorem is correct. But it also suggests a way of understanding it visually, with an Euler diagram.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-82"></span>
+<img src="_main_files/figure-html/unnamed-chunk-82-1.png" alt="An Euler diagram for visualizing Bayes' theorem" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 8.3: An Euler diagram for visualizing Bayes’ theorem<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">We’ve talked</span> before about <span class="math inline">\(\p(A \given B)\)</span> being the portion of the <span class="math inline">\(B\)</span> region that’s inside the <span class="math inline">\(A\)</span> region. The purple portion of the blue <span class="math inline">\(B\)</span> circle, in other words:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B) &amp;= \frac{ \color{middlecolour}{\p(A \wedge B)} }{ \color{rightcolour}{\p(B)} }.\\
+  \end{aligned}
+\]</span>
+So when we apply the General Multiplication Rule to the purple region we get:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B) &amp;= \frac{ \color{middlecolour}{\p(B \given A)\p(A)} }{ \color{rightcolour}{\p(B)} }.\\
+  \end{aligned}
+\]</span></p>
+<p>We’ll come back to another, non-visual way of understanding Bayes’ theorem in <a href="probability-induction.html#bayesibe">Chapter 10</a>.</p>
+<p><span class="newthought">There</span> are lots more visual explanations of Bayes’ theorem you can find online. There’s even one <a href="https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego">using Legos</a>! But they all tend to come down to the same thing. A two step explanation that goes:</p>
+<ol style="list-style-type: decimal">
+<li>Start with the definition of conditional probability, which we learned how to visualize in <a href="conditional-probability.html#calculating-conditional-probability">Chapter 6</a>.</li>
+<li>Then apply the General Multiplication Rule, which we learned how to visualize in <a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule">Chapter 7</a>.</li>
+</ol>
+<p>This is a perfectly good and helpful way to think about Bayes’ theorem. But it’s not really a visualization of the theorem itself. It’s two separate visualizations of the ingredients we use to derive the theorem.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:neonbayes"></span>
+<img src="img/neon_bayes.png" alt="Bayes' theorem on display at the offices of HP Autonomy, in Cambridge, UK" width="275"  />
+<!--
+<p class="caption marginnote">-->Figure 8.4: Bayes’ theorem on display at the offices of HP Autonomy, in Cambridge, UK<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>In any case, Bayes’ theorem comes up so often it’s good to memorize the formula itself. The visualization in Figure <a href="chbayes.html#fig:neonbayes">8.4</a> is probably about as helpful as it gets for this purpose.</p>
+</div>
+<div id="bayes-long-theorem" class="section level2">
+<h2><span class="header-section-number">8.3</span> Bayes’ Long Theorem</h2>
+<p><span class="newthought">We</span> had to apply the Law of Total Probability first, before we could solve the taxicab problem with Bayes’ theorem, to calculate the denominator. This is so common that you’ll often see Bayes’ theorem written with this calculation built in. That is, the denominator <span class="math inline">\(\p(B)\)</span> is expanded out using the Law of Total Probability.</p>
+<dl>
+<dt>Bayes’ Theorem (long version)</dt>
+<dd><p>If <span class="math inline">\(1 &gt; \p(A) &gt; 0\)</span> and <span class="math inline">\(\p(B)&gt;0\)</span>, then
+<span class="math display">\[ \p(A \given B) = \frac{\p(A)\p(B \given A)}{\p(A)\p(B \given A) + \p(\neg A)\p(B \given \neg A)}. \]</span></p>
+</dd>
+</dl>
+<p>Notice how there’s some repetition in the numerator and the denominator. The term <span class="math inline">\(\p(A)\p(B \given A)\)</span> appears both above and below. So, when you’re doing a calculation with this formula, you can just do that bit once and then copy it in both the top and bottom. Then you just have to do the bottom-right term to complete the formula.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:longbayestree"></span>
+<img src="_main_files/figure-html/longbayestree-1.png" alt="A tree diagram for the long form of Bayes' theorem. The definition of conditional probability tells us $\p(A \given B)$ is the first leaf divided by the sum of the first and third leaves." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 8.5: A tree diagram for the long form of Bayes’ theorem. The definition of conditional probability tells us <span class="math inline">\(\p(A \given B)\)</span> is the first leaf divided by the sum of the first and third leaves.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">A</span> tree diagram helps illuminate the long version of Bayes’ theorem. To calculate <span class="math inline">\(\p(A \given B)\)</span>, the definition of conditional probability directs us to calculate <span class="math inline">\(\p(A \wedge B)\)</span> and <span class="math inline">\(\p(B)\)</span>:
+<span class="math display">\[ \p(A \given B) = \frac{ \p(A \wedge B) }{ \p(B) }. \]</span>
+Looking at the tree diagram in Figure <a href="chbayes.html#fig:longbayestree">8.5</a>, we see that this amounts to computing the first leaf for the numerator, and the sum of the first and third leaves for the denominator. Which yields the same formula as in the long form of Bayes’ theorem.</p>
+</div>
+<div id="example-1" class="section level2">
+<h2><span class="header-section-number">8.4</span> Example</h2>
+<p><span class="newthought">Let’s</span> practice the long form of Bayes’ theorem.</p>
+<div class="problem">
+<p>
+Joe has just heard about the Zika virus and wonders if he has it. His doctor tells him only <span class="math inline"><span class="math inline">\(1\%\)</span></span> of the population has the virus, but he’s still worried. There’s a blood test he can take, but it’s not perfect. The test always comes up either negative or positive, but:
+</p>
+<ul>
+<li>
+95% of people who have the virus test positive.
+</li>
+<li>
+85% of people who don’t have the virus test negative.
+</li>
+</ul>
+<p>
+If Joe tests positive, what is the probability he really has the Zika virus?
+</p>
+</div>
+<p>We’re asked to calculate <span class="math inline">\(\p(Z \given P)\)</span>, and we’re given the following:</p>
+<ul>
+<li><span class="math inline">\(\p(Z) = 1/100\)</span>.</li>
+<li><span class="math inline">\(\p(P \given Z) = 95/100\)</span>.</li>
+<li><span class="math inline">\(\p(P \given \neg Z) = 15/100\)</span>.</li>
+</ul>
+<p>So we can calculate <span class="math inline">\(\p(Z \given P)\)</span> using the long form of Bayes’ theorem:
+<span class="math display">\[
+  \begin{aligned}
+    \p(Z \given P) &amp;= \frac{\p(Z)\p(P \given Z)}{\p(Z)\p(P \given Z) + \p(\neg Z)\p(P \given \neg Z)}\\
+                   &amp;= \frac{(1/100)(95/100)}{(1/100)(95/100) + (99/100)(15/100)}\\
+                   &amp;= \frac{95}{95 + 1,485}\\
+                   &amp;= 19/316\\
+                   &amp;\approx .06.
+  \end{aligned}
+\]</span>
+The calculation is also diagrammed in Figure <a href="chbayes.html#fig:zikatree">8.6</a>.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:zikatree"></span>
+<img src="_main_files/figure-html/zikatree-1.png" alt="Tree diagram of the Zika problem" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 8.6: Tree diagram of the Zika problem<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>It turns out there’s only about a <span class="math inline">\(6\%\)</span> chance Joe has the virus. Even though he tested positive with a fairly reliable blood test! It’s counterintuitive, but the reason is the same as with the taxicab problem. There are two, conflicting pieces of evidence: the blood test is positive but the virus is rare. It turns out the virus is so rare that the positive blood test doesn’t do much to increase Joe’s chances of being infected.</p>
+<p><span class="newthought">Bayes’ theorem</span> doesn’t always give such surprising results. In fact the results are often very intuitive. Professors just like to use the counterintuitive examples to demonstrate how important Bayes’ theorem is. Without it, it’s easy to go astray.</p>
+</div>
+<div id="baserate" class="section level2">
+<h2><span class="header-section-number">8.5</span> The Base Rate Fallacy</h2>
+<p><span class="newthought">In</span> the Zika example, the rate of infection in the general population is very low, just <span class="math inline">\(1\%\)</span>. The rate at which something happens in general is called the <em>base rate</em>. In the taxicab example, the base rate for blue cabs was <span class="math inline">\(15\%\)</span>.</p>
+<p>One lesson of this chapter is that you have to take the base rate into account to get the right answer, via Bayes’ theorem. Humans have a tendency to ignore the base rate, and focus only on the “test” performed: the blood test in the Zika example, the testimony of the witness in the taxicab example. This mistake is called <em>base rate neglect</em>, or <em>the base rate fallacy</em>.</p>
+<p>The base rate fallacy is so tempting, even trained professionals are susceptible to it. In <a href="https://www.stat.berkeley.edu/~aldous/157/Papers/health_stats.pdf">one famous study</a>, <span class="math inline">\(160\)</span> medical doctors were given a problem similar to our Zika example (but with cancer instead of Zika). The question was multiple choice, and it used easier numbers than we did. Yet only <span class="math inline">\(34\)</span> of the doctors got it right.</p>
+<p>Hence the quote that opens <a href="the-monty-hall-problem.html#the-monty-hall-problem">Chapter 1</a> of this book: “in no other branch of mathematics is it so easy for experts to blunder as in probability theory.”</p>
+</div>
+<div id="exercises-6" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Recall this problem from <a href="conditional-probability.html#ch6ex">Chapter 6</a>:</p>
+<blockquote>
+<p>Five percent of tablets made by the company Ixian have factory defects. Ten percent of the tablets made by their competitor company Guild do. A computer store buys <span class="math inline">\(40\%\)</span> of its tablets from Ixian, and <span class="math inline">\(60\%\)</span> from Guild.</p>
+</blockquote>
+<p>Use Bayes’ theorem to find <span class="math inline">\(\p(I \given D)\)</span>, the probability a tablet from this store is made by Ixian, given that it has a factory defect?</p></li>
+<li><p>Recall this problem from <a href="conditional-probability.html#ch6ex">Chapter 6</a>:</p>
+<blockquote>
+<p>In the city of Elizabeth, the neighbourhood of Southside has lots of chemical plants. <span class="math inline">\(2\%\)</span> of Elizabeth’s children live in Southside, and <span class="math inline">\(14\%\)</span> of those children have been exposed to toxic levels of lead. Elsewhere in the city, only <span class="math inline">\(1\%\)</span> of the children have toxic levels of exposure.</p>
+</blockquote>
+<p>Use Bayes’ theorem to find <span class="math inline">\(\p(S \given L)\)</span>, the probability that a randomly chosen child from Elizabeth who has toxic levels of lead exposure lives in Southside?</p></li>
+<li><p>The probability that Nasim will study for her test is <span class="math inline">\(4/10\)</span>. The probability that she will pass, given that she studies, is <span class="math inline">\(9/10\)</span>. The probability that she passes, given that she does not study, is <span class="math inline">\(3/10\)</span>. What is the probability that she has studied, given that she passes?</p></li>
+<li><p>At the height of flu season, roughly <span class="math inline">\(1\)</span> in every <span class="math inline">\(100\)</span> people have the flu. But some people don’t show symptoms even when they have it: only half the people who have the virus show symptoms.</p>
+<p>Flu symptoms can also be caused by other things, like colds and allergies. So about <span class="math inline">\(1\)</span> in every <span class="math inline">\(20\)</span> people who don’t have the flu still have flu-like symptoms.</p>
+<p>If someone has flu-like symptoms at the height of flu season, what is the probability that they actually have the flu?</p></li>
+<li><p>A magic shop sells two kinds of trick coins. The first kind are biased towards heads: they come up heads <span class="math inline">\(9\)</span> times out of <span class="math inline">\(10\)</span> (the tosses are independent). The second kind are biased towards tails: they comes up tails <span class="math inline">\(8\)</span> times out of <span class="math inline">\(10\)</span> (tosses still independent). Half the coins are the first kind, half are the second kind. But they don’t label the coins, so you have to experiment to find out which are which.</p>
+<p>You pick a coin at random and flip it twice. Given that it comes up heads both times, what is the probability it’s the first kind of coin?</p></li>
+<li><p>There is a room filled with two types of urns.</p>
+<ul>
+<li>Type A urns have <span class="math inline">\(30\)</span> yellow marbles, <span class="math inline">\(70\)</span> red.</li>
+<li>Type B urns have <span class="math inline">\(20\)</span> green marbles, <span class="math inline">\(80\)</span> yellow.</li>
+</ul>
+<p>The two types of urn look identical, but <span class="math inline">\(80\%\)</span> of them are Type A. You pick an urn at random and draw a marble from it at random.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability the marble will be yellow?</li>
+</ol>
+<p>Now you look at the marble: it is yellow.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability the urn is a Type B urn, given that you drew a yellow marble?</li>
+</ol>
+<p>Suppose now you put the yellow marble back, shake hard, and draw another marble at random from the same urn.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>If this marble is also yellow, what is the probability the
+urn is a Type B urn?</li>
+<li>If this marble is instead green, what is the probability the urn
+is a Type B urn?</li>
+</ol></li>
+<li><p>In the long form of Bayes’ theorem, the denominator is broken down by applying the Law of Total Probability to a partition of two propositions, <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span>. We can extend the same idea to a partition of three propositions, <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span>. Here is a start on the formula:</p>
+<p><span class="math display">\[ \p(X \given B) = \frac{\p(X)\p(B \given X)}{\p(X)\p(B \given X) + \;\ldots\;}.\]</span></p>
+<p>Fill in the rest of the formula, then justify it.</p></li>
+<li><p>A company makes websites, always powered by one of three server platforms: Bulldozer, Kumquat, or Penguin. Bulldozer crashes <span class="math inline">\(1\)</span> out of every <span class="math inline">\(10\)</span> visits, Kumquat crashes <span class="math inline">\(1\)</span> in <span class="math inline">\(50\)</span> visits, and Penguin only crashes <span class="math inline">\(1\)</span> out of every <span class="math inline">\(200\)</span> visits.</p>
+<p><label for="tufte-mn-13" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-13" class="margin-toggle"><span class="marginnote"><span style="display: block;">This problem is based on Exercise 6 from p. 78 of Ian Hacking’s <em>An Introduction to Probability &amp; Inductive Logic</em>.</span></span></p>
+<p>Half of the websites are run on Bulldozer, <span class="math inline">\(30\%\)</span> are run on Kumquat, and <span class="math inline">\(20\%\)</span> are run on Penguin.</p>
+<p>You visit one of their sites for the first time and it crashes. What is the probability it was run on Penguin?</p></li>
+<li><p>You and Carlos are at a party, which means there’s a <span class="math inline">\(2/3\)</span> chance he’s been drinking. You decide to experiment to find out: you throw a tennis ball to Carlos and he misses the catch. Five minutes later you try again and he misses again. Assume the two catches are independent.</p>
+<p>When he’s sober, Carlos misses a catch only two times out of ten. When he’s been drinking, Carlos misses catches half the time.</p>
+<p>What is the probability that Carlos has been drinking, given that he missed both catches?</p></li>
+<li><p>The Queen Gertrude Hotel has two kinds of suites: singles have one bed, royal suites have three beds. There are <span class="math inline">\(80\)</span> singles and <span class="math inline">\(20\)</span> royals.</p>
+<p>In a single, the probability of bed bugs is <span class="math inline">\(1/100\)</span>. But every additional bed put in a suite doubles the chance of bed bugs.</p>
+<p>If a suite is inspected at random and bed bugs are found, what is the probability it’s a royal?</p></li>
+<li><p>Willy Wonka Chocolates Inc. makes two kinds of boxes of chocolates. The “wonk box” has four caramel chocolates and six regular chocolates. The “zonk box” has six caramel chocolates, two regular chocolates, and two mint chocolates. A third of their boxes are wonk boxes, the rest are zonk boxes.</p>
+<p>They don’t mark the boxes. The only way to tell what kind of box you’ve bought is by trying the chocolates inside. In fact, all the chocolates look the same; you can only tell the difference by tasting them.</p>
+<p>If you buy a random box, try a chocolate at random, and find that it’s caramel, what is the probability you’ve bought a wonk box?</p></li>
+<li><p>A room contains four urns. Three of them are Type X, one is Type Y.</p>
+<ul>
+<li>The Type X urns each contain <span class="math inline">\(3\)</span> black marbles, <span class="math inline">\(2\)</span> white marbles.</li>
+<li>The Type Y urn contains <span class="math inline">\(1\)</span> black marble, <span class="math inline">\(4\)</span> white marbles.</li>
+</ul>
+<p>You are going to pick an urn at random and start drawing marbles from it at random <em>without</em> replacement.</p>
+<p>What is the probability the urn is Type X if the first draw is black?</p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="calculating-probabilities-part-ii.html"><button class="btn btn-default">Previous</button></a>
+<a href="multiple-conditions.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

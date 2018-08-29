@@ -1,0 +1,124 @@
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}  
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#TOC {
+  width: 20rem;
+}
+
+#TOC::before {
+  content: "☰ Contents";
+  font-size: 1.7rem;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 10px;
+  width: calc(20rem - 10px);
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px double #fefefe;
+}
+
+#TOC:hover {
+  color: white;
+}
+
+#TOC:hover:before {
+  background: #2c2c2c;
+  border-bottom: 2px double #4f4f4f;
+  -webkit-animation: fadeIn .5s;
+  animation: fadeIn .5s;
+}
+
+#TOC ul {
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  font-size: 1.2rem;
+}
+
+#TOC:hover > ul {
+  display: block;
+  z-index: 1;
+  -webkit-animation: fadeIn .5s;
+  animation: fadeIn .5s;
+}
+
+#TOC li {
+  padding: 0 0 0 0;
+  position: relative;
+  display: block;
+  width: 20rem;
+}
+
+#TOC > ul > li {
+  border-bottom: 1px solid #4f4f4f;
+}
+
+#TOC ul ul {
+  position: absolute;
+  display: none;
+  left: 100%;
+  top: 0;
+}
+
+#TOC li:hover ul {
+  width: fit-content;
+  display: block;
+  -webkit-animation: fadeIn .5s;
+  animation: fadeIn .5s;
+}
+
+#TOC li:hover > ul {
+  display: block;
+}
+
+#TOC a, .part, .appendix {
+  background: #2c2c2c; /*linear-gradient(to bottom, #2c2c2c 0%, #141414 100%);*/
+  color: #ffffff;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+#TOC .part, .appendix {
+  background: #0fa1e0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#TOC > ul > li > a:hover{
+  background: #1e1e1e;
+}
+
+#TOC .has-sub ul li a {
+  background: #0fa1e0;
+  border-bottom: 1px dotted #31b7f1;
+  filter: none;
+  display: block;
+  line-height: 120%;
+  padding: 10px;
+  color: #ffffff;
+}
+
+#TOC .has-sub ul li:first-child a {
+  border-radius: 0 5px 0 0;
+}
+
+#TOC .has-sub ul li:last-child a {
+  border-radius: 0 0 5px 0;
+}
+
+#TOC .has-sub ul li:hover a {
+  background: #0c7fb0;
+}
+
+#TOC ul ul li:hover > a {
+  color: #ffffff;
+}

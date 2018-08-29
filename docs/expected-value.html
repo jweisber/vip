@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="expected-value" class="section level1">
+<h1><span class="header-section-number">11</span> Expected Value</h1>
+<p><span class="newthought">We’ve been thinking a lot</span> about what conclusions our evidence supports. But a lot of reasoning is <em>practical</em>: it’s not just about what to believe, but about what you should <em>do</em>. Once you know how likely the various possible outcomes of a decision are, how do you make your choice?</p>
+<div class="problem">
+<p>
+Suppose you have a free ticket to play one game at the local casino. You can choose either the Coin Game or the Die Game.
+</p>
+<ul>
+<li>
+Coin Game: a fair coin is flipped. You win <span class="math inline"><span class="math inline">\(\$1\)</span></span> if it lands heads, nothing otherwise.
+</li>
+<li>
+Die Game: a fair die is rolled. You win <span class="math inline"><span class="math inline">\(\$3\)</span></span> if it lands five or six, nothing otherwise.
+</li>
+</ul>
+<p>
+Which game should you play?
+</p>
+</div>
+<p>The Coin Game has better odds: a <span class="math inline">\(1/2\)</span> chance of winning vs. just <span class="math inline">\(1/3\)</span> in the Die Game. But the Die Game promises a bigger payoff: <span class="math inline">\(\$3\)</span> rather than just <span class="math inline">\(\$1\)</span>. So there are conflicting arguments here. The odds favour the first choice, while the potential payoffs favour the second. How do you reconcile these considerations and come to a decision?</p>
+<p>Well, let’s think about what would happen in the long run if you played each game over and over.</p>
+<p>Suppose you played the Coin Game over and over, a hundred times. Half the time you’d win <span class="math inline">\(\$1\)</span>, and half the time you’d win nothing. So after a hundred plays, you’d probably win about <span class="math inline">\(\$50\)</span>, which is an average of <span class="math inline">\(\$0.50\)</span> per play.</p>
+<p>Now suppose you played the Die Game a hundred times instead. A third of the time you’d win <span class="math inline">\(\$3\)</span>, and the other two thirds of the time you’d win nothing. So after a hundred plays you’d have won about <span class="math inline">\(\$100\)</span>, an average of about <span class="math inline">\(\$1\)</span> per play.</p>
+<p>In technical terms, this means the Die Game has a higher <em>expected value</em>. In the long run, you’d expect to win about <span class="math inline">\(\$1\)</span> per play in the Die Game, as opposed to <span class="math inline">\(\$0.50\)</span> for the Coin Game.</p>
+<p>So the Die Game is the more advantageous one, on this analysis. On average, people tend to win more playing that game.</p>
+<div id="expected-monetary-values" class="section level2">
+<h2><span class="header-section-number">11.1</span> Expected Monetary Values</h2>
+<p><span class="newthought">To</span> calculate the expected value of an option, we multiply each payoff by its probability, and then sum up the results. For example, our analysis of the Coin Game can be written this way:
+<span class="math display">\[
+  \begin{aligned}
+    \p(\$1) \times \$1 + \p(\$0) \times \$0 &amp;= (1/2)(\$1) + (1/2)(\$0)\\
+      &amp;= \$0.50.
+  \end{aligned}
+\]</span>
+And for the Die Game:
+<span class="math display">\[
+  \begin{aligned}
+    \p(\$3) \times \$3 + \p(\$0) \times \$0 &amp;= (1/3)(\$3) + (2/3)(\$0)\\
+      &amp;= \$1.
+  \end{aligned}
+\]</span></p>
+<p>Sometimes a gamble has the potential to lose money, so we use a negative number for the “payoff”. For example, suppose the Die Game is modified so that you have to pay <span class="math inline">\(\$3\)</span> if the die lands <span class="math inline">\(1, 2, 3\)</span>, or <span class="math inline">\(4\)</span>. Then we calculate:
+<span class="math display">\[
+  \begin{aligned}
+    \p(\$3) \times \$3 + \p(-\$3) \times -\$1 &amp;= (1/3)(\$3) + (2/3)(-\$3)\\
+      &amp;= -\$1.
+  \end{aligned}
+\]</span></p>
+<p>In general, the formula for a game with possible payoffs <span class="math inline">\(\$x\)</span> and <span class="math inline">\(\$y\)</span> is:
+<span class="math display">\[ \p(\$x) \times \$x + \p(\$y) \times \$y. \]</span></p>
+<p>Notice that expected values aren’t necessarily what you might think from the name. The expected value of a game isn’t necessarily the amount you expect to win playing it. If you play the Die Game, you’ll either win <span class="math inline">\(\$3\)</span> or nothing. But the expected value is <span class="math inline">\(\$1\)</span>. So you actually know for certain ahead of time that you won’t win the expected value, <span class="math inline">\(\$1\)</span>.</p>
+<div class="warning">
+<p>
+The expected value isn’t the amount you expect to win from a game. It’s the amount you expect to win <em>on average, in the long run</em>, if you play the game over and over.
+</p>
+</div>
+</div>
+<div id="visualizing-expectations" class="section level2">
+<h2><span class="header-section-number">11.2</span> Visualizing Expectations</h2>
+<p><span class="newthought">We</span> can visualize these long run averages as the area in a diagram. Figure <a href="expected-value.html#fig:gambleviz">11.1</a> shows a gamble with a <span class="math inline">\(1/3\)</span> chance of paying <span class="math inline">\(\$2\)</span>, and a <span class="math inline">\(2/3\)</span> chance of paying <span class="math inline">\(\$6\)</span>.</p>
+<div class="figure"><span id="fig:gambleviz"></span>
+<p class="caption marginnote shownote">
+Figure 11.1: A gamble with a <span class="math inline">\(1/3\)</span> chance of paying <span class="math inline">\(\$2\)</span>, and a <span class="math inline">\(2/3\)</span> chance of paying <span class="math inline">\(\$6\)</span>
+</p>
+<img src="_main_files/figure-html/gambleviz-1.png" alt="A gamble with a $1/3$ chance of paying $\$2$, and a $2/3$ chance of paying $\$6$" width="672"  />
+</div>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:coindiegame"></span>
+<img src="_main_files/figure-html/coindiegame-1.png" alt="The Coin Game (top) and the Die Game (bottom)" width="672"  /><img src="_main_files/figure-html/coindiegame-2.png" alt="The Coin Game (top) and the Die Game (bottom)" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 11.2: The Coin Game (top) and the Die Game (bottom)<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>There are two rectangular regions, one for each possible outcome. The width of each rectangle is the probability of the corresponding outcome, and the height is the payoff. So each rectangle’s area is one term in the expected value’s sum:
+<span class="math display">\[ 1/3 \times \$2 + 2/3 \times \$6. \]</span>
+The expected value is thus the area of the two rectangles together, i.e. the area of the blue region (about <span class="math inline">\(\$4.67\)</span> in this example).</p>
+<p>The Coin Game and the Die Game are visualized in Figure <a href="expected-value.html#fig:coindiegame">11.2</a>.</p>
+<p><span class="newthought">We</span> started this chapter wondering how to reconcile conflicting arguments. The Coin Game has better odds, but the Die Game has a greater potential payoff.</p>
+<p>Well, a rectangle’s area can be enlarged by increasing either its width or its height. Likewise, a payoff’s contribution to expected value can be increased either by increasing its amount or by increasing its probability.</p>
+<p>So the expected value formula answers our opening question by giving equal weight to the two competing factors. Width (probability) and height (payoff) are treated the same: neither one is given greater weight. We just multiply one against the other and take the total area that results.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-93"></span>
+<img src="_main_files/figure-html/unnamed-chunk-93-1.png" alt="A gamble with one negative payoff, one positive" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 11.3: A gamble with one negative payoff, one positive<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">Sometimes</span> a decision loses money. We use negative dollar amounts to represent losses. For example, imagine the Coin Game is modified so that you lose <span class="math inline">\(\$2\)</span> if the coin lands tails. Then the expected value is:
+<span class="math display">\[ 1/2 \times \$1 + 1/2 \times -\$2 = -\$1/2.\]</span></p>
+<p>In our diagrams, potential losses extend below the <span class="math inline">\(x\)</span>-axis. And we colour them red as a reminder that they are to be subtracted from the area above the <span class="math inline">\(x\)</span>-axis. To get the expected value, we subtract the red area from the blue area.</p>
+</div>
+<div id="more-than-two-outcomes" class="section level2">
+<h2><span class="header-section-number">11.3</span> More Than Two Outcomes</h2>
+<p><span class="newthought">Most</span> casino games have mor than two possible payoffs. For that matter, most decisions in life have more than two possible outcomes. If you buy insurance for your phone, it could end up saving you <span class="math inline">\(\$0\)</span>, or it could save you <span class="math inline">\(\$100\)</span>, or it might save you <span class="math inline">\(\$150\)</span>, etc.</p>
+<p>So the official definition of expected monetary value is:</p>
+<dl>
+<dt>Expected Monetary Value</dt>
+<dd><p>Given an act <span class="math inline">\(A\)</span> with possible consequences <span class="math inline">\(\$x_1, \$x_2, \ldots, \$x_n\)</span>, the <em>expected monetary value</em> of <span class="math inline">\(A\)</span> is:
+<span class="math display">\[
+  \begin{aligned}
+\E(A) &amp;= \p(\$x_1) \times \$x_1 + \p(\$x_2) \times \$x_2 + \ldots + \p(x_n) \times \$x_n.
+  \end{aligned}
+\]</span></p>
+</dd>
+</dl>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-94"></span>
+<img src="_main_files/figure-html/unnamed-chunk-94-1.png" alt="A gamble with three possible outcomes" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 11.4: A gamble with three possible outcomes<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>For example, suppose a fair die will be rolled and you will win $1 if it lands on a low number, $2 if it’s a middling number. If it’s a high number, you lose $3. Then:
+<span class="math display">\[
+  \begin{aligned}
+    \E(A) &amp;= (1/3)(\$1) + (1/3)(\$2) + (1/3)(-\$3)\\
+          &amp;= \$1/3 + \$2/3 - \$1\\
+          &amp;= \$0.
+  \end{aligned}
+\]</span></p>
+<p>Gambles with more than two outcomes are visualized the same as before. We just use three or more reactangles, one for each possible outcome.</p>
+</div>
+<div id="fair-prices" class="section level2">
+<h2><span class="header-section-number">11.4</span> Fair Prices</h2>
+<p><span class="newthought">Imagine</span> a variation of the Coin Game, where you win <span class="math inline">\(\$1\)</span> if the coin lands heads, and you pay <span class="math inline">\(\$1\)</span> if it lands tails. You might be able to guess, the expected value of this game is <span class="math inline">\(\$0\)</span>:
+<span class="math display">\[
+  \begin{aligned}
+    \p(\$1) \times \$1 + \p(-\$1) \times -\$1 &amp;= (1/2)(\$1) + (1/2)(-\$1)\\
+      &amp;= 0.
+  \end{aligned}
+\]</span>
+If you played over and over again, you’d break even in the long run. Half the time you’d win a dollar, and the other half of the time you’d pay a dollar back.</p>
+<p>So if someone asked you to pay in order to play this game, that would seem unfair. Why pay to play if you don’t expect to win?</p>
+<p>But for a game like the Die Game, asking people to pay to play does seem fair. In the long run, the casino is going to lose an average of <span class="math inline">\(\$1\)</span> per play. So it’s only fair that they ask people to pay <span class="math inline">\(\$1\)</span> to play that game. In the long run they’ll break even. (Of course, a real casino will demand more so they can turn a profit.)</p>
+<p>In general, a game’s fair price is thought to be its expected value. If the expected value is <span class="math inline">\(\$3\)</span>, it’s fair to pay <span class="math inline">\(\$3\)</span> to play. If the expected value is <span class="math inline">\(-\$3\)</span>, it’s fair to “pay” <span class="math inline">\(-\$3\)</span> to play. Meaning <em>they should pay you</em> <span class="math inline">\(\$3\)</span> to play.</p>
+<p><span class="newthought">Notice</span> that the expected value of paying the fair price is always <span class="math inline">\(\$0\)</span>. Suppose you pay <span class="math inline">\(\$1\)</span> to play the original Die Game, for example. Because $1 is automatically deducted from your winnings, the possible consequences are now <span class="math inline">\(\$3 - \$1 = \$2\)</span> or <span class="math inline">\(\$0 - \$1 = -\$1\)</span>. So the expected value of paying $1 to play is:
+<span class="math display">\[
+  \begin{aligned}
+    (1/3)(\$2) + (2/3)(-\$1) &amp;= \$2/3 - \$2/3\\
+      &amp;= \$0.
+  \end{aligned}
+\]</span></p>
+<p>That makes sense: if it’s a fair price, you shouldn’t have any advantage over the casino. You don’t stand to gain or lose money in the long run, if you pay the fair price to play over and over.</p>
+<p>The casino is in the same position. For them, the losses and gains are reversed: a roll of five or six loses them $3, and otherwise they lose nothing. So if you pay them <span class="math inline">\(\$1\)</span> to play, they either lose <span class="math inline">\(\$2\)</span> in the end or gain <span class="math inline">\(\$1\)</span>:
+<span class="math display">\[
+  \begin{aligned}
+    (1/3)(-\$2) + (2/3)(\$1) &amp;= -\$2/3 + \$2/3\\
+      &amp;= \$0.
+  \end{aligned}
+\]</span></p>
+<p>Since nobody has an advantage, it’s a fair deal.</p>
+</div>
+<div id="other-goods" class="section level2">
+<h2><span class="header-section-number">11.5</span> Other Goods</h2>
+<p><span class="newthought">Money</span> isn’t everything, of course. People value lots of other things, like their health, their family and friends, and their free time. The concept of expected value can be applied to other goods besides money, as long as they’re quantifiable.</p>
+<div class="problem">
+<p>
+Imagine you’re taking a trip to Ottawa and you can either drive or go by train. If you take the train, it’s pretty predictable: it’s always a five or six hour ride, with equal probability. If you drive, it’s less predictable. Nine times out of ten it’s just a four hour drive. But one time in ten, an accident causes a traffic jam and it ends up being a ten hour drive.
+</p>
+</div>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-96"></span>
+<img src="_main_files/figure-html/unnamed-chunk-96-1.png" alt="Take the train to Ottawa or drive?" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-96-2.png" alt="Take the train to Ottawa or drive?" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 11.5: Take the train to Ottawa or drive?<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>If all you care about is spending as little time on the road as possible, should you take the train or drive?
+<span class="math display">\[
+  \begin{aligned}
+    \E(\mbox{Train}) &amp;= \p(-5{\mbox{ hr}}) \times -5{\mbox{ hr}}+ \p(-6{\mbox{ hr}}) \times -6{\mbox{ hr}}\\
+                     &amp;= (1/2)(-5{\mbox{ hr}}) + (1/2)(-6{\mbox{ hr}})\\
+                     &amp;= -11/2{\mbox{ hr}}\\
+                     &amp;= -5.5{\mbox{ hr}},\\
+    \E(\mbox{Drive}) &amp;= \p(-4{\mbox{ hr}}) \times -4{\mbox{ hr}}+ \p(-10{\mbox{ hr}}) \times -10{\mbox{ hr}}\\
+                     &amp;= (9/10)(-4{\mbox{ hr}}) + (1/10)(-10{\mbox{ hr}})\\
+                     &amp;= -46/10{\mbox{ hr}}\\
+                     &amp;= -4.6{\mbox{ hr}}.
+  \end{aligned}
+\]</span>
+So driving has a higher expected value—measured in terms of free time, rather than money.</p>
+<p>Notice that both options have negative expected value in this example. After all, you’re bound to lose time travelling no matter what. Sometimes you don’t have any choice but to accept a loss. But you can still choose the option that minimizes your expected loss, i.e. maximizes expected value.</p>
+</div>
+<div id="decision-tables" class="section level2">
+<h2><span class="header-section-number">11.6</span> Decision Tables</h2>
+<p><span class="newthought">Many</span> decision problems can be represented in a table. Suppose you’re choosing between the following two gambles, based on the roll of a fair, six-sided die.</p>
+<ul>
+<li><span class="math inline">\(A\)</span>: you win $3 if it lands <span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span>, you win <span class="math inline">\(\$1\)</span> if it lands <span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span>, and you lose <span class="math inline">\(\$1\)</span> if it lands <span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span>.</li>
+<li><span class="math inline">\(B\)</span>: you win <span class="math inline">\(\$3\)</span> if it lands <span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span>, you lose <span class="math inline">\(\$3\)</span> if it lands <span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span>, and nothing happens if it lands <span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span>.</li>
+</ul>
+<p>A decision table has a row for each option and a column for each possible outcome. Each cell of the table then contains the payoff for that combination of act and outcome:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span></th>
+<th align="center"><span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span></th>
+<th align="center"><span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(-\$1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td align="center"><span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(\$2\)</span></td>
+<td align="center"><span class="math inline">\(\$0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We can also add in the probability for each cell:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span></th>
+<th align="center"><span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span></th>
+<th align="center"><span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(-\$1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(-\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Now calculating expected values is just a matter of multiplying the numbers within each cell, and then adding up across each row:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span></th>
+<th align="center"><span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span></th>
+<th align="center"><span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span></th>
+<th align="center">Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(-\$1\)</span></td>
+<td align="center"><span class="math inline">\(\$1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(-\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$0\)</span></td>
+<td align="center"><span class="math inline">\(\$0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="newthought">Note</span> that the probabilities don’t have to be the same from row to row. The casino might choose to use a different die depending on how you bet, for example. Suppose if you choose <span class="math inline">\(A\)</span>, they’ll use a loaded die to eliminate your edge:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span></th>
+<th align="center"><span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span></th>
+<th align="center"><span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span></th>
+<th align="center">Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(1/6\)</span>, <span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/6\)</span>, <span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(4/6\)</span>, <span class="math inline">\(-\$1\)</span></td>
+<td align="center"><span class="math inline">\(\$0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(-\$3\)</span></td>
+<td align="center"><span class="math inline">\(1/3\)</span>, <span class="math inline">\(\$0\)</span></td>
+<td align="center"><span class="math inline">\(\$0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Now that the die is loaded towards <span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span> if you choose <span class="math inline">\(A\)</span>, the expected value of choosing <span class="math inline">\(A\)</span> is nil: <span class="math inline">\(\$0\)</span>.</p>
+<p><span class="newthought">Once</span> in a while you can avoid calculating expected values altogether. Consider this decision problem:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span></th>
+<th align="center"><span class="math inline">\(3\)</span> or <span class="math inline">\(4\)</span></th>
+<th align="center"><span class="math inline">\(5\)</span> or <span class="math inline">\(6\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(\$3\)</span></td>
+<td align="center"><span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(-\$1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td align="center"><span class="math inline">\(\$1\)</span></td>
+<td align="center"><span class="math inline">\(\$0\)</span></td>
+<td align="center"><span class="math inline">\(-\$3\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We don’t even have to put in the probabilities to make our decision here. Option <span class="math inline">\(A\)</span> is clearly better, because it has a better payoff no matter how the die lands. In every column, row <span class="math inline">\(A\)</span> has a larger payoff than row <span class="math inline">\(B\)</span>. So <span class="math inline">\(A\)</span> is a better decision no matter what.</p>
+<p>When one option has a better payoff than another no matter what happens, we say the first option <strong><em>dominates</em></strong> the second. In terms of a table, the dominant option has a higher payoff in every column.</p>
+<div class="info">
+<p>
+If <span class="math inline"><span class="math inline">\(A\)</span></span> dominates <span class="math inline"><span class="math inline">\(B\)</span></span>, then <span class="math inline"><span class="math inline">\(A\)</span></span> must have higher expected value than <span class="math inline"><span class="math inline">\(B\)</span></span>.
+</p>
+</div>
+<p>Dominant options don’t come up very often in practice. Real decision problems tend to be harder than that. But they do come up sometimes. (They’re also important in more advanced, theoretical topics: <a href="dutch-books.html#dutch-books-1">Chapter 17</a> covers one example.)</p>
+</div>
+<div id="exercises-8" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Which of the following best describes expected monetary value?</p>
+<ol style="list-style-type: lower-alpha">
+<li>The amount you would expect to gain if you chose the same option over and over again for a long, long time.</li>
+<li>The amount you expect to gain/lose.</li>
+<li>The average amount you would expect to gain/lose each time if you chose the same option over and over again many times.</li>
+<li>The amount of profit a business expects to garner in a fiscal year.</li>
+</ol></li>
+<li><p>What is the expected monetary value of playing a slot machine that costs <span class="math inline">\(\$100\)</span> to play, and has a <span class="math inline">\(1/25\)</span> chance of paying out <span class="math inline">\(\$500\)</span>? (The rest of the time it pays nothing.)</p></li>
+<li><p>Suppose a slot machine pays off <span class="math inline">\(\$25\)</span> a fiftieth of the time and costs a <span class="math inline">\(\$1\)</span> to play, and a video poker machine pays off <span class="math inline">\(\$10\)</span> a twentieth of the time and costs <span class="math inline">\(\$2\)</span> to play. Which machine is the better bet in terms of expected monetary value?</p></li>
+<li><p>You’re considering downloading a new game for your phone. The game costs <span class="math inline">\(\$0.99\)</span>. But as a promotion, the first <span class="math inline">\(50,000\)</span> downloaders are being entered in a fair lottery with a <span class="math inline">\(\$10,000\)</span> cash prize.</p>
+<p><label for="tufte-mn-15" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-15" class="margin-toggle"><span class="marginnote"><span style="display: block;">This exercise is based on Exercise 2 from p. 95 of Ian Hacking’s <em>An Introduction to Probability &amp; Inductive Logic</em>.</span></span></p>
+<p>If you know you’ll be one of the first <span class="math inline">\(50,000\)</span> downloaders, what is the expected monetary value of downloading the game?</p></li>
+<li><p>A local casino offers a game which costs <span class="math inline">\(\$2\)</span> to play. A fair coin is flipped up to three times, and the payouts work as follows:</p>
+<ul>
+<li>If the coin lands heads on the first toss, you win <span class="math inline">\(\$2\)</span> and the game is over.</li>
+<li>If the coin lands heads on the second toss, you win <span class="math inline">\(\$4\)</span> and the game is over.</li>
+<li>If the coin lands heads on the third toss, you win <span class="math inline">\(\$8\)</span> and the game is over.</li>
+<li>If the coin lands tails all three times, you win <span class="math inline">\(\$0\)</span>.</li>
+</ul>
+<p>What is the expected monetary value of this game?</p></li>
+<li><p>When is the following statement true: the expected monetary value of a gamble is also one of its possible payoffs.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Always true</li>
+<li>Sometimes true</li>
+<li>Never true</li>
+</ol></li>
+<li><p>Suppose you can bet on either of two dogs: Santa’s Little Helper or She’s the Fastest. If you bet on Santa’s Little Helper and he wins, you get <span class="math inline">\(\$5\)</span>. If he loses you pay <span class="math inline">\(\$2\)</span>. If you bet on She’s the Fastest and she loses, you pay <span class="math inline">\(\$10\)</span>. The two dogs have the same chance of winning.</p>
+<p><label for="tufte-mn-16" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-16" class="margin-toggle"><span class="marginnote"><span style="display: block;">This problem is based on Exercise 1 from p. 85 of Michael D. Resnik’s excellent book, <em>Choices</em>.</span></span></p>
+<p>How much would a winning bet on She’s the Fastest have to pay for her to be the better bet?</p></li>
+<li><p>Suppose the government is deciding whether to create a vaccination program to prevent a potential epidemic of Zika virus. If there is an epidemic, it will cost the country <span class="math inline">\(\$1,000\)</span> million (for medical care, lost work-hours, etc.). The vaccination program would cost <span class="math inline">\(\$40\)</span> million.</p>
+<p><label for="tufte-mn-17" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-17" class="margin-toggle"><span class="marginnote"><span style="display: block;">This problem is based on an example from p. 86 of Michael D. Resnik’s <em>Choices</em>.</span></span></p>
+<p>If they don’t create the vaccination program, there is a <span class="math inline">\(9/10\)</span> chance of an epidemic. If they do create the vaccination program, there is still a <span class="math inline">\(1/10\)</span> chance of an epidemic.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Draw a <span class="math inline">\(2 \times 2\)</span> table and label the rows with the available actions (program, no program). Label the columns with the possible outcomes (epidemic, no epidemic). In each cell write the monetary cost and the corresponding probability.</li>
+<li>What is the expected monetary value of creating the vaccine program?</li>
+<li>What is the expected monetary value of not creating the program?</li>
+<li>If the government makes their decision based on expected monetary values, will they create the program or not?</li>
+</ol></li>
+<li><p>Suppose Ontario is deciding whether to enact a new tax. If the tax is enacted, it will bring in <span class="math inline">\(\$700\)</span> million in revenue.</p>
+<p>But it could also hurt the economy. The chance of harm to the economy is small, just <span class="math inline">\(1/5\)</span>. But it would cost the country <span class="math inline">\(\$1,200\)</span> million in lost earnings. (The <span class="math inline">\(\$700\)</span> million in revenue would still be gained, partially offsetting this loss.)</p>
+<p>Treat gains as positive and losses as negative.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected monetary value of enacting the new tax?</li>
+</ol>
+<p>The government also has the option of conducting a study before deciding whether to enact the new tax. If the study’s findings are bad news, that means the chance of harm to the economy is actually double what they thought. If its findings are good news, then the chance of harm to the economy is actually half of what they thought.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose the government conducts the study and its findings are good news. What will the expected monetary value of enacting the tax be then?</li>
+<li>Suppose the government conducts the study and its findings are bad news. What will the expected monetary value of enacting the tax be then?</li>
+<li>Suppose conducting the study would cost <span class="math inline">\(\$5,000\)</span>. Will the government conduct the study? Explain your answer. (Assume they make decisions by maximizing expected monetary value.)</li>
+</ol></li>
+<li><p>Suppose your university is considering a tuition increase. If the increase happens, it will bring in <span class="math inline">\(\$7\)</span> million.</p>
+<p>But it could also hurt the university’s reputation. The chance of harm to the university’s reputation is <span class="math inline">\(3/5\)</span>, and it would cost the university <span class="math inline">\(\$20\)</span> million in lost donations if it happened. The <span class="math inline">\(\$7\)</span> million in tuition would still be gained though, partially offsetting this loss.</p>
+<p>Treat gains as positive and losses as negative.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected monetary value of enacting the tuition increase?</li>
+</ol>
+<p>The university has the option of conducting a study before deciding whether to increase tuition. If the study’s findings are bad, the chance of harm to the university’s reputation is increased by <span class="math inline">\(1/5\)</span>. If its findings are good, the chance of harm is decreased by <span class="math inline">\(1/5\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose the university conducts the study and its findings are good. What will the expected monetary value of enacting the increase be then?</li>
+<li>Suppose the university conducts the study and its findings are bad. What will the expected monetary value of increasing tuition be then?</li>
+<li>Suppose the study would cost a thousand dollars. Will the university conduct the study? Assume they make decisions by maximizing expected monetary value.</li>
+</ol></li>
+<li><p>Noree has a phone worth <span class="math inline">\(\$60\)</span> and a tablet worth <span class="math inline">\(\$240\)</span>. The probability she’ll have to replace the phone (because of damage/loss/theft/etc.) is <span class="math inline">\(1/5\)</span>. The probability she’ll have to replace the tablet is <span class="math inline">\(1/6\)</span>. These probabilities are independent.</p>
+<p>An insurance policy that costs <span class="math inline">\(\$60\)</span> will cover the cost of replacing both items.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected monetary value of buying the insurance?</li>
+<li>What is the expected monetary value of declining the insurance?</li>
+</ol></li>
+<li><p>William has a phone worth <span class="math inline">\(\$60\)</span> and a tablet worth <span class="math inline">\(\$540\)</span>. The probability he’ll have to replace the phone (because of damage/loss/theft/etc.) is <span class="math inline">\(1/3\)</span>. The probability he’ll have to replace the tablet is <span class="math inline">\(1/5\)</span>. These probabilities are independent.</p>
+<p>An insurance policy that costs <span class="math inline">\(\$100\)</span> will cover the cost of replacing both items.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected value of buying the insurance?</li>
+<li>What is the expected value of declining the insurance?</li>
+</ol></li>
+<li><p>Zhi has a netbook worth <span class="math inline">\(\$350\)</span> and a desktop computer worth <span class="math inline">\(\$1400\)</span>. The probability that she’ll spill liquid on the desktop is <span class="math inline">\(1/7\)</span> and the probability that she’ll spill liquid on the netbook is <span class="math inline">\(1/5\)</span>. These probabilities are independent, and in either case she will have to replace the damaged device.</p>
+<p>An insurance policy that costs <span class="math inline">\(\$200\)</span> will cover the cost of replacing either/both items if they are damaged from a spill. Treat all losses as negative.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected monetary value of buying the insurance?</li>
+<li>What is the expected monetary value of declining the insurance?</li>
+</ol></li>
+<li><p>Suppose you play poker with five of your friends every week, but you’re not very good. For every week you win, there are eight weeks where you lose. You don’t play for real money though, so it’s usually no big deal.</p>
+<p>But next week your friends want to have a real game where everyone puts in <span class="math inline">\(\$15\)</span>. The winner keeps all the money, everyone else loses their <span class="math inline">\(\$15\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected monetary value of playing next week?</li>
+</ol>
+<p>Now suppose you see a book that teaches people to improve their poker game. The book costs <span class="math inline">\(\$30\)</span>, but it will increase your odds of winning.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>How much would the book have to increase your odds of winning to make the expected value of buying it positive?</li>
+</ol></li>
+<li><p>Suppose you’ve accumulated enough loyalty points at your local drug store to trade them in for <span class="math inline">\(\$100\)</span> worth of merchandise.</p>
+<p>But the pharmacy offers you a second option. You can trade your points for an opportunity to join a lottery along with all the other customers who’ve accumulated the same number of points. The lottery will have one randomly selected winner, and the prize is <span class="math inline">\(\$10,000\)</span> worth of merchandise. There would be <span class="math inline">\(300\)</span> people in the lottery (including you).</p>
+<p>Treat losing the lottery as a monetary loss: <span class="math inline">\(-\$100\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected monetary value of joining the lottery?</li>
+<li>How small would the lottery need to be for it to be a fair trade for your points? In other words: how few people would there need to be in the lottery (including you) for it to have the same expected value as just trading your points for <span class="math inline">\(\$100\)</span> of merchandise?</li>
+</ol></li>
+<li><p>Consider the following game: I’m going to flip a fair coin up to three times. If it comes up heads on the first toss, the game is over and you win <span class="math inline">\(\$2\)</span>. If it comes up heads for the first time on the second toss, you win <span class="math inline">\(\$40\)</span> and the game is over. If the first heads comes up on the third toss, you win <span class="math inline">\(\$800\)</span> and the game is over. If it comes up tails every time, you have to pay me <span class="math inline">\(\$x\)</span>. What does <span class="math inline">\(x\)</span> have to be to make the game fair.</p></li>
+<li><p>Consider the following game. I’m going to roll a fair die up to two times. If it comes up 1 on the first roll you win $<span class="math inline">\(x\)</span> and the game is over. Otherwise, I roll it again. If it comes up 2 on the second roll, you win $<span class="math inline">\(6x\)</span> and the game is over. Otherwise you pay me $6 and the game is over. What does <span class="math inline">\(x\)</span> have to be for this game to be fair?</p></li>
+<li><p>Consider the following game.</p>
+<p>I draw a card from a fair deck. If it’s a <span class="math inline">\(2\)</span> or <span class="math inline">\(3\)</span>, you pay me <span class="math inline">\(\$x\)</span>
+times the face value: <span class="math inline">\(\$2x\)</span> if it’s a <span class="math inline">\(2\)</span>, <span class="math inline">\(\$3x\)</span> if it’s a <span class="math inline">\(3\)</span>.</p>
+<p>If the first card is neither a <span class="math inline">\(2\)</span> nor a <span class="math inline">\(3\)</span>, I draw a second card. If
+it’s a <span class="math inline">\(7\)</span>, you win <span class="math inline">\(\$7x\)</span>. Otherwise you pay me <span class="math inline">\(\$1\)</span> and the game is
+over.</p>
+<p>What does <span class="math inline">\(x\)</span> have to be for this game to be fair?</p></li>
+<li><p>Suppose there are three urns, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span>. Each urn has <span class="math inline">\(100\)</span> marbles: some are black, the rest are white. You don’t know how many black marbles there are in each urn. But you do know two things:</p>
+<ul>
+<li><span class="math inline">\(B\)</span> has twice as many black marbles as <span class="math inline">\(A\)</span>, and <span class="math inline">\(C\)</span> has twice as many black marbles as <span class="math inline">\(B\)</span>.</li>
+<li><span class="math inline">\(\$1\)</span> is a fair price for the following game. I pick an urn at random and draw a marble at random. If I pick a black marble from urn <span class="math inline">\(A\)</span> you win <span class="math inline">\(\$100\)</span>. If I pick a black marble from urn <span class="math inline">\(B\)</span> you win <span class="math inline">\(\$50\)</span>. If I pick a black marble from urn <span class="math inline">\(C\)</span>, you win <span class="math inline">\(\$25\)</span>. Otherwise you win nothing.</li>
+</ul>
+<p>How many black marbles are there in urn <span class="math inline">\(A\)</span>?</p></li>
+<li><p>You’re on a game show where there are three closed doors. One of the doors has a large cash prize behind it, though you don’t know how much exactly. The other two doors have nothing. You have two options:</p>
+<ul>
+<li>Option <span class="math inline">\(A\)</span>: Choose a door at random and keep whatever you find, if anything.</li>
+<li>Option <span class="math inline">\(B\)</span>: First ask the host to open one of the doors with nothing behind it. Then choose one of the remaining doors at random. The catch is that now you only get to keep <em>half</em> of what you find, if anything.</li>
+</ul>
+<p>Which option has higher expected value? Justify your answer.</p>
+<p>Hint: first calculate the expected value of each option if the cash prize is <span class="math inline">\(\$100\)</span>. Then do the same calculations for a prize of <span class="math inline">\(\$1,000\)</span>. Then explain how to generalize this reasoning to any cash prize.</p></li>
+<li><p>Some workplaces hold a weekly lottery. Suppose there are 30 people in your workplace lottery, and each person pays in $5 every Monday. A finalist is chosen at random every Friday, for three weeks. Then, on the fourth Friday, one of the three finalists from the previous three weeks is chosen at random. That person gets all the prize money.</p>
+<p>What is the expected value of being in this lottery? Explain the reasoning behind your answer.</p>
+<p>Tip: it’s possible to answer this question without doing any calculations.</p></li>
+<li><p>Prove that paying the fair price for an option always results in expected value of <span class="math inline">\(\$0\)</span>. In other words, if <span class="math inline">\(E(A) = \$x\)</span>, then <span class="math inline">\(E(\mbox{Pay } \$x \mbox{ for } A) = \$0\)</span>.</p></li>
+<li><p>Prove that if <span class="math inline">\(A\)</span> dominates <span class="math inline">\(B\)</span>, then <span class="math inline">\(A\)</span> has higher expected value: <span class="math inline">\(E(A) &gt; E(B)\)</span>.</p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="probability-induction.html"><button class="btn btn-default">Previous</button></a>
+<a href="utility.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

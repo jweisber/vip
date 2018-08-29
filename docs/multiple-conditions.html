@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="multiple-conditions" class="section level1">
+<h1><span class="header-section-number">9</span> Multiple Conditions</h1>
+<p><span class="newthought">We</span> often need to account for multiple pieces of evidence. More than one witness testifies about the colour of a taxicab; more than one person responds to our poll about an upcoming election; etc.</p>
+<p>How do we a calculate conditional probability when there are multiple conditions? In other words, how do we handle quantities of the form <span class="math inline">\(\p(A \given B_1 \wedge B_2 \wedge \ldots)\)</span>?</p>
+<div id="multiple-draws" class="section level2">
+<h2><span class="header-section-number">9.1</span> Multiple Draws</h2>
+<p><span class="newthought">Imagine</span> you’re faced with another one of our mystery urns. There are two equally likely possibilities:
+<span class="math display">\[
+  \begin{aligned}
+    A      &amp;: \mbox{The urn contains $70$ black marbles, $30$ white marbles.}\\
+    \neg A &amp;: \mbox{The urn contains $20$ black marbles, $80$ white marbles.}\\
+  \end{aligned}
+\]</span>
+Now suppose you draw a marble at random and it’s black. You put it back, give the urn a good shake, and then draw another: black again. What’s the probability the urn has <span class="math inline">\(70\)</span> black marbles?</p>
+<p>We need to calculate <span class="math inline">\(\p(A \given B_1 \wedge B_2)\)</span>, the probability of <span class="math inline">\(A\)</span> given that the first and second draws were both black. We already know how to do this calculation for one draw, <span class="math inline">\(\p(A \given B_1)\)</span>. We use Bayes’ theorem to get:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1) &amp;= \frac{\p(B_1 \given A)\p(A)}{\p(B_1 \given A) \p(A) + \p(B_1 \given \neg A) \p(\neg A)} \\
+      &amp;= \frac{(70/100)(1/2)}{(70/100)(1/2) + (20/100)(1/2)}\\
+      &amp;= 7/9.
+  \end{aligned}
+\]</span></p>
+<p>But for two draws, Bayes’ theorem gives us:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1 \wedge B_2) &amp;= \frac{\p(B_1 \wedge B_2 \given A)\p(A)}{\p(B_1 \wedge B_2 \given A) \p(A) + \p(B_1 \wedge B_2 \given \neg A) \p(\neg A)}.
+  \end{aligned}
+\]</span>
+To fill in the values on the right hand side, we need to know these quantities:</p>
+<ul>
+<li><span class="math inline">\(\p(B_1 \wedge B_2 \given A)\)</span>,</li>
+<li><span class="math inline">\(\p(B_1 \wedge B_2 \given \neg A)\)</span>.</li>
+</ul>
+<p>To get the first quantity, remember that we replaced the first marble before doing the second draw. So, given <span class="math inline">\(A\)</span>, the second draw is independent of the first. There are still <span class="math inline">\(70\)</span> black marbles out of <span class="math inline">\(100\)</span> on the second draw, so the chance of black on the second draw is still <span class="math inline">\(70/100\)</span>. In other words:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B_1 \wedge B_2 \given A) &amp;= \p(B_1 \given A) \p(B_2 \given A)\\
+      &amp;= (70/100)^2.
+  \end{aligned}
+\]</span>
+The same reasoning applies given <span class="math inline">\(\neg A\)</span>, too. Except here the chance of black on each draw is <span class="math inline">\(20/100\)</span>. So:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B_1 \wedge B_2 \given \neg A) &amp;= \p(B_1 \given A) \p(B_2 \given \neg A)\\
+      &amp;= (20/100)^2.
+  \end{aligned}
+\]</span></p>
+<p>Returning to Bayes’ theorem, we can now finish the calculation:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1 \wedge B_2) &amp;= \frac{\p(B_1 \wedge B_2 \given A)\p(A)}{\p(B_1 \wedge B_2 \given A) \p(A) + \p(B_1 \wedge B_2 \given \neg A) \p(\neg A)} \\ 
+    &amp;= \frac{(70/100)^2(1/2)}{(70/100)^2(1/2) + (20/100)^2(1/2)}\\
+    &amp;= 49/53.
+  \end{aligned}
+\]</span></p>
+<p><span class="newthought">The</span> same solution can also be captured in a probability tree. The tree will have an extra stage now, because there’s a second draw. And it will have many more leaves, but luckily we can ignore most of them. We just need to worry about the two leaves where both draws have come up black. And we only need to fill in the probabilities along the paths that lead to those two leaves. The result is Figure <a href="multiple-conditions.html#fig:twodrawsreplacement">9.1</a>.</p>
+<div class="figure"><span id="fig:twodrawsreplacement"></span>
+<p class="caption marginnote shownote">
+Figure 9.1: Tree diagram for two draws with replacement
+</p>
+<img src="_main_files/figure-html/twodrawsreplacement-1.png" alt="Tree diagram for two draws with replacement" width="672"  />
+</div>
+<p>So <span class="math inline">\(\p(A \given B_1 \wedge B_2) = 0.245 / (0.245 + 0.2)\)</span>, which is the same as <span class="math inline">\(49/53\)</span>, the answer we got with Bayes’ theorem.</p>
+<p><span class="newthought">You</span> might be able to guess now what would happen after three black draws. Instead of getting squared probabilities in Bayes’ theorem, we’d get cubed probabilities. And using the same logic, we could keep going. We could use Bayes’ theorem to calculate <span class="math inline">\(\p(A \given B_1 \wedge \ldots \wedge B_n)\)</span> for as many draws <span class="math inline">\(n\)</span> as you like.</p>
+</div>
+<div id="multiple-witnesses" class="section level2">
+<h2><span class="header-section-number">9.2</span> Multiple Witnesses</h2>
+<p><span class="newthought">Let’s try</span> a different sort of problem with multiple conditions. Recall the taxicab problem from <a href="chbayes.html#chbayes">Chapter 8</a>:</p>
+
+<div class="problem">
+<p>A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. You are given the following data:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(85\%\)</span> of the cabs in the city are Green and <span class="math inline">\(15\%\)</span> are Blue.</li>
+<li>A witness identified the cab as Blue. The court tested the reliability of the witness under the same circumstances that existed on the night of the accident and concluded that the witness correctly identified each one of the two colors <span class="math inline">\(80\%\)</span> of the time and failed <span class="math inline">\(20\%\)</span> of the time.</li>
+</ol>
+What is the probability that the cab involved in the accident was blue rather green?
+</div>
+
+<p>We saw it’s only about <span class="math inline">\(41\%\)</span> likely the cab was really blue, even with the witness’ testimony. But what if there had been two witnesses, both saying the cab was blue?</p>
+<p>Let’s use Bayes’ theorem again:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B \given W_1 \wedge W_2) &amp;= \frac{\p(B)\p(W_1 \wedge W_2 \given B)}{\p(W_1 \wedge W_2)}.
+  \end{aligned}
+\]</span>
+We have one of the terms here already: <span class="math inline">\(\p(B) = 15/100\)</span>. What about the other two:</p>
+<ul>
+<li><span class="math inline">\(\p(W_1 \wedge W_2 \given B)\)</span>,</li>
+<li><span class="math inline">\(\p(W_1 \wedge W_2)\)</span>.</li>
+</ul>
+<p>Let’s make things easy on ourselves by assuming our two witnesses are reporting independently. They don’t talk to each other, or influence one another in any way. They’re only reporting what they saw (or think they saw). Then we can “factor” these probabilities like we did when sampling with replacement:
+<span class="math display">\[
+  \begin{aligned}
+    \p(W_1 \wedge W_2 \given B) &amp;= \p(W_1 \given B) \p(W_2 \given B)\\
+                                &amp;= (80/100)^2.
+  \end{aligned}
+\]</span>
+And for the denominator we use the Law of Total Probability:
+<span class="math display">\[
+  \begin{aligned}
+    \p(W_1 \wedge W_2) &amp;= \p(W_1 \wedge W_2 \given B)\p(B) + 
+                          \p(W_1 \wedge W_2 \given \neg B)\p(\neg B)\\
+                       &amp;= (80/100)^2(15/100) + (20/100)^2(85/100)\\
+                       &amp;= 96/1000 + 34/1000\\
+                       &amp;= 13/100.
+  \end{aligned}
+\]</span></p>
+<p>Now we can return to Bayes’ theorem to finish the problem:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B \given W_1 \wedge W_2) &amp;= \frac{(15/100)(80/100)^2}{13/100}\\
+                                &amp;= 96/130\\
+                                &amp;\approx .74.
+  \end{aligned}
+\]</span>
+So, with two witnesses independently agreeing that the cab was blue, the probability goes up from less than <span class="math inline">\(1/2\)</span> to almost <span class="math inline">\(3/4\)</span>.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:twowitnesstree"></span>
+<img src="_main_files/figure-html/twowitnesstree-1.png" alt="Tree diagram for the two-witness taxicab problem" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 9.2: Tree diagram for the two-witness taxicab problem<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">We</span> can use a tree here too, similar to the one we made when sampling two black marbles with replacement. As before, we only need to worry about the <span class="math inline">\(W_1 \wedge W_2\)</span> leaves, the ones where both witnesses say the cab was blue. The result is Figure <a href="multiple-conditions.html#fig:twowitnesstree">9.2</a>, which tells us that <span class="math inline">\(\p(B \given W_1 \wedge W_2) = 0.096 / (0.096 + 0.034)\)</span>, which is approximately <span class="math inline">\(0.74\)</span>.</p>
+</div>
+<div id="without-replacement" class="section level2">
+<h2><span class="header-section-number">9.3</span> Without Replacement</h2>
+<p><span class="newthought">The</span> problems we’ve done so far were simplified by assuming independence. We sampled with replacement in the urn problem, and we assumed our two witnesses were independently reporting what they saw in the taxicab problem. What about when independence doesn’t hold?</p>
+<p>Let’s go back to our urn problem, but this time suppose we don’t replace the marble after the first draw. How do we calculate <span class="math inline">\(\p(A \given B_1 \wedge B_2)\)</span> then?</p>
+<p>We’re still going to start with Bayes’ theorem:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1 \wedge B_2) &amp;= \frac{\p(B_1 \wedge B_2 \given A)\p(A)}{\p(B_1 \wedge B_2 \given A) \p(A) + \p(B_1 \wedge B_2 \given \neg A) \p(\neg A)}.
+  \end{aligned}
+\]</span>
+But to calculate terms like <span class="math inline">\(\p(B_1 \wedge B_2 \given A)\)</span> now, we need to think things through in two steps.</p>
+<p>We know the first draw has a <span class="math inline">\(70/100\)</span> chance of coming up black if <span class="math inline">\(A\)</span> is true:
+<span class="math display">\[ \p(B_1 \given A) = 70/100. \]</span>
+And once the first draw has come up black, if <span class="math inline">\(A\)</span> is true then there are 69 black balls remaining and 30 white. So:
+<span class="math display">\[ \p(B_2 \given B_1 \wedge A) = 69/99. \]</span>
+So instead of multiplying <span class="math inline">\(70/100\)</span> by itself, we’re multiplying <span class="math inline">\(70/100\)</span> by <em>almost</em> <span class="math inline">\(70/100\)</span>:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B_1 \wedge B_2 \given A) &amp;= (70/100)(69/99)\\
+       &amp;= 161/300.
+  \end{aligned}
+\]</span></p>
+<p>Using similar reasoning for the possibility that <span class="math inline">\(\neg A\)</span> instead, we can calculate
+<span class="math display">\[
+  \begin{aligned}
+    \p(B_1 \wedge B_2 \given \neg A) &amp;= (20/100)(19/99)\\
+       &amp;= 19/495.
+  \end{aligned}
+\]</span></p>
+<p>Returning to Bayes’ theorem to finish the calculation:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1 \wedge B_2) &amp;= \frac{\p(B_1 \wedge B_2 \given A)\p(A)}{\p(B_1 \wedge B_2 \given A) \p(A) + \p(B_1 \wedge B_2 \given \neg A) \p(\neg A)} \\
+      &amp;= \frac{(161/300)(1/2)}{(161/300)(1/2) + (19/495)(1/2)} \\
+      &amp;= 5313/5693 \\
+      &amp;\approx .93. 
+  \end{aligned}
+\]</span>
+Notice how similar this answer is to the <span class="math inline">\(.92\)</span> we got when sampling with replacement. With so many black and white marbles in the urn, taking one out doesn’t make much difference. The second draw is almost the same as the first, so the final answer isn’t much affected.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:twodrawsnoreplacement"></span>
+<img src="_main_files/figure-html/twodrawsnoreplacement-1.png" alt="Tree diagram for two draws with replacement, values rounded" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 9.3: Tree diagram for two draws with replacement, values rounded<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">The</span> tree diagram for this problem will also be similar to the with-replacement version. The key difference is the probabilities at the last stage of the tree. Without independence, the probability of a <span class="math inline">\(B_2\)</span> branch is affected by the <span class="math inline">\(B_1\)</span> that precedes it. The result is Figure <a href="multiple-conditions.html#fig:twodrawsnoreplacement">9.3</a>, though note that some values are rounded. Still we find that:
+<span class="math display">\[
+  \begin{aligned}
+     \p(A \given B_1 \wedge B_2) &amp;\approx \frac{ 0.2439 }{ 0.2439 + 0.0192 } \\
+                                 &amp;\approx 0.93.
+  \end{aligned}
+\]</span></p>
+</div>
+<div id="multiplying-conditional-probabilities" class="section level2">
+<h2><span class="header-section-number">9.4</span> Multiplying Conditional Probabilities</h2>
+<p><span class="newthought">The</span> calculation we just did relied on a new rule, which we should make explicit. Start by recalling a familiar rule:</p>
+<dl>
+<dt>The General Multiplication Rule</dt>
+<dd><p><span class="math inline">\(\p(A \wedge B) = \p(A \given B) \p(B).\)</span></p>
+</dd>
+</dl>
+<p>Our new rule applies the same idea to situations where some proposition <span class="math inline">\(C\)</span> is taken as a given.</p>
+<dl>
+<dt>The General Multiplication Rule (Conditional Version)</dt>
+<dd><p><span class="math inline">\(\p(A \wedge B \given C) = \p(A \given B \wedge C) \p(B \given C).\)</span></p>
+</dd>
+</dl>
+<p>In a way, the new rule isn’t really new. We just have to realize that the probabilities we get when we take a condition <span class="math inline">\(C\)</span> as given are still probabilities. They obey all the same rules as unconditional probabilities, and this includes the General Multiplication Rule.</p>
+<p>Another example which illustrates this point is the Negation Rule. The following conditional version is also valid:</p>
+<dl>
+<dt>The Negation Rule (Conditional Version)</dt>
+<dd><p><span class="math inline">\(\p(\neg A \given C) = 1 - \p(A \given C).\)</span></p>
+</dd>
+</dl>
+<p>We could go through all the rules of probability we’ve learned and write out the conditional version for each one. But we’ve already got enough rules and equations to keep track of. So let’s just remember this mantra instead:</p>
+<div class="info">
+<p>
+Conditional probabilities are probabilities.
+</p>
+</div>
+<p>So if we have a rule of probability, the same rule will hold if we add a condition <span class="math inline">\(C\)</span> into each of the <span class="math inline">\(\p(\ldots)\)</span> terms.</p>
+</div>
+<div id="summary-2" class="section level2">
+<h2><span class="header-section-number">9.5</span> Summary</h2>
+<p><span class="newthought">We’ve learned two strategies</span> for calculating conditional probabilities with multiple conditions.</p>
+<p>The first strategy is easier, but it only works when the conditions are appropriately independent. Like when we sample with replacement, or when two witnesses independently report what they saw.</p>
+<p>In this kind of case, we first use Bayes’ theorem, and then “factor” the terms:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1 \wedge B_2) &amp;= 
+      \frac{\p(B_1 \wedge B_2 \given A)\p(A)}{%
+            \p(B_1 \wedge B_2 \given A)\p(A) +%
+              \p(B_1 \wedge B_2 \given \neg A)\p(\neg A)}\\
+      &amp;= \frac{\p(B_1 \given A)\p(B_2 \given A)\p(A)}{%
+                \p(B_1 \given A)\p(B_2 \given A)\p(A) +%
+                  \p(B_1 \given \neg A)\p(B_2 \given \neg A)\p(\neg A)}\\
+      &amp;= \frac{(\p(B_1 \given A))^2\p(A)}{%
+                (\p(B_1 \given A))^2\p(A) +%
+                  (\p(B_1 \given \neg A))^2\p(\neg A)}.
+  \end{aligned}
+\]</span></p>
+<p>Our second strategy is a little more difficult. But it works even when the conditions are <strong>not</strong> independent. We still start with Bayes’ theorem. But then we apply the conditional form of the General Multiplication Rule:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B_1 \wedge B_2) &amp;= 
+      \frac{\p(B_1 \wedge B_2 \given A)\p(A)}{%
+            \p(B_1 \wedge B_2 \given A)\p(A) +%
+              \p(B_1 \wedge B_2 \given \neg A)\p(\neg A)}\\
+      &amp;= \frac{\p(B_2 \given B_1 \wedge A)\p(B_1 \given A)\p(A)}{%
+                \p(B_2 \given B_1 \wedge A)\p(B_1 \given A)\p(A) +%
+                  \p(B_2 \given B_1 \wedge \neg A)\p(B_1 \given \neg A)\p(\neg A)}.
+  \end{aligned}
+\]</span></p>
+<p>These are some pretty hairy formulas, so memorizing them probably isn’t a good idea. It’s better to understand how they flow from Bayes’ theorem or a tree diagram.</p>
+</div>
+<div id="exercises-7" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Recall the following problem from <a href="chbayes.html#bayes-theorem">Chapter 8</a>.</p>
+<p>Willy Wonka Co. makes two kinds of boxes of chocolates. The “wonk box” has four caramel chocolates and six regular chocolates. The “zonk box” has six caramel chocolates, two regular chocolates, and two mint chocolates. A third of their boxes are wonk boxes, the rest are zonk boxes.</p>
+<p>They don’t mark the boxes. The only way to tell what kind of box you’ve bought is by trying the chocolates inside. In fact, all the chocolates look the same; you can only tell the difference by tasting them.</p>
+<p>Previously you calculated the probability a randomly chosen box is a wonk box given that a chocolate randomly selected from it is caramel. This time, suppose you randomly select two chocolates.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability it’s a wonk box given that both chocolates are caramel?</li>
+<li>What is the probability it’s a wonk box given that the first is caramel and the second is regular?</li>
+<li>What is the probability it’s a wonk box given that the first is regular and the second is caramel?</li>
+</ol></li>
+<li><p>Recall the following problem from <a href="chbayes.html#bayes-theorem">Chapter 8</a>.</p>
+<p>A room contains four urns. Three of them are Type X, one is Type Y.</p>
+<ul>
+<li>The Type X urns each contain <span class="math inline">\(3\)</span> black marbles, <span class="math inline">\(2\)</span> white marbles.</li>
+<li>The Type Y urn contains <span class="math inline">\(1\)</span> black marble, <span class="math inline">\(4\)</span> white marbles.</li>
+</ul>
+<p>You are going to pick an urn at random and start drawing marbles from it at random <em>without</em> replacement.</p>
+<p>Previously you calculated the probability the urn is Type X given that the first draw is black.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability the urn is Type X if the first draw is black and the second is white?</li>
+<li>What is the probability the urn is Type X if the first draw is white and the second is black?</li>
+<li>What is the probability the third draw will be black, if the first draw is black and the second is white?</li>
+</ol></li>
+<li><p>The order in which conditions are given doesn’t matter. More precisely, the following equation always holds:</p>
+<p><span class="math display">\[ \p(A \given B \wedge C) = \p(A \given C \wedge B).\]</span></p>
+<p>Use the rules of probability to prove that it always holds.</p></li>
+<li><p>The order in which things happen often matters. If the light was red but is now green, the intersection is probably safe to drive through. But if the light was green and is now red, it’s probably not safe.</p>
+<p>We just saw, though, that the order in which conditions are given doesn’t make any difference to the probability.</p>
+<p>Explain why these two observations do not conflict.</p></li>
+<li><p>Above we observed that <span class="math inline">\(\p(\neg A \given C) = 1 - \p(A \given C)\)</span>. Prove that this equation holds. Hint: start with the definition of conditional probability, and then recall that <span class="math inline">\(1 = \p(C) / \p(C)\)</span>.</p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="chbayes.html"><button class="btn btn-default">Previous</button></a>
+<a href="probability-induction.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

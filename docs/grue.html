@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="grue" class="section level1">
+<h1><span class="header-section-number">C</span> The Grue Paradox</h1>
+<p><span class="newthought">In</span> <a href="logic.html#indargs">Section</a> <a href="logic.html#indargs">2.5</a> we noticed that many inductive arguments follow this pattern:</p>
+<div class="argument">
+<p>
+All observed instances of <span class="math inline"><span class="math inline">\(X\)</span></span> have been <span class="math inline"><span class="math inline">\(Y\)</span></span>.<br />
+Therefore, all instances of <span class="math inline"><span class="math inline">\(X\)</span></span> are <span class="math inline"><span class="math inline">\(Y\)</span></span>.
+</p>
+</div>
+<p>All observed ravens are black, so we expect all ravens to be black. All observed emeralds are green, so we expect all emeralds to be green. And so on.</p>
+<p>So it seems like a fundamental principle of scientific inquiry that we expect the unobserved to resemble the observed. Philosophers call this <em>The Principle of Induction</em>.</p>
+<div id="a-gruesome-concept" class="section level2 unnumbered">
+<h2>A Gruesome Concept</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-167"></span>
+<img src="img/goodman.png" alt="Nelson Goodman ($1906$--$1988$) discovered the grue paradox in the $1940$s and '$50$s." width="111"  />
+<!--
+<p class="caption marginnote">-->Figure C.1: Nelson Goodman (<span class="math inline">\(1906\)</span>–<span class="math inline">\(1988\)</span>) discovered the grue paradox in the <span class="math inline">\(1940\)</span>s and ’<span class="math inline">\(50\)</span>s.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">But</span> in the <span class="math inline">\(1940\)</span>s, Nelson Goodman discovered a problem with the Principle of Induction. To illustrate the problem he invented a very curious concept, <em>grue</em>.</p>
+<p>There are two ways for an object to be grue. Some green things are grue, but it depends on when we first encounter them. If our first observation of a green object happens before the year <span class="math inline">\(2050\)</span>, then it’s grue. So the Statue of Liberty is grue: it’s a green object that was first observed before the year <span class="math inline">\(2050\)</span> (<em>long</em> before).</p>
+<p>But if our first encounter with a green object happens in the year <span class="math inline">\(2050\)</span> or later, then it’s not grue. The same goes if we never observe it. Objects on the far side of the universe that we’ll never see, or buried deep underground, are not grue.</p>
+<p>There is a second way for an object to be grue: some blue objects are grue. Not the ones observed before <span class="math inline">\(2050\)</span>, though. Instead it’s the ones that <em>aren’t</em> observed before <span class="math inline">\(2050\)</span>. If a blue object is observed for the first time <em>after</em> <span class="math inline">\(2049\)</span>, or it’s never observed at all, then it’s grue. So blue sapphires that won’t be mined before the year <span class="math inline">\(2050\)</span> are grue, for example.</p>
+<p>As usual, it helps to have a diagram:</p>
+<div class="figure"><span id="fig:unnamed-chunk-168"></span>
+<p class="caption marginnote shownote">
+Figure C.2: The definition of grue
+</p>
+<img src="_main_files/figure-html/unnamed-chunk-168-1.png" alt="The definition of grue" width="672"  />
+</div>
+<p>Here is the formal definition of grue:</p>
+<dl>
+<dt>Grue</dt>
+<dd><p>An object is <em>grue</em> if either (a) it is green and first observed before the year <span class="math inline">\(2050\)</span>, or (b) it’s blue and not observed before <span class="math inline">\(2050\)</span>.</p>
+</dd>
+</dl>
+<p>To test your understanding, see if you can explain why each of the following are examples of grue things: the <span class="math inline">\(\$20\)</span> bill in my pocket, Kermit the Frog, the first sapphire to be mined in <span class="math inline">\(2050\)</span>, and blue planets on the far side of the universe.</p>
+<p>Then see if you can explain why these things aren’t grue: fire engines, the <a href="https://en.wikipedia.org/wiki/Star_of_India_(gem)">Star of India</a>, and the first <span class="math inline">\(\$20\)</span> bill to be printed in <span class="math inline">\(2050\)</span>.</p>
+<p>Once you’ve got all those down, try this question: do grue objects change colour in the year <span class="math inline">\(2050\)</span>? It’s a common mistake to think they do.</p>
+<p>But no, grue objects don’t change colour. The Statue of Liberty is green and it always will be (let’s assume). So it’s grue, and always will be, because it’s a green thing that was first observed before the year <span class="math inline">\(2050\)</span>. Part (a) of the definition of grue guarantees that.</p>
+<p>The only way time comes into it is in determining which green things are grue, and which blue things. If a green thing is first observed before <span class="math inline">\(2050\)</span>, then it’s grue, ever and always. Likewise if a blue thing is <em>not</em> first observed before <span class="math inline">\(2050\)</span>. Then it’s grue—and it always has been!</p>
+</div>
+<div id="the-paradox" class="section level2 unnumbered">
+<h2>The Paradox</h2>
+<p><span class="newthought">Now</span> ask yourself, have you ever seen a grue emerald? You probably have. In fact, every emerald everyone’s ever seen has been grue.</p>
+<p>Why? Because they’re all green, and they’ve all been observed before the year <span class="math inline">\(2050\)</span>. So they’re all grue the first way—they all satisfy part (a) of the definition. (Notice it’s an either/or definition, so you only have to satisfy one of the two parts to be grue.)</p>
+<p>So all the emeralds we’ve ever seen have been grue. Let’s apply the Principle of Induction then:</p>
+<div class="argument">
+<p>
+All observed emeralds have been grue.<br />
+Therefore <em>all</em> emeralds are grue.
+</p>
+</div>
+<p>But if all emeralds are grue, then the first emeralds to be mined in <span class="math inline">\(2050\)</span> will be grue. And that means they’ll be blue! Because they won’t have been observed before <span class="math inline">\(2050\)</span>, so the only way for them to be grue is to be blue.</p>
+<p>We’ve reached the absurd conclusion that there are blue emeralds out there, just waiting to be pulled out of the earth. Something has gone off the rails here, but what?</p>
+<p>Here’s another way to put the challenge. We have two “patterns” in our observed data. The emeralds we’ve seen are uniformly green, but they’re also uniformly grue. We can’t project both these patterns into the future, though. They’ll contradict each other starting in <span class="math inline">\(2050\)</span>.</p>
+<p>Now, obviously, common sense says the green pattern is the real one. The grue “pattern” is bogus, and no one but a philosopher would even bother thinking about it. But <em>why</em> is it bogus? What’s so special about green?</p>
+<p>Apparently the Principle of Induction has a huge hole in it! It says to extrapolate from observed patterns. But <em>which</em> patterns?</p>
+</div>
+<div id="grue-artificial-intelligence" class="section level2 unnumbered">
+<h2>Grue &amp; Artificial Intelligence</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:curvefitting"></span>
+<img src="_main_files/figure-html/curvefitting-1.png" alt="The same set of points interpreted two different ways" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure C.3: The same set of points interpreted two different ways<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Patterns are cheap, as any data scientist will tell you. Given a bunch of data points in an <em>xy</em>-plane, there are lots of ways to connect the dots. Even if they all lie on a straight line, you could draw an oscillating curve that passes through each point (Figure <a href="grue.html#fig:curvefitting">C.3</a>). You can probably think of even sillier curves that will fit all the points.</p>
+<p>Designing a computer program that will know which patterns to use and which to ignore is a big part of what machine learning experts do. And it’s one reason humans are still essential to designing artificial intelligence. Thanks to our experience, and our genetic inheritance, we have <em>lots</em> of information about which patterns are likely to continue, and which are bogus, like grue.</p>
+<p>But how do we pass all that wisdom on to the machines? How do we teach them the difference between green and grue, so that they can take it from here and we can all go on permanent vacation?</p>
+</div>
+<div id="disjunctivitis" class="section level2 unnumbered">
+<h2>Disjunctivitis</h2>
+<p><span class="newthought">Here’s one</span> very natural answer. The problem with grue is that it’s <em>disjunctive</em>: it’s defined using either/or. It suffers from what we might call “disjunctivitis”.</p>
+<p>But the beauty of Goodman’s puzzle is the neat way it exposes the flaw in this answer. It allows us to make ‘green’ the disjunctive concept instead! How? We start by building grue a friend, a concept to fill in the missing spaces in our original diagram. We’ll call it <em>bleen</em>:</p>
+<div class="figure"><span id="fig:unnamed-chunk-170"></span>
+<p class="caption marginnote shownote">
+Figure C.4: Defining bleen, a counterpart to grue
+</p>
+<img src="_main_files/figure-html/unnamed-chunk-170-1.png" alt="Defining bleen, a counterpart to grue" width="672"  />
+</div>
+<p>Now we can define green in terms of grue and bleen:</p>
+<dl>
+<dt>Green</dt>
+<dd><p>An object is <em>green</em> if either (a) it’s grue and first observed before the year <span class="math inline">\(2050\)</span>, or (b) it’s bleen and not observed before <span class="math inline">\(2050\)</span>.</p>
+</dd>
+</dl>
+<p>Now maybe you’re thinking: you <em>could</em> define green that way, but that’s not how it’s <em>actually</em> defined. In reality, we already understand the concept of green, and we have to learn the concept of grue from its disjunctive definition.</p>
+<p>The problem is, that’s just a fact about <em>us humans</em>, not about the concepts grue and green. That’s just the way we <em>homo sapiens</em> happen to be built (or maybe socialized, or both).</p>
+<p>Some bizarre species of alien could grow up thinking in grue/bleen terms instead. And when they landed on Earth, we’d have to explain our green/blue language to them using an either/or definition. Then <em>they</em> would be looking at <em>us</em> thinking: you guys have a very weird, disjunctive way of thinking!</p>
+<p>What could we say to them to establish the superiority of our way of thinking? It’s been more than $7$0 years since Goodman first posed this question. Yet no answer has emerged as the clear and decisively correct one.</p>
+</div>
+<div id="time-dependence" class="section level2 unnumbered">
+<h2>Time Dependence</h2>
+<p><span class="newthought">Another</span> natural answer to Goodman’s challenge is to say that grue is defective because it’s time-dependent. It means different things depending on the time an object is first observed.</p>
+<p>But the same reversal of fortunes that toppled the “disjunctivitis” diagnosis happens here. We can define green in terms of grue and bleen. And when we do, it’s green that’s the time-dependent concept, not grue.</p>
+<p>So we’re left in the same spot. We need some way of showing that the “true” order of definition is the one we’re used to. By what criterion can we say that green is more fundamental, more basic, than grue?</p>
+</div>
+<div id="the-moral" class="section level2 unnumbered">
+<h2>The Moral</h2>
+<p><label for="tufte-mn-35" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-35" class="margin-toggle"><span class="marginnote"><span style="display: block;"><a href="http://www.wi-phi.com/video/puzzle-grue"><img src="img/wiphi_grue.png" /></a> For another explanation of the grue puzzle, check out <a href="http://www.wi-phi.com/video/puzzle-grue">this excellent Wi-Phi video</a>.</span></span></p>
+<p><span class="newthought">Goodman’s puzzle</span> may seem just cute at first, a mere curiosity. But it is actually quite profound.</p>
+<p>In a way, the central question of this book is: what is the logic of science? What are the correct rules of scientific reasoning?</p>
+<p>The laws of probability seem like a good place to start. But that path led us to a dead end at the problem of priors in <a href="priors.html#priors">Chapter</a> <a href="priors.html#priors">18</a>. Perhaps then we could start with the Principle of Induction instead? But then we end up in another dead end, stopped by the grue paradox.</p>
+<p>Just as Bertrand’s paradox stops us from using the Principle of Indifference to answer the problem of priors, Goodman’s paradox stops us from using the Principle of Induction.</p>
+<p>There is even more to the similarity between these two paradoxes. Both paradoxes are problems of “language dependence”. Depending on what language we work in, rules like the Principle of Indifference and the Principle of Induction give different recommendations. If we apply the Principle of Indifference to length, we get one prior probability; if we apply it to area, we get another. If we apply the Principle of Induction to green, we expect all emeralds to be green; if we apply it to grue, we expect some to be blue.</p>
+<p>To this day, we do not have an answer to the question: which language is the right one to use, and why?</p>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="the-axioms-of-probability.html"><button class="btn btn-default">Previous</button></a>
+<a href="the-problem-of-induction.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

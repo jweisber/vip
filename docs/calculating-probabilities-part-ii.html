@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="calculating-probabilities-part-ii" class="section level1">
+<h1><span class="header-section-number">7</span> Calculating Probabilities, Part II</h1>
+<p><span class="newthought">We</span> learned rules for <span class="math inline">\(\vee\)</span> and for <span class="math inline">\(\wedge\)</span> back in <a href="calculating-probabilities.html#calculating-probabilities">Chapter 5</a>:</p>
+<dl>
+<dt>The Addition Rule</dt>
+<dd><p><span class="math inline">\(\p(A \vee B) = \p(A) + \p(B)\)</span> if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive.</p>
+</dd>
+<dt>The Multiplication Rule</dt>
+<dd><p><span class="math inline">\(\p(A \&amp; B) = \p(A) \times \p(B)\)</span> if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent.</p>
+</dd>
+</dl>
+<p>In this chapter we’ll learn new, more powerful rules for <span class="math inline">\(\vee\)</span> and <span class="math inline">\(\wedge\)</span>. But we’ll start with negation, a rule for calculating <span class="math inline">\(\p(\neg A)\)</span>.</p>
+<div id="the-negation-rule" class="section level2">
+<h2><span class="header-section-number">7.1</span> The Negation Rule</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-68"></span>
+<img src="_main_files/figure-html/unnamed-chunk-68-1.png" alt="The Negation Rule. $\p(\neg A) = 1 - \p(A)$." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 7.1: The Negation Rule. <span class="math inline">\(\p(\neg A) = 1 - \p(A)\)</span>.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>If there’s a 70% chance of rain, then there’s a 30% chance it won’t rain. In symbols, if <span class="math inline">\(\p(R) = .7\)</span> then <span class="math inline">\(\p(\neg R) = .3\)</span>. So the rule for <span class="math inline">\(\p(\neg A)\)</span> is:</p>
+<dl>
+<dt>The Negation Rule</dt>
+<dd><p><span class="math inline">\(\p(\neg A) = 1 - \p(A)\)</span>.</p>
+</dd>
+</dl>
+<p>In terms of an Euler diagram, the probability of <span class="math inline">\(\neg A\)</span> is the size of the red region. So <span class="math inline">\(\p(\neg A)\)</span> is <span class="math inline">\(1 - \p(A)\)</span>.</p>
+<p><span class="newthought">It’s important</span> to notice that this rule can be flipped around, to calculate the probability of a positive statement:
+<span class="math display">\[ 
+  \p(A) = 1 - \p(\neg A).
+\]</span>
+Sometimes we really want to know the probability of <span class="math inline">\(A\)</span>, <span class="math inline">\(\p(A)\)</span>, but it turns out to be much easier to calculate <span class="math inline">\(\p(\neg A)\)</span> first. Then we use this flipped version of the negation rule to get what we’re after.</p>
+</div>
+<div id="the-general-addition-rule" class="section level2">
+<h2><span class="header-section-number">7.2</span> The General Addition Rule</h2>
+<p><span class="newthought">The</span> Addition Rule for calculating <span class="math inline">\(\p(A \vee B)\)</span> depends on <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> being mutually exclusive. What if they’re not? Then we can use:</p>
+<dl>
+<dt>The General Addition Rule</dt>
+<dd><p><span class="math inline">\(\p(A \vee B) = \p(A) + \p(B) - \p(A \wedge B)\)</span>.</p>
+</dd>
+</dl>
+<p>This rule always applies, whether <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive or not.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-69"></span>
+<img src="_main_files/figure-html/unnamed-chunk-69-1.png" alt="The General Addition Rule in an Euler diagram." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 7.2: The General Addition Rule in an Euler diagram.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>To understand the rule, consider an Euler diagram where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not mutually exclusive. In terms of colour, the size of the <span class="math inline">\(A \vee B\)</span>-region is:
+<span class="math display">\[ 
+  \color{leftcolour}{\blacksquare}\color{black}{}
+    \,+\,
+  \color{middlecolour}{\blacksquare}\color{black}{}
+    \,+\,
+  \color{rightcolour}{\blacksquare}\color{black}{}.
+\]</span>
+Which is the same as:
+<span class="math display">\[
+  (\color{leftcolour}{\blacksquare}\color{black}{}
+    \,+\,
+  \color{middlecolour}{\blacksquare}\color{black}{})
+    \,+\, 
+  (\color{rightcolour}{\blacksquare}\color{black}{}
+    \,+\,
+  \color{middlecolour}{\blacksquare}\color{black}{}) 
+    \,-\,
+  \color{middlecolour}{\blacksquare}\color{black}{}.
+\]</span>
+In algebraic terms this is:
+<span class="math display">\[ \p(A) + \p(B) - \p(A \wedge B).\]</span></p>
+<p>To think of it another way, when we add <span class="math inline">\(\p(A) + \p(B)\)</span> to get the size of the <span class="math inline">\(A \vee B\)</span> region, we double-count the <span class="math inline">\(A \wedge B\)</span> region. So we have to subtract out <span class="math inline">\(\p(A \wedge B)\)</span> at the end.</p>
+<p><span class="newthought">What</span> if there is no <span class="math inline">\(A \wedge B\)</span> region? Then <span class="math inline">\(\p(A \wedge B) = 0\)</span>, so subtracting it at the end has no effect. Then we just have the old Addition Rule:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \vee B) &amp;= \p(A) + \p(B) - \p(A \wedge B)\\
+                 &amp;= \p(A) + \p(B) - 0\\
+                 &amp;= \p(A) + \p(B).\\
+  \end{aligned}
+\]</span>
+And this makes sense. If there is no <span class="math inline">\(A \wedge B\)</span> region, that means <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive. So the old Addition Rule applies.</p>
+<p>That’s why we call the new rule the <em>General</em> Addition Rule. It applies in general, even when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not mutually exclusive. And in the special case where they are mutually exclusive, it gives the same result as the Addition Rule we already learned.</p>
+<p><span class="newthought">A</span> tree diagram also works to explain the General Addition Rule. Consider Figure <a href="calculating-probabilities-part-ii.html#fig:gatree">7.3</a>, where we start with branches for <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span>, then subdivide into branches for <span class="math inline">\(B\)</span> and <span class="math inline">\(\neg B\)</span>.</p>
+<div class="figure"><span id="fig:gatree"></span>
+<p class="caption marginnote shownote">
+Figure 7.3: Tree diagram with the three <span class="math inline">\(A \vee B\)</span> leaves marked
+</p>
+<img src="_main_files/figure-html/gatree-1.png" alt="Tree diagram with the three $A \vee B$ leaves marked" width="672"  />
+</div>
+<p>There are three leaves where <span class="math inline">\(A \vee B\)</span> is true, marked with emoji. If we add <span class="math inline">\(\p(A) + \p(B)\)</span>, we’re adding the two leaves where <span class="math inline">\(A\)</span> is true (<img src="img/emoji_shades_small.png" width="17"  /> and <img src="img/emoji_hearts_small.png" width="17"  />) to the two leaves where <span class="math inline">\(B\)</span> is true (<img src="img/emoji_shades_small.png" width="17"  /> and <img src="img/emoji_nerd_small.png" width="17"  />). So we’ve double-counted the <span class="math inline">\(A \wedge B\)</span> leaf (<img src="img/emoji_shades_small.png" width="17"  />). To get <span class="math inline">\(\p(A \vee B)\)</span> then, we have to subtract one of those <span class="math inline">\(A \wedge B\)</span> leaves (<img src="img/emoji_shades_small.png" width="17"  />).</p>
+<p><span class="newthought">There</span> is a catch to the General Addition Rule. You need to know <span class="math inline">\(\p(A \wedge B)\)</span> in order to apply it. Sometimes that information is given to us. But when it’s not, we have to figure it out somehow. If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then it’s easy: <span class="math inline">\(\p(A \wedge B) = 0\)</span>. Or, if they’re independent, then we can calculate <span class="math inline">\(\p(A \wedge B) = \p(A) \times \p(B)\)</span>. But in other cases we have to turn elsewhere.</p>
+</div>
+<div id="the-general-multiplication-rule" class="section level2">
+<h2><span class="header-section-number">7.3</span> The General Multiplication Rule</h2>
+<p><span class="newthought">How</span> can we calculate <span class="math inline">\(\p(A \wedge B)\)</span> in general?</p>
+<dl>
+<dt>The General Multiplication Rule</dt>
+<dd><p><span class="math inline">\(\p(A \wedge B) = \p(A \given B) \p(B).\)</span></p>
+</dd>
+</dl>
+<p>The intuitive idea is, if you want to know how likely it is <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> will both turn out to be true, first ask yourself how likely <span class="math inline">\(A\)</span> is to be true <em>if</em> <span class="math inline">\(B\)</span> is true. Then weight the answer according to <span class="math inline">\(B\)</span>’s chances of being true.</p>
+<p>Notice, if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, then this rule just collapses into the familiar Multiplication Rule we already learned. If they’re independent, then <span class="math inline">\(\p(A \given B) = \p(A)\)</span> by definition. So substituting into the General Multiplication Rule gives:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \wedge B) &amp;= \p(A \given B) \p(B)\\
+                   &amp;= \p(A) \p(B).
+  \end{aligned}
+\]</span>
+Which is precisely the Multiplication Rule.</p>
+<p>So we now have two rules for <span class="math inline">\(\wedge\)</span>. The first one only applies when the two sides of the <span class="math inline">\(\wedge\)</span> are independent. The second applies whether they’re independent or not. The second rule ends up being the same as the first one when they are independent.</p>
+<p><span class="newthought">A</span> tree diagram helps us understand this rule too. Recall this problem from <a href="conditional-probability.html#conditional-probability">Chapter 6</a>, with two urns of coloured marbles:</p>
+<ul>
+<li>Urn X contains 3 black marbles, 1 white.</li>
+<li>Urn Y contains 1 black marble, 3 white.</li>
+</ul>
+<p>I flip a fair coin to decide which urn to draw from, heads for Urn X and tails for Urn Y. Then I draw one marble at random.</p>
+<div class="figure"><span id="fig:unnamed-chunk-71"></span>
+<p class="caption marginnote shownote">
+Figure 7.4: Tree diagram for an urn problem
+</p>
+<img src="_main_files/figure-html/unnamed-chunk-71-7.png" alt="Tree diagram for an urn problem" width="672"  />
+</div>
+<p>Now suppose we want to know the probability the coin will land tails and the marble drawn will be white, <span class="math inline">\(\p(T \wedge W)\)</span>. The General Multiplication Rule tells us the answer is:
+<span class="math display">\[
+  \begin{aligned}
+    \p(T \wedge W) &amp;= \p(W \wedge T)\\
+                   &amp;= \p(W \given T) \p(T)\\
+                   &amp;= 3/4 \times 1/2\\
+                   &amp;= 3/8.
+  \end{aligned}
+\]</span>
+In the tree diagram, this corresponds to following the bottom-most path, multiplying the probabilities as we go. And this makes sense: half the time the coin will land tails, and on <span class="math inline">\(3/4\)</span> of those occasions the marble drawn will be white. So, if we were to repeat the experiment again and again, we would get tails followed by a white marble in <span class="math inline">\(3\)</span> out of every <span class="math inline">\(8\)</span> trials.</p>
+<div class="warning">
+<p>
+Black hole warning: notice that the General Multiplication Rule depends on <span class="math inline"><span class="math inline">\(\p(A \given B)\)</span></span> being well-defined. So it only applies when <span class="math inline"><span class="math inline">\(\p(B) \gt 0\)</span></span>.
+</p>
+</div>
+</div>
+<div id="laplaces-urn-puzzle" class="section level2">
+<h2><span class="header-section-number">7.4</span> Laplace’s Urn Puzzle</h2>
+<p><span class="newthought">The</span> same urn scenario was used by <a href="logic.html#strength">18th Century mathematician Laplace</a> in one of his favourite puzzles. He asked what happens if we do <em>two</em> draws, with replacement. What’s the probability both draws will come up black?</p>
+<p>It’s tempting to say <span class="math inline">\(1/4\)</span>. The probability of drawing a black marble on each draw is <span class="math inline">\(1/2\)</span>. So it <em>seems</em> the probability of two blacks is just <span class="math inline">\(1/2 \times 1/2 = 1/4\)</span>.</p>
+<p>But the correct answer is actually <span class="math inline">\(5/16\)</span>. Why? Let’s use a probability tree again.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-73"></span>
+<img src="_main_files/figure-html/unnamed-chunk-73-1.png" alt="Building a probability tree to solve Laplace's urn puzzle" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-73-2.png" alt="Building a probability tree to solve Laplace's urn puzzle" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 7.5: Building a probability tree to solve Laplace’s urn puzzle<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Depending on how the coin lands, you could end up drawing either from Urn X or from Urn Y, with equal probability.</p>
+<p>If you end up drawing from Urn X, the probability of a black marble on any given draw is <span class="math inline">\(3/4\)</span>. Because the draws are independent (we’re drawing with replacement), the probability they’ll both come up black is <span class="math inline">\(3/4 \times 3/4 = 9/16\)</span>.</p>
+<p>If instead you end up drawing from Urn Y, the probability of a black marble on any given draw is <span class="math inline">\(1/4\)</span>. The draws are still independent though, so the chance of both being black in this case is <span class="math inline">\(1/4 \times 1/4 = 1/16\)</span>.</p>
+<p>So the probability of drawing two black marbles from Urn X is:
+<span class="math display">\[
+  \begin{aligned}
+    \p(X \wedge BB) &amp;= \p(X) \p(BB \given X)\\
+                    &amp;= 1/2 \times 9/16\\
+                    &amp;= 9/32.
+  \end{aligned}
+\]</span>
+And the probability of drawing two black marbles from Urn Y is:
+<span class="math display">\[
+  \begin{aligned}
+    \p(Y \wedge BB) &amp;= \p(Y) \p(BB \given Y)\\
+                    &amp;= 1/2 \times 1/16\\
+                    &amp;= 1/32.
+  \end{aligned}
+\]</span>
+Now we can apply the Addition Rule to calcualte <span class="math inline">\(\p(BB)\)</span>:
+<span class="math display">\[
+  \begin{aligned}
+    \p(BB) &amp;= \p(X \wedge BB) + \p(Y \wedge BB)\\
+           &amp;= 9/32 + 1/32\\
+           &amp;= 5/16.
+  \end{aligned}
+\]</span></p>
+</div>
+<div id="the-law-of-total-probability" class="section level2">
+<h2><span class="header-section-number">7.5</span> The Law of Total Probability</h2>
+<p><span class="newthought">This</span> kind of calculation comes up a lot. Since it would be tedious to figure it out from scratch every time, we make a general rule instead:</p>
+<dl>
+<dt>The Law of Total Probability</dt>
+<dd><p><span class="math inline">\(\p(A) = \p(A \given B) \p(B) + \p(A \given \neg B) \p(\neg B)\)</span>.</p>
+</dd>
+</dl>
+<p>There’s an intuitive idea at work here. To figure out how likely <span class="math inline">\(A\)</span> is, consider how likely it would be if <span class="math inline">\(B\)</span> were true, and how likely it would be if <span class="math inline">\(B\)</span> were false. Then weight each of those hypothetical possibilities according to their probabilities.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-74"></span>
+<img src="_main_files/figure-html/unnamed-chunk-74-1.png" alt="The Law of Total Probability calculates the size of the $A$ region by summing its two part." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 7.6: The Law of Total Probability calculates the size of the <span class="math inline">\(A\)</span> region by summing its two part.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>We can also use an Euler diagram. The size of the <span class="math inline">\(A\)</span> region is the sum of the <span class="math inline">\(A \wedge B\)</span> region and the <span class="math inline">\(A \wedge \neg B\)</span> region: <span class="math inline">\(\color{middlecolour}{\blacksquare}\color{black}{} + \color{leftcolour}{\blacksquare}\color{black}{}\)</span>. And each of those regions can be calculated using the General Multiplication Rule. For example, <span class="math inline">\(\p(A \wedge B) = \p(A \given B) \p(B)\)</span>. So in algebraic terms we have:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A) &amp;= \color{middlecolour}{\blacksquare}\color{black}{} 
+             + \color{leftcolour}{\blacksquare}\color{black}{}\\
+          &amp;= \p(A \wedge B) + \p(A \wedge \neg B)\\
+          &amp;= \p(A \given B) \p(B) + \p(A \given \neg B) \p(\neg B).
+  \end{aligned}
+\]</span>
+Which is precisely the Law of Total Probability.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-75"></span>
+<img src="_main_files/figure-html/unnamed-chunk-75-1.png" alt="The Law of Total Probability in a tree diagram" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 7.7: The Law of Total Probability in a tree diagram<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>We can also use a tree diagram to illustrate the same reasoning. There are two leaves where <span class="math inline">\(A\)</span> is true, marked <img src="img/emoji_shades_small.png" width="17"  /> and <img src="img/emoji_hearts_small.png" width="17"  />. To get the probability of each leaf we multiply across the branches (that’s the General Multiplication Rule). And then to get the total probability for <span class="math inline">\(A\)</span>, we add up the two leaves: <span class="math inline">\(\p(A) =\)</span> <img src="img/emoji_shades_small.png" width="17"  /> <span class="math inline">\(+\)</span> <img src="img/emoji_hearts_small.png" width="17"  />. Once again the result is the Law of Total Probability:
+<span class="math display">\[
+  \p(A) = \p(A \given B) \p(B) + \p(A \given \neg B) \p(\neg B).
+\]</span></p>
+<div class="warning">
+<p>
+Black hole warning: notice that the Law of Total Probability depends on <span class="math inline"><span class="math inline">\(\p(A \given B)\)</span></span> and <span class="math inline"><span class="math inline">\(\p(A \given \neg B)\)</span></span> both being well-defined. So it only applies when <span class="math inline"><span class="math inline">\(\p(B) \gt 0\)</span></span> and <span class="math inline"><span class="math inline">\(\p(\neg B) \gt 0\)</span></span>.
+</p>
+</div>
+</div>
+<div id="example" class="section level2">
+<h2><span class="header-section-number">7.6</span> Example</h2>
+<p><span class="newthought">Every</span> day Professor X either drives her car to campus or takes the bus. Mostly she drives, but one time in four she takes the bus. When she drives, she’s on time <span class="math inline">\(80\%\)</span> of the time. When she takes the bus, she’s on-time <span class="math inline">\(90\%\)</span> of the time.</p>
+<p>What is the probability she’ll be on time for class tomorrow?</p>
+<p>First let’s solve this by just applying the Law of Total Probability directly:
+<span class="math display">\[
+  \begin{aligned}
+    \p(O) &amp;= \p(O \given B)\p(B) + \p(O \given D)\p(D)\\
+          &amp;= (9/10)(1/4) + (8/10)(3/4)\\
+          &amp;= 33/40.
+  \end{aligned}
+\]</span></p>
+<p>Now let’s solve it slightly differently, thinking the problem through from more basic principles.</p>
+<p>There are two, mutually exclusive cases where Professor X is on time: one where she takes the bus, one where she drives.
+<span class="math display">\[ \p(O) = \p(O \wedge B) + \p(O \wedge D). \]</span>
+We can use the General Multiplication Rule to calculate the probability she’ll take the bus and be on time:
+<span class="math display">\[ \p(O \wedge B) = \p(O \given B)\p(B). \]</span>
+And we can do the same for the probability she’ll drive and be on time:
+<span class="math display">\[ \p(O \wedge D) = \p(O \given D)\p(D)\]</span>
+Putting all the pieces together:
+<span class="math display">\[
+  \begin{aligned}
+    \p(O) &amp;= \p(O \wedge B) + \p(O \wedge D)\\
+          &amp;= \p(O \given B)\p(B) + \p(O \given D)\p(D)\\
+          &amp;= (9/10)(1/4) + (8/10)(3/4)\\
+          &amp;= 33/40.
+  \end{aligned}
+\]</span></p>
+<p>Notice that we didn’t just get the same answer, we ended up doing the same calculation too. Our second approach just reconstructed from scratch the reasoning behind the Law of Total Probability. It’s a very good idea to understand the rationale behind the Law of Total Probability. But once you get used to the formula, it’s also fine to skip straight to applying it directly.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-77"></span>
+<img src="_main_files/figure-html/unnamed-chunk-77-5.png" alt="A probability tree for Professor X" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 7.8: A probability tree for Professor X<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>You can also use a tree diagram. Again, the calculation will be the same. But the diagram may help you get started, and it helps you check that you’ve applied the formula correctly too.</p>
+</div>
+<div id="exercises-5" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Suppose you have an ordinary deck of <span class="math inline">\(52\)</span> playing cards, and you draw one card at random. What is the probability you will draw:</p>
+<ol style="list-style-type: lower-alpha">
+<li>A face card (king, queen, or jack)?</li>
+<li>A card that is not a face card?</li>
+<li>An ace or a spade?</li>
+<li>A queen or a heart?</li>
+<li>A queen or a non-spade?</li>
+</ol></li>
+<li><p>Suppose that <span class="math inline">\(Pr(A)=1/3\)</span>, <span class="math inline">\(Pr(B) = 1/4\)</span>, and that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent. What is <span class="math inline">\(\p(\neg A \wedge \neg B)\)</span>?</p></li>
+<li><p>What is <span class="math inline">\(\p(X \vee B)\)</span> in the first version of the urn problem? (The first version is the one where we start with a fair coin flip to choose between Urn X and Urn Y, then draw one marble at random.)</p></li>
+<li><p>Recall Laplace’s version of the urn puzzle: we select either Urn X or Urn Y at random, then we do two random draws from it, with replacement. What is <span class="math inline">\(\p(X \vee BB)\)</span>?</p></li>
+<li><p>Suppose we add a third urn to Laplace’s puzzle: Urn Z contains <span class="math inline">\(2\)</span> black marbles and <span class="math inline">\(2\)</span> white ones. We choose one of the three urns at random, and then do two random draws with replacement. What is <span class="math inline">\(\p(BB)\)</span> then?</p></li>
+<li><p>The Law of Total probability calculates <span class="math inline">\(\p(A)\)</span> by considering two cases, <span class="math inline">\(B\)</span> and <span class="math inline">\(\neg B\)</span>. Notice that <span class="math inline">\(B\)</span> and <span class="math inline">\(\neg B\)</span> form a <a href="the-monty-hall-problem.html#lessons">partition</a>: they are mutually exclusive and exhaustive possibilities.</p>
+<p>Suppose we had a partition of three propositions instead: <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, and <span class="math inline">\(D\)</span>. Would the following extension of the Law of Total Probability hold then?
+<span class="math display">\[\p(A) = \p(A \given B)\p(B) + \p(A \given C)\p(C) + \p(A \given D)\p(D).\]</span>
+Justify your answer.</p></li>
+<li><p>Suppose there are two urns with the following contents:</p>
+<ul>
+<li>Urn I has 8 black balls, 2 white.</li>
+<li>Urn II has 2 black balls, 3 white.</li>
+</ul>
+<p>A fair coin will be flipped. If it comes up heads, a ball will be drawn from Urn I at random. Otherwise a ball will be drawn from Urn II at random. What is the probability a black ball will be drawn?</p></li>
+<li><p>Suppose you have an ordinary deck of 52 cards. A card is drawn and is <strong>not replaced</strong>, then another card is drawn. Assume that on each draw all the cards then in the deck have an equal chance of being drawn.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of getting an ace on draw 1?</li>
+<li>What is the probability of a ten on draw 2 given ace on draw 1?</li>
+<li>What is the probability of an ace on draw 1 and a ten on draw 2?</li>
+<li>What is the probability of a ten on draw 1 and an ace on draw 2?</li>
+<li>What is the probability of an ace and a ten?</li>
+<li>What is the probability of 2 aces?</li>
+</ol></li>
+<li><p>The probability that George will study for the final is <span class="math inline">\(4/5\)</span>. The probability he will pass given that he studies is <span class="math inline">\(3/5\)</span>. The probability he will pass given that he does not study is <span class="math inline">\(1/10\)</span>. What is the probability George will pass?</p></li>
+<li><p>Calculate each of the following probabilities:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(Pr(P) = 1/2\)</span>, <span class="math inline">\(Pr(Q) = 1/2\)</span>, <span class="math inline">\(Pr(P \wedge Q) = 1/8\)</span>. What is <span class="math inline">\(Pr(P \vee Q)\)</span>?</li>
+<li><span class="math inline">\(Pr(R) = 1/2, Pr(S) = 1/4, Pr(R \vee S) = 3/4\)</span>. What is <span class="math inline">\(Pr(R \wedge S)\)</span>?</li>
+<li><span class="math inline">\(Pr(U) = 1/2, Pr(T) = 3/4, Pr(U \wedge \neg T) = 1/8\)</span>. What is <span class="math inline">\(Pr(U \vee \neg T)\)</span>?</li>
+</ol></li>
+<li><p><span class="math inline">\(Pr(P) = 1/2, Pr(Q) = 1/2\)</span>, and <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are independent.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is <span class="math inline">\(Pr(P {\,\&amp;\,}Q)\)</span>?</li>
+<li>Are <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> mutually exclusive?</li>
+<li>What is <span class="math inline">\(Pr(P \vee Q)\)</span>?</li>
+</ol></li>
+<li><p>Suppose <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are all mutually exclusive, and they each have the same probability: <span class="math inline">\(1/5\)</span>. What is <span class="math inline">\(\p(\neg(A \wedge B) \wedge C)\)</span>?</p></li>
+<li><p>Researchers are studying the safety of drug X. They enroll 60 subjects in a study and give drug X to 35 of them. By the end of the study, 5 subjects have developed stomach cancer: 3 who were taking drug X, 2 who were not.</p>
+<p>Draw a Venn diagram and use it to answer the following questions about a randomly selected subject:</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability they developed stomach cancer?</li>
+<li>What is the probability they developed stomach cancer given that they were taking drug X?</li>
+<li>What is the probability they developed stomach cancer given that they were not taking drug X?</li>
+<li>Based on this study, would you conclude that drug X increases or decreases the risk of stomach cancer?</li>
+</ol></li>
+<li><p>There is a room filled with two types of urns.</p>
+<ul>
+<li>Type A urns contain 30 yellow marbles, 70 red.</li>
+<li>Type B urns contain 20 green marbles, 80 yellow.</li>
+</ul>
+<p>The two types of urn look identical, but 80% of them are Type A.</p>
+<ol style="list-style-type: lower-alpha">
+<li>You pick an urn at random and draw a marble from it at random. What is the probability the marble will be yellow?</li>
+<li>You look at the marble: it is yellow. What’s the probability the urn is a Type B urn?</li>
+</ol></li>
+<li><p>Suppose <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are independent of one another. Does it follow that <span class="math inline">\(\p(B \given A \wedge C) = \p(B)\)</span>? Justify your answer.</p></li>
+<li><p>Is the following combination of probabilities possible? <span class="math inline">\(Pr(A) = 2/5\)</span>, <span class="math inline">\(Pr(B) = 4/5\)</span>, and <span class="math inline">\(Pr(A \vee B) = 3/5\)</span>. Justify your answer.</p></li>
+<li><p>Which of the following situations is impossible? Justify your answer.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\p(A) = 4/5\)</span>, <span class="math inline">\(\p(B) = 1/5\)</span>, <span class="math inline">\(\p(\neg A \wedge B) = 3/5\)</span>.</li>
+<li><span class="math inline">\(\p(\neg X) = 1/3\)</span>, <span class="math inline">\(\p(\neg Y) = 2/3\)</span>, <span class="math inline">\(\p(X \wedge Y) = 0\)</span>.</li>
+</ol></li>
+<li><p>If <span class="math inline">\(Pr(A)=0\)</span>, what is <span class="math inline">\(\p(A \given B)\)</span>? Justify your answer.</p></li>
+<li><p>Do Exercise 2 from p. 67 of Hacking.</p></li>
+<li><p>Do Exercise 3 from p. 67 of Hacking.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are logically equivalent, what is <span class="math inline">\(\p(A \given B)\)</span>? Justify your answer.</p></li>
+<li><p>Suppose <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> all have the same probability, namely <span class="math inline">\(1/4\)</span>. Suppose they are also independent of one another. What is <span class="math inline">\(\p(\neg A \vee \neg B \vee \neg C)\)</span>?</p>
+<p>Hint: <span class="math inline">\(\neg A \vee \neg B \vee \neg C\)</span> is logically equivalent to <span class="math inline">\(\neg (A \wedge B \wedge C)\)</span>. Why?</p></li>
+<li><p>If <span class="math inline">\(\p(A) = 1/2\)</span> and <span class="math inline">\(\p(B) = 3/5\)</span>, are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> mutually exclusive? Justify your answer.</p></li>
+<li><p>Suppose <span class="math inline">\(\p(A) = 1/4\)</span>, <span class="math inline">\(\p(B) = 1/3\)</span>, and <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent. What is <span class="math inline">\(\p(A \vee (B \wedge \neg A))\)</span>?</p></li>
+<li><p>Suppose <span class="math inline">\(A\)</span> logically entails <span class="math inline">\(C\)</span>, and <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent. If <span class="math inline">\(\p(A) = 1/7\)</span>, <span class="math inline">\(\p(B) = 1/3\)</span>, and <span class="math inline">\(\p(C)=1/3\)</span>, what is <span class="math inline">\(\p((A \wedge \neg B) \vee \neg C)\)</span>?</p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, must the following hold?
+<span class="math display">\[\p(A \vee B \given C) = \p(A \given C) + \p(B \given C).\]</span>
+Assume the conditional probabilities are all well-defined, and justify your answer.</p>
+<p>Hint: apply the definition of conditional probability and use the following fact: <span class="math inline">\((A \vee B) \wedge C\)</span> is logically equivalent to <span class="math inline">\((A \wedge C) \vee (B \wedge C)\)</span>.</p></li>
+<li><p>Prove that if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then
+<span class="math display">\[\p(A \given A \vee B) = \frac{ \p(A) }{ \p(A) + \p(B) }.\]</span></p></li>
+<li><p>If <span class="math inline">\(\p(C \given B \wedge A) = \p(C \given B)\)</span>, does this follow?
+<span class="math display">\[\p(A \given B \wedge C) = Pr(A \given B).\]</span>
+Assume all conditional probabilities are well-defined, and justify your answer.</p></li>
+<li><p>Justify the claim from <a href="conditional-probability.html#declaring-independence">Chapter 6</a> that independence extends to negations: if <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, then it’s also independent of <span class="math inline">\(\neg B\)</span> (provided <span class="math inline">\(\p(\neg A) &gt; 0\)</span>).</p>
+<p>Warning: this one is hard. I suggest starting with the equation:
+<span class="math display">\[ \p(A \wedge B) = \p(A) \p(B). \]</span>
+Then use the Negation Rule which tells us:
+<span class="math display">\[ \p(B) = 1 - \p(\neg B). \]</span>
+And use the Addition Rule to get:
+<span class="math display">\[ \p(A \wedge B) = \p(A) - \p(A \wedge \neg B).\]</span></p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="conditional-probability.html"><button class="btn btn-default">Previous</button></a>
+<a href="chbayes.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

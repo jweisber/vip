@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="beliefs-betting-rates" class="section level1">
+<h1><span class="header-section-number">16</span> Beliefs &amp; Betting Rates</h1>
+<p><span class="newthought">For</span> Bayesians, probabilities are beliefs. When I say it’ll probably rain today, I’m telling you something about my personal level of confidence in rain today. I’m saying I’m more than <span class="math inline">\(50\%\)</span> confident it’ll rain.</p>
+<p>But how can we quantify something as personal and elusive as a level of confidence? Bayesians answer this question using the same basic idea we used for utility in <a href="utility.html#utility">Chapter 12</a>. They look at people’s willingness to risk things they care about.</p>
+<div id="measuring-personal-probabilities" class="section level2">
+<h2><span class="header-section-number">16.1</span> Measuring Personal Probabilities</h2>
+<p><span class="newthought">The</span> more confident someone is, the more they’ll be willing to bet. So let’s use betting rates to quantify personal probabilities.</p>
+<p>I said I’m more than <span class="math inline">\(50\%\)</span> confident it’ll rain today. But exactly how confident: <span class="math inline">\(60\%\)</span>? <span class="math inline">\(70\%\)</span>? Well, I’d give two-to-one odds on it raining today, and no higher. In other words, I’d accept a deal that pays <span class="math inline">\(\$1\)</span> if it rains, and costs me <span class="math inline">\(\$2\)</span> otherwise. But I wouldn’t risk more than <span class="math inline">\(\$2\)</span> when I only stand to win <span class="math inline">\(\$1\)</span>.</p>
+<p>In this example I put <span class="math inline">\(2\)</span> dollars on the table, and you put down <span class="math inline">\(1\)</span> dollar. Whoever wins the bet keeps all <span class="math inline">\(3\)</span> dollars. The sum of all the money on the table is called the <strong><em>stake</em></strong>. In this case the stake is <span class="math inline">\(\$2 + \$1 = \$3\)</span>.</p>
+<p>If it doesn’t rain, I’ll lose <span class="math inline">\(\$2\)</span>. To find my <strong><em>fair betting rate</em></strong>, we divide this potential loss by the stake:
+<span class="math display">\[
+  \begin{aligned}
+    \mbox{betting rate} &amp;= \frac{\mbox{potential loss}}{\mbox{stake}}\\
+                        &amp;= \frac{\$2}{\$2 + \$1}\\
+                        &amp;= \frac{2}{3}.
+  \end{aligned}
+\]</span></p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-122"></span>
+<img src="_main_files/figure-html/unnamed-chunk-122-1.png" alt="A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 16.1: A bet that pays <span class="math inline">\(\$1\)</span> if you win and costs <span class="math inline">\(\$2\)</span> if you lose, is fair when the blue and red regions have equal size: when the probability of winning is <span class="math inline">\(2/3\)</span>.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>A person’s betting rate reflects their degree of confidence. The more confident they are of winning, the more they’ll be willing to risk losing. In this example my betting rate is <span class="math inline">\(2/3\)</span> because I’m <span class="math inline">\(2/3\)</span> confident it will rain. That’s my personal probability: <span class="math inline">\(\p(R) = 2/3\)</span>.</p>
+<p>Notice that a bet at two-to-one odds has zero expected value given my personal probability of <span class="math inline">\(2/3\)</span>:
+<span class="math display">\[ (2/3)(\$1) + (1/3)(-\$2) = 0. \]</span>
+This makes sense: it’s a fair bet from my point of view, after all.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-123"></span>
+<img src="_main_files/figure-html/unnamed-chunk-123-1.png" alt="A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 16.2: A bet that pays <span class="math inline">\(\$9\)</span> if you win and costs <span class="math inline">\(\$1\)</span> if you lose is fair when the probability of winning is <span class="math inline">\(1/10\)</span>.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>What if I were less confident in rain, say just <span class="math inline">\(1/10\)</span> confident? Then I’d be willing to stake much less. I’d need you to put down at least <span class="math inline">\(\$9\)</span> before I’d put down even <span class="math inline">\(\$1\)</span>. Only then would the bet have <span class="math inline">\(0\)</span> expected value:
+<span class="math display">\[ (1/10)(\$9) + (9/10)(-\$1) = 0. \]</span>
+So, for the bet to be fair in my eyes, the odds have to match my fair betting rate.</p>
+<p>Here’s the general recipe for quantifying someone’s personal probability in proposition <span class="math inline">\(A\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Find a bet on <span class="math inline">\(A\)</span> they deem fair. Call the potential winnings <span class="math inline">\(w\)</span> and the potential losses <span class="math inline">\(l\)</span>.</li>
+<li>Because they deem the bet fair, set the expected value of the bet equal to zero:
+<span class="math display">\[ \p(A) \times w + (1-\p(A)) \times -l = 0. \]</span></li>
+<li>Now solve for <span class="math inline">\(\p(A)\)</span>:
+<span class="math display">\[
+   \begin{aligned}
+     \p(A) \times w + (1-\p(A)) \times -l &amp;= 0 \\
+                           \p(A) \times w &amp;= (1-\p(A)) \times l \\
+          \p(A) \times w + \p(A) \times l &amp;= l \\
+                                    \p(A) &amp;= \frac{l}{w + l}.
+   \end{aligned}
+ \]</span></li>
+</ol>
+<p>Notice how we got the same formula we started with: potential loss divided by total stake.</p>
+<p>You can memorize this formula, but personally, I prefer to apply the recipe. It shows why the formula works, and it also exposes the formula’s limitations. It helps us understand when the formula <em>doesn’t</em> work.</p>
+</div>
+<div id="things-to-watch-out-for" class="section level2">
+<h2><span class="header-section-number">16.2</span> Things to Watch Out For</h2>
+<p><span class="newthought">Personal</span> probabilities aren’t revealed by just any old betting rate a person will accept. They’re exposed by the person’s <em>fair</em> betting rates.</p>
+<p>Consider: I’d take a bet where you pay me a million dollars of it rains today, and I pay you just <span class="math inline">\(\$1\)</span> otherwise. But that’s because I think this bet is <em>advantageous</em>. I don’t think this is a fair bet, which is why I’d only take one side of it. I wouldn’t take the reverse deal, where I win <span class="math inline">\(\$1\)</span> if it rains and I pay you a million dollars if it does. That’s a terrible deal from my point of view!</p>
+<p>So you can’t just look at a bet a person is willing to accept. You have to look at a bet they’re willing to accept <em>because they think it’s fair</em>.</p>
+<p><span class="newthought">Another</span> caveat is that we’re cheating by using dollars instead of utils. When we learned about utility, we saw that utility and dollars can be quite different. Gaining a dollar and losing a dollar aren’t necessarily comparable. Especially if it’s your last dollar!</p>
+<p>So, to really measure personal probabilities accurately, we’d have to substitute utilities for dollars. Nevertheless, we’ll pretend dollars and utils are equal for simplicity. Dollars are a decent approximation of utils for many people, as long as we stick to small sums.</p>
+<p><span class="newthought">Last</span> but definitely not least, our method only works when the person is following the expected value formula. Setting the expected value equal to zero was the key to deriving the formula:
+<span class="math display">\[ \p(A) = \frac{\mbox{potential loss}}{\mbox{stake}}. \]</span>
+But we know people don’t always follow the expected value formula, that’s one of the lessons of <a href="challenges-to-expected-utility.html#the-allais-paradox">the Allais paradox</a>. So this way of measuring personal probabilities is limited.</p>
+</div>
+<div id="indirect-measurements" class="section level2">
+<h2><span class="header-section-number">16.3</span> Indirect Measurements</h2>
+<p><span class="newthought">Sometimes</span> we don’t have the betting rate we need in order to apply the loss/stake formula directly. But we can still figure things out indirectly, given the betting rates we do have.</p>
+<p>For example, I’m not very confident there’s intelligent life on other planets. But I’d be much more confident if we learned there was life of any kind on another planet. If NASA finds bacteria living on Mars, I’ll be much less surprised to learn there are intelligent aliens on Alpha Centauri.</p>
+<p>Exactly how confident will I be? What is <span class="math inline">\(\p(I \given L)\)</span>, my personal probability that there is intelligent life on other planets given that there’s life of some kind on other planets at all?</p>
+<p>Suppose I tell you my betting rates for <span class="math inline">\(I\)</span> and <span class="math inline">\(L\)</span>. I deem the following bets fair:</p>
+<ul>
+<li>I win <span class="math inline">\(\$9\)</span> if <span class="math inline">\(I\)</span> is true, otherwise I pay <span class="math inline">\(\$1\)</span>.</li>
+<li>I win <span class="math inline">\(\$6\)</span> if <span class="math inline">\(L\)</span> is true, otherwise I pay <span class="math inline">\(\$4\)</span>.</li>
+</ul>
+<p>You can apply the loss/stake formula to figure <span class="math inline">\(\p(I) = 1/10\)</span> and <span class="math inline">\(\p(L) = 4/10\)</span>. But what about <span class="math inline">\(\p(I \given L)\)</span>? You can figure that out by starting with the definition of conditional probability:
+<span class="math display">\[
+\begin{aligned}
+    \p(I \given L) &amp;= \p(I \wedge L)/\p(L) \\
+                   &amp;= \p(I)/\p(L) \\
+                   &amp;= 1/4.
+\end{aligned}
+\]</span>
+The second line in this calculation uses the fact that <span class="math inline">\(I\)</span> is equivalent to <span class="math inline">\(I \wedge L\)</span>. If there’s intelligent life, then there must be life, by definition. So <span class="math inline">\(I \wedge L\)</span> is redundant. We can drop the second half and replace the whole statement with just <span class="math inline">\(I\)</span>.</p>
+<p>The general strategy here is: 1) identify what betting rates you have, 2) apply the loss/stakes formula to get those personal probabilities, and then 3) apply familiar rules of probability to derive other personal probabilities.</p>
+<p>We have to be careful though. This technique only works if the subject’s betting rates follow the familiar rules of probability. If my betting rate for rain tomorrow is <span class="math inline">\(3/10\)</span>, you might expect my betting rate for no rain to be <span class="math inline">\(7/10\)</span>. But people don’t always follow the laws of probability, just as they <a href="challenges-to-expected-utility.html#the-allais-paradox">don’t always follow the expected utility rule</a>. The taxicab problem from <a href="chbayes.html#chbayes">Chapter 8</a> illustrates one way people commonly violate the rules of probability. We’ll encounter <a href="dutch-books.html#bankteller">another way</a> in the next chapter.</p>
+</div>
+<div id="exercises-12" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Li thinks humans will eventually colonize Mars. More exactly, he regards the following deal as fair: if he’s right about that, you pay him <span class="math inline">\(\$3\)</span>, otherwise he’ll pay you <span class="math inline">\(\$7\)</span>.</p>
+<p>Suppose Li equates money with utility: for him, the utility of gaining <span class="math inline">\(\$3\)</span> is <span class="math inline">\(3\)</span>, the utility of losing <span class="math inline">\(\$7\)</span> is <span class="math inline">\(-7\)</span>, and so on.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is Li’s personal probability that humans will colonize Mars?</li>
+</ol>
+<p>Li also thinks there’s an even better chance of colonization if Elon Musk is elected president of the United States. If Musk is elected, Li will regard the following deal as fair: if colonization happens you pay him <span class="math inline">\(\$3\)</span>, otherwise he pays you <span class="math inline">\(\$12\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is Li’s personal conditional probability that humans will colonize Mars, given that Elon Musk is elected U.S. president?</li>
+</ol>
+<p>Li thinks the chances of colonization are lower if Musk is not elected. His personal conditional probability that colonization will happen given that Musk is not elected is <span class="math inline">\(1/2\)</span>.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is Li’s personal probability that Musk will be elected? (Assume his personal probabilities obey the laws of probability.)</li>
+</ol></li>
+<li><p>Sam thinks the Saskatchewan Roughriders will win the next Grey Cup game. She’s confident enough that she regards the following deal as fair: if they win, you pay her <span class="math inline">\(\$3\)</span>, otherwise she’ll pay you <span class="math inline">\(\$7\)</span>.</p>
+<p>Suppose Sam equates money with utility: for her, the utility of gaining <span class="math inline">\(\$3\)</span> is <span class="math inline">\(3\)</span>, the utility of losing <span class="math inline">\(\$7\)</span> is <span class="math inline">\(-7\)</span>, and so on.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is Sam’s personal probability that the Roughriders will win the Grey Cup?</li>
+</ol>
+<p>Sam thinks the Roughriders will have an even better chance in the snow. If it snows during the game, she will regard the following deal as fair: if the Roughriders win, you pay her <span class="math inline">\(\$3\)</span>, otherwise she’ll pay you <span class="math inline">\(\$12\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is Sam’s personal conditional probability that the Roughriders will win the Grey Cup if it snows?</li>
+</ol>
+<p>Sam thinks that the Roughriders will lose their advantage if it doesn’t snow. Her personal conditional probability that the Roughriders will win if it doesn’t snow is <span class="math inline">\(1/2\)</span>.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is Sam’s personal probability that it will snow during the Grey Cup? (Assume her personal probabilities obey all the familiar laws of probability.)</li>
+</ol></li>
+<li><p>Sam thinks the Leafs have a real shot at the playoffs next year. In fact, she regards the following deal as fair: if the Leafs make the playoffs, you pay her <span class="math inline">\(\$2\)</span>, otherwise she pays you <span class="math inline">\(\$10\)</span>.</p>
+<p>Suppose Sam equates money with utility: for her, the utility of gaining <span class="math inline">\(\$2\)</span> is <span class="math inline">\(2\)</span>, the utility of losing <span class="math inline">\(\$10\)</span> is <span class="math inline">\(-10\)</span>, and so on.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is Sam’s personal probability that the Leafs will make the playoffs?</li>
+</ol>
+<p>Sam also thinks the Leafs might even have a shot at winning the Stanley Cup. She’s willing to pay you <span class="math inline">\(\$1\)</span> if they don’t win the Cup, if you agree to pay her <span class="math inline">\(\$2\)</span> if they do. That’s a fair deal for her.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is Sam’s personal probability that the Leafs will win the Stanley Cup?</li>
+<li>What is Sam’s personal conditional probability that the Leafs will win the Stanley Cup if they make the playoffs? (Assume that winning the Stanley Cup logically entails making the playoffs.)</li>
+</ol></li>
+<li><p>Freya isn’t sure whether it will snow tomorrow. For her, a fair gamble is one where she gets <span class="math inline">\(\$10\)</span> if it snows and she pays <span class="math inline">\(\$10\)</span> if it doesn’t. Assume Freya equates money with utility.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is Freya’s personal probability for snow tomorrow?</li>
+</ol>
+<p>Here’s another gamble Freya regards as fair: she’ll check her phone to see whether tomorrow’s forecast calls for snow. If it does predict snow, she’ll pay you <span class="math inline">\(\$10\)</span>, but you have to pay her <span class="math inline">\(\$5\)</span> if it doesn’t.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is Freya’s personal probability that the forecast calls for snow?</li>
+</ol>
+<p>After checking the forecast and seeing that it does predict snow, Freya changes her betting odds for snow tomorrow. Now she’s willing to accept as little as <span class="math inline">\(\$5\)</span> if it snows, while still paying <span class="math inline">\(\$10\)</span> if it doesn’t.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Now what is Freya’s personal probability for snow tomorrow?</li>
+<li>Before she checked the forecast, what was Freya’s personal probability that the forecast would predict snow and be right. (Assume that winning the Stanley Cup logically entails making the playoffs.)</li>
+</ol></li>
+<li><p>Ben’s favourite TV show is <em>Community</em>. He thinks it’s so good they’ll make a movie of it. In fact, he’s so confident that he thinks the following is a fair deal: he pays you <span class="math inline">\(\$8\)</span> if they don’t make it into a movie and you pay him <span class="math inline">\(\$1\)</span> if they do. Assume Ben equates money with utility.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is Ben’s personal probability that <em>Community</em> will be made into a movie?</li>
+</ol>
+<p>Ben thinks the odds of a <em>Community</em> movie getting made are even higher if his favourite character, Shirly, returns to the show (she’s on leave right now). If Shirly returns, he’s willing to pay as much as <span class="math inline">\(\$17\)</span> if the movie does not get made, in return for <span class="math inline">\(\$1\)</span> if it does.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is Ben’s personal conditional probability that there will be a <em>Community</em> movie if Shirly returns?</li>
+</ol>
+<p>Ben also thinks the chances of a movie go down drastically if Shirly doesn’t return. His personal conditional probability that the movie will happen without Shirly is only <span class="math inline">\(1/3\)</span>.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>What is Ben’s personal probability that Shirly will return?</li>
+</ol></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="two-schools.html"><button class="btn btn-default">Previous</button></a>
+<a href="dutch-books.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

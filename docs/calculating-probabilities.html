@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="calculating-probabilities" class="section level1">
+<h1><span class="header-section-number">5</span> Calculating Probabilities</h1>
+<p><span class="newthought">Imagine</span> you’re going to flip a fair coin twice. You could get two heads, two tails, or one of each. How probable is each outcome?</p>
+<p>It’s tempting to say they’re equally probable, <span class="math inline">\(1/3\)</span> each. But actually the first two are only <span class="math inline">\(1/4\)</span> likely, while the last is <span class="math inline">\(1/2\)</span> likely. Why?</p>
+<p>There are actually four possible outcomes here, but we have to consider the order of events to see how. If you get one each of heads and tails, what order will they come in? You could get the head first and then the tail, or the reverse.</p>
+<p>So there are four possible sequences: HH, TT, HT, and TH. And all four sequences are equally likely, a probability of <span class="math inline">\(1/4\)</span>.</p>
+<p>How do we know each sequence has <span class="math inline">\(1/4\)</span> probability though? And how does that tell us the probability is <span class="math inline">\(1/2\)</span> that you’ll get one each of heads and tails? We need to introduce some mechanics of probability to settle these questions.</p>
+<div id="multiplying-probabilities" class="section level2">
+<h2><span class="header-section-number">5.1</span> Multiplying Probabilities</h2>
+<p><span class="newthought">We</span> denote the probability of proposition <span class="math inline">\(A\)</span> with <span class="math inline">\(Pr(A)\)</span>. For example, <span class="math inline">\(Pr(A)=2/3\)</span> means there’s a <span class="math inline">\(2/3\)</span> chance <span class="math inline">\(A\)</span> is true.</p>
+<p>Now, our coin is fair, and by definition that means it always has a <span class="math inline">\(1/2\)</span> chance of landing heads and a <span class="math inline">\(1/2\)</span> chance of landing tails. For a single toss, we can use <span class="math inline">\(H\)</span> for the proposition that it lands heads, and <span class="math inline">\(T\)</span> for the proposition that it lands tails. We can then write <span class="math inline">\(Pr(H) = 1/2\)</span> and <span class="math inline">\(Pr(T) = 1/2\)</span>.</p>
+<p>For a sequence of two tosses, we can use <span class="math inline">\(H_1\)</span> for heads on the first toss, and <span class="math inline">\(H_2\)</span> for heads on the second toss. Similarly, <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span> represent tails on the first and second tosses, respectively. The four possible sequences are then expressed by the complex propositions:</p>
+<ul>
+<li><span class="math inline">\(H_1 \,\&amp;\, H_2\)</span>,</li>
+<li><span class="math inline">\(T_1 \,\&amp;\, T_2\)</span>,</li>
+<li><span class="math inline">\(H_1 \,\&amp;\, T_2\)</span>,</li>
+<li><span class="math inline">\(T_1 \,\&amp;\, H_2\)</span>.</li>
+</ul>
+<p>We want to calculate the probabilities of these propositions. For example, we want to know what number <span class="math inline">\(Pr(H_1 \,\&amp;\, H_2)\)</span> is equal to.</p>
+<p>Because the coin is fair, we know <span class="math inline">\(Pr(H_1) = 1/2\)</span> and <span class="math inline">\(Pr(H_2) = 1/2\)</span>. The probability of heads on any given toss is always <span class="math inline">\(1/2\)</span>, no matter what came before. To get the probability of <span class="math inline">\(H_1 \,\&amp;\, H_2\)</span> it’s then natural to compute:
+<span class="math display">\[
+  \begin{aligned}
+    Pr(H_1 \,\&amp;\, H_2) &amp;= Pr(H_1) \times Pr(H_2)\\
+                       &amp;= 1/2 \times 1/2\\
+                       &amp;= 1/4.
+  \end{aligned}
+\]</span>
+And this is indeed correct, but <em>only because the coin is fair and thus the tosses are independent</em>. The following is a general rule of probability:</p>
+<dl>
+<dt>The Multiplication Rule</dt>
+<dd><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, then <span class="math inline">\(Pr(A \,\&amp;\, B) = Pr(A) \times Pr(B)\)</span>.</p>
+</dd>
+</dl>
+<p>So, because our two coin tosses are independent, we can multiply to calculate <span class="math inline">\(Pr(H_1 \,\&amp;\, H_2) = 1/4\)</span>. And the same reasoning applies to all four possible sequences, so we have:
+<span class="math display">\[
+  \begin{aligned}
+    Pr(H_1 \,\&amp;\, H_2) &amp;= 1/4,\\
+    Pr(T_1 \,\&amp;\, T_2) &amp;= 1/4,\\
+    Pr(H_1 \,\&amp;\, T_2) &amp;= 1/4,\\
+    Pr(T_1 \,\&amp;\, H_2) &amp;= 1/4.
+  \end{aligned}
+\]</span></p>
+<p><span class="newthought">The</span> Multiplication rule only applies to independent propositions. Otherwise it gives the wrong answer.</p>
+<p>For example, the propositions <span class="math inline">\(H_1\)</span> and <span class="math inline">\(T_1\)</span> are definitely not independent. If the coin lands heads on the first toss (<span class="math inline">\(H_1\)</span>), that drastically alters the chances of tails on the first toss (<span class="math inline">\(T_1\)</span>). It changes that probability to zero! If you were to apply the Multiplication Rule though, you would get <span class="math inline">\(Pr(H_1 \,\&amp;\, T_1) = Pr(H_1) \times Pr(T_1) = 1/2 \times 1/2 = 1/4\)</span>, which is definitely wrong.</p>
+<div class="warning">
+<p>
+Only use the Multiplication Rule on independent propositions.
+</p>
+</div>
+</div>
+<div id="adding-probabilities" class="section level2">
+<h2><span class="header-section-number">5.2</span> Adding Probabilities</h2>
+<p><span class="newthought">We</span> observed that you can get one head and one tail two different ways. You can either get heads then tails (<span class="math inline">\(H_1 \,\&amp;\, T_2\)</span>), or you can get tails then heads (<span class="math inline">\(T_1 \,\&amp;\, H_2\)</span>). So the logical expression for “one of each” is:</p>
+<p><span class="math display">\[ (H_1 \,\&amp;\, T_2) \vee (T_1 \,\&amp;\, H_2). \]</span></p>
+<p>This proposition is a disjunction: its main connective is <span class="math inline">\(\vee\)</span>. How do we calculate the probability of a disjunction?</p>
+<dl>
+<dt>The Addition Rule</dt>
+<dd><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then <span class="math inline">\(Pr(A \vee B) = Pr(A) + Pr(B)\)</span>.</p>
+</dd>
+</dl>
+<p>In this case the two sides of our disjunction are mutually exclusive. They describe opposite orders of affairs. So we can apply the Addition Rule to calculate:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    Pr((H_1 \,\&amp;\, T_2) \vee (T_1 \,\&amp;\, H_2)) 
+      &amp;= Pr(H_1 \,\&amp;\, T_2) + Pr(T_1 \,\&amp;\, H_2)\\
+      &amp;= 1/4 + 1/4\\
+      &amp;= 1/2.
+  \end{aligned}      
+\]</span></p>
+<p><span class="newthought">This</span> completes the solution to our opening problem. We’ve now computed the three probabilities we wanted:</p>
+<ul>
+<li><span class="math inline">\(Pr(\mbox{2 heads}) = Pr(H_1 \,\&amp;\, H_2) = 1/2 \times 1/2 = 1/4\)</span>,</li>
+<li><span class="math inline">\(Pr(\mbox{2 tails}) = Pr(T_1 \,\&amp;\, T_2) = 1/2 \times 1/2 = 1/4\)</span>,</li>
+<li><span class="math inline">\(Pr(\mbox{One of each}) = Pr((H_1 \,\&amp;\, T_2) \vee (T_1 \,\&amp;\, H_2)) = 1/4 + 1/4 = 1/2\)</span>.</li>
+</ul>
+<p>In the process we introduced two central rules of probability, one for <span class="math inline">\(\,\&amp;\,\)</span> and one for <span class="math inline">\(\vee\)</span>. The multiplication rule for <span class="math inline">\(\,\&amp;\,\)</span> only applies when the propositions are independent. The addition rule for <span class="math inline">\(\,\vee\,\)</span> only applies when the propositions are mutually exclusive.</p>
+<p><span class="newthought">Why</span> does the addition rule for <span class="math inline">\(\vee\)</span> sentences only apply when the propositions are mutually exclusive? Well imagine the weather forecast says there’s a <span class="math inline">\(90\%\)</span> chance of rain in the morning, and there’s also a <span class="math inline">\(90\%\)</span> chance of rain in the afternoon. What’s the chance it’ll rain at some point during the day, either in the morning or the afternoon? If we calculate <span class="math inline">\(Pr(M \vee A) = Pr(M) + Pr(A)\)</span>, we get <span class="math inline">\(90\% + 90\% = 180\%\)</span>, which doesn’t make any sense. There can’t be a <span class="math inline">\(180\%\)</span> chance of rain tomorrow.</p>
+<p>The problem is that <span class="math inline">\(M\)</span> and <span class="math inline">\(A\)</span> are not mutually exclusive. It could rain all day, both morning and afternoon. We’ll see the correct way to handle this kind of situation in <a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii">Chapter 7</a>. In the meantime just be careful:</p>
+<div class="warning">
+<p>
+Only use the Addition Rule on mutually exclusive propositions.
+</p>
+</div>
+</div>
+<div id="exclusivity-vs.independence" class="section level2">
+<h2><span class="header-section-number">5.3</span> Exclusivity vs. Independence</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-56"></span>
+<img src="_main_files/figure-html/unnamed-chunk-56-1.png" alt="Mutually exclusive propositions don't overlap" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 5.1: Mutually exclusive propositions don’t overlap<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">Exclusivity</span> and independence can be hard to keep straight at first. One way to keep track of the difference is to remember that mutually exclusive propositions don’t overlap, but independent propositions usually do. Independence means the truth of one proposition doesn’t affect the chances of the other. So if you find out that <span class="math inline">\(A\)</span> is true, <span class="math inline">\(B\)</span> still has the same chance of being true. Which means there have to be some <span class="math inline">\(B\)</span> possibilities within the <span class="math inline">\(A\)</span> circle (unless the probability of <span class="math inline">\(A\)</span> was zero to start with).</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-57"></span>
+<img src="_main_files/figure-html/unnamed-chunk-57-1.png" alt="Independent propositions do overlap (unless one of them has zero probability)." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 5.2: Independent propositions do overlap (unless one of them has zero probability).<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>So independence and exclusivity are very different. Generally speaking, exclusive propositions are not independent, and independent propositions are not exclusive.</p>
+<p>There is one exception. If <span class="math inline">\(\p(A) = 0\)</span>, then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> can be both independent and mutually exclusive. If they’re mutually exclusive, the probability of <span class="math inline">\(A\)</span> just stays <span class="math inline">\(0\)</span> after <span class="math inline">\(B\)</span> we learn <span class="math inline">\(B\)</span>. But otherwise, independence and mutual exclusivity are incompatible with one another.</p>
+<p>Another marker that may help you keep these two concepts straight: exclusivity is a concept of deductive logic. It’s about whether it’s <em>possible</em> for both propositions to be true (even if that possibility is very unlikely). But independence is a concept of inductive logic. It’s about whether one proposition being true changes the <em>probability</em> of the other being true.</p>
+</div>
+<div id="tautologies-contradictions-and-equivalent-propositions" class="section level2">
+<h2><span class="header-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-58"></span>
+<img src="_main_files/figure-html/unnamed-chunk-58-1.png" alt="The Tautology Rule. Every point falls in either the $A$ region or the $\neg A$ region, so $\p(A \vee \neg A) = 1$." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 5.3: The Tautology Rule. Every point falls in either the <span class="math inline">\(A\)</span> region or the <span class="math inline">\(\neg A\)</span> region, so <span class="math inline">\(\p(A \vee \neg A) = 1\)</span>.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p><span class="newthought">A</span> tautology is a proposition that must be true, so its probability is always 1.</p>
+<dl>
+<dt>The Tautology Rule</dt>
+<dd><p><span class="math inline">\(\p(T) = 1\)</span> for every tautology <span class="math inline">\(T\)</span>.</p>
+</dd>
+</dl>
+<p>For example, <span class="math inline">\(A \vee \neg A\)</span> is a tautology, so <span class="math inline">\(\p(A \vee \neg A) = 1\)</span>. In terms of an Euler diagram, the <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span> regions together take up the whole diagram. To put it a bit colourfully, <span class="math inline">\(\p(A \vee \neg A) = \color{leftcolour}{\blacksquare}\color{black}{} + \color{rightcolour}{\blacksquare}\color{black}{} = 1\)</span>.</p>
+<p><span class="newthought">The</span> flipside of a tautology is a contradiction, a proposition that can’t possibly be true. So it has probability 0.</p>
+<dl>
+<dt>The Contradiction Rule</dt>
+<dd><p><span class="math inline">\(\p(C) = 0\)</span> for every contradiction <span class="math inline">\(C\)</span>.</p>
+</dd>
+</dl>
+<p>For example, <span class="math inline">\(A \wedge \neg A\)</span> is a contradiction, so <span class="math inline">\(\p(A \wedge \neg A) = 0\)</span>. In terms of our Euler diagram, there is no region where <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span> overlap. So the portion the diagram devoted to <span class="math inline">\(A \wedge \neg A\)</span> is nil, zero.</p>
+<p><span class="newthought">Equivalent</span> propositions are true under exactly the same circumstances (and false under exactly the same circumstances). So they have the same chance of being true (ditto false).</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-59"></span>
+<img src="_main_files/figure-html/unnamed-chunk-59-1.png" alt="The Equivalence Rule. The $A \vee B$ region is identical to the $B \vee A$ region, so they have the same probability." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 5.4: The Equivalence Rule. The <span class="math inline">\(A \vee B\)</span> region is identical to the <span class="math inline">\(B \vee A\)</span> region, so they have the same probability.<!--</p>-->
+<!--</div>--></span>
+</p>
+<dl>
+<dt>The Equivalence Rule</dt>
+<dd><p><span class="math inline">\(\p(A) = \p(B)\)</span> if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are logically equivalent.</p>
+</dd>
+</dl>
+<p>For example, <span class="math inline">\(A \vee B\)</span> is logically equivalent to <span class="math inline">\(B \vee A\)</span>, so <span class="math inline">\(\p(A \vee B) = \p(B \vee A)\)</span>.</p>
+<p>In terms of an Euler diagram, the <span class="math inline">\(A \vee B\)</span> region is exactly the same as the <span class="math inline">\(B \vee A\)</span> region: the red region. So both propositions take up the same amount of space in the diagram.</p>
+</div>
+<div id="the-language-of-events" class="section level2">
+<h2><span class="header-section-number">5.5</span> The Language of Events</h2>
+<p><span class="newthought">In</span> math and statistics books you’ll often see a lot of the same concepts from this chapter introduced in different language. Instead of propositions, they’ll discuss <em>events</em>, which are sets of possible outcomes.</p>
+<p>For example, the roll of a six-sided die has six possible outcomes: <span class="math inline">\(1, 2, 3, 4, 5, 6\)</span>. And the event of the die landing on an even number is the set <span class="math inline">\(\{2, 4, 6\}\)</span>.</p>
+<p>In this way of doing things, rather than consider the probability that a proposition <span class="math inline">\(A\)</span> is true, we consider the probability that event <span class="math inline">\(E\)</span> occurs. Instead of considering a conjunction of propositions like <span class="math inline">\(A \,\&amp;\, B\)</span>, we consider the <em>intersection</em> of two events, <span class="math inline">\(E \cap F\)</span>. And so on.</p>
+<p>If you’re used to seeing probability presented this way, there’s an easy way to translate into logic-ese. For any event <span class="math inline">\(E\)</span>, there’s the corresponding proposition that event <span class="math inline">\(E\)</span> occurs. And you can translate the usual set operations into logic as follows:</p>
+<p><!--
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-60">Table 5.1: </span>Translating between events and propositions</span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Events</th>
+<th align="center">Propositions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(E^c\)</span></td>
+<td align="center"><span class="math inline">\(\sim\! A\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(E \cap F\)</span></td>
+<td align="center"><span class="math inline">\(A \,\&amp;\, B\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(E \cup F\)</span></td>
+<td align="center"><span class="math inline">\(A \vee B\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We won’t use the language of events in this book. I’m just mentioning it in case you’ve come across it before and you’re wondering how it connects. If you’ve never seen it before, you can safely ignore this section.</p>
+</div>
+<div id="summary-1" class="section level2">
+<h2><span class="header-section-number">5.6</span> Summary</h2>
+<p><span class="newthought">In</span> this chapter we learned how to represent probabilities of propositions using the <span class="math inline">\(Pr(\ldots)\)</span> operator. We also learned some fundamental rules of probability.</p>
+<p>There were three rules corresponding to the concepts of tautology, contradiction, and equivalence.</p>
+<ul>
+<li><span class="math inline">\(\p(T) = 1\)</span> for every tautology <span class="math inline">\(T\)</span>.</li>
+<li><span class="math inline">\(\p(C) = 0\)</span> for every contradiction <span class="math inline">\(C\)</span>.</li>
+<li><span class="math inline">\(\p(A) = \p(B)\)</span> if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are logically equivalent.</li>
+</ul>
+<p>And there were two rules corresponding to the connectives <span class="math inline">\(\wedge\)</span> and <span class="math inline">\(\vee\)</span>.</p>
+<ul>
+<li><span class="math inline">\(Pr(A \vee B) = Pr(A) + Pr(B)\)</span>, if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive.</li>
+<li><span class="math inline">\(Pr(A \wedge B) = Pr(A) \times Pr(B)\)</span>, if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent.</li>
+</ul>
+<p>The restrictions on these two rules are essential. If you ignore them, you will get wrong answers.</p>
+</div>
+<div id="exercises-4" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>What is the probability of each of the following propositions?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A \wedge (B \wedge \neg A)\)</span></li>
+<li><span class="math inline">\(\neg (A \wedge \neg A)\)</span></li>
+</ol></li>
+<li><p>Give an example of each of the following:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Two statements that are mutually exclusive.</li>
+<li>Two statements that are independent.</li>
+</ol></li>
+<li><p>For each of the following, say whether it is true or false.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If propositions are independent, then they must be mutually exclusive.</li>
+<li>Independent propositions usually aren’t mutually exclusive.</li>
+<li>If propositions are mutually exclusive, then they must be independent.</li>
+<li>Mutually exclusive propositions usually aren’t independent.</li>
+</ol></li>
+<li><p>Assume <span class="math inline">\(Pr(A \wedge B)=1/3\)</span> and <span class="math inline">\(Pr(A \wedge \neg B)=1/5\)</span>. Answer each of the following:</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is <span class="math inline">\(Pr((A \wedge B) \vee (A \wedge \neg B))\)</span>?</li>
+<li>What is <span class="math inline">\(Pr(A)\)</span>?</li>
+<li>Are <span class="math inline">\((A \wedge B)\)</span> and <span class="math inline">\((A \wedge \neg B)\)</span> independent?</li>
+</ol></li>
+<li><p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, and <span class="math inline">\(A\)</span> and <span class="math inline">\(C\)</span> are mutually exclusive. Assume <span class="math inline">\(\p(A) = 1/3, \p(B) = 1/6, \p(C) = 1/9\)</span>, and answer each of the following:</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is <span class="math inline">\(\p(A \wedge C)\)</span>?</li>
+<li>What is <span class="math inline">\(\p((A \wedge B) \vee C)\)</span>?</li>
+<li>Must <span class="math inline">\(\p(A \wedge B) = 0\)</span>?</li>
+</ol></li>
+<li><p>Consider the following argument:</p>
+<div class="argument">
+<p>
+If a coin is fair, then the probability of getting at least one heads in a sequence of four tosses is quite high: above 90%.
+</p>
+<hr />
+<p>
+Therefore, if a fair coin has landed tails three times in a row, the next toss will probably land heads.
+</p>
+</div>
+<p>Answer each of the following questions.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Is the premise of this argument true?</li>
+<li>Is the argument valid?</li>
+<li>Is the argument sound?</li>
+</ol></li>
+<li><p>The Addition Rule can be extended to three propositions. If <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are all mutually exclusive with one another, then</p>
+<p><span class="math display">\[ \p(A \vee B \vee C) = \p(A) + \p(B) + \p(C).\]</span></p>
+<p>Explain why this rule is correct. Would the same idea extend to four mutually exclusive propositions? To five?</p>
+<p>(Hint: there’s more than one way to do this. You can use an Euler diagram. Or you can derive the new rule from the original one, by thinking of <span class="math inline">\(A \vee B \vee C\)</span> as a disjunction of <span class="math inline">\(A \vee B\)</span> and <span class="math inline">\(C\)</span>.)</p></li>
+<li><p>You have a biased coin, where each toss has a <span class="math inline">\(3/5\)</span> chance of landing heads. But each toss is independent of the others. Suppose you’re going to flip the coin <span class="math inline">\(1,000\)</span> times. The first 998 tosses all land tails. What is the probability at least one of the last two flips will be tails?</p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="the-gamblers-fallacy.html"><button class="btn btn-default">Previous</button></a>
+<a href="conditional-probability.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

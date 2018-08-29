@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="conditional-probability" class="section level1">
+<h1><span class="header-section-number">6</span> Conditional Probability</h1>
+<p><span class="newthought">The</span> chances of crashing your car are pretty low, but they’re considerably higher if you’re drunk. Probabilities change depending on the conditions.</p>
+<p>We symbolize this idea by writing <span class="math inline">\(\p(A \given B)\)</span>, the probability that <span class="math inline">\(A\)</span> is true <em>given</em> that <span class="math inline">\(B\)</span> is true. And we call this kind of probability <strong><em>conditional probability</em></strong>.</p>
+<p><label for="tufte-mn-9" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-9" class="margin-toggle"><span class="marginnote"><span style="display: block;">To say <span class="math inline"><span class="math inline">\(B\)</span></span> increases the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> we write <span class="math inline"><span class="math inline">\(\p(A \given B) \gt \p(A)\)</span></span>. And to say <span class="math inline"><span class="math inline">\(B\)</span></span> doubles the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> write <span class="math inline"><span class="math inline">\(\p(A \given B) = 2 \times \p(A)\)</span></span>.</span></span></p>
+<p>For example, to say the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> is 30%, we write:
+<span class="math display">\[ \p(A \given B) = .3. \]</span>
+But how do we calculate conditional probabilities?</p>
+<div id="calculating-conditional-probability" class="section level2">
+<h2><span class="header-section-number">6.1</span> Calculating Conditional Probability</h2>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-63"></span>
+<img src="_main_files/figure-html/unnamed-chunk-63-1.png" alt="Conditional probability in a fair die roll" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-63-2.png" alt="Conditional probability in a fair die roll" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 6.1: Conditional probability in a fair die roll<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Suppose I roll a fair, six-sided die behind a screen. You can’t see the result, but I tell you it’s an even number. What’s the probability it’s also a “high” number: either a <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span>, or <span class="math inline">\(6\)</span>?</p>
+<p>Maybe you figured the correct answer: <span class="math inline">\(2/3\)</span>. But why is that correct? Because, out of the three even numbers (<span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(6\)</span>), two of them are high (<span class="math inline">\(4\)</span> and <span class="math inline">\(6\)</span>). And since the die is fair, we expect it to land on a high number <span class="math inline">\(2/3\)</span> of the times it lands on an even number.</p>
+<p>This hints at a formula for <span class="math inline">\(\p(A \given B)\)</span>.</p>
+<dl>
+<dt>Conditional Probability</dt>
+<dd><p><span class="math display">\[ \p(A \given B) = \frac{\p(A \wedge B)}{\p(B)}. \]</span></p>
+</dd>
+</dl>
+<p>In the die-roll example, we considered how many of the <span class="math inline">\(B\)</span> possibilities were also <span class="math inline">\(A\)</span> possibilities. Which means we divided <span class="math inline">\(\p(A \wedge B)\)</span> by <span class="math inline">\(\p(B)\)</span>.</p>
+<p>In fact, this formula is our official definition for the concept of conditional probability. When we write the sequence of symbols <span class="math inline">\(\p(A \given B)\)</span>, it’s really just shorthand for the fraction <span class="math inline">\(\p(A \wedge B) / \p(B)\)</span>.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:condprob"></span>
+<img src="_main_files/figure-html/condprob-1.png" alt="Conditional probability is the size of the $A \wedge B$ region compared to the entire $B$ region." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 6.2: Conditional probability is the size of the <span class="math inline">\(A \wedge B\)</span> region compared to the entire <span class="math inline">\(B\)</span> region.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>In terms of an Euler diagram (Figure <a href="conditional-probability.html#fig:condprob">6.2</a>), the definition of conditional probability compares the size of the purple <span class="math inline">\(A \wedge B\)</span> region to the size of the whole <span class="math inline">\(B\)</span> region, purple and blue together. If you don’t mind getting a little colourful with your algebra:
+<span class="math display">\[
+  \p(A \given B) = \frac{\color{middlecolour}{\blacksquare}}{\color{middlecolour}{\blacksquare} + \color{rightcolour}{\blacksquare}}.
+\]</span>
+So the definition works because, informally speaking, <span class="math inline">\(\p(A \wedge B)/\p(B)\)</span> is the proportion of the <span class="math inline">\(B\)</span> outcomes that are also <span class="math inline">\(A\)</span> outcomes.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> The comedian Steven Wright once quipped that “black holes are where God divided by zero.”</span></p>
+<p><span class="newthought">Dividing</span> by zero is a common pitfall with conditional probability. Notice how the definition of <span class="math inline">\(\p(A \given B)\)</span> depends on <span class="math inline">\(\p(B)\)</span> being larger than zero. If <span class="math inline">\(\p(B) = 0\)</span>, then the formula
+<span class="math display">\[ \p(A \given B) = \frac{\p(A \wedge B)}{\p(B)} \]</span>
+doesn’t even make any sense. There is no number that results from the division on the right hand side.<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> There are alternative mathematical systems of probability, where conditional probability is defined differently to avoid this problem. But in this book we’ll stick to the standard system. Where there’s just no such thing as “the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>” when <span class="math inline">\(B\)</span> has zero probability.</span></p>
+<p>In such cases we say that <span class="math inline">\(\p(A \given B)\)</span> is <em>undefined</em>. It’s not zero, or some special number. It just isn’t a number.</p>
+</div>
+<div id="conditional-probability-trees" class="section level2">
+<h2><span class="header-section-number">6.2</span> Conditional Probability &amp; Trees</h2>
+<p><span class="newthought">We</span> already encountered conditional probabilities informally, when we used a tree diagram to solve <a href="the-monty-hall-problem.html#the-monty-hall-problem">the Monty Hall problem</a>.</p>
+<p>In a tree diagram, each branch represents a possible outcome. The number placed on that branch represents the chance of that outcome occurring. But that number is based on the assumption that all branches leading up to it occur. So the probability on that branch is conditional on all previous branches.</p>
+<p>For example, suppose there are two urns of coloured marbles:</p>
+<ul>
+<li>Urn X contains 3 black marbles, 1 white.</li>
+<li>Urn Y contains 1 black marble, 3 white.</li>
+</ul>
+<p>I flip a fair coin to decide which urn to draw from, heads for Urn B and tails for Urn W. Then I draw one marble at random.</p>
+<div class="figure"><span id="fig:unnamed-chunk-64"></span>
+<p class="caption marginnote shownote">
+Figure 6.3: Tree diagram for an urn problem
+</p>
+<img src="_main_files/figure-html/unnamed-chunk-64-1.png" alt="Tree diagram for an urn problem" width="672"  />
+</div>
+<p>The probability of drawing a black marble on the top path is <span class="math inline">\(3/4\)</span> because we are assuming the coin landed heads, and thus I’m drawing from Urn X. If the coin lands tails instead, and I draw from Urn Y, then the chance of a black marble is instead <span class="math inline">\(1/4\)</span>. So these quantities are conditional probabilities:
+<span class="math display">\[
+  \begin{aligned}
+    \p(B \given H) &amp;= 3/4,\\
+    \p(B \given T) &amp;= 1/4.
+  \end{aligned}
+\]</span></p>
+<p>Notice, though, the first branch in a tree diagram is different. In the <span class="math inline">\(H\)</span>-vs.-<span class="math inline">\(T\)</span> branch, the probabilities are <em>un</em>conditional, since there are no previous branches for them to be conditional on.</p>
+</div>
+<div id="more-examples" class="section level2">
+<h2><span class="header-section-number">6.3</span> More Examples</h2>
+<p><span class="newthought">Imagine</span> an urn contains marbles of three different colours: 20 are red, 30 are blue, and 40 are green. I draw a marble at random. What is <span class="math inline">\(\p(R \given \neg B)\)</span>, the probability it’s red given that it’s not blue?
+<span class="math display">\[
+  \begin{aligned}
+    \p(R \given \neg B) &amp;= \frac{\p(R \wedge \neg B)}{\p(\neg B)}\\
+                        &amp;= \frac{\p(R)}{\p(\neg B)}\\
+                        &amp;= \frac{20/90}{60/90}\\
+                        &amp;= 1/3.
+  \end{aligned}
+\]</span>
+This calculation relies on the fact that <span class="math inline">\(R \wedge \neg B\)</span> is logically equivalent to <span class="math inline">\(R\)</span>. A red marble is automatically not blue, so <span class="math inline">\(R\)</span> is true under exactly the same circumstances as <span class="math inline">\(R \wedge \neg B\)</span>. The <a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions">Equivalence Rule</a> thus tells us <span class="math inline">\(\p(R \wedge \neg B) = \p(R)\)</span>.</p>
+<p><span class="newthought">Suppose</span> a university has 10,000 students, and each student is studying under one of four broad headings: Humanities, Social Sciences, STEM, or Professional. Within each of these categories, the number of students with an average grade of A, B, C, or D is as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Humanities</th>
+<th align="center">Social Sciences</th>
+<th align="center">STEM</th>
+<th align="center">Professional</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td align="center">200</td>
+<td align="center">600</td>
+<td align="center">400</td>
+<td align="center">900</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td align="center">500</td>
+<td align="center">800</td>
+<td align="center">1600</td>
+<td align="center">900</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td align="center">250</td>
+<td align="center">400</td>
+<td align="center">1500</td>
+<td align="center">750</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td align="center">50</td>
+<td align="center">200</td>
+<td align="center">500</td>
+<td align="center">450</td>
+</tr>
+</tbody>
+</table>
+<p>What is the probability a randomly selected student will have an A average, given that they are studying either Humanities or Social Sciences?
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given H \vee S) &amp;= \frac{\p(A \wedge (H \vee S))}{\p(H \vee S)}\\
+                           &amp;= \frac{800/10,000}{3,000/10,000}\\
+                           &amp;= 4/15.
+  \end{aligned}
+\]</span></p>
+<p>What about the reverse probability, that a student is studying either Humanities or Social Sciences given that they have an A average?
+<span class="math display">\[
+  \begin{aligned}
+    \p(H \vee S \given A) &amp;= \frac{\p((H \vee S) \wedge A)}{\p(A)}\\
+                           &amp;= \frac{800/10,000}{2,100/10,000}\\
+                           &amp;= 8/21.
+  \end{aligned}
+\]</span>
+Notice how we get a different number now.</p>
+</div>
+<div id="order-matters" class="section level2">
+<h2><span class="header-section-number">6.4</span> Order Matters</h2>
+<p><span class="newthought">In</span> general, the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> will be different from the probability of <span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span>. These are different concepts.</p>
+<p>For example, university students are usually young, but young people aren’t usually university students. Most aren’t even old enough to be in university. So the probability someone is young given they are in university is high. But the probability someone is in university given that they are young is low. So <span class="math inline">\(\p(Y \given U) \neq \p(U \given Y)\)</span>.</p>
+<p>Once in a while we do find cases where <span class="math inline">\(\p(A \given B) = \p(B \given A)\)</span>. For example, suppose we throw a dart at random at a circular board, divided into four quadrants. The chance the dart will land on the left half given that it lands on the top half is the same as the chance it lands on the top half given it lands on the left. Both probabilities are <span class="math inline">\(1/2\)</span>.</p>
+<p>But this kind of thing is the exception rather than the rule. Usually, <span class="math inline">\(\p(A \given B)\)</span> will be a different number from <span class="math inline">\(\p(B \given A)\)</span>. So it’s important to remember how order matters.</p>
+<div class="warning">
+<p>
+When we write <span class="math inline"><span class="math inline">\(\p(A \given B)\)</span></span>, we are discussing the probability of <span class="math inline"><span class="math inline">\(A\)</span></span>. But we are discussing it under the assumption that <span class="math inline"><span class="math inline">\(B\)</span></span> is true.
+</p>
+</div>
+</div>
+<div id="declaring-independence" class="section level2">
+<h2><span class="header-section-number">6.5</span> Declaring Independence</h2>
+<p><span class="newthought">We</span> explained independence informally back in <a href="the-axioms-of-probability.html#independence-1">Chapter 4</a>: <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if the truth of one doesn’t change the probability of the other. Now that we’ve formally defined conditional probability, we can formally define independence too.</p>
+<dl>
+<dt>Independence</dt>
+<dd><p><span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span> if <span class="math inline">\(\p(A \given B) = \p(A)\)</span> and <span class="math inline">\(\p(A) &gt; 0\)</span>.</p>
+</dd>
+</dl>
+<p>In other words, they’re independent if <span class="math inline">\(A\)</span>’s probability is the same after <span class="math inline">\(B\)</span> is given as it was before (and not just for the silly reason that there was no chance of <span class="math inline">\(A\)</span> being true to begin with).</p>
+<p>Now we can establish three useful facts about independence.</p>
+<p><span class="newthought">The</span> first is summed up in the mantra “independence means multiply”. This actually has two parts.</p>
+<p>We already learned the first part with the Multiplication Rule: if <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, then <span class="math inline">\(\p(A \wedge B) = \p(A)\p(B)\)</span>. Except now we can see why this rule holds, using the definition of conditional probability and some algebra:
+<span class="math display">\[
+  \begin{aligned}
+    \p(A \given B)      &amp;= \frac{\p(A \wedge B)}{\p(B)} &amp; \mbox{by definition}\\
+    \p(A \given B)\p(B) &amp;= \p(A \wedge B)               &amp; \mbox{by algebra}\\
+    \p(A)\p(B)          &amp;= \p(A \wedge B)               &amp; \mbox{by independence}.
+  \end{aligned}
+\]</span></p>
+<p>The second part of the “independence means multiply” mantra is new though. It basically says that the reverse also holds. As long as <span class="math inline">\(\p(A) &gt; 0\)</span> and <span class="math inline">\(\p(B) &gt; 0\)</span>, if <span class="math inline">\(\p(A \wedge B) = \p(A)\p(B)\)</span>, then <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>.</p>
+<p>Bottom line: as long as there are no zeros to worry about, independence is the same thing as <span class="math inline">\(\p(A \wedge B) = \p(A)\p(B)\)</span>.</p>
+<p><span class="newthought">Second,</span> independence is symmetric. If <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span> then <span class="math inline">\(B\)</span> is independent of <span class="math inline">\(A\)</span>. Informally speaking, if <span class="math inline">\(B\)</span> makes no difference to <span class="math inline">\(A\)</span>’s probability, then <span class="math inline">\(A\)</span> makes no difference to <span class="math inline">\(B\)</span>’s probability.</p>
+<p>This is why we often say “<span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent”, without specifying which is independent of which. Since independence goes both ways, they’re automatically independent of each other.</p>
+<p><span class="newthought">Third,</span> independence extends to negations. If <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, then it’s also independent of <span class="math inline">\(\neg B\)</span> (as long as <span class="math inline">\(\p(\neg B) &gt; 0\)</span>, so that <span class="math inline">\(\p(A \given \neg B)\)</span> is well-defined).</p>
+<p>Notice, this also means that if <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, then <span class="math inline">\(\neg A\)</span> is independent of <span class="math inline">\(\neg B\)</span> (as long as <span class="math inline">\(\p(\neg A) &gt; 0\)</span>).</p>
+<p><span class="newthought">So</span> far our definition of independence only applies to two propositions. We can extend it to three as follows:</p>
+<dl>
+<dt>Three-way Independence</dt>
+<dd><p><span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are independent if</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(C\)</span>, and <span class="math inline">\(B\)</span> is independent of <span class="math inline">\(C\)</span>, and</li>
+<li><span class="math inline">\(\p(A \wedge B \wedge C) = \p(A)\p(B)\p(C)\)</span>.</li>
+</ol>
+</dd>
+</dl>
+<p>In other words, a trio of propositions is independent if each pair of them is independent, and the multiplication rule applies to their conjunction. The same idea can be extended to define independence for four propositions, five, etc.</p>
+</div>
+<div id="ch6ex" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Answer each of the following:</p>
+<ol style="list-style-type: lower-alpha">
+<li>On a fair die with six sides, what is the probability of rolling a low number (1, 2, or 3) given that you roll an even number.</li>
+<li>On a fair die with eight sides, what is the probability of rolling an even number given that you roll a high number (5, 6, 7, or 8)?</li>
+</ol></li>
+<li><p>Suppose <span class="math inline">\(\p(B) = 4/10\)</span>, <span class="math inline">\(\p(A) = 7/10\)</span>, and <span class="math inline">\(\p(B \wedge A) = 2/10\)</span>.
+What are each of the following probabilities?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\p(A \vee B)\)</span></li>
+<li><span class="math inline">\(\p(A \given B)\)</span></li>
+<li><span class="math inline">\(\p(B \given A)\)</span></li>
+</ol></li>
+<li><p>Five percent of tablets made by the company Ixian have factory defects. Ten percent of the tablets made by their competitor company Guild do. A computer store buys <span class="math inline">\(40\%\)</span> of its tablets from Ixian, and <span class="math inline">\(60\%\)</span> from Guild.</p>
+<p><label for="tufte-mn-10" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-10" class="margin-toggle"><span class="marginnote"><span style="display: block;">This exercise and the next one are based on very similar exercises from Ian Hacking’s wonderful book, <em>An Introduction to Probability and Inductive Logic</em>.</span></span></p>
+<p>Draw a probability tree to answer the following questions.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability a randomly selected tablet in the store is made by Ixian and has a factory defect?</li>
+<li>What is the probability a randomly selected tablet in the store has a factory defect?</li>
+<li>What is the probability a tablet from this store is made by Ixian, given that it has a factory defect?</li>
+</ol></li>
+<li><p>In the city of Elizabeth, the neighbourhood of Southside has lots of chemical plants. <span class="math inline">\(2\%\)</span> of Elizabeth’s children live in Southside, and <span class="math inline">\(14\%\)</span> of those children have been exposed to toxic levels of lead. Elsewhere in the city, only <span class="math inline">\(1\%\)</span> of the children have toxic levels of exposure.</p>
+<p>Draw a probability tree to answer the following questions.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that a randomly chosen child from Elizabeth lives in Southside and has toxic levels of lead exposure?</li>
+<li>What is the probability that a randomly chosen child from Elizabeth has toxic levels of lead exposure?</li>
+<li>What is the probability that a randomly chosen child from Elizabeth who has toxic levels of lead exposure lives in Southside?</li>
+</ol></li>
+<li><p>Imagine 100 prisoners are sentenced to death. 70 of them are housed in cell block A, the other 30 are in cell block B. Of the prisoners in cell block A, 9 are innocent. Only 1 prisoner in cell block B is innocent.</p>
+<p>The law requires that one prisoner be pardoned. The lucky prisoner will be selected by flipping a fair coin to choose either cell block A or B. Then a fair lottery will be used to select a random prisoner from the chosen cell block.</p>
+<p>What is the probability the pardoned prisoner comes from cell block A if she is innocent? Answer each of the following to find out.</p>
+<p><span class="math inline">\(I\)</span> = The pardoned prisoner is innocent.<br />
+<span class="math inline">\(A\)</span> = The pardoned prisoner comes from cell block A.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is <span class="math inline">\(Pr(I \given A)\)</span>?</li>
+<li>What is <span class="math inline">\(Pr(A \wedge I)\)</span>?</li>
+<li>What is <span class="math inline">\(Pr(I \given B)\)</span>?</li>
+<li>What is <span class="math inline">\(Pr(B \wedge I)\)</span>?</li>
+<li>What is <span class="math inline">\(Pr(I)\)</span>?</li>
+<li>What is <span class="math inline">\(Pr(A \given I)\)</span>?</li>
+<li>Draw a probability tree to visualize and verify your calculations.</li>
+</ol></li>
+<li><p>Suppose <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are independent, and they each have the
+same probability: <span class="math inline">\(1/3\)</span>. What is <span class="math inline">\(\p(A \wedge B \given C)\)</span>?</p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, what is <span class="math inline">\(\p(A \given B)\)</span>? Justify your answer using the definition of conditional probability.</p></li>
+<li><p>Which of the following situations is impossible? Justify your answer.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\p(A) = 1/2, \p(A \given B) = 1/2, \p(B \given A) = 1/2\)</span>.</li>
+<li><span class="math inline">\(\p(A) = 1/2, \p(A \given B) = 1, \p(A \given \neg B) = 1\)</span>.</li>
+</ol></li>
+<li><p>Is the following statement true or false: if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then <span class="math inline">\(Pr(A \vee B \given C) = Pr(A \given C) + Pr(B \given C)\)</span>. Justify your answer.</p></li>
+<li><p>Justify the second part of the “independence means multiply” mantra: if <span class="math inline">\(\p(A) &gt; 0\)</span>, <span class="math inline">\(\p(B) &gt; 0\)</span>, and <span class="math inline">\(\p(A \wedge B) = \p(A) \p(B)\)</span>, then <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>.</p>
+<p>Hint: start by supposing <span class="math inline">\(\p(A) &gt; 0\)</span>, <span class="math inline">\(\p(B) &gt; 0\)</span>, and <span class="math inline">\(\p(A \wedge B) = \p(A)\p(B)\)</span>. Then apply some algebra and the definition of conditional probability.</p></li>
+<li><p>Justify the claim that independence is symmetric: if <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, then <span class="math inline">\(B\)</span> is independent of <span class="math inline">\(A\)</span>.</p>
+<p>Hint: start by supposing that <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>. Then write out <span class="math inline">\(\p(A \given B)\)</span> and apply the definition of conditional probability.</p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="calculating-probabilities.html"><button class="btn btn-default">Previous</button></a>
+<a href="calculating-probabilities-part-ii.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

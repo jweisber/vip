@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="truth-tables" class="section level1">
+<h1><span class="header-section-number">3</span> Truth Tables</h1>
+<p><span class="newthought">In</span> this chapter we’ll introduce the last few concepts we need from deductive logic, and we’ll learn a useful technique in the process: truth tables.</p>
+<div id="connectives" class="section level2">
+<h2><span class="header-section-number">3.1</span> Connectives</h2>
+<p><span class="newthought">Complex</span> propositions can be built up out of other, simpler propositions:</p>
+<ul>
+<li>Aegon is a tyrant <strong>and</strong> Brandon is a wizard.</li>
+<li><strong>Either</strong> Aegon is a tyrant <strong>or</strong> Brandon is a wizard.</li>
+<li><strong>It’s not true that</strong> Aegon is a tyrant.</li>
+</ul>
+<p><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote"><span style="display: block;">Notice, we call <em>it’s not true that</em> a connective even though it doesn’t actually connect two propositions together.</span></span></p>
+<p>Here we’ve used two simple propositions to build up longer, more complex ones using the terms <em>and</em>, <em>either/or</em>, and <em>it’s not true that</em>. Such terms are called <strong><em>connectives</em></strong>.</p>
+<p>The three connectives just listed are the only ones we’ll need in this book. Each has a name and a shorthand symbol:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">English</th>
+<th align="left">Symbol</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">conjunction</td>
+<td align="left">and</td>
+<td align="left"><span class="math inline">\(\wedge\)</span></td>
+<td align="left"><span class="math inline">\(A \wedge B\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">disjunction</td>
+<td align="left">either/or</td>
+<td align="left"><span class="math inline">\(\vee\)</span></td>
+<td align="left"><span class="math inline">\(A \vee B\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">negation</td>
+<td align="left">it’s not true that</td>
+<td align="left"><span class="math inline">\(\neg\)</span></td>
+<td align="left"><span class="math inline">\(\neg A\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Here are some more examples of complex propositions:</p>
+<ul>
+<li><span class="math inline">\(F \wedge \neg G\)</span>: Florida is warm and Geneva is not.</li>
+<li><span class="math inline">\(\neg J \vee \neg K\)</span>: Either Jing won’t come to the party or Kamal won’t come.</li>
+</ul>
+<p><span class="newthought">Sometimes</span> we also need parentheses, to avoid ambiguity. Consider an example from arithmetic:
+<span class="math display">\[ 4 \div 2 \times 2 = 1. \]</span>
+Is this equation true? That depends on what you mean. Does the division operation come first, or the multiplication? So we use parentheses to clarify: <span class="math inline">\(4 \div (2 \times 2) = 1\)</span>, but <span class="math inline">\((4 \div 2) \times 2 = 4\)</span>.</p>
+<p>In logic we use parentheses to prevent ambiguity similarly. Consider:
+<span class="math display">\[ A \vee B \wedge C. \]</span>
+This proposition is ambiguous, it has two interpretations. In English we can distinguish them with a comma:</p>
+<ul>
+<li>Either Aegon is a tyrant or Brandon is a wizard, and Cerci is the queen.</li>
+<li>Either Aegon is a tyrant, or Brandon is a wizard and Cerci is the queen.</li>
+</ul>
+<p>Notice how these statements make different claims. The first takes a definite stand on Cerci: she is the queen. It only leaves open the question whether Aegon is a tyrant or Brandon is a wizard. Whereas the second statement takes no definite stand on any of our three characters. Maybe Aegon is a tyrant, maybe not. Maybe Brandon is a wizard and Cerci is the queen, maybe not.</p>
+<p>In logic we use parentheses to clarify which interpretation we mean:</p>
+<ul>
+<li><span class="math inline">\((A \vee B) \wedge C\)</span>.</li>
+<li><span class="math inline">\(A \vee (B \wedge C)\)</span>.</li>
+</ul>
+<p>Notice how the first statement is primarily an <span class="math inline">\(\wedge\)</span> statement. It uses <span class="math inline">\(\wedge\)</span> to combine the simpler statements <span class="math inline">\(C\)</span> and <span class="math inline">\(A \vee B\)</span> together. Whereas the second statement is primarily a <span class="math inline">\(\vee\)</span> statement. It uses <span class="math inline">\(\vee\)</span> to combine <span class="math inline">\(A\)</span> with <span class="math inline">\(B \wedge C\)</span>.</p>
+<p>We call the last connective used to build up the statement the <strong><em>main connective</em></strong>.</p>
+<ul>
+<li><span class="math inline">\((A \vee B) \wedge C\)</span>: main connective is <span class="math inline">\(\wedge\)</span>.</li>
+<li><span class="math inline">\(A \vee (B \wedge C)\)</span>: main connective is <span class="math inline">\(\vee\)</span>.</li>
+</ul>
+<p>Two more examples:</p>
+<ul>
+<li><span class="math inline">\(\neg (A \vee B)\)</span>: main connective is <span class="math inline">\(\neg\)</span>.</li>
+<li><span class="math inline">\(\neg A \vee B\)</span>: main connective is <span class="math inline">\(\vee\)</span>.</li>
+</ul>
+<p>Technically, the last example should have parentheses to prevent ambiguity, like so: <span class="math inline">\((\neg A) \vee B\)</span>. But things get cluttered and hard to read if we add parentheses around every negation. So we have a special understanding for <span class="math inline">\(\neg\)</span> in order to keep things tidy.</p>
+<p><label for="tufte-mn-6" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-6" class="margin-toggle"><span class="marginnote"><span style="display: block;">This special understanding for <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> mirrors the one for minus signs in arithmetic.</span></span></p>
+<div class="info">
+<p>
+The negation symbol <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> only applies to the proposition immediately following it.
+</p>
+</div>
+<p>So in the proposition <span class="math inline">\(\neg A \vee B\)</span>, the <span class="math inline">\(\neg\)</span> only applies to <span class="math inline">\(A\)</span>. And in <span class="math inline">\(\neg (A \wedge B) \vee C\)</span>, it only applies to <span class="math inline">\(A \wedge B\)</span>.</p>
+</div>
+<div id="truth-tables-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> Truth Tables</h2>
+<p><span class="newthought">The</span> truth of a complex proposition built using our three connectives depends on the truth of its components. For example, <span class="math inline">\(\neg A\)</span> is false if <span class="math inline">\(A\)</span> is true, and it’s true if <span class="math inline">\(A\)</span> is false:</p>
+<p><!--
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-31">Table 3.1: </span>Truth table for <span class="math inline">\(\neg\)</span></span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+<p>Slightly more complicated is the rule for <span class="math inline">\(\&amp;\)</span>:</p>
+<p><!--
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-32">Table 3.2: </span>Truth table for <span class="math inline">\(\wedge\)</span></span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \wedge B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>There are four rows now because <span class="math inline">\(\&amp;\)</span> combines two propositions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> together to make the more complex proposition <span class="math inline">\(A \&amp; B\)</span>. Since each of those propositions could be either true or false, there are <span class="math inline">\(2 \times 2 = 4\)</span> possible situations to consider.</p>
+<p>Notice that in only one of these situations is <span class="math inline">\(A \&amp; B\)</span> true, namely the first row where both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are true.</p>
+<p>The truth table for <span class="math inline">\(\vee\)</span> (“either/or”) is a little more surprising:</p>
+<p><!--
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-33">Table 3.3: </span>Truth table for <span class="math inline">\(\vee\)</span></span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>Now the complex proposition is always true, except in one case: the last row where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both false. It makes sense that <span class="math inline">\(A \vee B\)</span> is false when both sides are false. But why is it true when both sides are true? Doesn’t “Either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>” mean that <em>just one</em> of these is true?</p>
+<p>Sometimes it does have that meaning. But sometimes it means “Either A or B, <em>or both</em>”. Consider this exchange:</p>
+<blockquote>
+<p>X: What are you doing tomorrow night?<br />
+Y: I’m either going to a friend’s house or out to a club. I might even do both, if there’s time.</p>
+</blockquote>
+<p>Person Y isn’t necessarily changing their mind here. They could just be clarifying: they’re doing at least one of these things, possibly even both of them.</p>
+<p>Although it’s common to use “either/or” in English to mean <em>just</em> one or the other, in logic we use the more permissive reading. So <span class="math inline">\(A \vee B\)</span> means <em>either <span class="math inline">\(A\)</span>, or <span class="math inline">\(B\)</span>, or both</em>.</p>
+<p>We can always convey the stricter way of meaning “either/or” with a more complex construction:
+<span class="math display">\[(A \vee B) \wedge \neg (A \wedge B).\]</span>
+That says:
+<span class="math display">\[ \mbox{Either $A$ or $B$ is true, and it&#39;s not the case that both $A$ and $B$ are true}.\]</span>
+Which is just a very explicit way of saying: either one or the other, but not both.</p>
+<p>We can even verify that the complex construction captures the meaning we want using a truth table. We start with an empty table, where the header lists all the formulas we use to build up to the final, complex one we’re interested in:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(A \&amp; B\)</span></th>
+<th align="center"><span class="math inline">\(\neg(A \wedge B\)</span>)</th>
+<th align="center"><span class="math inline">\((A \vee B) \wedge \neg (A \wedge B)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\;\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\;\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\;\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\;\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Then we fill in the possible truth values for the simplest propositions, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(A \&amp; B\)</span></th>
+<th align="center"><span class="math inline">\(\neg(A \wedge B\)</span>)</th>
+<th align="center"><span class="math inline">\((A \vee B) \wedge \neg (A \wedge B)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Next we consult the truth tables above for <span class="math inline">\(\&amp;\)</span> and <span class="math inline">\(\vee\)</span> to fill in the columns at the next level of complexity:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(A \&amp; B\)</span></th>
+<th align="center"><span class="math inline">\(\neg(A \wedge B\)</span>)</th>
+<th align="center"><span class="math inline">\((A \vee B) \wedge \neg (A \wedge B)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Then move up to the next level of complexity. To fill in the column for <span class="math inline">\(\neg(A \wedge B)\)</span>, we consult the column for <span class="math inline">\(A \wedge B\)</span> and apply the rules from the table for <span class="math inline">\(\neg\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(A \&amp; B\)</span></th>
+<th align="center"><span class="math inline">\(\neg(A \wedge B\)</span>)</th>
+<th align="center"><span class="math inline">\((A \vee B) \wedge \neg (A \wedge B)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Finally, we consult the columns for <span class="math inline">\(A \vee B\)</span> and <span class="math inline">\(\neg(A \wedge B)\)</span>, and the table for <span class="math inline">\(\&amp;\)</span>, to fill in the column for <span class="math inline">\((A \vee B) \wedge \neg(A \&amp; B)\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(A \&amp; B\)</span></th>
+<th align="center"><span class="math inline">\(\neg(A \wedge B\)</span>)</th>
+<th align="center"><span class="math inline">\((A \vee B) \wedge \neg (A \wedge B)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>Complex constructions like this are difficult at first, but don’t worry. With practice they quickly become routine.</p>
+</div>
+<div id="logical-truths-contradictions" class="section level2">
+<h2><span class="header-section-number">3.3</span> Logical Truths &amp; Contradictions</h2>
+<p><span class="newthought">Some</span> propositions come out true in every row of the truth table. Consider <span class="math inline">\(A \vee \neg A\)</span> for example:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+<th align="center"><span class="math inline">\(A \vee \neg A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+<p>Such propositions are especially interesting because they <em>must</em> be true. Their truth is guaranteed, just as a matter of logic. So we call them <strong><em>logical truths</em></strong>.</p>
+<p>The other side of this coin is propositions that are false in every row of the truth table, like <span class="math inline">\(A \wedge \neg A\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+<th align="center"><span class="math inline">\(A \wedge \neg A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>These propositions are called <strong><em>contradictions</em></strong>.</p>
+<p>Notice that the negation of a contradiction is a logical truth. For example, consider the truth table for <span class="math inline">\(\neg (A \wedge \neg A)\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+<th align="center"><span class="math inline">\(A \wedge \neg A\)</span></th>
+<th align="center"><span class="math inline">\(\neg (A \wedge \neg A)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="mutually-exclusivity-truth-tables" class="section level2">
+<h2><span class="header-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</h2>
+<p><span class="newthought">Truth</span> tables can be used to establish that two propositions are mutually exclusive. A very simple example is the propositions <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+<p>There is no row in the table where both propositions are true. And if two propositions can’t both be true, they are mutually exclusive by definition.</p>
+<p>A slightly more complex example is the propositions <span class="math inline">\(A \vee B\)</span> and <span class="math inline">\(\neg A \wedge \neg B\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+<th align="center"><span class="math inline">\(\neg B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(\neg A \wedge \neg B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+<p>Again there’s no row where <span class="math inline">\(A \vee B\)</span> and <span class="math inline">\(\neg A \wedge \neg B\)</span> are both true. So they are mutually exclusive.</p>
+</div>
+<div id="entailment-equivalence" class="section level2">
+<h2><span class="header-section-number">3.5</span> Entailment &amp; Equivalence</h2>
+<p><span class="newthought">Truth</span> tables can also be used to establish that an argument is valid. Here’s a very simple example:</p>
+<blockquote>
+<p><span class="math inline">\(A \wedge B\)</span>.<br />
+Therefore, <span class="math inline">\(A\)</span>.</p>
+</blockquote>
+<p>Obviously it’s not possible for the premise to be true and the conclusion false, so the argument is valid (if a bit silly). Accordingly, there is no line of the truth table where <span class="math inline">\(A \wedge B\)</span> comes out true, yet <span class="math inline">\(A\)</span> comes out false:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \wedge B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>The only line where <span class="math inline">\(A \wedge B\)</span> comes out true is the first one. And on that line <span class="math inline">\(A\)</span> is true too. So the argument from <span class="math inline">\(A \wedge B\)</span> to <span class="math inline">\(A\)</span> is valid.</p>
+<p>One more example:</p>
+<blockquote>
+<p><span class="math inline">\(A \vee B\)</span>.<br />
+<span class="math inline">\(\neg A\)</span>.<br />
+Therefore, <span class="math inline">\(B\)</span>.</p>
+</blockquote>
+<p>This argument is valid because the first premise says that at least one of the two propositions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> must be true, and the second line says it’s not <span class="math inline">\(A\)</span>. So it must be <span class="math inline">\(B\)</span> that’s true, as the conclusion asserts. And once again there is no line of the truth table where both <span class="math inline">\(A \vee B\)</span> and <span class="math inline">\(\neg A\)</span> are true, yet <span class="math inline">\(B\)</span> is false:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>The only line where both <span class="math inline">\(A \vee B\)</span> and <span class="math inline">\(\neg A\)</span> are true is the third row, and <span class="math inline">\(B\)</span> is true on that row. So once again the truth table tells us this argument is valid.</p>
+<p>In the <a href="logic.html#visualizing-propositions">previous chapter</a> we introduced the concept of logical entailment. <span class="math inline">\(A\)</span> logically entails <span class="math inline">\(B\)</span> when it’s impossible for <span class="math inline">\(A\)</span> to be true and <span class="math inline">\(B\)</span> false. When one proposition entails another, there is no line of the truth table where the first proposition is true and the second is false.</p>
+<p><span class="newthought">Sometimes</span> entailment goes in both directions: the first proposition entails the second <em>and the second entails the first</em>. For example, not only does <span class="math inline">\(A \wedge B\)</span> entail <span class="math inline">\(B \wedge A\)</span>, but also <span class="math inline">\(B \wedge A\)</span> entails <span class="math inline">\(A \wedge B\)</span>.</p>
+<p>We say such propositions are <strong><em>logically equivalent</em></strong>. In terms of truth tables, their columns match perfectly, they are identical copies of T’s and F’s.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(A \wedge B\)</span></th>
+<th align="center"><span class="math inline">\(B \wedge A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>A more complex example is the propositions <span class="math inline">\(\neg (A \vee B)\)</span> and <span class="math inline">\(\neg A \wedge \neg B\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(\neg A\)</span></th>
+<th align="center"><span class="math inline">\(\neg B\)</span></th>
+<th align="center"><span class="math inline">\(A \vee B\)</span></th>
+<th align="center"><span class="math inline">\(\neg(A \vee B)\)</span></th>
+<th align="center"><span class="math inline">\(\neg A \wedge \neg B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+<p>Here again the columns under these two propositions are identical.</p>
+</div>
+<div id="summary" class="section level2">
+<h2><span class="header-section-number">3.6</span> Summary</h2>
+<p><span class="newthought">Connectives</span> can be used to build more complex propositions, like <span class="math inline">\(A \wedge B\)</span> or <span class="math inline">\(A \vee \neg B\)</span>. We introduced three connectives:</p>
+<ul>
+<li><span class="math inline">\(\neg A\)</span> means it’s not true that <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(A \wedge B\)</span> means both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are true.</li>
+<li><span class="math inline">\(A \vee B\)</span> means either <span class="math inline">\(A\)</span> is true, or <span class="math inline">\(B\)</span> is true, <em>or both are true</em>.</li>
+</ul>
+<p>In a complex proposition, the main connective is the last one used to build it up from simpler components. In <span class="math inline">\(A \vee \neg B\)</span> the main connective is the <span class="math inline">\(\vee\)</span>.</p>
+<p>An argument’s validity can be established with a truth table, if there’s no row where all the premises have a T and yet the conclusion has an F.</p>
+<p>Truth tables can also be used to establish that two propositions are mutually exclusive, if there is no row of the table where both propositions have a T.</p>
+<p>Logically equivalent propositions entail one another. When two propositions have identical columns in a truth table, they are logically equivalent.</p>
+</div>
+<div id="exercises-2" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>Using the following abbreviations:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+     A &amp;= \mbox{Asha loves Cerci},\\
+     B &amp;= \mbox{Balon loves Cerci},
+  \end{aligned}
+\]</span></p>
+<p>translate each of the following into logicese (e.g. <span class="math inline">\(\neg A \vee B\)</span>).</p>
+<ol style="list-style-type: lower-alpha">
+<li>Asha doesn’t love Cerci.</li>
+<li>Asha loves Cerci and Balon loves Cerci.</li>
+<li>Asha loves Cerci but Balon does not.</li>
+<li>Neither Asha nor Balon loves Cerci.</li>
+</ol></li>
+<li><p>For each pair of propositions, use a truth table to determine whether they are mutually exclusive.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A \wedge B\)</span> and <span class="math inline">\(A \wedge \neg B\)</span>.</li>
+<li><span class="math inline">\(A\)</span> and <span class="math inline">\(\neg B\)</span>.</li>
+<li><span class="math inline">\(A \vee \neg A\)</span> and <span class="math inline">\(A \wedge \neg A\)</span>.</li>
+</ol></li>
+<li><p>For each pair of propositions, use a truth table to determine whether they are logically equivalent.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\neg A \vee B\)</span> and <span class="math inline">\(\neg (A \wedge \neg B)\)</span>.</li>
+<li><span class="math inline">\(A\)</span> and <span class="math inline">\((A \wedge B) \vee (A \wedge \neg B)\)</span>.</li>
+<li><span class="math inline">\(A\)</span> and <span class="math inline">\((B \wedge A) \vee (B \wedge \neg A)\)</span>.</li>
+</ol></li>
+<li><p>The proposition <span class="math inline">\(A \vee (B \wedge C)\)</span> features three simple propositions, so its truth table has 8 rows. Fill in the rest of the table:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(C\)</span></th>
+<th align="center"><span class="math inline">\(B \wedge C\)</span></th>
+<th align="center"><span class="math inline">\(A \vee (B \wedge C)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Use a truth table to determine whether the propositions <span class="math inline">\(A \vee (B \wedge C)\)</span> and <span class="math inline">\((A \vee B) \wedge (A \vee C)\)</span> are equivalent.</p></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="logic.html"><button class="btn btn-default">Previous</button></a>
+<a href="the-gamblers-fallacy.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

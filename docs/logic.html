@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Odds &amp; Ends" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Jonathan Weisberg" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Odds &amp; Ends">
+
+<title>Odds &amp; Ends</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<!--
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["output/HTML-CSS"],
+  "HTML-CSS": {
+    availableFonts: ["Gyre-Pagella"],
+    preferredFont: "Gyre-Pagella",
+    webFont: "Gyre-Pagella",
+    imageFont: "Gyre-Pagella"
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      extensions: ["color.js"]
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\deg}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{leftcolour}{RGB}{228,6,19}
+  \definecolor{rightcolour}{RGB}{0,92,169}
+  \definecolor{middlecolour}{RGB}{114,49,94} 
+$$
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface">Preface</a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="has-sub"><a href="the-monty-hall-problem.html#the-monty-hall-problem"><span class="toc-section-number">1</span> The Monty Hall Problem</a><ul>
+<li><a href="the-monty-hall-problem.html#diagramming-the-solution"><span class="toc-section-number">1.1</span> Diagramming the Solution</a></li>
+<li><a href="the-monty-hall-problem.html#lessons"><span class="toc-section-number">1.2</span> Lessons Learned</a></li>
+<li><a href="the-monty-hall-problem.html#exercises">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="logic.html#logic"><span class="toc-section-number">2</span> Logic</a><ul>
+<li><a href="logic.html#validity-soundness"><span class="toc-section-number">2.1</span> Validity &amp; Soundness</a></li>
+<li><a href="logic.html#propositions"><span class="toc-section-number">2.2</span> Propositions</a></li>
+<li><a href="logic.html#visualizing-propositions"><span class="toc-section-number">2.3</span> Visualizing Propositions</a></li>
+<li><a href="logic.html#strength"><span class="toc-section-number">2.4</span> Strength</a></li>
+<li><a href="logic.html#indargs"><span class="toc-section-number">2.5</span> Forms of Inductive Argument</a></li>
+<li><a href="logic.html#exercises-1">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="truth-tables.html#truth-tables"><span class="toc-section-number">3</span> Truth Tables</a><ul>
+<li><a href="truth-tables.html#connectives"><span class="toc-section-number">3.1</span> Connectives</a></li>
+<li><a href="truth-tables.html#truth-tables-1"><span class="toc-section-number">3.2</span> Truth Tables</a></li>
+<li><a href="truth-tables.html#logical-truths-contradictions"><span class="toc-section-number">3.3</span> Logical Truths &amp; Contradictions</a></li>
+<li><a href="truth-tables.html#mutually-exclusivity-truth-tables"><span class="toc-section-number">3.4</span> Mutually Exclusivity &amp; Truth Tables</a></li>
+<li><a href="truth-tables.html#entailment-equivalence"><span class="toc-section-number">3.5</span> Entailment &amp; Equivalence</a></li>
+<li><a href="truth-tables.html#summary"><span class="toc-section-number">3.6</span> Summary</a></li>
+<li><a href="truth-tables.html#exercises-2">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-gamblers-fallacy.html#the-gamblers-fallacy"><span class="toc-section-number">4</span> The Gambler’s Fallacy</a><ul>
+<li><a href="the-gamblers-fallacy.html#independence"><span class="toc-section-number">4.1</span> Independence</a></li>
+<li><a href="the-gamblers-fallacy.html#fairness"><span class="toc-section-number">4.2</span> Fairness</a></li>
+<li><a href="the-gamblers-fallacy.html#the-gamblers-fallacy-1"><span class="toc-section-number">4.3</span> The Gambler’s Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#ignorance-is-not-a-fallacy"><span class="toc-section-number">4.4</span> Ignorance Is Not a Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#the-hot-hand-fallacy"><span class="toc-section-number">4.5</span> The Hot Hand Fallacy</a></li>
+<li><a href="the-gamblers-fallacy.html#exercises-3">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities.html#calculating-probabilities"><span class="toc-section-number">5</span> Calculating Probabilities</a><ul>
+<li><a href="calculating-probabilities.html#multiplying-probabilities"><span class="toc-section-number">5.1</span> Multiplying Probabilities</a></li>
+<li><a href="calculating-probabilities.html#adding-probabilities"><span class="toc-section-number">5.2</span> Adding Probabilities</a></li>
+<li><a href="calculating-probabilities.html#exclusivity-vs.independence"><span class="toc-section-number">5.3</span> Exclusivity vs. Independence</a></li>
+<li><a href="calculating-probabilities.html#tautologies-contradictions-and-equivalent-propositions"><span class="toc-section-number">5.4</span> Tautologies, Contradictions, and Equivalent Propositions</a></li>
+<li><a href="calculating-probabilities.html#the-language-of-events"><span class="toc-section-number">5.5</span> The Language of Events</a></li>
+<li><a href="calculating-probabilities.html#summary-1"><span class="toc-section-number">5.6</span> Summary</a></li>
+<li><a href="calculating-probabilities.html#exercises-4">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="conditional-probability.html#conditional-probability"><span class="toc-section-number">6</span> Conditional Probability</a><ul>
+<li><a href="conditional-probability.html#calculating-conditional-probability"><span class="toc-section-number">6.1</span> Calculating Conditional Probability</a></li>
+<li><a href="conditional-probability.html#conditional-probability-trees"><span class="toc-section-number">6.2</span> Conditional Probability &amp; Trees</a></li>
+<li><a href="conditional-probability.html#more-examples"><span class="toc-section-number">6.3</span> More Examples</a></li>
+<li><a href="conditional-probability.html#order-matters"><span class="toc-section-number">6.4</span> Order Matters</a></li>
+<li><a href="conditional-probability.html#declaring-independence"><span class="toc-section-number">6.5</span> Declaring Independence</a></li>
+<li><a href="conditional-probability.html#ch6ex">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="calculating-probabilities-part-ii.html#calculating-probabilities-part-ii"><span class="toc-section-number">7</span> Calculating Probabilities, Part II</a><ul>
+<li><a href="calculating-probabilities-part-ii.html#the-negation-rule"><span class="toc-section-number">7.1</span> The Negation Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-addition-rule"><span class="toc-section-number">7.2</span> The General Addition Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-general-multiplication-rule"><span class="toc-section-number">7.3</span> The General Multiplication Rule</a></li>
+<li><a href="calculating-probabilities-part-ii.html#laplaces-urn-puzzle"><span class="toc-section-number">7.4</span> Laplace’s Urn Puzzle</a></li>
+<li><a href="calculating-probabilities-part-ii.html#the-law-of-total-probability"><span class="toc-section-number">7.5</span> The Law of Total Probability</a></li>
+<li><a href="calculating-probabilities-part-ii.html#example"><span class="toc-section-number">7.6</span> Example</a></li>
+<li><a href="calculating-probabilities-part-ii.html#exercises-5">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chbayes.html#chbayes"><span class="toc-section-number">8</span> Bayes’ Theorem</a><ul>
+<li><a href="chbayes.html#bayes-theorem"><span class="toc-section-number">8.1</span> Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#understanding-bayes-theorem"><span class="toc-section-number">8.2</span> Understanding Bayes’ Theorem</a></li>
+<li><a href="chbayes.html#bayes-long-theorem"><span class="toc-section-number">8.3</span> Bayes’ Long Theorem</a></li>
+<li><a href="chbayes.html#example-1"><span class="toc-section-number">8.4</span> Example</a></li>
+<li><a href="chbayes.html#baserate"><span class="toc-section-number">8.5</span> The Base Rate Fallacy</a></li>
+<li><a href="chbayes.html#exercises-6">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="multiple-conditions.html#multiple-conditions"><span class="toc-section-number">9</span> Multiple Conditions</a><ul>
+<li><a href="multiple-conditions.html#multiple-draws"><span class="toc-section-number">9.1</span> Multiple Draws</a></li>
+<li><a href="multiple-conditions.html#multiple-witnesses"><span class="toc-section-number">9.2</span> Multiple Witnesses</a></li>
+<li><a href="multiple-conditions.html#without-replacement"><span class="toc-section-number">9.3</span> Without Replacement</a></li>
+<li><a href="multiple-conditions.html#multiplying-conditional-probabilities"><span class="toc-section-number">9.4</span> Multiplying Conditional Probabilities</a></li>
+<li><a href="multiple-conditions.html#summary-2"><span class="toc-section-number">9.5</span> Summary</a></li>
+<li><a href="multiple-conditions.html#exercises-7">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
+<li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
+<li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+</ul></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
+<li><a href="expected-value.html#expected-monetary-values"><span class="toc-section-number">11.1</span> Expected Monetary Values</a></li>
+<li><a href="expected-value.html#visualizing-expectations"><span class="toc-section-number">11.2</span> Visualizing Expectations</a></li>
+<li><a href="expected-value.html#more-than-two-outcomes"><span class="toc-section-number">11.3</span> More Than Two Outcomes</a></li>
+<li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
+<li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
+<li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
+<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
+<li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
+<li><a href="utility.html#the-general-recipe"><span class="toc-section-number">12.2</span> The General Recipe</a></li>
+<li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
+<li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
+<li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
+<li><a href="utility.html#exercises-9">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
+<li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#the-sure-thing-principle"><span class="toc-section-number">13.2</span> The Sure-thing Principle</a></li>
+<li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
+<li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
+<li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
+<li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
+<li><a href="infinity-beyond.html#bernoullis-solution"><span class="toc-section-number">14.2</span> Bernoulli’s Solution</a></li>
+<li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
+<li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
+<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+</ul></li>
+<li class="part"><span><b>Part III</b></span></li>
+<li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
+<li><a href="two-schools.html#probability-as-frequency"><span class="toc-section-number">15.1</span> Probability as Frequency</a></li>
+<li><a href="two-schools.html#probability-as-belief"><span class="toc-section-number">15.2</span> Probability as Belief</a></li>
+<li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
+<li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
+<li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+</ul></li>
+<li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
+<li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
+<li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
+<li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
+<li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
+<li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
+<li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
+<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
+<li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
+<li><a href="priors.html#the-principle-of-indifference"><span class="toc-section-number">18.2</span> The Principle of Indifference</a></li>
+<li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
+<li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
+<li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
+<li><a href="priors.html#exercises-14">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
+<li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
+<li><a href="significance-testing.html#making-it-precise"><span class="toc-section-number">19.2</span> Making it Precise</a></li>
+<li><a href="significance-testing.html#levels-of-significance"><span class="toc-section-number">19.3</span> Levels of Significance</a></li>
+<li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
+<li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
+<li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
+<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
+<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
+<li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
+<li><a href="chlindley.html#making-it-concrete"><span class="toc-section-number">20.2</span> Making It Concrete</a></li>
+<li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
+<li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
+<li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
+<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
+<li><a href="cheat-sheet.html#deductive-logic">Deductive Logic</a></li>
+<li><a href="cheat-sheet.html#probability">Probability</a></li>
+<li><a href="cheat-sheet.html#decision-theory">Decision Theory</a></li>
+<li><a href="cheat-sheet.html#bayesianism-1">Bayesianism</a></li>
+<li><a href="cheat-sheet.html#frequentism-1">Frequentism</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-axioms-of-probability.html#the-axioms-of-probability"><span class="toc-section-number">B</span> The Axioms of Probability</a><ul>
+<li><a href="the-axioms-of-probability.html#theories-and-axioms">Theories and Axioms</a></li>
+<li><a href="the-axioms-of-probability.html#the-three-axioms-of-probability">The Three Axioms of Probability</a></li>
+<li><a href="the-axioms-of-probability.html#first-steps">First Steps</a></li>
+<li><a href="the-axioms-of-probability.html#conditional-probability-the-multiplication-rule">Conditional Probability &amp; the Multiplication Rule</a></li>
+<li><a href="the-axioms-of-probability.html#equivalence-general-addition">Equivalence &amp; General Addition</a></li>
+<li><a href="the-axioms-of-probability.html#total-probability-bayes-theorem">Total Probability &amp; Bayes’ Theorem</a></li>
+<li><a href="the-axioms-of-probability.html#independence-1">Independence</a></li>
+</ul></li>
+<li class="has-sub"><a href="grue.html#grue"><span class="toc-section-number">C</span> The Grue Paradox</a><ul>
+<li><a href="grue.html#a-gruesome-concept">A Gruesome Concept</a></li>
+<li><a href="grue.html#the-paradox">The Paradox</a></li>
+<li><a href="grue.html#grue-artificial-intelligence">Grue &amp; Artificial Intelligence</a></li>
+<li><a href="grue.html#disjunctivitis">Disjunctivitis</a></li>
+<li><a href="grue.html#time-dependence">Time Dependence</a></li>
+<li><a href="grue.html#the-moral">The Moral</a></li>
+</ul></li>
+<li class="has-sub"><a href="the-problem-of-induction.html#the-problem-of-induction"><span class="toc-section-number">D</span> The Problem of Induction</a><ul>
+<li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
+<li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
+<li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="logic" class="section level1">
+<h1><span class="header-section-number">2</span> Logic</h1>
+<div class="epigraph">
+<p>
+I can win an argument on any topic, against any opponent. People know this, and steer clear of me at parties. Often, as a sign of their great respect, they don’t even invite me.<br />
+—Dave Barry
+</p>
+</div>
+<p><span class="newthought">Logic</span> is the study of what follows from what. From the information that Tweety is a bird and all birds are animals, it follows that Tweety is an animal. But things aren’t always so certain. Can Tweety fly? Most birds can fly, so probably. But Tweety might be a penguin.</p>
+<p><em>Deductive</em> logic is the branch of logic that studies what follows with certainty. <em>Inductive</em> logic deals with uncertainty, things that only follow with high probability.</p>
+<p>This book is about inductive logic and probability. But we need a few concepts from deductive logic to get started.</p>
+<div id="validity-soundness" class="section level2">
+<h2><span class="header-section-number">2.1</span> Validity &amp; Soundness</h2>
+<p><span class="newthought">In</span> deductive logic we study “valid” arguments. An argument is <strong><em>valid</em></strong> when the conclusion must be true if the premises are true. Take this example again:</p>
+<div class="argument">
+<p>
+Tweety is a bird.<br />
+All birds are animals.<br />
+Therefore, Tweety is an animal.
+</p>
+</div>
+<p>The first two lines are called the <em>premises</em> of the argument. The last line is called the <em>conclusion</em>. In this example, the conclusion must be true if the premises are. So the argument is valid.</p>
+<p>Here’s another example of a valid argument:</p>
+<div class="argument">
+<p>
+Tweety is taller than Kwazi.<br />
+Kwazi is taller than Peso.<br />
+Therefore, Tweety is taller than Peso.
+</p>
+</div>
+<p>The argument is valid because it’s just not possible for the premises to be true and the conclusion false.</p>
+<p>Here’s an example of an <em>invalid</em> argument:</p>
+<div class="argument">
+<p>
+Tweety is a bird.<br />
+Most birds can fly.<br />
+Therefore, Tweety can fly.
+</p>
+</div>
+<p>It’s not valid because validity requires the conclusion to follow <em>necessarily</em>. If there’s any way for the the premises to be true yet the conclusion false, the argument doesn’t count as valid. And like we said, Tweety might be a penguin.</p>
+<p>Valid arguments are interesting because their logic is airtight. If the assumptions of the argument are correct, there’s no way to go wrong accepting the conclusion. But what if the assumptions <em>aren’t</em> correct? Validity isn’t everything, we also want our arguments to build on true foundations.</p>
+<p><span class="newthought">We</span> call an argument <strong><em>sound</em></strong> when it is valid <em>and</em> all the premises are true:
+<span class="math display">\[ \mbox{sound = valid + true premises}.\]</span>
+For example, here’s a sound argument:</p>
+<div class="argument">
+<p>
+The author of this book is human.<br />
+All humans are animals.<br />
+Therefore, the author of this book is an animal.
+</p>
+</div>
+<p>Sound arguments are important because their conclusions are always true. The premises of a valid argument are true by definition. And since it’s valid by definition too, that gauratnees the conclusion to be true as well.</p>
+<p>Yet deductive logic studies validity, not soundness. Why?</p>
+<p>Because logicians aren’t in the business of determining when the premises of an argument are true. As a logician, I might have no idea who Tweety is, and thus no idea whether Tweety is a bird. I might not even know whether all birds fly, or just some, or even none. That’s a job for an ornithologist.</p>
+<p>A logician’s job is to assess the <em>logic</em> of an argument, the connections between its assumptions and its conclusion. So a logician just takes the premises of an argument for granted and asks, how well do those assumptions support the conclusion? That’s something you don’t need to know any ornithology to study. Or biology, or medicine, or physics, or whatever topic a particular argument concerns.</p>
+<p><span class="newthought">Validity</span> is a tricky, counterintuitive concept. It’s very much a hypothetical notion: it’s about whether the conclusion must be true <em>if</em> the premises are true. So when we assess an argument’s validity, we ignore what we know about the truth of its premises. We pretend they’re true even if they aren’t. We even have to ignore what we know about the conclusion.</p>
+<p>Instead we suspend what we know about the topic, and just imagine the premises to be true. Then we ask: in this hypothetical scenario, is there any way the conclusion could be false? If there is, the argument is invalid. Otherwise, it’s valid.</p>
+</div>
+<div id="propositions" class="section level2">
+<h2><span class="header-section-number">2.2</span> Propositions</h2>
+<p><span class="newthought">Arguments</span> are made out of statements, assertions that something is true. In logic we call these statements <strong><em>propositions</em></strong>. And we use capital letters of the English alphabet to stand for them. For example, this argument:</p>
+<div class="argument">
+<p>
+If Aegon is a tyrant, then Brandon is a wizard.<br />
+Aegon is a tyrant.<br />
+Therefore, Brandon is a wizard.
+</p>
+</div>
+<p>can be summarized like this:</p>
+<div class="argument">
+<p>
+If <span class="math inline"><span class="math inline">\(A\)</span></span>, then <span class="math inline"><span class="math inline">\(B\)</span></span>.<br />
+<span class="math inline"><span class="math inline">\(A\)</span></span>.<br />
+Therefore, <span class="math inline"><span class="math inline">\(B\)</span></span>.
+</p>
+</div>
+<p><span class="newthought">Not</span> all sentences are propositions. Some are questions, some are commands, some are expressions of worry. For example:</p>
+<ul>
+<li>What time is it?</li>
+<li>Pass the rooster sauce!</li>
+<li>Uh oh.</li>
+</ul>
+<p>One way to distinguish propositions from other kinds of sentences is: propositions are capable of being true or false. It wouldn’t make sense to respond to someone who asks you what time it is by saying, “what you just said is false!” And you wouldn’t respond to someone’s request to pass the sauce with “that’s true!” Except maybe as a joke.</p>
+</div>
+<div id="visualizing-propositions" class="section level2">
+<h2><span class="header-section-number">2.3</span> Visualizing Propositions</h2>
+<p><span class="newthought">We</span> learned about mutually exclusive propositions in <a href="the-monty-hall-problem.html#lessons">Section</a> <a href="the-monty-hall-problem.html#lessons">1.2</a>. Two propositions are mutually exclusive when one of them being true means the other must be false. For example:</p>
+<ul>
+<li><span class="math inline">\(A\)</span>: Confucius was born in the 6th Century A.D.</li>
+<li><span class="math inline">\(B\)</span>: Confucius was born in the 6th Century B.C.</li>
+</ul>
+<p>There is no way for both of these propositions to be true, and we can visualize this relationship in a diagram (Figure <a href="logic.html#fig:meprops">2.1</a>).</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:meprops"></span>
+<img src="_main_files/figure-html/meprops-1.png" alt="Mutually exclusive propositions" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 2.1: Mutually exclusive propositions<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>Each circle represents a proposition. You can think of it as surrounding the possible situations where the proposition would be true. The circles don’t overlap because there is no possible situation where both propositions in this example are true.</p>
+<p>In contrast, these two propositions are not mutually exclusive:</p>
+<ul>
+<li>Confucius was born in Asia.</li>
+<li>Confucius was born in the 6th Century B.C.</li>
+</ul>
+<p>When propositons are not mutually exclusive, we say they are <strong><em>compatible</em></strong>. Compatible propositions overlap (Figure <a href="logic.html#fig:compropositions">2.2</a>). The region where the circles overlap represents the possible scenarios where both propositions are true (the “<span class="math inline">\(A \wedge B\)</span> region”).</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:compropositions"></span>
+<img src="_main_files/figure-html/compropositions-1.png" alt="Compatible propositions" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 2.2: Compatible propositions<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:unnamed-chunk-13"></span>
+<img src="img/euler.png" alt="Leonhard Euler ($1707$--$1783$)" width="230"  />
+<!--
+<p class="caption marginnote">-->Figure 2.3: Leonhard Euler (<span class="math inline">\(1707\)</span>–<span class="math inline">\(1783\)</span>)<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>These are called <strong><em>Euler diagrams</em></strong>, after the mathematician Leonhard Euler (prounounced <em>oiler</em>). You may have seen Venn diagrams before, which are very similar. But in Euler diagrams the circles don’t have to overlap.</p>
+<p><span class="newthought">Sometimes</span> one circle will even contain another circle entirely. Take this example:</p>
+<ul>
+<li>Confucius was born in Asia.</li>
+<li>Confucius was born somewhere.</li>
+</ul>
+<p>These propositions aren’t just compatible. If the first is true, then the second <em>must</em> be true. Imagine an argument with the first proposition as the premise and the second proposition as the conclusion. The argument would be valid:</p>
+<div class="argument">
+<p>
+Confucius was born in Asia.<br />
+Therefore, Confucius was born.
+</p>
+</div>
+<p>In this case we say that the first proposition <strong><em>logically entails</em></strong> the second. In terms of an Euler diagram, he first circle is contained entirely in the second (Figure <a href="logic.html#fig:entailment">2.4</a>). Because there is no possible situation where the first proposition is true yet the second false.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:entailment"></span>
+<img src="_main_files/figure-html/entailment-1.png" alt="Logical entailment" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 2.4: Logical entailment<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>What if an argument has multiple premises? For example:</p>
+<div class="argument">
+<p>
+Zhuangzi was born in the Chinese province of Anhui.<br />
+Zhuoru was born in the Chinese city of Beijing.<br />
+Therefore, both Zhuangzi and Zhuoru were born in China.
+</p>
+</div>
+<p>This argument is valid, and the diagram might look like Figure <a href="logic.html#fig:validtwopremises">2.5</a>. Notice how the <span class="math inline">\(A \wedge B\)</span> region lies entirely within the <span class="math inline">\(C\)</span> circle. This reflects the argument’s validity: there is no way for the first two propositions to be true and the last one false.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:validtwopremises"></span>
+<img src="_main_files/figure-html/validtwopremises-1.png" alt="A valid argument with two premises" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 2.5: A valid argument with two premises<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>In contrast, an invalid argument would have a diagram like Figure <a href="logic.html#fig:invalidtwopremises">2.6</a>. This diagram allows for the possibility that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both true yet <span class="math inline">\(C\)</span> is false; part of the <span class="math inline">\(A \wedge B\)</span> region falls outside the <span class="math inline">\(C\)</span> circle.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:invalidtwopremises"></span>
+<img src="_main_files/figure-html/invalidtwopremises-1.png" alt="An invalid argument with two premises" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 2.6: An invalid argument with two premises<!--</p>-->
+<!--</div>--></span>
+</p>
+</div>
+<div id="strength" class="section level2">
+<h2><span class="header-section-number">2.4</span> Strength</h2>
+<p><span class="newthought">Inductive</span> logic studies arguments that aren’t necessarily valid, but still “strong”. A <strong><em>strong</em></strong> argument is one where the conclusion is highly probable, if the premises are true. For example:</p>
+<div class="argument">
+<p>
+The sun has risen every day so far.<br />
+Therefore, the sun will rise again tomorrow.
+</p>
+</div>
+<p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;"><img src="img/stolen_earth.png" /> In the <em>Doctor Who</em> episode “The Stolen Earth”, aliens teleport our planet out of its solar system. The sun doesn’t rise that day, strange planets fill the sky instead.</span></span></p>
+<p>This argument isn’t valid, because it’s possible the conclusion is false even though the premise is true. Maybe the sun will explode in the night for some surprising reason. Or maybe the earth’s rotation will be stopped by alien forces.</p>
+<p>These possibilities aren’t very likely, of course. So the argument is strong, even though it’s not strictly valid. The premise gives us very good reason to believe the conclusion, just not a 100% guarantee.</p>
+<p>In terms of an Euler diagram then, the premise circle isn’t contained entirely within the conclusion circle (<a href="logic.html#fig:strongarg">2.7</a>). We have to leave some room for the possibility that the premise is true and the conclusion false. But we can still convey that this possibility has only a very slight chance of being true, by making it slim.</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:strongarg"></span>
+<img src="_main_files/figure-html/strongarg-1.png" alt="A strong argument" width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 2.7: A strong argument<!--</p>-->
+<!--</div>--></span>
+</p>
+
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:laplace"></span>
+<img src="img/laplace.png" alt="Pierre Simone Laplace (\(1749\)–\(1827\)) developed a formula for calculating this number exactly. We’ll learn how to do similar calculations in the coming chapters." width="200"  />
+<!--
+<p class="caption marginnote">-->Figure 2.8: Pierre Simone Laplace (<span class="math inline">\(1749\)</span>–<span class="math inline">\(1827\)</span>) developed <a href="https://bit.ly/2mU9WgW">a formula</a> for calculating this number exactly. We’ll learn how to do similar calculations in the coming chapters.<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>We could also label the <em><span class="math inline">\(A\)</span>-but-not-<span class="math inline">\(B\)</span></em> region with a small number, if we knew exactly how unlikely this possibility was.</p>
+<p><span class="newthought">Strength</span> comes in degrees. An argument’s premises can make the conclusion somewhat likely, very likely, almost certain, or perfectly certain. So arguments range from weak, to somewhat strong, to very strong, etc.</p>
+<p>Strength differs from validity here, since validity is all-or-nothing. If there is any possible way for the premises to be true and the conclusion false, the argument is invalid—no matter how remote or bizarre that possibility is.</p>
+<p>Notice though, valid arguments are strong by definition. Since it’s impossible for a valid argument’s conclusion to be false if the premises are true, the premises make the conclusion 100% probable. A valid argument is the strongest possible argument.</p>
+</div>
+<div id="indargs" class="section level2">
+<h2><span class="header-section-number">2.5</span> Forms of Inductive Argument</h2>
+<p><span class="newthought">What</span> kinds of strong arguments are there, and how strong are they? That’s what the rest of this book is about, in a way. But we can start by identifying some common forms of inductive argument right now.</p>
+<p><span class="newthought">Generalizing</span> from observed instances is one extremely common form of argument:</p>
+<div class="argument">
+<p>
+Every raven I have every seen has been black.<br />
+Therefore, all ravens are black.
+</p>
+</div>
+<p>Arguments of this kind are usually stronger the more instances you observe. If you’ve only ever seen two ravens, this argument won’t be very compelling. But if you’ve seen thousands, then it’s much stronger.</p>
+<p>It also helps to observe different kinds of instances. If you’ve only observed ravens in your city or town, then even the thousands you’ve seen won’t count for much. Maybe the raven population in your area is unusual, and ravens on the other side of the world are all different colours.</p>
+<p><span class="newthought">Going</span> in the opposite direction, we can use what we know about a general population to draw conclusions about particular instances. We saw an example of this earlier:</p>
+<div class="argument">
+<p>
+Most birds can fly.<br />
+Tweety is a bird.<br />
+Therefore, Tweety can fly.
+</p>
+</div>
+<p>Again, the strength of the inference depends on the details. If “most birds” means <span class="math inline">\(99\%\)</span>, the argument is quite strong. If “most” only means <span class="math inline">\(80\%\)</span>, then it’s not so strong. (Usually “most” just means more than <span class="math inline">\(50\%\)</span>.)</p>
+<p>It also helps to know that Tweety is similar to the birds that can fly, and different from the ones that can’t. If we know that Tweety is small and has feathers, that makes the argument stronger. If instead we know that Tweety is large, and coloured black and white, that makes the argument weaker. It suggests Tweety is a penguin.</p>
+<p><span class="newthought">Inference</span> to the best explanation is another common form of argument, quite different from the previous two. Here’s an example:</p>
+<div class="argument">
+<p>
+My car won’t start and the gas gauge reads ‘empty’.<br />
+Therefore, my car is out of gas.
+</p>
+</div>
+<p>An empty tank would explain the sytmptoms described in the premise, so the premise makes the conclusion plausible. There could be other possible explanations, of course. Maybe the engine and the gas gauge both just happened to break at the same time. But that would be quite a coincidence, so this explanation isn’t as good.</p>
+<p>What makes one explanation better than another? That turns out to be a very hard question, and there is no generally accepted answer. We’ll come back to this issue later, once we have a better grip on the basics of probability.</p>
+</div>
+<div id="exercises-1" class="section level2 unnumbered">
+<h2>Exercises</h2>
+<ol>
+<li><p>For each of the following arguments, say whether it is valid or invalid.</p>
+<ol style="list-style-type: lower-alpha">
+<li><div class="argument">
+<p>
+All cats have whiskers.<br />
+Simba has whiskers.<br />
+Therefore, Simba is a cat.
+</p>
+</div></li>
+<li><div class="argument">
+<p>
+Ada Lovelace wrote the world’s first computer program.<br />
+Ada Lovelace was Lord Byron’s daughter.<br />
+Therefore, the first computer program was written by Lord Byron’s daughter.
+</p>
+</div>
+<p>Hint: the premises of this argument are true.</p></li>
+<li><div class="argument">
+<p>
+All Canadian residents are Russian citizens.<br />
+Vladimir Putin is a Canadian resident.<br />
+Therefore, Vladimir Putin is a Russian citizen.
+</p>
+</div></li>
+<li><div class="argument">
+<p>
+Manitoba is located in either Saskatchewan, Ontario, or Quebec.<br />
+Manitoba is not located in Saskatchewan.<br />
+Manitoba is not located in Ontario.<br />
+Therefore, Manitoba is located in Quebec.
+</p>
+</div></li>
+<li><div class="argument">
+<p>
+If snow is black then pigs can fly.<br />
+Snow is not black.<br />
+Therefore, pigs cannot fly.
+</p>
+</div></li>
+<li><div class="argument">
+<p>
+Either the moon is made of green cheese or pigs can fly.<br />
+Pigs can’t fly.<br />
+Therefore the moon is made of green cheese.<br />
+</p>
+</div></li>
+</ol></li>
+<li><p>For each pair of propositions, say whether they are mutually exclusive or compatible.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Regarding the roll of an ordinary die:</p>
+<ul>
+<li>The die will land on an even number.</li>
+<li>The die will land either <span class="math inline">\(4\)</span> or <span class="math inline">\(5\)</span>.</li>
+</ul></li>
+<li><p>Regarding the unemployment rate in your country tomorrow:</p>
+<ul>
+<li>The unemployment rate will be at least <span class="math inline">\(5\%\)</span>.</li>
+<li>The unemployment rate will be exactly <span class="math inline">\(5\%\)</span>.</li>
+</ul></li>
+<li><p>Regarding a party tomorrow:</p>
+<ul>
+<li>Ani will be there and so will her sister PJ.</li>
+<li>PJ will not be there.</li>
+</ul></li>
+</ol></li>
+<li><p>True or false? If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then <span class="math inline">\(A\)</span> logically entails that <span class="math inline">\(B\)</span> is false.</p></li>
+<li><p>True or false? It is possible for <span class="math inline">\(A\)</span> to logically entail <span class="math inline">\(B\)</span> even though the reverse does not hold (i.e. even though <span class="math inline">\(B\)</span> does not logically entail <span class="math inline">\(A\)</span>).</p></li>
+<li><p>Create your own example of each of the three types of inductive argument described in this chapter:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Generalizing from Observed Instances</li>
+<li>Inferring an Instance from a Generalization</li>
+<li>Inference to the Best Explanation</li>
+</ol></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="the-monty-hall-problem.html"><button class="btn btn-default">Previous</button></a>
+<a href="truth-tables.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

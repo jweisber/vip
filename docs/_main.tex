@@ -81,9 +81,9 @@
 \newcommand{\EU}{EU}
 \newcommand{\pr}{Pr}
 \newcommand{\po}{Pr^*}
-\definecolor{leftcolour}{RGB}{228,6,19}
-\definecolor{rightcolour}{RGB}{0,92,169}
-\definecolor{middlecolour}{RGB}{114,49,94} 
+\definecolor{bookred}{RGB}{228,6,19}
+\definecolor{bookblue}{RGB}{0,92,169}
+\definecolor{bookpurple}{RGB}{114,49,94}
 
 \newenvironment{epigraph}%
 {
@@ -201,77 +201,65 @@
 \chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
 
-\newthought{This} book is designed for introductory philosophy courses
-on probability and inductive logic. It is based on a typical such course
-I teach at the University of Toronto, where we offer ``Probability \&
+\newthought{This} textbook is for introductory philosophy courses on
+probability and inductive logic. It is based on a typical such course I
+teach at the University of Toronto, where we offer ``Probability \&
 Inductive Logic'' in the second year, alongside the usual deductive
 logic intro.\(\,\)
 
-The book assumes no deductive logic. The little that's used is
-introduced in the early chapters. In fact almost no formal background is
-presumed, only very simple high school algebra.
+The book assumes no deductive logic. The early chapters introduce the
+little that's used. In fact almost no formal background is presumed,
+only very simple high school algebra.
 
-Two well-known predecessors inspired and influenced this book: Brian
+Several well known predecessors inspired and shaped this book. Brian
 Skyrms' \emph{Choice \& Chance} and Ian Hacking's \emph{An Introduction
-to Probability and Inductive Logic}. Both texts are widely used with
-good reason: they are excellent. I've taught them both many times
-myself, with great success. This book blends my favourite aspects of
-each, organizing them in the sequence and style I prefer.
+to Probability and Inductive Logic} were especially influential. Both
+texts are widely used with good reason---they are excellent. I've taught
+both myself many times, with great success. But this book blends my
+favourite aspects of each, organizing them in the sequence and style I
+prefer.
 
-But I also hope it offers more universal benefits:
+I hope this book also offers more universal benefits:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  This book is open access, hence free.
+  It is open access, hence free.
 \item
-  It's also open source, so other instructors can modify it to their
-  liking.
+  It's also \href{https://github.com/jweisber/vip-source}{open source},
+  so other instructors can modify it to their liking.
 \item
-  It's available in both PDF and HTML, so it can be either printed or
-  read comfortably on a range of devices.
+  It's available in both
+  \href{http://jonathanweisberg.org/vip/_main.pdf}{PDF} and
+  \href{http://jonathanweisberg.org/vip/}{HTML}. So it can be read
+  comfortably on a range of devices, or printed.
 \item
   It emphasizes visual explanations and techniques, to make the material
   more approachable.
 \item
-  It livens up the text with hyperlinks, images, animations, interactive
-  tools, and margin notes that highlight points of history and
-  curiosity.
+  It livens up the text with hyperlinks, images, and margin notes that
+  highlight points of history and curiosity. I also hope to add some
+  animations and interactive tools soon.
 \end{enumerate}
 
 \newthought{The} book is divided into three main parts. The first
 explains the basics of logic and probability, the second covers basic
-decision theory, and the last engages the Bayesian and frequentist
-schools of thought. A ``cheat sheet'' at the front summarizes key
-definitions and formulas. And optional chapters in the Appendix cover
-the axiomatic construction of probability theory, Hume's problem of
+decision theory, and the last explores the philosophical foundations of
+probability and statistics. This last, philosophical part focuses on the
+Bayesian and frequentist approaches.
+
+A ``cheat sheet'' summarizing key definitions and formulas appears in
+\protect\hyperlink{cheat-sheet}{Appendix}
+\protect\hyperlink{cheat-sheet}{A}. Further appendices cover the
+axiomatic construction of probability theory, Hume's problem of
 induction, and Goodman's new ridle of induction.
 
-When I teach this material, I aim to leave students with a clearer view
-of their society's statistical realities. Media bombard them with
-nutritional fads, overhyped ``significant'' findings, fantastical (or
-fantastical sounding) advances in machine learning and artificial
-intelligence, and more. I want them to understand what these items do
-and don't mean. I don't want them to become too skeptical or jaded about
-scientific research just because the news overhypes nutritional studies,
-only to cash in on the backlash. But neither do I want them to be naive
-about scientific practice, oblivious to the assumptions that underpin
-the contemporary scientific worldview.
-
-So I think of the course as building up a suite of skills and tools, yet
-ending with a mystery. The mystery is revealed in the final showdown
-between the Bayesian and frequentist schools, each of which is left
-facing an ultimate paradox. The Bayesian school struggles with the
-problem of priors, exemplified in Bertrand's paradox. The frequentist
-school then tries to work prior-free with significance testing, only to
-find that priors bite back in Lindley's paradox.
-
-I usually get a mix of students in my course, with different ideological
-inclinations and varying levels of background. For some the technical
-material is easy, even review. For others, a healthy skepticism about
-scientific methods and discourses comes naturally. My goal is to get
-these students all more or less on the same page.
+\newthought{I} usually get a mix of students in my course, with
+different ideological inclinations and varying levels of background. For
+some the technical material is easy, even review. For others, a healthy
+skepticism about scientific methods and discourses comes naturally. My
+goal is to get these students all more or less on the same page.
 
 By the end of the course, students with little formal background have a
 bevy of tools for thinking about uncertainty. They can understand much
@@ -282,7 +270,7 @@ I hope, better understand their limitations. I want them to understand
 why these tools leave big questions open---not just philosophically, but
 also in very pressing, practical ways.
 
-\newthought{The} book was made using the \texttt{bookdown} package
+\newthought{The} book was made with the \texttt{bookdown} package
 created by Yihui Xie. It's a wonderful tool, built on a bunch of other
 technologies I love, especially the R programming language and the
 pandoc conversion tool created by philosopher John MacFarlane. The
@@ -292,11 +280,11 @@ who adapted Tufte's designs to HTML and PDF (via LaTeX).
 
 If it weren't for these tools, I never would have written this book. It
 wouldn't have been possible to create one that does all the things this
-books is meant to do. I also owe inspiration to Kieran Healy's wonderful
-book \href{http://socviz.co/}{\emph{Data Visualization: A Practical
+book is meant to do. I also owe inspiration to Kieran Healy's book
+\href{http://socviz.co/}{\emph{Data Visualization: A Practical
 Introduction}}, which uses the same suite of tools. It gave me the idea
-to use them for an updated, open, and visually enhanced rendition of the
-classic material from Skyrms and Hacking.
+to use those tools for an updated, open, and visually enhanced rendition
+of the classic material from Skyrms and Hacking.
 
 \hypertarget{part-part-i}{%
 \part*{Part I}\label{part-part-i}}
@@ -827,14 +815,12 @@ represents the possible scenarios where both propositions are true (the
 \includegraphics{_main_files/figure-latex/compropositions-1} \caption[Compatible propositions]{Compatible propositions}\label{fig:compropositions}
 \end{marginfigure}
 
-\begin{marginfigure}
-\includegraphics[width=1.54in]{img/euler} \caption[Leonhard Euler ($1707$--$1783$)]{Leonhard Euler ($1707$--$1783$)}\label{fig:unnamed-chunk-13}
-\end{marginfigure}
-
 These are called \textbf{\emph{Euler diagrams}}, after the mathematician
-Leonhard Euler (prounounced \emph{oiler}). You may have seen Venn
-diagrams before, which are very similar. But in Euler diagrams the
-circles don't have to overlap.
+Leonhard Euler (prounounced \emph{oiler}).\footnote{Leonhard Euler lived
+  from \(1707\) to \(1783\). You may have encountered some of his work
+  before if you've worked with logarithms or taken calculus.} You may
+have seen Venn diagrams before, which are very similar. But in Euler
+diagrams the circles don't have to overlap.
 
 \newthought{Sometimes} one circle will even contain another circle
 entirely. Take this example:
@@ -857,15 +843,15 @@ Confucius was born in Asia.\\
 Therefore, Confucius was born.
 \end{argument}
 
+\begin{marginfigure}
+\includegraphics{_main_files/figure-latex/entailment-1} \caption[Logical entailment]{Logical entailment}\label{fig:entailment}
+\end{marginfigure}
+
 In this case we say that the first proposition \textbf{\emph{logically
 entails}} the second. In terms of an Euler diagram, he first circle is
 contained entirely in the second (Figure \ref{fig:entailment}). Because
 there is no possible situation where the first proposition is true yet
 the second false.
-
-\begin{marginfigure}
-\includegraphics{_main_files/figure-latex/entailment-1} \caption[Logical entailment]{Logical entailment}\label{fig:entailment}
-\end{marginfigure}
 
 What if an argument has multiple premises? For example:
 
@@ -875,15 +861,15 @@ Zhuoru was born in the Chinese city of Beijing.\\
 Therefore, both Zhuangzi and Zhuoru were born in China.
 \end{argument}
 
+\begin{marginfigure}
+\includegraphics{_main_files/figure-latex/validtwopremises-1} \caption[A valid argument with two premises]{A valid argument with two premises}\label{fig:validtwopremises}
+\end{marginfigure}
+
 This argument is valid, and the diagram might look like Figure
 \ref{fig:validtwopremises}. Notice how the \(A \wedge B\) region lies
 entirely within the \(C\) circle. This reflects the argument's validity:
 there is no way for the first two propositions to be true and the last
 one false.
-
-\begin{marginfigure}
-\includegraphics{_main_files/figure-latex/validtwopremises-1} \caption[A valid argument with two premises]{A valid argument with two premises}\label{fig:validtwopremises}
-\end{marginfigure}
 
 In contrast, an invalid argument would have a diagram like Figure
 \ref{fig:invalidtwopremises}. This diagram allows for the possibility
@@ -906,13 +892,6 @@ example:
 The sun has risen every day so far.\\
 Therefore, the sun will rise again tomorrow.
 \end{argument}
-
-\begin{marginfigure}
-\includegraphics{img/stolen_earth.png} In the \emph{Doctor Who} episode
-``The Stolen Earth'', aliens teleport our planet out of its solar
-system. The sun doesn't rise that day, strange planets fill the sky
-instead.
-\end{marginfigure}
 
 This argument isn't valid, because it's possible the conclusion is false
 even though the premise is true. Maybe the sun will explode in the night
@@ -1291,7 +1270,7 @@ connectives depends on the truth of its components. For example,
 \(\neg A\) is false if \(A\) is true, and it's true if \(A\) is false:
 
 \begin{longtable}[]{@{}cc@{}}
-\caption{\label{tab:unnamed-chunk-31}Truth table for
+\caption{\label{tab:unnamed-chunk-29}Truth table for
 \(\neg\)}\tabularnewline
 \toprule
 \(A\) & \(\neg A\)\tabularnewline
@@ -1309,7 +1288,7 @@ F & T\tabularnewline
 Slightly more complicated is the rule for \(\&\):
 
 \begin{longtable}[]{@{}ccc@{}}
-\caption{\label{tab:unnamed-chunk-32}Truth table for
+\caption{\label{tab:unnamed-chunk-30}Truth table for
 \(\wedge\)}\tabularnewline
 \toprule
 \(A\) & \(B\) & \(A \wedge B\)\tabularnewline
@@ -1338,7 +1317,7 @@ The truth table for \(\vee\) (``either/or'') is a little more
 surprising:
 
 \begin{longtable}[]{@{}ccc@{}}
-\caption{\label{tab:unnamed-chunk-33}Truth table for
+\caption{\label{tab:unnamed-chunk-31}Truth table for
 \(\vee\)}\tabularnewline
 \toprule
 \(A\) & \(B\) & \(A \vee B\)\tabularnewline
@@ -2273,7 +2252,7 @@ Only use the Addition Rule on mutually exclusive propositions.
 vs.~Independence}\label{exclusivity-vs.independence}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-56-1} \caption[Mutually exclusive propositions don't overlap]{Mutually exclusive propositions don't overlap}\label{fig:unnamed-chunk-56}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-54-1} \caption[Mutually exclusive propositions don't overlap]{Mutually exclusive propositions don't overlap}\label{fig:unnamed-chunk-54}
 \end{marginfigure}
 
 \newthought{Exclusivity} and independence can be hard to keep straight
@@ -2286,7 +2265,7 @@ there have to be some \(B\) possibilities within the \(A\) circle
 (unless the probability of \(A\) was zero to start with).
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-57-1} \caption[Independent propositions do overlap (unless one of them has zero probability)]{Independent propositions do overlap (unless one of them has zero probability).}\label{fig:unnamed-chunk-57}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-55-1} \caption[Independent propositions do overlap (unless one of them has zero probability)]{Independent propositions do overlap (unless one of them has zero probability).}\label{fig:unnamed-chunk-55}
 \end{marginfigure}
 
 So independence and exclusivity are very different. Generally speaking,
@@ -2311,7 +2290,7 @@ the \emph{probability} of the other being true.
 Propositions}\label{tautologies-contradictions-and-equivalent-propositions}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-58-1} \caption[The Tautology Rule]{The Tautology Rule. Every point falls in either the $A$ region or the $\neg A$ region, so $\p(A \vee \neg A) = 1$.}\label{fig:unnamed-chunk-58}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-56-1} \caption[The Tautology Rule]{The Tautology Rule. Every point falls in either the $A$ region or the $\neg A$ region, so $\p(A \vee \neg A) = 1$.}\label{fig:unnamed-chunk-56}
 \end{marginfigure}
 
 \newthought{A} tautology is a proposition that must be true, so its
@@ -2326,7 +2305,7 @@ For example, \(A \vee \neg A\) is a tautology, so
 \(\p(A \vee \neg A) = 1\). In terms of an Euler diagram, the \(A\) and
 \(\neg A\) regions together take up the whole diagram. To put it a bit
 colourfully,
-\(\p(A \vee \neg A) = \color{leftcolour}{\blacksquare}\color{black}{} + \color{rightcolour}{\blacksquare}\color{black}{} = 1\).
+\(\p(A \vee \neg A) = \color{bookred}{\blacksquare}\color{black}{} + \color{bookblue}{\blacksquare}\color{black}{} = 1\).
 
 \newthought{The} flipside of a tautology is a contradiction, a
 proposition that can't possibly be true. So it has probability 0.
@@ -2346,7 +2325,7 @@ circumstances (and false under exactly the same circumstances). So they
 have the same chance of being true (ditto false).
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-59-1} \caption[The Equivalence Rule]{The Equivalence Rule. The $A \vee B$ region is identical to the $B \vee A$ region, so they have the same probability.}\label{fig:unnamed-chunk-59}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-57-1} \caption[The Equivalence Rule]{The Equivalence Rule. The $A \vee B$ region is identical to the $B \vee A$ region, so they have the same probability.}\label{fig:unnamed-chunk-57}
 \end{marginfigure}
 
 \begin{description}
@@ -2385,7 +2364,7 @@ corresponding proposition that event \(E\) occurs. And you can translate
 the usual set operations into logic as follows:
 
 \begin{longtable}[]{@{}cc@{}}
-\caption{\label{tab:unnamed-chunk-60}Translating between events and
+\caption{\label{tab:unnamed-chunk-58}Translating between events and
 propositions}\tabularnewline
 \toprule
 Events & Propositions\tabularnewline
@@ -2587,7 +2566,7 @@ probabilities?
 Probability}\label{calculating-conditional-probability}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-63-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-63-2} \caption[Conditional probability in a fair die roll]{Conditional probability in a fair die roll}\label{fig:unnamed-chunk-63}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-61-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-61-2} \caption[Conditional probability in a fair die roll]{Conditional probability in a fair die roll}\label{fig:unnamed-chunk-61}
 \end{marginfigure}
 
 Suppose I roll a fair, six-sided die behind a screen. You can't see the
@@ -2625,7 +2604,7 @@ of conditional probability compares the size of the purple
 \(A \wedge B\) region to the size of the whole \(B\) region, purple and
 blue together. If you don't mind getting a little colourful with your
 algebra: \[
-  \p(A \given B) = \frac{\color{middlecolour}{\blacksquare}}{\color{middlecolour}{\blacksquare} + \color{rightcolour}{\blacksquare}}.
+  \p(A \given B) = \frac{\color{bookpurple}{\blacksquare}}{\color{bookpurple}{\blacksquare} + \color{bookblue}{\blacksquare}}.
 \] So the definition works because, informally speaking,
 \(\p(A \wedge B)/\p(B)\) is the proportion of the \(B\) outcomes that
 are also \(A\) outcomes.\footnote{The comedian Steven Wright once
@@ -2673,7 +2652,7 @@ I flip a fair coin to decide which urn to draw from, heads for Urn B and
 tails for Urn W. Then I draw one marble at random.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-64-1} \caption[Tree diagram for an urn problem]{Tree diagram for an urn problem}\label{fig:unnamed-chunk-64}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-62-1} \caption[Tree diagram for an urn problem]{Tree diagram for an urn problem}\label{fig:unnamed-chunk-62}
 \end{figure}
 
 The probability of drawing a black marble on the top path is \(3/4\)
@@ -3037,7 +3016,7 @@ In this chapter we'll learn new, more powerful rules for \(\vee\) and
 \section{The Negation Rule}\label{the-negation-rule}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-68-1} \caption[The Negation Rule]{The Negation Rule. $\p(\neg A) = 1 - \p(A)$.}\label{fig:unnamed-chunk-68}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-66-1} \caption[The Negation Rule]{The Negation Rule. $\p(\neg A) = 1 - \p(A)$.}\label{fig:unnamed-chunk-66}
 \end{marginfigure}
 
 If there's a 70\% chance of rain, then there's a 30\% chance it won't
@@ -3076,27 +3055,27 @@ This rule always applies, whether \(A\) and \(B\) are mutually exclusive
 or not.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-69-1} \caption[The General Addition Rule in an Euler diagram]{The General Addition Rule in an Euler diagram.}\label{fig:unnamed-chunk-69}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-67-1} \caption[The General Addition Rule in an Euler diagram]{The General Addition Rule in an Euler diagram.}\label{fig:unnamed-chunk-67}
 \end{marginfigure}
 
 To understand the rule, consider an Euler diagram where \(A\) and \(B\)
 are not mutually exclusive. In terms of colour, the size of the
 \(A \vee B\)-region is: \[ 
-  \color{leftcolour}{\blacksquare}\color{black}{}
+  \color{bookred}{\blacksquare}\color{black}{}
     \,+\,
-  \color{middlecolour}{\blacksquare}\color{black}{}
+  \color{bookpurple}{\blacksquare}\color{black}{}
     \,+\,
-  \color{rightcolour}{\blacksquare}\color{black}{}.
+  \color{bookblue}{\blacksquare}\color{black}{}.
 \] Which is the same as: \[
-  (\color{leftcolour}{\blacksquare}\color{black}{}
+  (\color{bookred}{\blacksquare}\color{black}{}
     \,+\,
-  \color{middlecolour}{\blacksquare}\color{black}{})
+  \color{bookpurple}{\blacksquare}\color{black}{})
     \,+\, 
-  (\color{rightcolour}{\blacksquare}\color{black}{}
+  (\color{bookblue}{\blacksquare}\color{black}{}
     \,+\,
-  \color{middlecolour}{\blacksquare}\color{black}{}) 
+  \color{bookpurple}{\blacksquare}\color{black}{}) 
     \,-\,
-  \color{middlecolour}{\blacksquare}\color{black}{}.
+  \color{bookpurple}{\blacksquare}\color{black}{}.
 \] In algebraic terms this is: \[ \p(A) + \p(B) - \p(A \wedge B).\]
 
 To think of it another way, when we add \(\p(A) + \p(B)\) to get the
@@ -3196,7 +3175,7 @@ I flip a fair coin to decide which urn to draw from, heads for Urn X and
 tails for Urn Y. Then I draw one marble at random.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-71-7} \caption[Tree diagram for an urn problem]{Tree diagram for an urn problem}\label{fig:unnamed-chunk-71}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-69-7} \caption[Tree diagram for an urn problem]{Tree diagram for an urn problem}\label{fig:unnamed-chunk-69}
 \end{figure}
 
 Now suppose we want to know the probability the coin will land tails and
@@ -3238,7 +3217,7 @@ But the correct answer is actually \(5/16\). Why? Let's use a
 probability tree again.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-73-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-73-2} \caption[Building a probability tree to solve Laplace's urn puzzle]{Building a probability tree to solve Laplace's urn puzzle}\label{fig:unnamed-chunk-73}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-71-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-71-2} \caption[Building a probability tree to solve Laplace's urn puzzle]{Building a probability tree to solve Laplace's urn puzzle}\label{fig:unnamed-chunk-71}
 \end{marginfigure}
 
 Depending on how the coin lands, you could end up drawing either from
@@ -3293,26 +3272,26 @@ it would be if \(B\) were false. Then weight each of those hypothetical
 possibilities according to their probabilities.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-74-1} \caption[The Law of Total Probability calculates the size of the $A$ region by summing its two part]{The Law of Total Probability calculates the size of the $A$ region by summing its two part.}\label{fig:unnamed-chunk-74}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-72-7} \caption[The Law of Total Probability calculates the size of the $A$ region by summing its two part]{The Law of Total Probability calculates the size of the $A$ region by summing its two part.}\label{fig:unnamed-chunk-72}
 \end{marginfigure}
 
 We can also use an Euler diagram. The size of the \(A\) region is the
 sum of the \(A \wedge B\) region and the \(A \wedge \neg B\) region:
-\(\color{middlecolour}{\blacksquare}\color{black}{} + \color{leftcolour}{\blacksquare}\color{black}{}\).
+\(\color{bookpurple}{\blacksquare}\color{black}{} + \color{bookred}{\blacksquare}\color{black}{}\).
 And each of those regions can be calculated using the General
 Multiplication Rule. For example,
 \(\p(A \wedge B) = \p(A \given B) \p(B)\). So in algebraic terms we
 have: \[
   \begin{aligned}
-    \p(A) &= \color{middlecolour}{\blacksquare}\color{black}{} 
-             + \color{leftcolour}{\blacksquare}\color{black}{}\\
+    \p(A) &= \color{bookpurple}{\blacksquare}\color{black}{} 
+             + \color{bookred}{\blacksquare}\color{black}{}\\
           &= \p(A \wedge B) + \p(A \wedge \neg B)\\
           &= \p(A \given B) \p(B) + \p(A \given \neg B) \p(\neg B).
   \end{aligned}
 \] Which is precisely the Law of Total Probability.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-75-1} \caption[The Law of Total Probability in a tree diagram]{The Law of Total Probability in a tree diagram}\label{fig:unnamed-chunk-75}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-73-1} \caption[The Law of Total Probability in a tree diagram]{The Law of Total Probability in a tree diagram}\label{fig:unnamed-chunk-73}
 \end{marginfigure}
 
 We can also use a tree diagram to illustrate the same reasoning. There
@@ -3380,7 +3359,7 @@ Probability. But once you get used to the formula, it's also fine to
 skip straight to applying it directly.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-77-5} \caption[A probability tree for Professor X]{A probability tree for Professor X}\label{fig:unnamed-chunk-77}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-75-5} \caption[A probability tree for Professor X]{A probability tree for Professor X}\label{fig:unnamed-chunk-75}
 \end{marginfigure}
 
 You can also use a tree diagram. Again, the calculation will be the
@@ -3795,19 +3774,19 @@ that Bayes' theorem is correct. But it also suggests a way of
 understanding it visually, with an Euler diagram.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-82-1} \caption[An Euler diagram for visualizing Bayes' theorem]{An Euler diagram for visualizing Bayes' theorem}\label{fig:unnamed-chunk-82}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-80-5} \caption[An Euler diagram for visualizing Bayes' theorem]{An Euler diagram for visualizing Bayes' theorem}\label{fig:unnamed-chunk-80}
 \end{marginfigure}
 
 \newthought{We've talked} before about \(\p(A \given B)\) being the
 portion of the \(B\) region that's inside the \(A\) region. The purple
 portion of the blue \(B\) circle, in other words: \[
   \begin{aligned}
-    \p(A \given B) &= \frac{ \color{middlecolour}{\p(A \wedge B)} }{ \color{rightcolour}{\p(B)} }.\\
+    \p(A \given B) &= \frac{ \color{bookpurple}{\p(A \wedge B)} }{ \color{bookblue}{\p(B)} }.\\
   \end{aligned}
 \] So when we apply the General Multiplication Rule to the purple region
 we get: \[
   \begin{aligned}
-    \p(A \given B) &= \frac{ \color{middlecolour}{\p(B \given A)\p(A)} }{ \color{rightcolour}{\p(B)} }.\\
+    \p(A \given B) &= \frac{ \color{bookpurple}{\p(B \given A)\p(A)} }{ \color{bookblue}{\p(B)} }.\\
   \end{aligned}
 \]
 
@@ -4823,7 +4802,7 @@ What about the last term in Bayes' theorem though, the denominator
 \begin{marginfigure}
 \includegraphics[width=2.12in]{img/moon} \caption[The hammer/feather experiment was performed on the moon
 in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.]{The hammer/feather experiment was performed on the moon
-in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.}\label{fig:unnamed-chunk-90}
+in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.}\label{fig:unnamed-chunk-88}
 \end{marginfigure}
 \begin{marginfigure}
 \includegraphics[width=2in]{img/vacuum} \caption[It's also been performed in vacuum chambers here on
@@ -4832,7 +4811,7 @@ earth. A beautifully filmed example is
 BBC.]{It's also been performed in vacuum chambers here on
 earth. A beautifully filmed example is
 \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the
-BBC.}\label{fig:unnamed-chunk-90}
+BBC.}\label{fig:unnamed-chunk-88}
 \end{marginfigure}
 
 Scientists love theories that explain the unexplained. For example,
@@ -5007,7 +4986,7 @@ weight. We just multiply one against the other and take the total area
 that results.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-93-1} \caption[A gamble with one negative payoff, one positive]{A gamble with one negative payoff, one positive}\label{fig:unnamed-chunk-93}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-91-1} \caption[A gamble with one negative payoff, one positive]{A gamble with one negative payoff, one positive}\label{fig:unnamed-chunk-91}
 \end{marginfigure}
 
 \newthought{Sometimes} a decision loses money. We use negative dollar
@@ -5043,7 +5022,7 @@ Given an act \(A\) with possible consequences
 \end{description}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-94-1} \caption[A gamble with three possible outcomes]{A gamble with three possible outcomes}\label{fig:unnamed-chunk-94}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-92-1} \caption[A gamble with three possible outcomes]{A gamble with three possible outcomes}\label{fig:unnamed-chunk-92}
 \end{marginfigure}
 
 For example, suppose a fair die will be rolled and you will win \$1 if
@@ -5132,7 +5111,7 @@ hour drive.
 \end{problem}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-96-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-96-2} \caption[Take the train to Ottawa or drive?]{Take the train to Ottawa or drive?}\label{fig:unnamed-chunk-96}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-94-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-94-2} \caption[Take the train to Ottawa or drive?]{Take the train to Ottawa or drive?}\label{fig:unnamed-chunk-94}
 \end{marginfigure}
 
 If all you care about is spending as little time on the road as
@@ -5808,7 +5787,7 @@ option, let's say it has utility one: \(\u(P)=1\). What is the utility
 of salad \(\u(S)\) then?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-107-1} \caption[A utility scale for lunch options]{A utility scale for lunch options}\label{fig:unnamed-chunk-107}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-105-1} \caption[A utility scale for lunch options]{A utility scale for lunch options}\label{fig:unnamed-chunk-105}
 \end{marginfigure}
 
 We know that you're willing to trade the salad for the gamble when the
@@ -5828,7 +5807,7 @@ precise, objective measurement. We've managed to quantify your lunch
 preferences.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-108-1} \caption[A friend's utility scale for lunch options]{A friend's utility scale for lunch options}\label{fig:unnamed-chunk-108}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-106-1} \caption[A friend's utility scale for lunch options]{A friend's utility scale for lunch options}\label{fig:unnamed-chunk-106}
 \end{marginfigure}
 
 \newthought{Now} imagine your friend gives a different answer. They'd
@@ -5948,7 +5927,7 @@ have to multiply \(\p(B)\) by \(10\) to get \(\u(C)\). That would add
 some unnecessary work.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-111-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-111-2} \includegraphics{_main_files/figure-latex/unnamed-chunk-111-3} \caption[The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)]{The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)}\label{fig:unnamed-chunk-111}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-109-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-109-2} \includegraphics{_main_files/figure-latex/unnamed-chunk-109-3} \caption[The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)]{The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)}\label{fig:unnamed-chunk-109}
 \end{marginfigure}
 
 It's also inuitive to use the same \(0\)-to-\(1\) scale for both
@@ -6475,7 +6454,7 @@ your personal utilities are, there's just no way to prefer \(1A\) over
 rule.
 
 \begin{marginfigure}
-\includegraphics[width=0.91in]{img/allais} \caption[Maurice Allais ($1911$--$2010$), photograph by Harcourt Studios]{Maurice Allais ($1911$--$2010$), photograph by Harcourt Studios}\label{fig:unnamed-chunk-113}
+\includegraphics[width=0.91in]{img/allais} \caption[Maurice Allais ($1911$--$2010$), photograph by Harcourt Studios]{Maurice Allais ($1911$--$2010$), photograph by Harcourt Studios}\label{fig:unnamed-chunk-111}
 \end{marginfigure}
 \begin{marginfigure}
 Leonard Savage (\(1917\)--\(1971\)) was an American staistician and
@@ -6507,7 +6486,7 @@ random ticket will be drawn from a hat containing tickets numbered
 according to the following table:
 
 \begin{longtable}[]{@{}lccc@{}}
-\caption{\label{tab:unnamed-chunk-115}Savage's version of the Allais
+\caption{\label{tab:unnamed-chunk-113}Savage's version of the Allais
 paradox, using a lottery with \(100\) tickets}\tabularnewline
 \toprule
 & \(\#1\) & \(\#2\)--\(11\) & \(\#12\)--\(100\)\tabularnewline
@@ -6688,7 +6667,7 @@ Gross).]{Daniel Ellsberg (b. \(1931\)) is most famous as the
 leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017
 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story,
 with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd
-Gross).}\label{fig:unnamed-chunk-117}
+Gross).}\label{fig:unnamed-chunk-115}
 \end{marginfigure}
 
 Instead let's think about what this puzzle is showing us.
@@ -6715,7 +6694,7 @@ Is this preference for known risks rational? Well, it violates Savage's
 Sure-thing Principle. View Ellsberg's dilemma as a table:
 
 \begin{longtable}[]{@{}lccc@{}}
-\caption{\label{tab:unnamed-chunk-118}The Ellsberg paradox}\tabularnewline
+\caption{\label{tab:unnamed-chunk-116}The Ellsberg paradox}\tabularnewline
 \toprule
 & Red & Black & White\tabularnewline
 \midrule
@@ -7090,7 +7069,7 @@ that limit, and why?
 \section{Pascal's Wager}\label{pascals-wager}}
 
 \begin{marginfigure}
-\includegraphics[width=1in]{img/pascal} \caption[Blaise Pascal ($1623$--$1662$)]{Blaise Pascal ($1623$--$1662$)}\label{fig:unnamed-chunk-120}
+\includegraphics[width=1in]{img/pascal} \caption[Blaise Pascal ($1623$--$1662$)]{Blaise Pascal ($1623$--$1662$)}\label{fig:unnamed-chunk-118}
 \end{marginfigure}
 
 \newthought{The} modern theory of probability has a curious origin. It
@@ -7499,7 +7478,7 @@ involve infinite quantities.
 \chapter{Two Schools}\label{two-schools}}
 
 \begin{marginfigure}
-\includegraphics[width=1.83in]{img/flanders} \caption[Ned Flanders informs us that, well sir, there are two schools of thought on the matter]{Ned Flanders informs us that, well sir, there are two schools of thought on the matter.}\label{fig:unnamed-chunk-121}
+\includegraphics[width=1.83in]{img/flanders} \caption[Ned Flanders informs us that, well sir, there are two schools of thought on the matter]{Ned Flanders informs us that, well sir, there are two schools of thought on the matter.}\label{fig:unnamed-chunk-119}
 \end{marginfigure}
 
 \newthought{What} does the word ``probability'' mean? There are two
@@ -7769,7 +7748,7 @@ betting rate}}, we divide this potential loss by the stake: \[
 \]
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-122-1} \caption[A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size]{A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$.}\label{fig:unnamed-chunk-122}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-120-1} \caption[A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size]{A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$.}\label{fig:unnamed-chunk-120}
 \end{marginfigure}
 
 A person's betting rate reflects their degree of confidence. The more
@@ -7782,7 +7761,7 @@ personal probability of \(2/3\): \[ (2/3)(\$1) + (1/3)(-\$2) = 0. \]
 This makes sense: it's a fair bet from my point of view, after all.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-123-1} \caption[A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$]{A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$.}\label{fig:unnamed-chunk-123}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-121-1} \caption[A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$]{A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$.}\label{fig:unnamed-chunk-121}
 \end{marginfigure}
 
 What if I were less confident in rain, say just \(1/10\) confident? Then
@@ -8390,7 +8369,7 @@ beginning she pays us \(\$0.70 + \$0.40 = \$1.10\). Then she wins back
 in the end, she still has a net loss of \(10\)¢.
 
 \begin{longtable}[]{@{}llrr@{}}
-\caption{\label{tab:unnamed-chunk-129}A Dutch book for Suzy the
+\caption{\label{tab:unnamed-chunk-127}A Dutch book for Suzy the
 Scientist}\tabularnewline
 \toprule
 & & \(E\) & \(\neg E\)\tabularnewline
@@ -8599,7 +8578,7 @@ even number}? Let's assume your answer here is
 \(\pr(H \given E) = 2/3\).
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-131-1} \caption[Prior vs]{Prior vs. posterior probabilities in a die-roll problem. $H$ $=$ the die landed $4$, $5$, or $6$. $E$ $=$ the die landed even. $Pr(H) = 1/2$, $Pr^*(H) = 2/3$.}\label{fig:unnamed-chunk-131}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-129-1} \caption[Prior vs]{Prior vs. posterior probabilities in a die-roll problem. $H$ $=$ the die landed $4$, $5$, or $6$. $E$ $=$ the die landed even. $Pr(H) = 1/2$, $Pr^*(H) = 2/3$.}\label{fig:unnamed-chunk-129}
 \end{marginfigure}
 
 Now I roll the die and I tell you it did in fact land even. What is your
@@ -8686,7 +8665,7 @@ fair, what should your prior probability be that the ball will land in a
 green pocket?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-133-1} \caption[A North American roulette wheel]{A North American roulette wheel}\label{fig:unnamed-chunk-133}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-131-1} \caption[A North American roulette wheel]{A North American roulette wheel}\label{fig:unnamed-chunk-131}
 \end{marginfigure}
 
 According to the Principle of Indifference, each space has equal
@@ -8723,7 +8702,7 @@ probability of any subinterval from \(c\) to \(d\) is:
 \end{description}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-134-1} \caption[The continuous version of the Principle of Indifference]{The continuous version of the Principle of Indifference: $Pr(H)$ is the length of the $c$-to-$d$ interval divided by the length of the whole $a$-to-$b$ interval.}\label{fig:unnamed-chunk-134}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-132-1} \caption[The continuous version of the Principle of Indifference]{The continuous version of the Principle of Indifference: $Pr(H)$ is the length of the $c$-to-$d$ interval divided by the length of the whole $a$-to-$b$ interval.}\label{fig:unnamed-chunk-132}
 \end{marginfigure}
 
 The idea is that the prior probability of a hypothesis \(H\) is just the
@@ -8757,7 +8736,7 @@ rephrased! If the sides are between \(1\) and \(2\) feet long, that's
 the same as the area being between \(1\) ft\(^2\) and \(4\) ft\(^2\).
 
 \begin{marginfigure}
-\includegraphics[width=1.33in]{img/bertrand} \caption[Joseph Bertrand ($1822$--$1900$) presented this paradox in his $1889$ book *Calcul des Probabilités*]{Joseph Bertrand ($1822$--$1900$) presented this paradox in his $1889$ book *Calcul des Probabilités*. He used a different example though. Our example is a bit easier to understand, and comes from the book *Laws and Symmetry* by Bas van Fraassen.}\label{fig:unnamed-chunk-135}
+\includegraphics[width=1.33in]{img/bertrand} \caption[Joseph Bertrand ($1822$--$1900$) presented this paradox in his $1889$ book *Calcul des Probabilités*]{Joseph Bertrand ($1822$--$1900$) presented this paradox in his $1889$ book *Calcul des Probabilités*. He used a different example though. Our example is a bit easier to understand, and comes from the book *Laws and Symmetry* by Bas van Fraassen.}\label{fig:unnamed-chunk-133}
 \end{marginfigure}
 
 So which answer is right, \(1/2\) or \(3/8\)? It depends on which
@@ -9248,7 +9227,7 @@ estimate.
 \section{Significance Testing}\label{significance-testing-1}}
 
 \begin{marginfigure}
-\includegraphics[width=0.89in]{img/fisher} \caption[Ronald A]{Ronald A. Fisher ($1890$--$1962$) established significance testing as a standard scientific method with his influential $1925$ book *Statistical Methods for Research Workers*.}\label{fig:unnamed-chunk-140}
+\includegraphics[width=0.89in]{img/fisher} \caption[Ronald A]{Ronald A. Fisher ($1890$--$1962$) established significance testing as a standard scientific method with his influential $1925$ book *Statistical Methods for Research Workers*.}\label{fig:unnamed-chunk-138}
 \end{marginfigure}
 
 \newthought{The} method of evaluating hypotheses we've been explaining
@@ -9813,16 +9792,16 @@ have stuck with the \(.05\) threshold and still had very good results:
 we would discover about \(85\) genuine treatments and only approved
 about \(3\) bogus ones, a precision of about \(97\%\).
 
-\begin{marginfigure}
-\includegraphics{_main_files/figure-latex/hundredstudiesgrid3-1} \caption[A significance cutoff of $.05$ does much better if the base rate is more favourable]{A significance cutoff of $.05$ does much better if the base rate is more favourable.}\label{fig:hundredstudiesgrid3}
-\end{marginfigure}
-
 There are two lessons here. First, lowering the threshold for
 significance has both benefits and costs. A lower threshold means fewer
 false discoveries, but it means fewer genuine discoveries too. Second,
 the base rate informs our decision about how to make this tradeoff. The
 more false hypotheses there are to watch out for, the stronger the
 incentive to use a lower threshold.
+
+\begin{marginfigure}
+\includegraphics{_main_files/figure-latex/hundredstudiesgrid3-1} \caption[A significance cutoff of $.05$ does much better if the base rate is more favourable]{A significance cutoff of $.05$ does much better if the base rate is more favourable.}\label{fig:hundredstudiesgrid3}
+\end{marginfigure}
 
 \hypertarget{the-role-of-priors-in-significance-testing}{%
 \section{The Role of Priors in Significance
@@ -9858,7 +9837,7 @@ this can lead to very wrong results, as we learned from the taxicab
 problem in \protect\hyperlink{chbayes}{Chapter} \ref{chbayes}.
 
 \begin{marginfigure}
-\includegraphics[width=0.58in]{img/jeffreys} \caption[Harold Jeffreys ($1891$--$1989$) first raised the problem known as Lindley's paradox in $1939$]{Harold Jeffreys ($1891$--$1989$) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox.}\label{fig:unnamed-chunk-151}
+\includegraphics[width=0.58in]{img/jeffreys} \caption[Harold Jeffreys ($1891$--$1989$) first raised the problem known as Lindley's paradox in $1939$]{Harold Jeffreys ($1891$--$1989$) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox.}\label{fig:unnamed-chunk-149}
 \end{marginfigure}
 
 This critique of frequentism is sharpened by a famous problem known as
@@ -9894,7 +9873,7 @@ But if she uses significance testing, she won't get this result. In fact
 she'll get an \emph{impossible} result. Let's see how.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-153-1} \caption[The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$]{The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$.}\label{fig:unnamed-chunk-153}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-151-1} \caption[The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$]{The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$.}\label{fig:unnamed-chunk-151}
 \end{marginfigure}
 
 Our florist starts by testing the hypothesis that \(25\%\) of the bulbs
@@ -9908,7 +9887,7 @@ finding of \(k = 36\) is nowhere close to this range, so the result is
 significant at the \(.01\) level. She rejects the \(25\%\) hypothesis.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-154-1} \caption[The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$]{The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$.}\label{fig:unnamed-chunk-154}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-152-1} \caption[The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$]{The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$.}\label{fig:unnamed-chunk-152}
 \end{marginfigure}
 
 So far so good, but what if she tests the \(50\%\) hypothesis too? She
@@ -9931,7 +9910,7 @@ well: it's an extremely improbable result on either hypothesis. This is
 why both hypotheses end up being rejected by a significance test.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/lindley-11} \caption[An illustration of Lindley's paradox]{An illustration of Lindley's paradox. The finding $k = 36$ doesn't fit well with either hypothesis, so both are rejected. But it fits one of them (red) much better than the other (blue). So the red hypothesis is more plausible from an intuitive perspective.}\label{fig:lindley}
+\includegraphics{_main_files/figure-latex/lindley-1} \caption[An illustration of Lindley's paradox]{An illustration of Lindley's paradox. The finding $k = 36$ doesn't fit well with either hypothesis, so both are rejected. But it fits one of them (red) much better than the other (blue). So the red hypothesis is more plausible from an intuitive perspective.}\label{fig:lindley}
 \end{figure}
 
 But one of these hypotheses still fits the finding much better than the
@@ -10721,7 +10700,7 @@ expect the unobserved to resemble the observed. Philosophers call this
 \addcontentsline{toc}{section}{A Gruesome Concept}
 
 \begin{marginfigure}
-\includegraphics[width=0.74in]{img/goodman} \caption[Nelson Goodman ($1906$--$1988$) discovered the grue paradox in the $1940$s and '$50$s]{Nelson Goodman ($1906$--$1988$) discovered the grue paradox in the $1940$s and '$50$s.}\label{fig:unnamed-chunk-167}
+\includegraphics[width=0.74in]{img/goodman} \caption[Nelson Goodman ($1906$--$1988$) discovered the grue paradox in the $1940$s and '$50$s]{Nelson Goodman ($1906$--$1988$) discovered the grue paradox in the $1940$s and '$50$s.}\label{fig:unnamed-chunk-165}
 \end{marginfigure}
 
 \newthought{But} in the \(1940\)s, Nelson Goodman discovered a problem
@@ -10749,7 +10728,7 @@ before the year \(2050\) are grue, for example.
 As usual, it helps to have a diagram:
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-168-1} \caption[The definition of grue]{The definition of grue}\label{fig:unnamed-chunk-168}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-166-11} \caption[The definition of grue]{The definition of grue}\label{fig:unnamed-chunk-166}
 \end{figure}
 
 Here is the formal definition of grue:
@@ -10869,7 +10848,7 @@ instead! How? We start by building grue a friend, a concept to fill in
 the missing spaces in our original diagram. We'll call it \emph{bleen}:
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-170-1} \caption[Defining bleen, a counterpart to grue]{Defining bleen, a counterpart to grue}\label{fig:unnamed-chunk-170}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-168-1} \caption[Defining bleen, a counterpart to grue]{Defining bleen, a counterpart to grue}\label{fig:unnamed-chunk-168}
 \end{figure}
 
 Now we can define green in terms of grue and bleen:
@@ -10996,7 +10975,7 @@ strong track record. Isn't that a good argument for believing it's
 correct?
 
 \begin{marginfigure}
-\includegraphics[width=1.33in]{img/hume} \caption[David Hume ($1711$--$1776$) raised the problem of induction in $1739$]{David Hume ($1711$--$1776$) raised the problem of induction in $1739$. Our presentation of it here is somewhat modernized from his original argument.}\label{fig:unnamed-chunk-172}
+\includegraphics[width=1.33in]{img/hume} \caption[David Hume ($1711$--$1776$) raised the problem of induction in $1739$]{David Hume ($1711$--$1776$) raised the problem of induction in $1739$. Our presentation of it here is somewhat modernized from his original argument.}\label{fig:unnamed-chunk-170}
 \end{marginfigure}
 
 No, because the argument is circular. It uses the Principle of Induction

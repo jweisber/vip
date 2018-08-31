@@ -78,9 +78,9 @@ $$
   \newcommand{\u}{U}
   \newcommand{\pr}{Pr}
   \newcommand{\po}{Pr^*}
-  \definecolor{leftcolour}{RGB}{228,6,19}
-  \definecolor{rightcolour}{RGB}{0,92,169}
-  \definecolor{middlecolour}{RGB}{114,49,94} 
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94} 
 $$
 
 <div class="row">
@@ -287,7 +287,7 @@ $$
 <h1><span class="header-section-number">6</span> Conditional Probability</h1>
 <p><span class="newthought">The</span> chances of crashing your car are pretty low, but they’re considerably higher if you’re drunk. Probabilities change depending on the conditions.</p>
 <p>We symbolize this idea by writing <span class="math inline">\(\p(A \given B)\)</span>, the probability that <span class="math inline">\(A\)</span> is true <em>given</em> that <span class="math inline">\(B\)</span> is true. And we call this kind of probability <strong><em>conditional probability</em></strong>.</p>
-<p><label for="tufte-mn-9" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-9" class="margin-toggle"><span class="marginnote"><span style="display: block;">To say <span class="math inline"><span class="math inline">\(B\)</span></span> increases the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> we write <span class="math inline"><span class="math inline">\(\p(A \given B) \gt \p(A)\)</span></span>. And to say <span class="math inline"><span class="math inline">\(B\)</span></span> doubles the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> write <span class="math inline"><span class="math inline">\(\p(A \given B) = 2 \times \p(A)\)</span></span>.</span></span></p>
+<p><label for="tufte-mn-8" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-8" class="margin-toggle"><span class="marginnote"><span style="display: block;">To say <span class="math inline"><span class="math inline">\(B\)</span></span> increases the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> we write <span class="math inline"><span class="math inline">\(\p(A \given B) \gt \p(A)\)</span></span>. And to say <span class="math inline"><span class="math inline">\(B\)</span></span> doubles the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> write <span class="math inline"><span class="math inline">\(\p(A \given B) = 2 \times \p(A)\)</span></span>.</span></span></p>
 <p>For example, to say the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> is 30%, we write:
 <span class="math display">\[ \p(A \given B) = .3. \]</span>
 But how do we calculate conditional probabilities?</p>
@@ -296,8 +296,8 @@ But how do we calculate conditional probabilities?</p>
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-63"></span>
-<img src="_main_files/figure-html/unnamed-chunk-63-1.png" alt="Conditional probability in a fair die roll" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-63-2.png" alt="Conditional probability in a fair die roll" width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-61"></span>
+<img src="_main_files/figure-html/unnamed-chunk-61-1.png" alt="Conditional probability in a fair die roll" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-61-2.png" alt="Conditional probability in a fair die roll" width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 6.1: Conditional probability in a fair die roll<!--</p>-->
 <!--</div>--></span>
@@ -323,12 +323,12 @@ But how do we calculate conditional probabilities?</p>
 </p>
 <p>In terms of an Euler diagram (Figure <a href="conditional-probability.html#fig:condprob">6.2</a>), the definition of conditional probability compares the size of the purple <span class="math inline">\(A \wedge B\)</span> region to the size of the whole <span class="math inline">\(B\)</span> region, purple and blue together. If you don’t mind getting a little colourful with your algebra:
 <span class="math display">\[
-  \p(A \given B) = \frac{\color{middlecolour}{\blacksquare}}{\color{middlecolour}{\blacksquare} + \color{rightcolour}{\blacksquare}}.
+  \p(A \given B) = \frac{\color{bookpurple}{\blacksquare}}{\color{bookpurple}{\blacksquare} + \color{bookblue}{\blacksquare}}.
 \]</span>
-So the definition works because, informally speaking, <span class="math inline">\(\p(A \wedge B)/\p(B)\)</span> is the proportion of the <span class="math inline">\(B\)</span> outcomes that are also <span class="math inline">\(A\)</span> outcomes.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> The comedian Steven Wright once quipped that “black holes are where God divided by zero.”</span></p>
+So the definition works because, informally speaking, <span class="math inline">\(\p(A \wedge B)/\p(B)\)</span> is the proportion of the <span class="math inline">\(B\)</span> outcomes that are also <span class="math inline">\(A\)</span> outcomes.<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> The comedian Steven Wright once quipped that “black holes are where God divided by zero.”</span></p>
 <p><span class="newthought">Dividing</span> by zero is a common pitfall with conditional probability. Notice how the definition of <span class="math inline">\(\p(A \given B)\)</span> depends on <span class="math inline">\(\p(B)\)</span> being larger than zero. If <span class="math inline">\(\p(B) = 0\)</span>, then the formula
 <span class="math display">\[ \p(A \given B) = \frac{\p(A \wedge B)}{\p(B)} \]</span>
-doesn’t even make any sense. There is no number that results from the division on the right hand side.<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> There are alternative mathematical systems of probability, where conditional probability is defined differently to avoid this problem. But in this book we’ll stick to the standard system. Where there’s just no such thing as “the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>” when <span class="math inline">\(B\)</span> has zero probability.</span></p>
+doesn’t even make any sense. There is no number that results from the division on the right hand side.<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> There are alternative mathematical systems of probability, where conditional probability is defined differently to avoid this problem. But in this book we’ll stick to the standard system. Where there’s just no such thing as “the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>” when <span class="math inline">\(B\)</span> has zero probability.</span></p>
 <p>In such cases we say that <span class="math inline">\(\p(A \given B)\)</span> is <em>undefined</em>. It’s not zero, or some special number. It just isn’t a number.</p>
 </div>
 <div id="conditional-probability-trees" class="section level2">
@@ -341,11 +341,11 @@ doesn’t even make any sense. There is no number that results from the division
 <li>Urn Y contains 1 black marble, 3 white.</li>
 </ul>
 <p>I flip a fair coin to decide which urn to draw from, heads for Urn B and tails for Urn W. Then I draw one marble at random.</p>
-<div class="figure"><span id="fig:unnamed-chunk-64"></span>
+<div class="figure"><span id="fig:unnamed-chunk-62"></span>
 <p class="caption marginnote shownote">
 Figure 6.3: Tree diagram for an urn problem
 </p>
-<img src="_main_files/figure-html/unnamed-chunk-64-1.png" alt="Tree diagram for an urn problem" width="672"  />
+<img src="_main_files/figure-html/unnamed-chunk-62-1.png" alt="Tree diagram for an urn problem" width="672"  />
 </div>
 <p>The probability of drawing a black marble on the top path is <span class="math inline">\(3/4\)</span> because we are assuming the coin landed heads, and thus I’m drawing from Urn X. If the coin lands tails instead, and I draw from Urn Y, then the chance of a black marble is instead <span class="math inline">\(1/4\)</span>. So these quantities are conditional probabilities:
 <span class="math display">\[
@@ -493,7 +493,7 @@ What are each of the following probabilities?</p>
 <li><span class="math inline">\(\p(B \given A)\)</span></li>
 </ol></li>
 <li><p>Five percent of tablets made by the company Ixian have factory defects. Ten percent of the tablets made by their competitor company Guild do. A computer store buys <span class="math inline">\(40\%\)</span> of its tablets from Ixian, and <span class="math inline">\(60\%\)</span> from Guild.</p>
-<p><label for="tufte-mn-10" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-10" class="margin-toggle"><span class="marginnote"><span style="display: block;">This exercise and the next one are based on very similar exercises from Ian Hacking’s wonderful book, <em>An Introduction to Probability and Inductive Logic</em>.</span></span></p>
+<p><label for="tufte-mn-9" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-9" class="margin-toggle"><span class="marginnote"><span style="display: block;">This exercise and the next one are based on very similar exercises from Ian Hacking’s wonderful book, <em>An Introduction to Probability and Inductive Logic</em>.</span></span></p>
 <p>Draw a probability tree to answer the following questions.</p>
 <ol style="list-style-type: lower-alpha">
 <li>What is the probability a randomly selected tablet in the store is made by Ixian and has a factory defect?</li>

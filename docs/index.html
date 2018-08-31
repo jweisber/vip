@@ -78,9 +78,9 @@ $$
   \newcommand{\u}{U}
   \newcommand{\pr}{Pr}
   \newcommand{\po}{Pr^*}
-  \definecolor{leftcolour}{RGB}{228,6,19}
-  \definecolor{rightcolour}{RGB}{0,92,169}
-  \definecolor{middlecolour}{RGB}{114,49,94} 
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94} 
 $$
 
 <div class="row">
@@ -290,24 +290,23 @@ $$
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
-<p><span class="newthought">This</span> book is designed for introductory philosophy courses on probability and inductive logic. It is based on a typical such course I teach at the University of Toronto, where we offer “Probability &amp; Inductive Logic” in the second year, alongside the usual deductive logic intro.<span class="math inline">\(\,\)</span></p>
-<p>The book assumes no deductive logic. The little that’s used is introduced in the early chapters. In fact almost no formal background is presumed, only very simple high school algebra.</p>
-<p>Two well-known predecessors inspired and influenced this book: Brian Skyrms’ <em>Choice &amp; Chance</em> and Ian Hacking’s <em>An Introduction to Probability and Inductive Logic</em>. Both texts are widely used with good reason: they are excellent. I’ve taught them both many times myself, with great success. This book blends my favourite aspects of each, organizing them in the sequence and style I prefer.</p>
-<p>But I also hope it offers more universal benefits:</p>
+<p><span class="newthought">This</span> textbook is for introductory philosophy courses on probability and inductive logic. It is based on a typical such course I teach at the University of Toronto, where we offer “Probability &amp; Inductive Logic” in the second year, alongside the usual deductive logic intro.<span class="math inline">\(\,\)</span></p>
+<p>The book assumes no deductive logic. The early chapters introduce the little that’s used. In fact almost no formal background is presumed, only very simple high school algebra.</p>
+<p>Several well known predecessors inspired and shaped this book. Brian Skyrms’ <em>Choice &amp; Chance</em> and Ian Hacking’s <em>An Introduction to Probability and Inductive Logic</em> were especially influential. Both texts are widely used with good reason—they are excellent. I’ve taught both myself many times, with great success. But this book blends my favourite aspects of each, organizing them in the sequence and style I prefer.</p>
+<p>I hope this book also offers more universal benefits:</p>
 <ol style="list-style-type: decimal">
-<li>This book is open access, hence free.</li>
-<li>It’s also open source, so other instructors can modify it to their liking.</li>
-<li>It’s available in both PDF and HTML, so it can be either printed or read comfortably on a range of devices.</li>
+<li>It is open access, hence free.</li>
+<li>It’s also <a href="https://github.com/jweisber/vip-source">open source</a>, so other instructors can modify it to their liking.</li>
+<li>It’s available in both <a href="http://jonathanweisberg.org/vip/_main.pdf">PDF</a> and <a href="http://jonathanweisberg.org/vip/">HTML</a>. So it can be read comfortably on a range of devices, or printed.</li>
 <li>It emphasizes visual explanations and techniques, to make the material more approachable.</li>
-<li>It livens up the text with hyperlinks, images, animations, interactive tools, and margin notes that highlight points of history and curiosity.</li>
+<li>It livens up the text with hyperlinks, images, and margin notes that highlight points of history and curiosity. I also hope to add some animations and interactive tools soon.</li>
 </ol>
-<p><span class="newthought">The</span> book is divided into three main parts. The first explains the basics of logic and probability, the second covers basic decision theory, and the last engages the Bayesian and frequentist schools of thought. A “cheat sheet” at the front summarizes key definitions and formulas. And optional chapters in the Appendix cover the axiomatic construction of probability theory, Hume’s problem of induction, and Goodman’s new ridle of induction.</p>
-<p>When I teach this material, I aim to leave students with a clearer view of their society’s statistical realities. Media bombard them with nutritional fads, overhyped “significant” findings, fantastical (or fantastical sounding) advances in machine learning and artificial intelligence, and more. I want them to understand what these items do and don’t mean. I don’t want them to become too skeptical or jaded about scientific research just because the news overhypes nutritional studies, only to cash in on the backlash. But neither do I want them to be naive about scientific practice, oblivious to the assumptions that underpin the contemporary scientific worldview.</p>
-<p>So I think of the course as building up a suite of skills and tools, yet ending with a mystery. The mystery is revealed in the final showdown between the Bayesian and frequentist schools, each of which is left facing an ultimate paradox. The Bayesian school struggles with the problem of priors, exemplified in Bertrand’s paradox. The frequentist school then tries to work prior-free with significance testing, only to find that priors bite back in Lindley’s paradox.</p>
-<p>I usually get a mix of students in my course, with different ideological inclinations and varying levels of background. For some the technical material is easy, even review. For others, a healthy skepticism about scientific methods and discourses comes naturally. My goal is to get these students all more or less on the same page.</p>
+<p><span class="newthought">The</span> book is divided into three main parts. The first explains the basics of logic and probability, the second covers basic decision theory, and the last explores the philosophical foundations of probability and statistics. This last, philosophical part focuses on the Bayesian and frequentist approaches.</p>
+<p>A “cheat sheet” summarizing key definitions and formulas appears in <a href="cheat-sheet.html#cheat-sheet">Appendix</a> <a href="cheat-sheet.html#cheat-sheet">A</a>. Further appendices cover the axiomatic construction of probability theory, Hume’s problem of induction, and Goodman’s new ridle of induction.</p>
+<p><span class="newthought">I</span> usually get a mix of students in my course, with different ideological inclinations and varying levels of background. For some the technical material is easy, even review. For others, a healthy skepticism about scientific methods and discourses comes naturally. My goal is to get these students all more or less on the same page.</p>
 <p>By the end of the course, students with little formal background have a bevy of tools for thinking about uncertainty. They can understand much more of the statistical and scientific discourse they encounter. And hopefully they have a greater appreciation for the value of formal methods. Students who already have strong formal tools and skills will, I hope, better understand their limitations. I want them to understand why these tools leave big questions open—not just philosophically, but also in very pressing, practical ways.</p>
-<p><span class="newthought">The</span> book was made using the <code>bookdown</code> package created by Yihui Xie. It’s a wonderful tool, built on a bunch of other technologies I love, especially the R programming language and the pandoc conversion tool created by philosopher John MacFarlane. The book’s visual style emulates the famous designs of Edward Tufte, thanks to more software created by Yihui Xie, J. J. Allaire, and many others who adapted Tufte’s designs to HTML and PDF (via LaTeX).</p>
-<p>If it weren’t for these tools, I never would have written this book. It wouldn’t have been possible to create one that does all the things this books is meant to do. I also owe inspiration to Kieran Healy’s wonderful book <a href="http://socviz.co/"><em>Data Visualization: A Practical Introduction</em></a>, which uses the same suite of tools. It gave me the idea to use them for an updated, open, and visually enhanced rendition of the classic material from Skyrms and Hacking.</p>
+<p><span class="newthought">The</span> book was made with the <code>bookdown</code> package created by Yihui Xie. It’s a wonderful tool, built on a bunch of other technologies I love, especially the R programming language and the pandoc conversion tool created by philosopher John MacFarlane. The book’s visual style emulates the famous designs of Edward Tufte, thanks to more software created by Yihui Xie, J. J. Allaire, and many others who adapted Tufte’s designs to HTML and PDF (via LaTeX).</p>
+<p>If it weren’t for these tools, I never would have written this book. It wouldn’t have been possible to create one that does all the things this book is meant to do. I also owe inspiration to Kieran Healy’s book <a href="http://socviz.co/"><em>Data Visualization: A Practical Introduction</em></a>, which uses the same suite of tools. It gave me the idea to use those tools for an updated, open, and visually enhanced rendition of the classic material from Skyrms and Hacking.</p>
 
 </div>
 

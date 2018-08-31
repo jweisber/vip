@@ -78,9 +78,9 @@ $$
   \newcommand{\u}{U}
   \newcommand{\pr}{Pr}
   \newcommand{\po}{Pr^*}
-  \definecolor{leftcolour}{RGB}{228,6,19}
-  \definecolor{rightcolour}{RGB}{0,92,169}
-  \definecolor{middlecolour}{RGB}{114,49,94} 
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94} 
 $$
 
 <div class="row">
@@ -285,7 +285,7 @@ $$
 <div class="col-sm-12">
 <div id="chbayes" class="section level1">
 <h1><span class="header-section-number">8</span> Bayes’ Theorem</h1>
-<p><label for="tufte-mn-11" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-11" class="margin-toggle"><span class="marginnote"><span style="display: block;">The experiment was first published in 1971. It was performed by <a href="https://en.wikipedia.org/wiki/Daniel_Kahneman">Daniel Kahneman</a> and <a href="https://en.wikipedia.org/wiki/Amos_Tversky">Amos Tversky</a>. Their work on human reasoning reshaped the field of psychology, and eventually won a Nobel prize in 2002.</span></span></p>
+<p><label for="tufte-mn-10" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-10" class="margin-toggle"><span class="marginnote"><span style="display: block;">The experiment was first published in 1971. It was performed by <a href="https://en.wikipedia.org/wiki/Daniel_Kahneman">Daniel Kahneman</a> and <a href="https://en.wikipedia.org/wiki/Amos_Tversky">Amos Tversky</a>. Their work on human reasoning reshaped the field of psychology, and eventually won a Nobel prize in 2002.</span></span></p>
 <p><span class="newthought">In</span> a famous psychology experiment, subjects were asked to solve the following problem.</p>
 <div class="problem">
 <p>
@@ -324,7 +324,7 @@ What is the probability that the cab involved in the accident was blue rather gr
 <div id="bayes-theorem" class="section level2">
 <h2><span class="header-section-number">8.1</span> Bayes’ Theorem</h2>
 <p><span class="newthought">Problems</span> where we’re given <span class="math inline">\(\p(B \given A)\)</span> and we have to figure out <span class="math inline">\(\p(A \given B)\)</span> are extremely common. Luckily, there’s a famous formula for solving them.</p>
-<p><label for="tufte-mn-12" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-12" class="margin-toggle"><span class="marginnote"><span style="display: block;"><a href="https://en.wikipedia.org/wiki/Thomas_Bayes">Thomas Bayes</a> (1701–1761) was an English minister and mathematician, the first to formulate the theorem that now bears his name.</span></span></p>
+<p><label for="tufte-mn-11" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-11" class="margin-toggle"><span class="marginnote"><span style="display: block;"><a href="https://en.wikipedia.org/wiki/Thomas_Bayes">Thomas Bayes</a> (1701–1761) was an English minister and mathematician, the first to formulate the theorem that now bears his name.</span></span></p>
 <dl>
 <dt>Bayes’ Theorem</dt>
 <dd><p>If <span class="math inline">\(\p(A),\p(B)&gt;0\)</span>, then
@@ -380,8 +380,8 @@ This proves that Bayes’ theorem is correct. But it also suggests a way of unde
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-82"></span>
-<img src="_main_files/figure-html/unnamed-chunk-82-1.png" alt="An Euler diagram for visualizing Bayes' theorem" width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-80"></span>
+<img src="_main_files/figure-html/unnamed-chunk-80-5.png" alt="An Euler diagram for visualizing Bayes' theorem" width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 8.3: An Euler diagram for visualizing Bayes’ theorem<!--</p>-->
 <!--</div>--></span>
@@ -389,13 +389,13 @@ This proves that Bayes’ theorem is correct. But it also suggests a way of unde
 <p><span class="newthought">We’ve talked</span> before about <span class="math inline">\(\p(A \given B)\)</span> being the portion of the <span class="math inline">\(B\)</span> region that’s inside the <span class="math inline">\(A\)</span> region. The purple portion of the blue <span class="math inline">\(B\)</span> circle, in other words:
 <span class="math display">\[
   \begin{aligned}
-    \p(A \given B) &amp;= \frac{ \color{middlecolour}{\p(A \wedge B)} }{ \color{rightcolour}{\p(B)} }.\\
+    \p(A \given B) &amp;= \frac{ \color{bookpurple}{\p(A \wedge B)} }{ \color{bookblue}{\p(B)} }.\\
   \end{aligned}
 \]</span>
 So when we apply the General Multiplication Rule to the purple region we get:
 <span class="math display">\[
   \begin{aligned}
-    \p(A \given B) &amp;= \frac{ \color{middlecolour}{\p(B \given A)\p(A)} }{ \color{rightcolour}{\p(B)} }.\\
+    \p(A \given B) &amp;= \frac{ \color{bookpurple}{\p(B \given A)\p(A)} }{ \color{bookblue}{\p(B)} }.\\
   \end{aligned}
 \]</span></p>
 <p>We’ll come back to another, non-visual way of understanding Bayes’ theorem in <a href="probability-induction.html#bayesibe">Chapter 10</a>.</p>
@@ -537,7 +537,7 @@ is a Type B urn?</li>
 <p><span class="math display">\[ \p(X \given B) = \frac{\p(X)\p(B \given X)}{\p(X)\p(B \given X) + \;\ldots\;}.\]</span></p>
 <p>Fill in the rest of the formula, then justify it.</p></li>
 <li><p>A company makes websites, always powered by one of three server platforms: Bulldozer, Kumquat, or Penguin. Bulldozer crashes <span class="math inline">\(1\)</span> out of every <span class="math inline">\(10\)</span> visits, Kumquat crashes <span class="math inline">\(1\)</span> in <span class="math inline">\(50\)</span> visits, and Penguin only crashes <span class="math inline">\(1\)</span> out of every <span class="math inline">\(200\)</span> visits.</p>
-<p><label for="tufte-mn-13" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-13" class="margin-toggle"><span class="marginnote"><span style="display: block;">This problem is based on Exercise 6 from p. 78 of Ian Hacking’s <em>An Introduction to Probability &amp; Inductive Logic</em>.</span></span></p>
+<p><label for="tufte-mn-12" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-12" class="margin-toggle"><span class="marginnote"><span style="display: block;">This problem is based on Exercise 6 from p. 78 of Ian Hacking’s <em>An Introduction to Probability &amp; Inductive Logic</em>.</span></span></p>
 <p>Half of the websites are run on Bulldozer, <span class="math inline">\(30\%\)</span> are run on Kumquat, and <span class="math inline">\(20\%\)</span> are run on Penguin.</p>
 <p>You visit one of their sites for the first time and it crashes. What is the probability it was run on Penguin?</p></li>
 <li><p>You and Carlos are at a party, which means there’s a <span class="math inline">\(2/3\)</span> chance he’s been drinking. You decide to experiment to find out: you throw a tennis ball to Carlos and he misses the catch. Five minutes later you try again and he misses again. Assume the two catches are independent.</p>

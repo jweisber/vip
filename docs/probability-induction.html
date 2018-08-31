@@ -78,9 +78,9 @@ $$
   \newcommand{\u}{U}
   \newcommand{\pr}{Pr}
   \newcommand{\po}{Pr^*}
-  \definecolor{leftcolour}{RGB}{228,6,19}
-  \definecolor{rightcolour}{RGB}{0,92,169}
-  \definecolor{middlecolour}{RGB}{114,49,94} 
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94} 
 $$
 
 <div class="row">
@@ -327,10 +327,10 @@ So after ten black draws, we can be about <span class="math inline">\(99.9\%\)</
 <h2><span class="header-section-number">10.2</span> Real Life Is More Complicated</h2>
 <p><span class="newthought">There</span> are two major limitations to our urn analogy.</p>
 <p><span class="newthought">The</span> first limitation is that the ravens we observe in real life aren’t randomly sampled from nature’s “urn”. We only observe ravens in certain locations, for example. But our solution to the urn problem relied on random sampling. For example, we assumed <span class="math inline">\(\p(B_1 \given \neg A) = 1/2\)</span> because the black marbles are just as likely to be drawn as the white ones, if there are any white ones.</p>
-<p>If there are white ravens in the world though, they might be limited to certain locales.<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> In fact there are white ravens, <a href="https://vancouversun.com/news/local-news/rare-white-raven-spotted-on-vancouver-island">especially in one area of Vancouver Island</a>.</span> So the fact we’re only observing ravens in our part of the world could make a big difference to what we find. It matters whether your sample really is random.</p>
+<p>If there are white ravens in the world though, they might be limited to certain locales.<label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> In fact there are white ravens, <a href="https://vancouversun.com/news/local-news/rare-white-raven-spotted-on-vancouver-island">especially in one area of Vancouver Island</a>.</span> So the fact we’re only observing ravens in our part of the world could make a big difference to what we find. It matters whether your sample really is random.</p>
 <p><span class="newthought">The</span> second limitation is that we pretended there were only two possibilities: either all the marbles in the urn are black, or half of them are. And, accordingly, we assumed there was already a 1/2 chance all the marbles are black, before we even looked at any of them.</p>
 <p>In real life though, when we encounter a new species, it could be that <span class="math inline">\(90\%\)</span> of them are black, or <span class="math inline">\(31\%\)</span>, or <span class="math inline">\(42.718\%\)</span>, or any portion from <span class="math inline">\(0\%\)</span> to <span class="math inline">\(100\%\)</span>. So there are many, many more possibilities. The possibility that <em>all</em> members of the new species (<span class="math inline">\(100\%\)</span>) are black is just one of these many possibilities. So it would start with a much lower probability than <span class="math inline">\(1/2\)</span>.</p>
-<p><label for="tufte-mn-14" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-14" class="margin-toggle"><span class="marginnote"><span style="display: block;">In a famous calculation, <a href="logic.html#fig:laplace">Laplace</a> showed how to solve the second problem. The result was his famous <a href="https://en.wikipedia.org/wiki/Rule_of_succession">rule of succession</a>: if you do <span class="math inline"><span class="math inline">\(n\)</span></span> random draws and they’re all black, the probability the next draw will be black is <span class="math inline"><span class="math inline">\((n+1)/(n+2)\)</span></span>.</span>
+<p><label for="tufte-mn-13" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-13" class="margin-toggle"><span class="marginnote"><span style="display: block;">In a famous calculation, <a href="logic.html#fig:laplace">Laplace</a> showed how to solve the second problem. The result was his famous <a href="https://en.wikipedia.org/wiki/Rule_of_succession">rule of succession</a>: if you do <span class="math inline"><span class="math inline">\(n\)</span></span> random draws and they’re all black, the probability the next draw will be black is <span class="math inline"><span class="math inline">\((n+1)/(n+2)\)</span></span>.</span>
 <span style="display: block;">Laplace’s calculation is too advanced for this book. But statistician Joe Blitzstein gives a nice explanation in <a href="https://www.youtube.com/watch?v=N8O6zd6vTZ8&amp;list=EC2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo">this video</a>, for students who have more background in probability (specifically random variables and probability density functions).</span></span></p>
 <p><span class="newthought">We</span> could make our analysis more realistic by taking these complications into account. But the calculations would get ugly, and we’d have to use calculus to solve the problem. This is the kind of technical topic you’d cover in a math or statistics class on probability. But it’s not the kind thing this book is about.</p>
 <p>For our purposes, the key ideas that matter are as follows. First, the strength of an inductive argument is a question of conditional probability: how probable is the argument’s conclusion given its premises? Second, an argument that generalizes from observed instances is similar to an urn problem, where we guess the contents of the urn by repeated sampling. And third, we know how to solve simple versions of these urn problems using Bayes’ theorem. In principle, we could also solve more complicated and realistic versions using the same fundamental ideas, the math would just be harder.</p>
@@ -370,7 +370,7 @@ How probable is our explanation <span class="math inline">\(H\)</span> given our
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-90"></span>
+<div class="figure">--><span id="fig:unnamed-chunk-88"></span>
 <img src="img/moon.gif" alt="The hammer/feather experiment was performed on the moon in 1971. See the full video here."  />
 <!--
 <p class="caption marginnote">-->Figure 10.1: The hammer/feather experiment was performed on the moon in 1971. See the <a href="https://bit.ly/1KLQzOB">full video here</a>.<!--</p>-->
@@ -379,7 +379,7 @@ How probable is our explanation <span class="math inline">\(H\)</span> given our
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-90"></span>
+<div class="figure">--><span id="fig:unnamed-chunk-88"></span>
 <img src="img/vacuum.gif" alt="It’s also been performed in vacuum chambers here on earth. A beautifully filmed example is available on YouTube, courtesy of the BBC."  />
 <!--
 <p class="caption marginnote">-->Figure 10.1: It’s also been performed in vacuum chambers here on earth. A beautifully filmed example is <a href="https://bit.ly/10hw8mP">available on YouTube</a>, courtesy of the BBC.<!--</p>-->

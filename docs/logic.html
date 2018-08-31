@@ -78,9 +78,9 @@ $$
   \newcommand{\u}{U}
   \newcommand{\pr}{Pr}
   \newcommand{\po}{Pr^*}
-  \definecolor{leftcolour}{RGB}{228,6,19}
-  \definecolor{rightcolour}{RGB}{0,92,169}
-  \definecolor{middlecolour}{RGB}{114,49,94} 
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94} 
 $$
 
 <div class="row">
@@ -400,16 +400,7 @@ Therefore, <span class="math inline"><span class="math inline">\(B\)</span></spa
 <p class="caption marginnote">-->Figure 2.2: Compatible propositions<!--</p>-->
 <!--</div>--></span>
 </p>
-<p>
-<span class="marginnote shownote">
-<!--
-<div class="figure">--><span id="fig:unnamed-chunk-13"></span>
-<img src="img/euler.png" alt="Leonhard Euler ($1707$--$1783$)" width="230"  />
-<!--
-<p class="caption marginnote">-->Figure 2.3: Leonhard Euler (<span class="math inline">\(1707\)</span>–<span class="math inline">\(1783\)</span>)<!--</p>-->
-<!--</div>--></span>
-</p>
-<p>These are called <strong><em>Euler diagrams</em></strong>, after the mathematician Leonhard Euler (prounounced <em>oiler</em>). You may have seen Venn diagrams before, which are very similar. But in Euler diagrams the circles don’t have to overlap.</p>
+<p>These are called <strong><em>Euler diagrams</em></strong>, after the mathematician Leonhard Euler (prounounced <em>oiler</em>).<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> Leonhard Euler lived from <span class="math inline">\(1707\)</span> to <span class="math inline">\(1783\)</span>. You may have encountered some of his work before if you’ve worked with logarithms or taken calculus.</span> You may have seen Venn diagrams before, which are very similar. But in Euler diagrams the circles don’t have to overlap.</p>
 <p><span class="newthought">Sometimes</span> one circle will even contain another circle entirely. Take this example:</p>
 <ul>
 <li>Confucius was born in Asia.</li>
@@ -422,16 +413,16 @@ Confucius was born in Asia.<br />
 Therefore, Confucius was born.
 </p>
 </div>
-<p>In this case we say that the first proposition <strong><em>logically entails</em></strong> the second. In terms of an Euler diagram, he first circle is contained entirely in the second (Figure <a href="logic.html#fig:entailment">2.4</a>). Because there is no possible situation where the first proposition is true yet the second false.</p>
 <p>
 <span class="marginnote shownote">
 <!--
 <div class="figure">--><span id="fig:entailment"></span>
 <img src="_main_files/figure-html/entailment-1.png" alt="Logical entailment" width="672"  />
 <!--
-<p class="caption marginnote">-->Figure 2.4: Logical entailment<!--</p>-->
+<p class="caption marginnote">-->Figure 2.3: Logical entailment<!--</p>-->
 <!--</div>--></span>
 </p>
+<p>In this case we say that the first proposition <strong><em>logically entails</em></strong> the second. In terms of an Euler diagram, he first circle is contained entirely in the second (Figure <a href="logic.html#fig:entailment">2.3</a>). Because there is no possible situation where the first proposition is true yet the second false.</p>
 <p>What if an argument has multiple premises? For example:</p>
 <div class="argument">
 <p>
@@ -440,24 +431,24 @@ Zhuoru was born in the Chinese city of Beijing.<br />
 Therefore, both Zhuangzi and Zhuoru were born in China.
 </p>
 </div>
-<p>This argument is valid, and the diagram might look like Figure <a href="logic.html#fig:validtwopremises">2.5</a>. Notice how the <span class="math inline">\(A \wedge B\)</span> region lies entirely within the <span class="math inline">\(C\)</span> circle. This reflects the argument’s validity: there is no way for the first two propositions to be true and the last one false.</p>
 <p>
 <span class="marginnote shownote">
 <!--
 <div class="figure">--><span id="fig:validtwopremises"></span>
 <img src="_main_files/figure-html/validtwopremises-1.png" alt="A valid argument with two premises" width="672"  />
 <!--
-<p class="caption marginnote">-->Figure 2.5: A valid argument with two premises<!--</p>-->
+<p class="caption marginnote">-->Figure 2.4: A valid argument with two premises<!--</p>-->
 <!--</div>--></span>
 </p>
-<p>In contrast, an invalid argument would have a diagram like Figure <a href="logic.html#fig:invalidtwopremises">2.6</a>. This diagram allows for the possibility that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both true yet <span class="math inline">\(C\)</span> is false; part of the <span class="math inline">\(A \wedge B\)</span> region falls outside the <span class="math inline">\(C\)</span> circle.</p>
+<p>This argument is valid, and the diagram might look like Figure <a href="logic.html#fig:validtwopremises">2.4</a>. Notice how the <span class="math inline">\(A \wedge B\)</span> region lies entirely within the <span class="math inline">\(C\)</span> circle. This reflects the argument’s validity: there is no way for the first two propositions to be true and the last one false.</p>
+<p>In contrast, an invalid argument would have a diagram like Figure <a href="logic.html#fig:invalidtwopremises">2.5</a>. This diagram allows for the possibility that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both true yet <span class="math inline">\(C\)</span> is false; part of the <span class="math inline">\(A \wedge B\)</span> region falls outside the <span class="math inline">\(C\)</span> circle.</p>
 <p>
 <span class="marginnote shownote">
 <!--
 <div class="figure">--><span id="fig:invalidtwopremises"></span>
 <img src="_main_files/figure-html/invalidtwopremises-1.png" alt="An invalid argument with two premises" width="672"  />
 <!--
-<p class="caption marginnote">-->Figure 2.6: An invalid argument with two premises<!--</p>-->
+<p class="caption marginnote">-->Figure 2.5: An invalid argument with two premises<!--</p>-->
 <!--</div>--></span>
 </p>
 </div>
@@ -470,17 +461,16 @@ The sun has risen every day so far.<br />
 Therefore, the sun will rise again tomorrow.
 </p>
 </div>
-<p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;"><img src="img/stolen_earth.png" /> In the <em>Doctor Who</em> episode “The Stolen Earth”, aliens teleport our planet out of its solar system. The sun doesn’t rise that day, strange planets fill the sky instead.</span></span></p>
 <p>This argument isn’t valid, because it’s possible the conclusion is false even though the premise is true. Maybe the sun will explode in the night for some surprising reason. Or maybe the earth’s rotation will be stopped by alien forces.</p>
 <p>These possibilities aren’t very likely, of course. So the argument is strong, even though it’s not strictly valid. The premise gives us very good reason to believe the conclusion, just not a 100% guarantee.</p>
-<p>In terms of an Euler diagram then, the premise circle isn’t contained entirely within the conclusion circle (<a href="logic.html#fig:strongarg">2.7</a>). We have to leave some room for the possibility that the premise is true and the conclusion false. But we can still convey that this possibility has only a very slight chance of being true, by making it slim.</p>
+<p>In terms of an Euler diagram then, the premise circle isn’t contained entirely within the conclusion circle (<a href="logic.html#fig:strongarg">2.6</a>). We have to leave some room for the possibility that the premise is true and the conclusion false. But we can still convey that this possibility has only a very slight chance of being true, by making it slim.</p>
 <p>
 <span class="marginnote shownote">
 <!--
 <div class="figure">--><span id="fig:strongarg"></span>
 <img src="_main_files/figure-html/strongarg-1.png" alt="A strong argument" width="672"  />
 <!--
-<p class="caption marginnote">-->Figure 2.7: A strong argument<!--</p>-->
+<p class="caption marginnote">-->Figure 2.6: A strong argument<!--</p>-->
 <!--</div>--></span>
 </p>
 
@@ -490,7 +480,7 @@ Therefore, the sun will rise again tomorrow.
 <div class="figure">--><span id="fig:laplace"></span>
 <img src="img/laplace.png" alt="Pierre Simone Laplace (\(1749\)–\(1827\)) developed a formula for calculating this number exactly. We’ll learn how to do similar calculations in the coming chapters." width="200"  />
 <!--
-<p class="caption marginnote">-->Figure 2.8: Pierre Simone Laplace (<span class="math inline">\(1749\)</span>–<span class="math inline">\(1827\)</span>) developed <a href="https://bit.ly/2mU9WgW">a formula</a> for calculating this number exactly. We’ll learn how to do similar calculations in the coming chapters.<!--</p>-->
+<p class="caption marginnote">-->Figure 2.7: Pierre Simone Laplace (<span class="math inline">\(1749\)</span>–<span class="math inline">\(1827\)</span>) developed <a href="https://bit.ly/2mU9WgW">a formula</a> for calculating this number exactly. We’ll learn how to do similar calculations in the coming chapters.<!--</p>-->
 <!--</div>--></span>
 </p>
 <p>We could also label the <em><span class="math inline">\(A\)</span>-but-not-<span class="math inline">\(B\)</span></em> region with a small number, if we knew exactly how unlikely this possibility was.</p>

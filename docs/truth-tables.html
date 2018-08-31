@@ -78,9 +78,9 @@ $$
   \newcommand{\u}{U}
   \newcommand{\pr}{Pr}
   \newcommand{\po}{Pr^*}
-  \definecolor{leftcolour}{RGB}{228,6,19}
-  \definecolor{rightcolour}{RGB}{0,92,169}
-  \definecolor{middlecolour}{RGB}{114,49,94} 
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94} 
 $$
 
 <div class="row">
@@ -294,7 +294,7 @@ $$
 <li><strong>Either</strong> Aegon is a tyrant <strong>or</strong> Brandon is a wizard.</li>
 <li><strong>It’s not true that</strong> Aegon is a tyrant.</li>
 </ul>
-<p><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote"><span style="display: block;">Notice, we call <em>it’s not true that</em> a connective even though it doesn’t actually connect two propositions together.</span></span></p>
+<p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;">Notice, we call <em>it’s not true that</em> a connective even though it doesn’t actually connect two propositions together.</span></span></p>
 <p>Here we’ve used two simple propositions to build up longer, more complex ones using the terms <em>and</em>, <em>either/or</em>, and <em>it’s not true that</em>. Such terms are called <strong><em>connectives</em></strong>.</p>
 <p>The three connectives just listed are the only ones we’ll need in this book. Each has a name and a shorthand symbol:</p>
 <table>
@@ -360,7 +360,7 @@ This proposition is ambiguous, it has two interpretations. In English we can dis
 <li><span class="math inline">\(\neg A \vee B\)</span>: main connective is <span class="math inline">\(\vee\)</span>.</li>
 </ul>
 <p>Technically, the last example should have parentheses to prevent ambiguity, like so: <span class="math inline">\((\neg A) \vee B\)</span>. But things get cluttered and hard to read if we add parentheses around every negation. So we have a special understanding for <span class="math inline">\(\neg\)</span> in order to keep things tidy.</p>
-<p><label for="tufte-mn-6" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-6" class="margin-toggle"><span class="marginnote"><span style="display: block;">This special understanding for <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> mirrors the one for minus signs in arithmetic.</span></span></p>
+<p><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote"><span style="display: block;">This special understanding for <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> mirrors the one for minus signs in arithmetic.</span></span></p>
 <div class="info">
 <p>
 The negation symbol <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> only applies to the proposition immediately following it.
@@ -372,7 +372,7 @@ The negation symbol <span class="math inline"><span class="math inline">\(\mathb
 <h2><span class="header-section-number">3.2</span> Truth Tables</h2>
 <p><span class="newthought">The</span> truth of a complex proposition built using our three connectives depends on the truth of its components. For example, <span class="math inline">\(\neg A\)</span> is false if <span class="math inline">\(A\)</span> is true, and it’s true if <span class="math inline">\(A\)</span> is false:</p>
 <p><!--
-<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-31">Table 3.1: </span>Truth table for <span class="math inline">\(\neg\)</span></span><!--</caption>--></p>
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-29">Table 3.1: </span>Truth table for <span class="math inline">\(\neg\)</span></span><!--</caption>--></p>
 <table>
 <thead>
 <tr class="header">
@@ -393,7 +393,7 @@ The negation symbol <span class="math inline"><span class="math inline">\(\mathb
 </table>
 <p>Slightly more complicated is the rule for <span class="math inline">\(\&amp;\)</span>:</p>
 <p><!--
-<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-32">Table 3.2: </span>Truth table for <span class="math inline">\(\wedge\)</span></span><!--</caption>--></p>
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-30">Table 3.2: </span>Truth table for <span class="math inline">\(\wedge\)</span></span><!--</caption>--></p>
 <table>
 <thead>
 <tr class="header">
@@ -429,7 +429,7 @@ The negation symbol <span class="math inline"><span class="math inline">\(\mathb
 <p>Notice that in only one of these situations is <span class="math inline">\(A \&amp; B\)</span> true, namely the first row where both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are true.</p>
 <p>The truth table for <span class="math inline">\(\vee\)</span> (“either/or”) is a little more surprising:</p>
 <p><!--
-<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-33">Table 3.3: </span>Truth table for <span class="math inline">\(\vee\)</span></span><!--</caption>--></p>
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-31">Table 3.3: </span>Truth table for <span class="math inline">\(\vee\)</span></span><!--</caption>--></p>
 <table>
 <thead>
 <tr class="header">

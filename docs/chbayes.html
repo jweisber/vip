@@ -512,7 +512,7 @@ The calculation is also diagrammed in Figure <a href="chbayes.html#fig:zikatree"
 <p>Flu symptoms can also be caused by other things, like colds and allergies. So about <span class="math inline">\(1\)</span> in every <span class="math inline">\(20\)</span> people who don’t have the flu still have flu-like symptoms.</p>
 <p>If someone has flu-like symptoms at the height of flu season, what is the probability that they actually have the flu?</p></li>
 <li><p>A magic shop sells two kinds of trick coins. The first kind are biased towards heads: they come up heads <span class="math inline">\(9\)</span> times out of <span class="math inline">\(10\)</span> (the tosses are independent). The second kind are biased towards tails: they comes up tails <span class="math inline">\(8\)</span> times out of <span class="math inline">\(10\)</span> (tosses still independent). Half the coins are the first kind, half are the second kind. But they don’t label the coins, so you have to experiment to find out which are which.</p>
-<p>You pick a coin at random and flip it twice. Given that it comes up heads both times, what is the probability it’s the first kind of coin?</p></li>
+<p>You pick a coin at random and flip it once. Given that it comes up heads, what is the probability it’s the first kind of coin?</p></li>
 <li><p>There is a room filled with two types of urns.</p>
 <ul>
 <li>Type A urns have <span class="math inline">\(30\)</span> yellow marbles, <span class="math inline">\(70\)</span> red.</li>
@@ -525,13 +525,6 @@ The calculation is also diagrammed in Figure <a href="chbayes.html#fig:zikatree"
 <p>Now you look at the marble: it is yellow.</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>What is the probability the urn is a Type B urn, given that you drew a yellow marble?</li>
-</ol>
-<p>Suppose now you put the yellow marble back, shake hard, and draw another marble at random from the same urn.</p>
-<ol start="3" style="list-style-type: lower-alpha">
-<li>If this marble is also yellow, what is the probability the
-urn is a Type B urn?</li>
-<li>If this marble is instead green, what is the probability the urn
-is a Type B urn?</li>
 </ol></li>
 <li><p>In the long form of Bayes’ theorem, the denominator is broken down by applying the Law of Total Probability to a partition of two propositions, <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span>. We can extend the same idea to a partition of three propositions, <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span>. Here is a start on the formula:</p>
 <p><span class="math display">\[ \p(X \given B) = \frac{\p(X)\p(B \given X)}{\p(X)\p(B \given X) + \;\ldots\;}.\]</span></p>

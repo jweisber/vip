@@ -3998,8 +3998,8 @@ in probability theory.''
   kind. But they don't label the coins, so you have to experiment to
   find out which are which.
 
-  You pick a coin at random and flip it twice. Given that it comes up
-  heads both times, what is the probability it's the first kind of coin?
+  You pick a coin at random and flip it once. Given that it comes up
+  heads, what is the probability it's the first kind of coin?
 \item
   There is a room filled with two types of urns.
 
@@ -4030,21 +4030,6 @@ in probability theory.''
   \item
     What is the probability the urn is a Type B urn, given that you drew
     a yellow marble?
-  \end{enumerate}
-
-  Suppose now you put the yellow marble back, shake hard, and draw
-  another marble at random from the same urn.
-
-  \begin{enumerate}
-  \def\labelenumii{\alph{enumii}.}
-  \setcounter{enumii}{2}
-  \tightlist
-  \item
-    If this marble is also yellow, what is the probability the urn is a
-    Type B urn?
-  \item
-    If this marble is instead green, what is the probability the urn is
-    a Type B urn?
   \end{enumerate}
 \item
   In the long form of Bayes' theorem, the denominator is broken down by
@@ -4503,6 +4488,52 @@ or a tree diagram.
   \item
     What is the probability it's a wonk box given that the first is
     regular and the second is caramel?
+  \end{enumerate}
+\item
+  Recall the following problem from
+  \protect\hyperlink{bayes-theorem}{Chapter 8}.
+
+  A magic shop sells two kinds of trick coins. The first kind are biased
+  towards heads: they come up heads \(9\) times out of \(10\) (the
+  tosses are independent). The second kind are biased towards tails:
+  they comes up tails \(8\) times out of \(10\) (tosses still
+  independent). Half the coins are the first kind, half are the second
+  kind. But they don't label the coins, so you have to experiment to
+  find out which are which.
+
+  Previously, you picked a coin at random and flipped it once. But now
+  suppose you flip it a second time. What's the probability it's the
+  first kind of coin if it lands heads both times?
+\item
+  Recall the following problem from
+  \protect\hyperlink{bayes-theorem}{Chapter 8}.
+
+  There is a room filled with two types of urns.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Type A urns have \(30\) yellow marbles, \(70\) red.
+  \item
+    Type B urns have \(20\) green marbles, \(80\) yellow.
+  \end{itemize}
+
+  The two types of urn look identical, but \(80\%\) of them are Type A.
+
+  Previously you calculated the probability a randomly selected urn is
+  Type B given that one marble randomly drawn from it is yellow. Suppose
+  now you put the yellow marble back, shake hard, and draw another
+  marble at random from the same urn.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    If this marble is also yellow, what is the probability the urn is a
+    Type B urn?
+  \item
+    If this marble is instead green, what is the probability the urn is
+    a Type B urn?
   \end{enumerate}
 \item
   Recall the following problem from

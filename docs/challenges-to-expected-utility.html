@@ -285,7 +285,7 @@ $$
 <div class="col-sm-12">
 <div id="challenges-to-expected-utility" class="section level1">
 <h1><span class="header-section-number">13</span> Challenges to Expected Utility</h1>
-<p><span class="newthought">We’ve learned</span> two key elements of modern decision theory. First, we can quantify people’s desires, values, and priorities, a quantity we call <em>utility</em>. Second, we should make our decisions according to the expected value formula. We should choose the option with highest <em>expected utility</em>.</p>
+<p><span class="newthought">We’ve</span> learned two key elements of modern decision theory. First, we can quantify people’s desires, values, and priorities, a quantity we call <em>utility</em>. Second, we should make our decisions according to the expected value formula. We should choose the option with highest <em>expected utility</em>.</p>
 <p>These ideas have been extremely popular and influential in the last hundred years. But there have also been challenges.</p>
 <div id="the-allais-paradox" class="section level2">
 <h2><span class="header-section-number">13.1</span> The Allais Paradox</h2>
@@ -304,13 +304,13 @@ $$
 <ul>
 <li><span class="math inline">\(2A\)</span>: a gamble…
 <ul>
-<li><span class="math inline">\(90\%\)</span> chance of <span class="math inline">\(\$0\)</span>,</li>
-<li><span class="math inline">\(10\%\)</span> chance of <span class="math inline">\(\$5\)</span> million.</li>
+<li><span class="math inline">\(89\%\)</span> chance of <span class="math inline">\(\$0\)</span>,</li>
+<li><span class="math inline">\(11\%\)</span> chance of <span class="math inline">\(\$1\)</span> million.</li>
 </ul></li>
 <li><span class="math inline">\(2B\)</span>: a gamble…
 <ul>
-<li><span class="math inline">\(89\%\)</span> chance of <span class="math inline">\(\$0\)</span>,</li>
-<li><span class="math inline">\(11\%\)</span> chance of <span class="math inline">\(\$1\)</span> million.</li>
+<li><span class="math inline">\(90\%\)</span> chance of <span class="math inline">\(\$0\)</span>,</li>
+<li><span class="math inline">\(10\%\)</span> chance of <span class="math inline">\(\$5\)</span> million.</li>
 </ul></li>
 </ul>
 <p><span class="newthought">Most</span> people choose <span class="math inline">\(1A\)</span> over <span class="math inline">\(1B\)</span> in the first decision. With the safe option of walking away <span class="math inline">\(\$1\)</span> million richer, they don’t want to take the chance at <span class="math inline">\(\$5\)</span> million. Even though there’s only a <span class="math inline">\(1\%\)</span> risk of walking away empty handed if they take the gamble, it’s not worth it to them. The <span class="math inline">\(10\%\)</span> shot at <span class="math inline">\(\$5\)</span> million isn’t enough to risk losing out on the guaranteed <span class="math inline">\(\$1\)</span> million.</p>
@@ -330,8 +330,8 @@ To see why, let’s first write out the expected utility formula for each option
   \begin{aligned}
      \EU(1A) &amp;= \u(\$1M),\\
      \EU(1B) &amp;= .89 \times \u(\$1M) + .1 \times \u(\$5M) + .01 \times \u(\$0M),\\
-     \EU(2A) &amp;= .9 \times \u(\$0M) + .1 \times\u(\$5M),\\
-     \EU(2B) &amp;= .89 \times \u(\$0M) + .11 \times \u(\$1M).
+     \EU(2A) &amp;= .89 \times \u(\$0M) + .11 \times \u(\$1M),\\
+     \EU(2B) &amp;= .9 \times \u(\$0M) + .1 \times\u(\$5M).
   \end{aligned}
 \]</span>
 Now a little arithmetic will show that we get the same result when we subtract the first two formulas and the second two:
@@ -342,7 +342,7 @@ Now a little arithmetic will show that we get the same result when we subtract t
   \end{aligned}
 \]</span>
 Notice how both formulas are exactly the same. The difference in expected value between the first two options is exactly the same as the difference in value between the second two options. Which means if you’re making decisions using the expected utility rule, you can’t prefer the A option in the first decision and the B option in the second.</p>
-<p><span class="newthought">It’s important to understand</span> that these calculations don’t depend on the utility of money.</p>
+<p><span class="newthought">It’s</span> important to understand that these calculations don’t depend on the utility of money.</p>
 <p>In <a href="utility.html#utility">Chapter 12</a> we noted that the difference in utility between <span class="math inline">\(\$0\)</span> and <span class="math inline">\(\$1\)</span> million might be larger for some people than for others. Could these individual priorities explain why some people prefer <span class="math inline">\(1A\)</span> over <span class="math inline">\(1B\)</span> yet <span class="math inline">\(2B\)</span> over <span class="math inline">\(2A\)</span>?</p>
 <p>No. In the Allais paradox, the way you personally value money is actually irrelevant. It doesn’t matter how much you value <span class="math inline">\(\$1\)</span> million vs. <span class="math inline">\(\$0\)</span>. Our calculations made no assumptions about the numerical values of <span class="math inline">\(\u(\$0)\)</span>, <span class="math inline">\(\u(\$1M)\)</span>, and <span class="math inline">\(\u(\$5M)\)</span>. We left those terms untouched, treating them as unknown placeholders. Whatever your personal utilities are, there’s just no way to prefer <span class="math inline">\(1A\)</span> over <span class="math inline">\(1B\)</span> and <span class="math inline">\(2B\)</span> over <span class="math inline">\(2A\)</span>, if you’re following the expected utility rule.</p>
 <p>
@@ -401,7 +401,7 @@ Notice how both formulas are exactly the same. The difference in expected value 
 <p>Viewed this way, we can see that there’s no difference between <span class="math inline">\(1A\)</span> and <span class="math inline">\(1B\)</span> if the ticket drawn is one of <span class="math inline">\(\#12\)</span>–<span class="math inline">\(100\)</span>. And likewise for <span class="math inline">\(2A\)</span> vs. <span class="math inline">\(2B\)</span>. So you must choose based on what will happen if the ticket drawn is <span class="math inline">\(\#1\)</span> or one of <span class="math inline">\(\#2\)</span>–<span class="math inline">\(11\)</span>. In other words, you should ignore the third column and just look at the first two.</p>
 <p>But in the first two columns, choosing 1A over <span class="math inline">\(1B\)</span> is the same as choosing <span class="math inline">\(2A\)</span> over <span class="math inline">\(2B\)</span>. So, to be consistent, you must choose <span class="math inline">\(2A\)</span> if you chose 1A.</p>
 <p>Thus, Savage argued, we can see that the expected utility rule is correct once we frame the problem correctly.</p>
-<p><span class="newthought">Here’s another way</span> of thinking about Savage’s argument. If you choose <span class="math inline">\(2B\)</span> over <span class="math inline">\(2A\)</span>, then you must be willing to accept a <span class="math inline">\(1\%\)</span> chance of getting nothing in exchange for a <span class="math inline">\(10\%\)</span> chance at <span class="math inline">\(\$5\)</span> million. But if you’re willing to make that trade, then you should be willing to give up option 1A and take option <span class="math inline">\(1B\)</span> instead.</p>
+<p><span class="newthought">Here’s</span> another way of thinking about Savage’s argument. If you choose <span class="math inline">\(2B\)</span> over <span class="math inline">\(2A\)</span>, then you must be willing to accept a <span class="math inline">\(1\%\)</span> chance of getting nothing in exchange for a <span class="math inline">\(10\%\)</span> chance at <span class="math inline">\(\$5\)</span> million. But if you’re willing to make that trade, then you should be willing to give up option 1A and take option <span class="math inline">\(1B\)</span> instead.</p>
 <p>
 <span class="marginnote shownote">
 <!--

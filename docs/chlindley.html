@@ -307,7 +307,7 @@ Another reason for the popularity of statistical significance testing is probabl
 <h2><span class="header-section-number">20.2</span> Making It Concrete</h2>
 <p><span class="newthought">Suppose</span> for example there are only two types of potential treatment being studied. The useless kind just leave the patient’s recovery up to chance: it’s a <span class="math inline">\(50\%\)</span> shot. But the effective kind increase their chances of recovery by <span class="math inline">\(15\%\)</span>: they have a <span class="math inline">\(65\%\)</span> chance of getting better with these treatments.</p>
 <p>Let’s also imagine we’re studying <span class="math inline">\(200\)</span> different treatments, <span class="math inline">\(160\)</span> of which are actually useless and <span class="math inline">\(40\)</span> of which are effective. Since we don’t know which are which, we’ll run <span class="math inline">\(200\)</span> studies, one for each treatment. And just to make things concrete, let’s suppose each study has <span class="math inline">\(n = 100\)</span> subjects enrolled.</p>
-<p>What will happen if our researchers set the cutoff for statistical significance at <span class="math inline">\(.05\)</span>? Only a few of the bogus treatments will be approved. Just <span class="math inline">\(5\%\)</span> of those studies will get flukey, statistically significant results. And half of those will look like they’re harming patients’ chances of recovery, rather than helpful. So only <span class="math inline">\(2.5\%\)</span> of the <span class="math inline">\(160\)</span> bogus treatments will be approved, which is <span class="math inline">\(4\)</span> treatments.</p>
+<p>What will happen if our researchers set the cutoff for statistical significance at <span class="math inline">\(.05\)</span>? Only a few of the bogus treatments will be approved. Just <span class="math inline">\(5\%\)</span> of those studies will get flukey, statistically significant results. And half of those will look like they’re harming patients’ chances of recovery, rather than helping. So only <span class="math inline">\(2.5\%\)</span> of the <span class="math inline">\(160\)</span> bogus treatments will be approved, which is <span class="math inline">\(4\)</span> treatments.</p>
 <p>But also, a good number of the genuine treatments will be missed. Only about <span class="math inline">\(85\%\)</span> will be discovered as it turns out: see Figure <a href="chlindley.html#fig:hundredstudies">20.1</a>.</p>
 <div class="figure"><span id="fig:hundredstudies"></span>
 <p class="caption marginnote shownote">
@@ -480,10 +480,10 @@ Conclusion: the probability of the first hypothesis <span class="math inline">\(
 <p>Suppose half the coins are fair and half are not. Suppose also that when a coin is unfair, the probability of getting a result that is not statistically significant is <span class="math inline">\(0.2\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
 <li>How many fair coins should we expect will incorrectly end up labeled “unfair”.</li>
-<li>How many unfair coins should we expect will correctly end up abeled “unfair”.</li>
+<li>How many unfair coins should we expect will correctly end up labeled “unfair”.</li>
 <li>What percentage of the coins labeled “unfair” should we expect to actually be unfair?</li>
 </ol></li>
-<li><p>Suppose we are going to investigate <span class="math inline">\(1,000\)</span> null hypotheses by running an experiment on each. In each experiment, we will reject the null hypothesis when the results are significance at the <span class="math inline">\(.01\)</span> level.</p>
+<li><p>Suppose we are going to investigate <span class="math inline">\(1,000\)</span> null hypotheses by running an experiment on each. In each experiment, we will reject the null hypothesis when the results are significant at the <span class="math inline">\(.01\)</span> level.</p>
 <p>Suppose <span class="math inline">\(90\%\)</span> of our hypotheses are false. Suppose also that when a null hypothesis is false, the results will not be statistically significant <span class="math inline">\(25\%\)</span> of the time.</p>
 <ol style="list-style-type: lower-alpha">
 <li>How many false hypotheses should we expect will fail to be rejected?</li>

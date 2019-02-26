@@ -299,7 +299,7 @@ Another reason for the popularity of statistical significance testing is probabl
 <p>Think of all the studies of potential cancer treatments being done around the world. In each study, the researcher is testing the hypothesis that their treatment has no effect, in the hopes of disproving that hypothesis. They’re hoping enough patients get better in their study to show the treatment genuinely helps. If just a few more patients improve with their treatment compared to a placebo, it could just be a fluke. But if a lot more improve, that means the treatment is probably making a real difference.</p>
 <p>The lower the significance level, the more patients have to improve before they can call their study’s results “significant”. So a lower significance level means fewer treatments will be approved by the medical community.</p>
 <p>That might seem like a bad thing, but it also has an upside. It means fewer <em>bogus</em> treatments being adopted.</p>
-<p><label for="tufte-mn-31" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-31" class="margin-toggle"><span class="marginnote"><span style="display: block;">Medical treatments are often expensive, painful, or dangerous. So it’s a serious problem to approve ones that don’t actually help.</span>
+<p><label for="tufte-mn-32" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-32" class="margin-toggle"><span class="marginnote"><span style="display: block;">Medical treatments are often expensive, painful, or dangerous. So it’s a serious problem to approve ones that don’t actually help.</span>
 <span style="display: block;">But sometimes it just leads to <a href="https://xkcd.com/882/">silly dietary choices</a>.</span></span></p>
 <p>After all, occasionally a study of a useless treatment will have lots of patients improving anyway, just by luck. When that happens, the medical community adopts a treatment that doesn’t actually work. And there might be lots of studies out there experimenting with treatments that don’t actually help. So if we do enough studies, we’re bound to get flukey results in some of them, and adopt a treatment that doesn’t actually work by mistake.</p>
 </div>
@@ -367,7 +367,7 @@ But we saw there’s no recipe for calculating the prior probability of <span cl
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-148"></span>
+<div class="figure">--><span id="fig:unnamed-chunk-149"></span>
 <img src="img/jeffreys.png" alt="Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox." width="87"  />
 <!--
 <p class="caption marginnote">-->Figure 20.6: Harold Jeffreys (1891–1989) first raised the problem known as Lindley’s paradox in <span class="math inline">\(1939\)</span>. Dennis Lindley labeled it a paradox in <span class="math inline">\(1957\)</span>, hence the name. It is sometimes called the Jeffreys-Lindley paradox.<!--</p>-->
@@ -377,7 +377,7 @@ But we saw there’s no recipe for calculating the prior probability of <span cl
 </div>
 <div id="lindleys-paradox" class="section level2">
 <h2><span class="header-section-number">20.4</span> Lindley’s Paradox</h2>
-<p><label for="tufte-mn-32" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-32" class="margin-toggle"><span class="marginnote"><span style="display: block;">The tulip example is based on an example from Henry Kyburg’s book <em>Logical Foundations of Statistical Inference</em>. It also appears in Howson &amp; Urbach’s <em>Scientific Reasoning: A Bayesian Approach</em>.</span></span></p>
+<p><label for="tufte-mn-33" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-33" class="margin-toggle"><span class="marginnote"><span style="display: block;">The tulip example is based on an example from Henry Kyburg’s book <em>Logical Foundations of Statistical Inference</em>. It also appears in Howson &amp; Urbach’s <em>Scientific Reasoning: A Bayesian Approach</em>.</span></span></p>
 <p><span class="newthought">Suppose</span> a florist receives a large shipment of tulip bulbs with the label scratched off. The company that sent the shipment only sends two kinds of shipments. The first kind contains <span class="math inline">\(25\%\)</span> red bulbs, the second kind has <span class="math inline">\(50\%\)</span> red bulbs.</p>
 <p>The two kinds of shipment are equally common. So the store owner figures this shipment could be of either kind, with equal probability.</p>
 <p>To figure out which kind of shipment she has, she takes a sample of <span class="math inline">\(48\)</span> bulbs and plants them to see what colour they grow. Of the <span class="math inline">\(48\)</span> planted, <span class="math inline">\(36\)</span> grow red. What should she conclude?</p>
@@ -386,8 +386,8 @@ But we saw there’s no recipe for calculating the prior probability of <span cl
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-150"></span>
-<img src="_main_files/figure-html/unnamed-chunk-150-1.png" alt="The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-151"></span>
+<img src="_main_files/figure-html/unnamed-chunk-151-1.png" alt="The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 20.7: The result <span class="math inline">\(k = 36\)</span> out of <span class="math inline">\(n = 48\)</span> is easily statistically significant for the null hypothesis <span class="math inline">\(p = .25\)</span>.<!--</p>-->
 <!--</div>--></span>
@@ -403,8 +403,8 @@ The <span class="math inline">\(99\%\)</span> range is <span class="math inline"
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-151"></span>
-<img src="_main_files/figure-html/unnamed-chunk-151-1.png" alt="The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-152"></span>
+<img src="_main_files/figure-html/unnamed-chunk-152-1.png" alt="The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 20.8: The result <span class="math inline">\(k = 36\)</span> out of <span class="math inline">\(n = 48\)</span> is also statistically significant for the null hypothesis <span class="math inline">\(p = .5\)</span>.<!--</p>-->
 <!--</div>--></span>

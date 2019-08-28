@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Odds &amp; Ends" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="20 Lindley’s Paradox | Odds &amp; Ends" />
 <meta property="og:type" content="book" />
 
-
-<meta property="og:description" content="A textbook introducing philosophy students to probability, decision theory, and the philosophical foundations of statistics" />
+<meta property="og:image" content="img/social_image.png" />
+<meta property="og:description" content="An open access textbook for introductory philosophy courses on probability and inductive logic." />
 <meta name="github-repo" content="jweisber/vip" />
 
 <meta name="author" content="Jonathan Weisberg" />
@@ -25,14 +23,22 @@ MathJax.Hub.Config({
 </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 
-<meta name="description" content="A textbook introducing philosophy students to probability, decision theory, and the philosophical foundations of statistics">
+<meta name="description" content="An open access textbook for introductory philosophy courses on probability and inductive logic.">
 
-<title>Odds &amp; Ends</title>
+<title>20 Lindley’s Paradox | Odds &amp; Ends</title>
 
 <link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jweisber" />
+<meta name="twitter:creator" content="@jweisber" />
+<meta name="twitter:title" content="20 Lindley’s Paradox | Odds &amp; Ends" />
+<meta name="twitter:description" content="An open access textbook for introductory philosophy courses on probability and inductive logic." />
+<meta name="twitter:image" content="img/social_image.png" />
+
+
 <!--
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -299,7 +305,7 @@ Another reason for the popularity of statistical significance testing is probabl
 <p>Think of all the studies of potential cancer treatments being done around the world. In each study, the researcher is testing the hypothesis that their treatment has no effect, in the hopes of disproving that hypothesis. They’re hoping enough patients get better in their study to show the treatment genuinely helps. If just a few more patients improve with their treatment compared to a placebo, it could just be a fluke. But if a lot more improve, that means the treatment is probably making a real difference.</p>
 <p>The lower the significance level, the more patients have to improve before they can call their study’s results “significant”. So a lower significance level means fewer treatments will be approved by the medical community.</p>
 <p>That might seem like a bad thing, but it also has an upside. It means fewer <em>bogus</em> treatments being adopted.</p>
-<p><label for="tufte-mn-32" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-32" class="margin-toggle"><span class="marginnote"><span style="display: block;">Medical treatments are often expensive, painful, or dangerous. So it’s a serious problem to approve ones that don’t actually help.</span>
+<p><label for="tufte-mn-35" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-35" class="margin-toggle"><span class="marginnote"><span style="display: block;">Medical treatments are often expensive, painful, or dangerous. So it’s a serious problem to approve ones that don’t actually help.</span>
 <span style="display: block;">But sometimes it just leads to <a href="https://xkcd.com/882/">silly dietary choices</a>.</span></span></p>
 <p>After all, occasionally a study of a useless treatment will have lots of patients improving anyway, just by luck. When that happens, the medical community adopts a treatment that doesn’t actually work. And there might be lots of studies out there experimenting with treatments that don’t actually help. So if we do enough studies, we’re bound to get flukey results in some of them, and adopt a treatment that doesn’t actually work by mistake.</p>
 </div>
@@ -345,7 +351,7 @@ Figure 20.3: A significance cutoff of <span class="math inline">\(.01\)</span> w
 <p>Figure <a href="chlindley.html#fig:hundredstudiesgrid2">20.4</a> shows what happens now: about <span class="math inline">\(95\%\)</span> of our approved treatments will be genuine. We discover half of the <span class="math inline">\(40\)</span> genuine treatments, which is <span class="math inline">\(20\)</span>. And <span class="math inline">\(.005\)</span> of the <span class="math inline">\(160\)</span> useless treatments is <span class="math inline">\(.8\)</span>, which we’ll round up to <span class="math inline">\(1\)</span> for purposes of the diagram. So <span class="math inline">\(20/21 \approx .95\)</span> of our approved treatments are genuinely effective.</p>
 <p>But we’ve paid a dear price for this increase in precision: we’ve failed to identify half the treatments there are to be discovered. We’ve missed out on a lot of potential benefit to our patients.</p>
 <p>Notice, however, that if bogus treatments were rarer the problem wouldn’t be so pressing. For example, Figure <a href="chlindley.html#fig:hundredstudiesgrid3">20.5</a> shows what would happen if half the treatments being studied were bogus, instead of <span class="math inline">\(80\%\)</span>. Then we could have stuck with the <span class="math inline">\(.05\)</span> threshold and still had very good results: we would discover about <span class="math inline">\(85\)</span> genuine treatments and only approved about <span class="math inline">\(3\)</span> bogus ones, a precision of about <span class="math inline">\(97\%\)</span>.</p>
-<p>There are two lessons here. First, lowering the threshold for significance has both benefits and costs. A lower threshold means fewer false discoveries, but it means fewer genuine discoveries too. Second, the base rate informs our decision about how to make this tradeoff. The more false hypotheses there are to watch out for, the stronger the incentive to use a lower threshold.</p>
+<p>There are two lessons here. First, lowering the threshold for significance has both benefits and costs. A lower threshold means fewer false discoveries, but it means fewer genuine discoveries too. Second, the base rate informs our decision about how to make this tradeoff. The more false hypotheses there are to watch out for, the stronger the incentive to use a lower threshold.<label for="tufte-sn-11" class="margin-toggle sidenote-number">11</label><input type="checkbox" id="tufte-sn-11" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">11</span> Is the real base rate low enough that medical researchers actually need to worry? Yes, according to <a href="https://www.doi.org/10.1038/nrd3439-c1">this research</a>.</span></p>
 <p>
 <span class="marginnote shownote">
 <!--
@@ -367,7 +373,7 @@ But we saw there’s no recipe for calculating the prior probability of <span cl
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-149"></span>
+<div class="figure">--><span id="fig:unnamed-chunk-153"></span>
 <img src="img/jeffreys.png" alt="Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox." width="87"  />
 <!--
 <p class="caption marginnote">-->Figure 20.6: Harold Jeffreys (1891–1989) first raised the problem known as Lindley’s paradox in <span class="math inline">\(1939\)</span>. Dennis Lindley labeled it a paradox in <span class="math inline">\(1957\)</span>, hence the name. It is sometimes called the Jeffreys-Lindley paradox.<!--</p>-->
@@ -377,7 +383,7 @@ But we saw there’s no recipe for calculating the prior probability of <span cl
 </div>
 <div id="lindleys-paradox" class="section level2">
 <h2><span class="header-section-number">20.4</span> Lindley’s Paradox</h2>
-<p><label for="tufte-mn-33" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-33" class="margin-toggle"><span class="marginnote"><span style="display: block;">The tulip example is based on an example from Henry Kyburg’s book <em>Logical Foundations of Statistical Inference</em>. It also appears in Howson &amp; Urbach’s <em>Scientific Reasoning: A Bayesian Approach</em>.</span></span></p>
+<p><label for="tufte-mn-36" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-36" class="margin-toggle"><span class="marginnote"><span style="display: block;">The tulip example is based on an example from Henry Kyburg’s book <em>Logical Foundations of Statistical Inference</em>. It also appears in Howson &amp; Urbach’s <em>Scientific Reasoning: A Bayesian Approach</em>.</span></span></p>
 <p><span class="newthought">Suppose</span> a florist receives a large shipment of tulip bulbs with the label scratched off. The company that sent the shipment only sends two kinds of shipments. The first kind contains <span class="math inline">\(25\%\)</span> red bulbs, the second kind has <span class="math inline">\(50\%\)</span> red bulbs.</p>
 <p>The two kinds of shipment are equally common. So the store owner figures this shipment could be of either kind, with equal probability.</p>
 <p>To figure out which kind of shipment she has, she takes a sample of <span class="math inline">\(48\)</span> bulbs and plants them to see what colour they grow. Of the <span class="math inline">\(48\)</span> planted, <span class="math inline">\(36\)</span> grow red. What should she conclude?</p>
@@ -386,8 +392,8 @@ But we saw there’s no recipe for calculating the prior probability of <span cl
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-151"></span>
-<img src="_main_files/figure-html/unnamed-chunk-151-1.png" alt="The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-155"></span>
+<img src="_main_files/figure-html/unnamed-chunk-155-1.png" alt="The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 20.7: The result <span class="math inline">\(k = 36\)</span> out of <span class="math inline">\(n = 48\)</span> is easily statistically significant for the null hypothesis <span class="math inline">\(p = .25\)</span>.<!--</p>-->
 <!--</div>--></span>
@@ -403,8 +409,8 @@ The <span class="math inline">\(99\%\)</span> range is <span class="math inline"
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-152"></span>
-<img src="_main_files/figure-html/unnamed-chunk-152-1.png" alt="The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-156"></span>
+<img src="_main_files/figure-html/unnamed-chunk-156-1.png" alt="The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 20.8: The result <span class="math inline">\(k = 36\)</span> out of <span class="math inline">\(n = 48\)</span> is also statistically significant for the null hypothesis <span class="math inline">\(p = .5\)</span>.<!--</p>-->
 <!--</div>--></span>

@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Odds &amp; Ends" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="6 Conditional Probability | Odds &amp; Ends" />
 <meta property="og:type" content="book" />
 
-
-<meta property="og:description" content="A textbook introducing philosophy students to probability, decision theory, and the philosophical foundations of statistics" />
+<meta property="og:image" content="img/social_image.png" />
+<meta property="og:description" content="An open access textbook for introductory philosophy courses on probability and inductive logic." />
 <meta name="github-repo" content="jweisber/vip" />
 
 <meta name="author" content="Jonathan Weisberg" />
@@ -25,14 +23,22 @@ MathJax.Hub.Config({
 </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 
-<meta name="description" content="A textbook introducing philosophy students to probability, decision theory, and the philosophical foundations of statistics">
+<meta name="description" content="An open access textbook for introductory philosophy courses on probability and inductive logic.">
 
-<title>Odds &amp; Ends</title>
+<title>6 Conditional Probability | Odds &amp; Ends</title>
 
 <link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jweisber" />
+<meta name="twitter:creator" content="@jweisber" />
+<meta name="twitter:title" content="6 Conditional Probability | Odds &amp; Ends" />
+<meta name="twitter:description" content="An open access textbook for introductory philosophy courses on probability and inductive logic." />
+<meta name="twitter:image" content="img/social_image.png" />
+
+
 <!--
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -287,7 +293,7 @@ $$
 <h1><span class="header-section-number">6</span> Conditional Probability</h1>
 <p><span class="newthought">The</span> chances of crashing your car are pretty low, but they’re considerably higher if you’re drunk. Probabilities change depending on the conditions.</p>
 <p>We symbolize this idea by writing <span class="math inline">\(\p(A \given B)\)</span>, the probability that <span class="math inline">\(A\)</span> is true <em>given</em> that <span class="math inline">\(B\)</span> is true. And we call this kind of probability <strong><em>conditional probability</em></strong>.</p>
-<p><label for="tufte-mn-7" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-7" class="margin-toggle"><span class="marginnote"><span style="display: block;">To say <span class="math inline"><span class="math inline">\(B\)</span></span> increases the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> we write <span class="math inline"><span class="math inline">\(\p(A \given B) \gt \p(A)\)</span></span>. And to say <span class="math inline"><span class="math inline">\(B\)</span></span> doubles the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> write <span class="math inline"><span class="math inline">\(\p(A \given B) = 2 \times \p(A)\)</span></span>.</span></span></p>
+<p><label for="tufte-mn-8" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-8" class="margin-toggle"><span class="marginnote"><span style="display: block;">To say <span class="math inline"><span class="math inline">\(B\)</span></span> increases the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> we write <span class="math inline"><span class="math inline">\(\p(A \given B) \gt \p(A)\)</span></span>. And to say <span class="math inline"><span class="math inline">\(B\)</span></span> doubles the chance of <span class="math inline"><span class="math inline">\(A\)</span></span> write <span class="math inline"><span class="math inline">\(\p(A \given B) = 2 \times \p(A)\)</span></span>.</span></span></p>
 <p>For example, to say the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> is 30%, we write:
 <span class="math display">\[ \p(A \given B) = .3. \]</span>
 But how do we calculate conditional probabilities?</p>
@@ -296,8 +302,8 @@ But how do we calculate conditional probabilities?</p>
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-60"></span>
-<img src="_main_files/figure-html/unnamed-chunk-60-1.png" alt="Conditional probability in a fair die roll" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-60-2.png" alt="Conditional probability in a fair die roll" width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-61"></span>
+<img src="_main_files/figure-html/unnamed-chunk-61-1.png" alt="Conditional probability in a fair die roll" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-61-2.png" alt="Conditional probability in a fair die roll" width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 6.1: Conditional probability in a fair die roll<!--</p>-->
 <!--</div>--></span>
@@ -341,11 +347,11 @@ doesn’t even make any sense. There is no number that results from the division
 <li>Urn Y contains 1 black marble, 3 white.</li>
 </ul>
 <p>I flip a fair coin to decide which urn to draw from, heads for Urn B and tails for Urn W. Then I draw one marble at random.</p>
-<div class="figure"><span id="fig:unnamed-chunk-61"></span>
+<div class="figure"><span id="fig:unnamed-chunk-62"></span>
 <p class="caption marginnote shownote">
 Figure 6.3: Tree diagram for an urn problem
 </p>
-<img src="_main_files/figure-html/unnamed-chunk-61-1.png" alt="Tree diagram for an urn problem" width="672"  />
+<img src="_main_files/figure-html/unnamed-chunk-62-1.png" alt="Tree diagram for an urn problem" width="672"  />
 </div>
 <p>The probability of drawing a black marble on the top path is <span class="math inline">\(3/4\)</span> because we are assuming the coin landed heads, and thus I’m drawing from Urn X. If the coin lands tails instead, and I draw from Urn Y, then the chance of a black marble is instead <span class="math inline">\(1/4\)</span>. So these quantities are conditional probabilities:
 <span class="math display">\[
@@ -492,7 +498,7 @@ What are each of the following probabilities?</p>
 <li><span class="math inline">\(\p(B \given A)\)</span></li>
 </ol></li>
 <li><p>Five percent of tablets made by the company Ixian have factory defects. Ten percent of the tablets made by their competitor company Guild do. A computer store buys <span class="math inline">\(40\%\)</span> of its tablets from Ixian, and <span class="math inline">\(60\%\)</span> from Guild.</p>
-<p><label for="tufte-mn-8" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-8" class="margin-toggle"><span class="marginnote"><span style="display: block;">This exercise and the next one are based on very similar exercises from Ian Hacking’s wonderful book, <em>An Introduction to Probability and Inductive Logic</em>.</span></span></p>
+<p><label for="tufte-mn-9" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-9" class="margin-toggle"><span class="marginnote"><span style="display: block;">This exercise and the next one are based on very similar exercises from Ian Hacking’s wonderful book, <em>An Introduction to Probability and Inductive Logic</em>.</span></span></p>
 <p>Draw a probability tree to answer the following questions.</p>
 <ol style="list-style-type: lower-alpha">
 <li>What is the probability a randomly selected tablet in the store is made by Ixian and has a factory defect?</li>

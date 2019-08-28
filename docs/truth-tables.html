@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Odds &amp; Ends" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="3 Truth Tables | Odds &amp; Ends" />
 <meta property="og:type" content="book" />
 
-
-<meta property="og:description" content="A textbook introducing philosophy students to probability, decision theory, and the philosophical foundations of statistics" />
+<meta property="og:image" content="img/social_image.png" />
+<meta property="og:description" content="An open access textbook for introductory philosophy courses on probability and inductive logic." />
 <meta name="github-repo" content="jweisber/vip" />
 
 <meta name="author" content="Jonathan Weisberg" />
@@ -25,14 +23,22 @@ MathJax.Hub.Config({
 </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 
-<meta name="description" content="A textbook introducing philosophy students to probability, decision theory, and the philosophical foundations of statistics">
+<meta name="description" content="An open access textbook for introductory philosophy courses on probability and inductive logic.">
 
-<title>Odds &amp; Ends</title>
+<title>3 Truth Tables | Odds &amp; Ends</title>
 
 <link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jweisber" />
+<meta name="twitter:creator" content="@jweisber" />
+<meta name="twitter:title" content="3 Truth Tables | Odds &amp; Ends" />
+<meta name="twitter:description" content="An open access textbook for introductory philosophy courses on probability and inductive logic." />
+<meta name="twitter:image" content="img/social_image.png" />
+
+
 <!--
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -294,7 +300,7 @@ $$
 <li><strong>Either</strong> Aegon is a tyrant <strong>or</strong> Brandon is a wizard.</li>
 <li><strong>It’s not true that</strong> Aegon is a tyrant.</li>
 </ul>
-<p><label for="tufte-mn-3" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle"><span class="marginnote"><span style="display: block;">Notice, we call <em>it’s not true that</em> a connective even though it doesn’t actually connect two propositions together.</span></span></p>
+<p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;">Notice, we call <em>it’s not true that</em> a connective even though it doesn’t actually connect two propositions together.</span></span></p>
 <p>Here we’ve used two simple propositions to build up longer, more complex ones using the terms <em>and</em>, <em>either/or</em>, and <em>it’s not true that</em>. Such terms are called <strong><em>connectives</em></strong>.</p>
 <p>The three connectives just listed are the only ones we’ll need in this book. Each has a name and a shorthand symbol:</p>
 <table>
@@ -360,7 +366,7 @@ This proposition is ambiguous, it has two interpretations. In English we can dis
 <li><span class="math inline">\(\neg A \vee B\)</span>: main connective is <span class="math inline">\(\vee\)</span>.</li>
 </ul>
 <p>Technically, the last example should have parentheses to prevent ambiguity, like so: <span class="math inline">\((\neg A) \vee B\)</span>. But things get cluttered and hard to read if we add parentheses around every negation. So we have a special understanding for <span class="math inline">\(\neg\)</span> in order to keep things tidy.</p>
-<p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;">This special understanding for <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> mirrors the one for minus signs in arithmetic.</span></span></p>
+<p><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote"><span style="display: block;">This special understanding for <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> mirrors the one for minus signs in arithmetic.</span></span></p>
 <div class="info">
 <p>
 The negation symbol <span class="math inline"><span class="math inline">\(\mathbin{\sim}\)</span></span> only applies to the proposition immediately following it.
@@ -372,7 +378,7 @@ The negation symbol <span class="math inline"><span class="math inline">\(\mathb
 <h2><span class="header-section-number">3.2</span> Truth Tables</h2>
 <p><span class="newthought">The</span> truth of a complex proposition built using our three connectives depends on the truth of its components. For example, <span class="math inline">\(\neg A\)</span> is false if <span class="math inline">\(A\)</span> is true, and it’s true if <span class="math inline">\(A\)</span> is false:</p>
 <p><!--
-<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-28">Table 3.1: </span>Truth table for <span class="math inline">\(\neg\)</span></span><!--</caption>--></p>
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-29">Table 3.1: </span>Truth table for <span class="math inline">\(\neg\)</span></span><!--</caption>--></p>
 <table>
 <thead>
 <tr class="header">
@@ -393,7 +399,7 @@ The negation symbol <span class="math inline"><span class="math inline">\(\mathb
 </table>
 <p>Slightly more complicated is the rule for <span class="math inline">\(\&amp;\)</span>:</p>
 <p><!--
-<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-29">Table 3.2: </span>Truth table for <span class="math inline">\(\wedge\)</span></span><!--</caption>--></p>
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-30">Table 3.2: </span>Truth table for <span class="math inline">\(\wedge\)</span></span><!--</caption>--></p>
 <table>
 <thead>
 <tr class="header">
@@ -429,7 +435,7 @@ The negation symbol <span class="math inline"><span class="math inline">\(\mathb
 <p>Notice that in only one of these situations is <span class="math inline">\(A \&amp; B\)</span> true, namely the first row where both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are true.</p>
 <p>The truth table for <span class="math inline">\(\vee\)</span> (“either/or”) is a little more surprising:</p>
 <p><!--
-<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-30">Table 3.3: </span>Truth table for <span class="math inline">\(\vee\)</span></span><!--</caption>--></p>
+<caption>--><span class="marginnote shownote"><span id="tab:unnamed-chunk-31">Table 3.3: </span>Truth table for <span class="math inline">\(\vee\)</span></span><!--</caption>--></p>
 <table>
 <thead>
 <tr class="header">

@@ -2642,10 +2642,6 @@ You can also use a tree diagram. Again, the calculation will be the same. But th
 \item
   If \(Pr(A)=0\), what is \(\p(A \given B)\)? Justify your answer.
 \item
-  Do Exercise 2 from p.~67 of Hacking.
-\item
-  Do Exercise 3 from p.~67 of Hacking.
-\item
   If \(A\) and \(B\) are logically equivalent, what is \(\p(A \given B)\)? Justify your answer.
 \item
   Suppose \(A\), \(B\), and \(C\) all have the same probability, namely \(1/4\). Suppose they are also independent of one another. What is \(\p(\neg A \vee \neg B \vee \neg C)\)?
@@ -2806,7 +2802,7 @@ And plug that back into the first equation:
 This proves that Bayes' theorem is correct. But it also suggests a way of understanding it visually, with an Euler diagram.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-80-1} \caption[An Euler diagram for visualizing Bayes' theorem]{An Euler diagram for visualizing Bayes' theorem}\label{fig:unnamed-chunk-80}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-79-11} \caption[An Euler diagram for visualizing Bayes' theorem]{An Euler diagram for visualizing Bayes' theorem}\label{fig:unnamed-chunk-79}
 \end{marginfigure}
 
 \newthought{We've talked} before about \(\p(A \given B)\) being the portion of the \(B\) region that's inside the \(A\) region. The purple portion of the blue \(B\) circle, in other words:
@@ -3584,10 +3580,10 @@ What about the last term in Bayes' theorem though, the denominator \(\p(E)\)? It
 
 
 \begin{marginfigure}
-\includegraphics[width=2.12in]{img/moon} \caption[The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.]{The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.}\label{fig:unnamed-chunk-92}
+\includegraphics[width=2.12in]{img/moon} \caption[The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.]{The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.}\label{fig:unnamed-chunk-91}
 \end{marginfigure}
 \begin{marginfigure}
-\includegraphics[width=2in]{img/vacuum} \caption[It's also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.]{It's also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.}\label{fig:unnamed-chunk-92}
+\includegraphics[width=2in]{img/vacuum} \caption[It's also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.]{It's also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.}\label{fig:unnamed-chunk-91}
 \end{marginfigure}
 
 Scientists love theories that explain the unexplained. For example, Newton's theory of physics is able to explain why a heavy object and a light object, like a hammer and feather, fall to the ground at the same speed as long as there's no air resistance. If you'd never performed this experiment before, you'd probably expect the hammer to fall faster. You'd be surprised to find that the hammer and feather actually hit the ground at the same time. That Newton's theory explains this surprising fact strongly supports his theory.
@@ -3706,7 +3702,7 @@ Well, a rectangle's area can be enlarged by increasing either its width or its h
 So the expected value formula answers our opening question by giving equal weight to the two competing factors. Width (probability) and height (payoff) are treated the same: neither one is given greater weight. We just multiply one against the other and take the total area that results.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-95-1} \caption[A gamble with one negative payoff, one positive]{A gamble with one negative payoff, one positive}\label{fig:unnamed-chunk-95}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-94-1} \caption[A gamble with one negative payoff, one positive]{A gamble with one negative payoff, one positive}\label{fig:unnamed-chunk-94}
 \end{marginfigure}
 
 \newthought{Sometimes} a decision loses money. We use negative dollar amounts to represent losses. For example, imagine the Coin Game is modified so that you lose \(\$2\) if the coin lands tails. Then the expected value is:
@@ -3732,7 +3728,7 @@ Given an act \(A\) with possible consequences \(\$x_1, \$x_2, \ldots, \$x_n\), t
 \end{description}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-96-1} \caption[A gamble with three possible outcomes]{A gamble with three possible outcomes}\label{fig:unnamed-chunk-96}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-95-1} \caption[A gamble with three possible outcomes]{A gamble with three possible outcomes}\label{fig:unnamed-chunk-95}
 \end{marginfigure}
 
 For example, suppose a fair die will be rolled and you will win \$1 if it lands on a low number, \$2 if it's a middling number. If it's a high number, you lose \$3. Then:
@@ -3799,7 +3795,7 @@ hour drive.
 \end{problem}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-98-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-98-2} \caption[Take the train to Ottawa or drive?]{Take the train to Ottawa or drive?}\label{fig:unnamed-chunk-98}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-97-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-97-2} \caption[Take the train to Ottawa or drive?]{Take the train to Ottawa or drive?}\label{fig:unnamed-chunk-97}
 \end{marginfigure}
 
 If all you care about is spending as little time on the road as possible, should you take the train or drive?
@@ -4265,7 +4261,7 @@ This is a question about your personal tastes, notice. Some people really like s
 Let's suppose for the sake of example that your answer is \(\p(P) \geq 1/3\). You'd need at least a \(1/3\) chance at the pizza to risk getting celery instead of salad. Since celery is the worst option, let's say it has utility zero: \(\u(C)=0\). And since pizza is the best option, let's say it has utility one: \(\u(P)=1\). What is the utility of salad \(\u(S)\) then?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-109-1} \caption[A utility scale for lunch options]{A utility scale for lunch options}\label{fig:unnamed-chunk-109}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-108-1} \caption[A utility scale for lunch options]{A utility scale for lunch options}\label{fig:unnamed-chunk-108}
 \end{marginfigure}
 
 We know that you're willing to trade the salad for the gamble when the probability of winning pizza is at least \(1/3\). So if \(\p(P) = 1/3\), the utility of salad is the same as the expected utility of the gamble: \(\u(S) = \EU(G)\). Therefore:
@@ -4282,7 +4278,7 @@ So salad has utility \(1/3\) for you.
 Hey look! We just took something personal and subjective and gave it a precise, objective measurement. We've managed to quantify your lunch preferences.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-110-1} \caption[A friend's utility scale for lunch options]{A friend's utility scale for lunch options}\label{fig:unnamed-chunk-110}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-109-1} \caption[A friend's utility scale for lunch options]{A friend's utility scale for lunch options}\label{fig:unnamed-chunk-109}
 \end{marginfigure}
 
 \newthought{Now} imagine your friend gives a different answer. They'd need at least a \(2/3\) chance at the pizza to risk ending up with celery instead of salad. So for them, \(\u(S) = \EU(G)\) when \(\p(P) = 2/3\). So now the calculation goes:
@@ -4370,7 +4366,7 @@ Question: how would we calculate \(\u(C)\) on a scale from \(-1\) to
 It's just convenient to use \(0\) and \(1\). Because then, once we've identified the relevant probability \(\p(B)\), we can immediately set \(\u(C) = \p(B)\). If we used a scale from \(0\) to \(10\) instead, we'd have to multiply \(\p(B)\) by \(10\) to get \(\u(C)\). That would add some unnecessary work.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-113-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-113-2} \includegraphics{_main_files/figure-latex/unnamed-chunk-113-3} \caption[The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)]{The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)}\label{fig:unnamed-chunk-113}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-112-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-112-2} \includegraphics{_main_files/figure-latex/unnamed-chunk-112-3} \caption[The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)]{The best possible gamble (top), the worst possible gamble (middle), and an intermediate gamble (bottom)}\label{fig:unnamed-chunk-112}
 \end{marginfigure}
 
 It's also inuitive to use the same \(0\)-to-\(1\) scale for both probability and utility. It makes our visualizations of expected utility especially tidy. Expected utility can then be thought of as portion of the unit square. The best possible option is a \(100\%\) chance of the best outcome, i.e.~probability 1 of getting utility \(1\). So the best possible choices have area \(1\). Whereas the worst gamble has no chance of getting any outcome with positive utility, and has area \(0\).
@@ -4726,7 +4722,7 @@ In \protect\hyperlink{utility}{Chapter 12} we noted that the difference in utili
 No.~In the Allais paradox, the way you personally value money is actually irrelevant. It doesn't matter how much you value \(\$1\) million vs. \(\$0\). Our calculations made no assumptions about the numerical values of \(\u(\$0)\), \(\u(\$1M)\), and \(\u(\$5M)\). We left those terms untouched, treating them as unknown placeholders. Whatever your personal utilities are, there's just no way to prefer \(1A\) over \(1B\) and \(2B\) over \(2A\), if you're following the expected utility rule.
 
 \begin{marginfigure}
-\includegraphics[width=0.91in]{img/allais} \caption[Maurice Allais (1911--2010), photograph by Harcourt Studios]{Maurice Allais (1911--2010), photograph by Harcourt Studios}\label{fig:unnamed-chunk-115}
+\includegraphics[width=0.91in]{img/allais} \caption[Maurice Allais (1911--2010), photograph by Harcourt Studios]{Maurice Allais (1911--2010), photograph by Harcourt Studios}\label{fig:unnamed-chunk-114}
 \end{marginfigure}
 \begin{marginfigure}
 Leonard Savage (1917--1971) was an American staistician and
@@ -4745,7 +4741,7 @@ Savage responded by acknowledging that people are tempted to make exactly the ch
 To make his case, Savage cast the example in concrete terms. Imagine a random ticket will be drawn from a hat containing tickets numbered \(\#1\) through \(\#100\). The outcome of each options is determined according to the following table:
 
 \begin{longtable}[]{@{}lccc@{}}
-\caption{\label{tab:unnamed-chunk-117}Savage's version of the Allais paradox, using a lottery with \(100\) tickets}\tabularnewline
+\caption{\label{tab:unnamed-chunk-116}Savage's version of the Allais paradox, using a lottery with \(100\) tickets}\tabularnewline
 \toprule
 & \(\#1\) & \(\#2\)--\(11\) & \(\#12\)--\(100\)\tabularnewline
 \midrule
@@ -4855,7 +4851,7 @@ Like in the Allais paradox, this popular combination of choices violates the exp
 
 
 \begin{marginfigure}
-\includegraphics[width=1.67in]{img/ellsberg} \caption[Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross).]{Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross).}\label{fig:unnamed-chunk-119}
+\includegraphics[width=1.67in]{img/ellsberg} \caption[Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross).]{Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross).}\label{fig:unnamed-chunk-118}
 \end{marginfigure}
 
 Instead let's think about what this puzzle is showing us.
@@ -4872,7 +4868,7 @@ But in the Ellsberg paradox, you never know the outcome. The most you can know i
 Is this preference for known risks rational? Well, it violates Savage's Sure-thing Principle. View Ellsberg's dilemma as a table:
 
 \begin{longtable}[]{@{}lccc@{}}
-\caption{\label{tab:unnamed-chunk-120}The Ellsberg paradox}\tabularnewline
+\caption{\label{tab:unnamed-chunk-119}The Ellsberg paradox}\tabularnewline
 \toprule
 & Red & Black & White\tabularnewline
 \midrule
@@ -5145,7 +5141,7 @@ But others don't find this response plausible. There may be a limit on how much 
 \section{Pascal's Wager}\label{pascals-wager}}
 
 \begin{marginfigure}
-\includegraphics[width=1in]{img/pascal} \caption[Blaise Pascal (1623--1662)]{Blaise Pascal (1623--1662)}\label{fig:unnamed-chunk-122}
+\includegraphics[width=1in]{img/pascal} \caption[Blaise Pascal (1623--1662)]{Blaise Pascal (1623--1662)}\label{fig:unnamed-chunk-121}
 \end{marginfigure}
 
 \newthought{The} modern theory of probability has a curious origin. It started with Blaise Pascal, a French mathematician and philosopher living in the \(1600\)s. Pascal had a friend who was an avid gambler, and who came to him for advice on gambling problems. Pascal discussed these problems in letters with another famous mathematician, Pierre de Fermat. Out of their correspondence, the concept of expected value was born.
@@ -5433,7 +5429,7 @@ So \(\infty - \infty\) is not a well-defined quantity.
 \chapter{Two Schools}\label{two-schools}}
 
 \begin{marginfigure}
-\includegraphics[width=1.83in]{img/flanders} \caption[Ned Flanders informs us that, well sir, there are two schools of thought on the matter]{Ned Flanders informs us that, well sir, there are two schools of thought on the matter.}\label{fig:unnamed-chunk-123}
+\includegraphics[width=1.83in]{img/flanders} \caption[Ned Flanders informs us that, well sir, there are two schools of thought on the matter]{Ned Flanders informs us that, well sir, there are two schools of thought on the matter.}\label{fig:unnamed-chunk-122}
 \end{marginfigure}
 
 \newthought{What} does the word ``probability'' mean? There are two competing philosophies of probability, and two very different schools of statistics to go with them.
@@ -5569,7 +5565,7 @@ If it doesn't rain, I'll lose \(\$2\). To find my \textbf{\emph{fair betting rat
 \]
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-124-1} \caption[A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size]{A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$.}\label{fig:unnamed-chunk-124}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-123-1} \caption[A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size]{A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$.}\label{fig:unnamed-chunk-123}
 \end{marginfigure}
 
 A person's betting rate reflects their degree of confidence. The more confident they are of winning, the more they'll be willing to risk losing. In this example my betting rate is \(2/3\) because I'm \(2/3\) confident it will rain. That's my personal probability: \(\p(R) = 2/3\).
@@ -5579,7 +5575,7 @@ Notice that a bet at two-to-one odds has zero expected value given my personal p
 This makes sense: it's a fair bet from my point of view, after all.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-125-1} \caption[A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$]{A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$.}\label{fig:unnamed-chunk-125}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-124-1} \caption[A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$]{A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$.}\label{fig:unnamed-chunk-124}
 \end{marginfigure}
 
 What if I were less confident in rain, say just \(1/10\) confident? Then I'd be willing to stake much less. I'd need you to put down at least \(\$9\) before I'd put down even \(\$1\). Only then would the bet have \(0\) expected value:
@@ -5972,7 +5968,7 @@ So we can make a Dutch book against Suzy. In this case she's overconfident in bo
 The end result is that Suzy loses \(10\)¢ no matter what. At the beginning she pays us \(\$0.70 + \$0.40 = \$1.10\). Then she wins back \(\$1\), either for the bet on \(E\) or for the bet on \(\neg E\). But in the end, she still has a net loss of \(10\)¢.
 
 \begin{longtable}[]{@{}llrr@{}}
-\caption{\label{tab:unnamed-chunk-131}A Dutch book for Suzy the Scientist}\tabularnewline
+\caption{\label{tab:unnamed-chunk-130}A Dutch book for Suzy the Scientist}\tabularnewline
 \toprule
 & & \(E\) & \(\neg E\)\tabularnewline
 \midrule
@@ -6115,7 +6111,7 @@ For example, imagine I'm going to roll a six-sided die behind a screen so you ca
 Also before I tell you the result, what is your personal probability that the die will land on a high number \emph{given that it lands on an even number}? Let's assume your answer here is \(\pr(H \given E) = 2/3\).
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-133-1} \caption[Prior vs]{Prior vs. posterior probabilities in a die-roll problem. $H$ $=$ the die landed $4$, $5$, or $6$. $E$ $=$ the die landed even. $Pr(H) = 1/2$, $Pr^*(H) = 2/3$.}\label{fig:unnamed-chunk-133}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-132-1} \caption[Prior vs]{Prior vs. posterior probabilities in a die-roll problem. $H$ $=$ the die landed $4$, $5$, or $6$. $E$ $=$ the die landed even. $Pr(H) = 1/2$, $Pr^*(H) = 2/3$.}\label{fig:unnamed-chunk-132}
 \end{marginfigure}
 
 Now I roll the die and I tell you it did in fact land even. What is your new personal probability that it landed on a high number? Following the Conditionalization rule, \(\po(H) = \pr(H \given E) = 2/3\).
@@ -6169,7 +6165,7 @@ In the die example, there are six possible outcomes. So each would have prior pr
 Here's one more example. In North American roulette, the wheel has \(38\) pockets, \(2\) of which are green: zero (\(\mathtt{0}\)) and double-zero (\(\mathtt{00}\)). If you don't know whether the wheel is fair, what should your prior probability be that the ball will land in a green pocket?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-135-1} \caption[A North American roulette wheel]{A North American roulette wheel}\label{fig:unnamed-chunk-135}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-134-1} \caption[A North American roulette wheel]{A North American roulette wheel}\label{fig:unnamed-chunk-134}
 \end{marginfigure}
 
 According to the Principle of Indifference, each space has equal probability, \(1/38\). So \(\pr(G) = 1/19\):
@@ -6194,7 +6190,7 @@ If there is an interval of possible outcomes from \(a\) to \(b\), the probabilit
 \end{description}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-136-1} \caption[The continuous version of the Principle of Indifference]{The continuous version of the Principle of Indifference: $Pr(H)$ is the length of the $c$-to-$d$ interval divided by the length of the whole $a$-to-$b$ interval.}\label{fig:unnamed-chunk-136}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-135-1} \caption[The continuous version of the Principle of Indifference]{The continuous version of the Principle of Indifference: $Pr(H)$ is the length of the $c$-to-$d$ interval divided by the length of the whole $a$-to-$b$ interval.}\label{fig:unnamed-chunk-135}
 \end{marginfigure}
 
 The idea is that the prior probability of a hypothesis \(H\) is just the proportion of possibilities where \(H\) occurs. If the full range of possibilities goes from \(a\) to \(b\), and the subrange of \(H\) possibilities is from \(c\) to \(d\), then we just calculate how big that subrange is compared to the whole range.
@@ -6213,7 +6209,7 @@ That seems reasonable, but now suppose we rephrase the question. What is the pro
 But the answer should have been the same as before: it's the same questions, just rephrased! If the sides are between \(1\) and \(2\) feet long, that's the same as the area being between \(1\) ft\(^2\) and \(4\) ft\(^2\).
 
 \begin{marginfigure}
-\includegraphics[width=1.33in]{img/bertrand} \caption[Joseph Bertrand (1822--1900) presented this paradox in his $1889$ book *Calcul des Probabilités*]{Joseph Bertrand (1822--1900) presented this paradox in his $1889$ book *Calcul des Probabilités*. He used a different example though. Our example is a bit easier to understand, and comes from the book *Laws and Symmetry* by Bas van Fraassen.}\label{fig:unnamed-chunk-137}
+\includegraphics[width=1.33in]{img/bertrand} \caption[Joseph Bertrand (1822--1900) presented this paradox in his $1889$ book *Calcul des Probabilités*]{Joseph Bertrand (1822--1900) presented this paradox in his $1889$ book *Calcul des Probabilités*. He used a different example though. Our example is a bit easier to understand, and comes from the book *Laws and Symmetry* by Bas van Fraassen.}\label{fig:unnamed-chunk-136}
 \end{marginfigure}
 
 So which answer is right, \(1/2\) or \(3/8\)? It depends on which dimension we apply the Principle of Indifference to: length vs.~area. And there doesn't seem to be any principled way of deciding which dimension to use. So we don't have a principled way to apply the Principle of Indifference.
@@ -6514,7 +6510,7 @@ In general, the more extreme the value of \(p\) is, the larger we need \(n\) to 
 \section{Significance Testing}\label{significance-testing-1}}
 
 \begin{marginfigure}
-\includegraphics[width=0.89in]{img/fisher} \caption[Ronald A]{Ronald A. Fisher (1890--1962) established significance testing as a standard scientific method with his influential $1925$ book *Statistical Methods for Research Workers*.}\label{fig:unnamed-chunk-142}
+\includegraphics[width=0.89in]{img/fisher} \caption[Ronald A]{Ronald A. Fisher (1890--1962) established significance testing as a standard scientific method with his influential $1925$ book *Statistical Methods for Research Workers*.}\label{fig:unnamed-chunk-141}
 \end{marginfigure}
 
 \newthought{The} method of evaluating hypotheses we've been explaining is called \textbf{\emph{significance testing}}. Here is the general recipe for significance testing with binomial probabilities:
@@ -6896,7 +6892,7 @@ From a Bayesian point of view, significance testing focuses on just one term in 
 So significance testing is based on a mistake, according to Bayesian critics. It ignores essential \protect\hyperlink{baserate}{base rate} information, namely how many of the hypotheses we study are true. And this can lead to very wrong results, as we learned from the taxicab problem in \protect\hyperlink{chbayes}{Chapter} \ref{chbayes}.
 
 \begin{marginfigure}
-\includegraphics[width=0.58in]{img/jeffreys} \caption[Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$]{Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox.}\label{fig:unnamed-chunk-153}
+\includegraphics[width=0.58in]{img/jeffreys} \caption[Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$]{Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox.}\label{fig:unnamed-chunk-152}
 \end{marginfigure}
 
 This critique of frequentism is sharpened by a famous problem known as Lindley's paradox.
@@ -6921,7 +6917,7 @@ Intuitively, this result fits much better with the \(50\%\) hypothesis than the 
 But if she uses significance testing, she won't get this result. In fact she'll get an \emph{impossible} result. Let's see how.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-155-1} \caption[The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$]{The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$.}\label{fig:unnamed-chunk-155}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-154-1} \caption[The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$]{The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$.}\label{fig:unnamed-chunk-154}
 \end{marginfigure}
 
 Our florist starts by testing the hypothesis that \(25\%\) of the bulbs in the shipment are red. She calculates \(\mu\) and \(\sigma\):
@@ -6934,7 +6930,7 @@ Our florist starts by testing the hypothesis that \(25\%\) of the bulbs in the s
 The \(99\%\) range is \(12 \pm (3)(3)\), or from \(3\) to \(21\). Her finding of \(k = 36\) is nowhere close to this range, so the result is significant at the \(.01\) level. She rejects the \(25\%\) hypothesis.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-156-1} \caption[The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$]{The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$.}\label{fig:unnamed-chunk-156}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-155-1} \caption[The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$]{The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$.}\label{fig:unnamed-chunk-155}
 \end{marginfigure}
 
 So far so good, but what if she tests the \(50\%\) hypothesis too? She calculates the new \(\mu\) and \(\sigma\):
@@ -7585,7 +7581,7 @@ So it seems like a fundamental principle of scientific inquiry that we expect th
 \addcontentsline{toc}{section}{A Gruesome Concept}
 
 \begin{marginfigure}
-\includegraphics[width=0.74in]{img/goodman} \caption[Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s]{Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s.}\label{fig:unnamed-chunk-169}
+\includegraphics[width=0.74in]{img/goodman} \caption[Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s]{Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s.}\label{fig:unnamed-chunk-168}
 \end{marginfigure}
 
 \newthought{But} in the \(1940\)s, Nelson Goodman discovered a problem with the Principle of Induction. To illustrate the problem he invented a very curious concept, \emph{grue}.
@@ -7599,7 +7595,7 @@ There is a second way for an object to be grue: some blue objects are grue. Not 
 As usual, it helps to have a diagram:
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-170-1} \caption[The definition of grue]{The definition of grue}\label{fig:unnamed-chunk-170}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-169-1} \caption[The definition of grue]{The definition of grue}\label{fig:unnamed-chunk-169}
 \end{figure}
 
 Here is the formal definition of grue:
@@ -7667,7 +7663,7 @@ But how do we pass all that wisdom on to the machines? How do we teach them the 
 But the beauty of Goodman's puzzle is the neat way it exposes the flaw in this answer. It allows us to make `green' the disjunctive concept instead! How? We start by building grue a friend, a concept to fill in the missing spaces in our original diagram. We'll call it \emph{bleen}:
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-172-1} \caption[Defining bleen, a counterpart to grue]{Defining bleen, a counterpart to grue}\label{fig:unnamed-chunk-172}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-171-1} \caption[Defining bleen, a counterpart to grue]{Defining bleen, a counterpart to grue}\label{fig:unnamed-chunk-171}
 \end{figure}
 
 Now we can define green in terms of grue and bleen:
@@ -7736,7 +7732,7 @@ Actually there are strong reasons to doubt whether this assumption can be justif
 Could we give an inductive argument for the Principle of Induction? At first it seems we could. Scientists have been using inductive reasoning for millenia, often with great success. Indeed, it seems humans, and other creatures too, have relied on it for much longer, and could not have survived without it. So the Principle of Induction has a very strong track record. Isn't that a good argument for believing it's correct?
 
 \begin{marginfigure}
-\includegraphics[width=1.33in]{img/hume} \caption[David Hume (1711--1776) raised the problem of induction in $1739$]{David Hume (1711--1776) raised the problem of induction in $1739$. Our presentation of it here is somewhat modernized from his original argument.}\label{fig:unnamed-chunk-174}
+\includegraphics[width=1.33in]{img/hume} \caption[David Hume (1711--1776) raised the problem of induction in $1739$]{David Hume (1711--1776) raised the problem of induction in $1739$. Our presentation of it here is somewhat modernized from his original argument.}\label{fig:unnamed-chunk-173}
 \end{marginfigure}
 
 No, because the argument is circular. It uses the Principle of Induction to justify believing in the Principle of Induction. Consider that the argument we are attempting looks like this:

@@ -295,8 +295,9 @@ $$
 <h1><span class="header-section-number">1</span> The Monty Hall Problem</h1>
 <div class="epigraph">
 <p>
-…in no other branch of mathematics is it so easy for experts to blunder as in probability theory.<br />
-—Martin Gardner
+When tackling a math problem,<br />
+I encourage students to <em>draw a picture</em>.<br />
+—Francis Su
 </p>
 </div>
 <p><span class="newthought">Imagine</span> you’re on a game show. There are three doors, one with a prize behind it. You’re allowed to pick any door, so you choose the first one at random, door A.</p>
@@ -394,12 +395,12 @@ Figure 1.6: The parts of a tree diagram: nodes, branches, and leaves
 </p>
 <img src="_main_files/figure-html/treeparts-1.png" alt="The parts of a tree diagram: nodes, branches, and leaves" width="672"  />
 </div>
-<p>The rules for a tree are as follows:</p>
-<p><em>Rule 1.</em> Each node must use a partition. The branches coming out of it must be mutually exclusive possibilities, and they must cover all the possibilities.</p>
-<p><em>Rule 2.</em> The probabilities at each node must add up to <span class="math inline">\(1\)</span>.</p>
+<p>The rules for a tree are as follows.</p>
+<p><em>Rule 1.</em> Each node must branch into a partition. The subpossibilities that emerge from a node must be mutually exclusive. And they must include every way the possibility from which they emerge could obtain.</p>
+<p><em>Rule 2.</em> The probabilities emerging from a node must add to <span class="math inline">\(1\)</span>. If we add up the numbers on the branches immediately coming out of a node, they should add to <span class="math inline">\(1\)</span>.</p>
 <p><em>Rule 3.</em> The probability on a branch is <em>conditional</em> on the branches leading up to it.</p>
 <ul>
-<li>For example, consider the bottom path in the Monty Hall problem. The probability the host will open door C is <span class="math inline">\(1/2\)</span> there because we’re assuming the prize is behind door A.</li>
+<li>Consider the bottom path in the Monty Hall problem. The probability the host will open door C is <span class="math inline">\(1/2\)</span> there because we’re assuming the prize is behind door A.</li>
 </ul>
 <p><em>Rule 4.</em> The probability of a leaf is calculated by multiplying across the branches on the path leading to it. This number represents the probability that all possibilities on that path occur.</p>
 <p>Notice, Rule 4 is how we got the final probabilities (the numbers in bold) we used to solve the Monty Hall problem.</p>

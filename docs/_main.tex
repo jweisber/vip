@@ -252,9 +252,9 @@ Finally, I'm indebted to several teaching assistants and students who helped wit
 \chapter{The Monty Hall Problem}\label{the-monty-hall-problem}}
 
 \begin{epigraph}
-\ldots{}in no other branch of mathematics is it so easy for experts to
-blunder as in probability theory.\\
----Martin Gardner
+When tackling a math problem,\\
+I encourage students to \textit{draw a picture.}\\
+---Francis Su
 \end{epigraph}
 
 \newthought{Imagine} you're on a game show. There are three doors, one with a prize behind it. You're allowed to pick any door, so you choose the first one at random, door A.
@@ -374,21 +374,16 @@ In a way, the fundamental principle of probability is that probabilities over a 
 \end{figure}
 
 The rules for a tree are as follows:
-
-\emph{Rule 1.} Each node must use a partition. The branches coming out of it must be mutually exclusive possibilities, and they must cover all the possibilities.
-
-\emph{Rule 2.} The probabilities at each node must add up to \(1\).
-
-\emph{Rule 3.} The probability on a branch is \emph{conditional} on the branches leading up to it.
-
+\begin{itemize}
+\item[]\emph{Rule 1.} Each node must branch into a partition. The subpossibilities that emerge from a node must be mutually exclusive. And they must include every way the possibility from which they emerge could obtain.
+\item[]\emph{Rule 2.} The probabilities emerging from a node must add to \(1\). If we add up the numbers on the branches immediately coming out of a node, they should add to \(1\).
+\item[]\emph{Rule 3.} The probability on a branch is \emph{conditional} on the branches leading up to it.
 \begin{itemize}
 \tightlist
-\item
-  For example, consider the bottom path in the Monty Hall problem. The probability the host will open door C is \(1/2\) there because we're assuming the prize is behind door A.
+\item[] Consider the bottom path in the Monty Hall problem. The probability the host will open door C is \(1/2\) there because we're assuming the prize is behind door A.
 \end{itemize}
-
-\emph{Rule 4.} The probability of a leaf is calculated by multiplying across the branches on the path leading to it. This number represents the probability that all possibilities on that path occur.
-
+\item[]\emph{Rule 4.} The probability of a leaf is calculated by multiplying across the branches on the path leading to it. This number represents the probability that all possibilities on that path occur.
+\end{itemize}
 Notice, Rule 4 is how we got the final probabilities (the numbers in bold) we used to solve the Monty Hall problem.
 
 \hypertarget{exercises}{%
@@ -609,30 +604,24 @@ These are called \textbf{\emph{Euler diagrams}}, after the mathematician Leonhar
 \end{itemize}
 
 These propositions aren't just compatible. If the first is true, then the second \emph{must} be true. Imagine an argument with the first proposition as the premise and the second proposition as the conclusion. The argument would be valid:
-
 \begin{argument}
 Confucius was born in Asia.\\
 Therefore, Confucius was born.
 \end{argument}
-
 \begin{marginfigure}
 \includegraphics{_main_files/figure-latex/entailment-1} \caption[Logical entailment]{Logical entailment}\label{fig:entailment}
 \end{marginfigure}
-
 In this case we say that the first proposition \textbf{\emph{logically entails}} the second. In terms of an Euler diagram, he first circle is contained entirely in the second (Figure \ref{fig:entailment}). Because there is no possible situation where the first proposition is true yet the second false.
 
 What if an argument has multiple premises? For example:
-
 \begin{argument}
 Zhuangzi was born in the Chinese province of Anhui.\\
 Zhuoru was born in the Chinese city of Beijing.\\
 Therefore, both Zhuangzi and Zhuoru were born in China.
 \end{argument}
-
 \begin{marginfigure}
 \includegraphics{_main_files/figure-latex/validtwopremises-1} \caption[A valid argument with two premises]{A valid argument with two premises}\label{fig:validtwopremises}
 \end{marginfigure}
-
 This argument is valid, and the diagram might look like Figure \ref{fig:validtwopremises}. Notice how the \(A \wedge B\) region lies entirely within the \(C\) circle. This reflects the argument's validity: there is no way for the first two propositions to be true and the last one false.
 
 In contrast, an invalid argument would have a diagram like Figure \ref{fig:invalidtwopremises}. This diagram allows for the possibility that \(A\) and \(B\) are both true yet \(C\) is false; part of the \(A \wedge B\) region falls outside the \(C\) circle.
@@ -829,7 +818,6 @@ What makes one explanation better than another? That turns out to be a very hard
 \section{Connectives}\label{connectives}}
 
 \newthought{Complex} propositions can be built up out of other, simpler propositions:
-
 \begin{itemize}
 \tightlist
 \item
@@ -839,12 +827,10 @@ What makes one explanation better than another? That turns out to be a very hard
 \item
   \textbf{It's not true that} Aegon is a tyrant.
 \end{itemize}
-
 \begin{marginfigure}
 Notice, we call \emph{it's not true that} a connective even though it
 doesn't actually connect two propositions together.
 \end{marginfigure}
-
 Here we've used two simple propositions to build up longer, more complex ones using the terms \emph{and}, \emph{either/or}, and \emph{it's not true that}. Such terms are called \textbf{\emph{connectives}}.
 
 The three connectives just listed are the only ones we'll need in this book. Each has a name and a shorthand symbol:
@@ -955,7 +941,6 @@ F & T\tabularnewline
 \end{longtable}
 
 Slightly more complicated is the rule for \(\&\):
-
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:unnamed-chunk-30}Truth table for \(\wedge\)}\tabularnewline
 \toprule
@@ -972,13 +957,11 @@ F & T & F\tabularnewline
 F & F & F\tabularnewline
 \bottomrule
 \end{longtable}
-
-There are four rows now because \(\&\) combines two propositions \(A\) and \(B\) together to make the more complex proposition \(A \& B\). Since each of those propositions could be either true or false, there are \(2 \times 2 = 4\) possible situations to consider.
+\noindent There are four rows now because \(\&\) combines two propositions \(A\) and \(B\) together to make the more complex proposition \(A \& B\). Since each of those propositions could be either true or false, there are \(2 \times 2 = 4\) possible situations to consider.
 
 Notice that in only one of these situations is \(A \& B\) true, namely the first row where both \(A\) and \(B\) are true.
 
 The truth table for \(\vee\) (``either/or'') is a little more surprising:
-
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:unnamed-chunk-31}Truth table for \(\vee\)}\tabularnewline
 \toprule
@@ -995,8 +978,7 @@ F & T & T\tabularnewline
 F & F & F\tabularnewline
 \bottomrule
 \end{longtable}
-
-Now the complex proposition is always true, except in one case: the last row where \(A\) and \(B\) are both false. It makes sense that \(A \vee B\) is false when both sides are false. But why is it true when both sides are true? Doesn't ``Either \(A\) or \(B\)'' mean that \emph{just one} of these is true?
+\noindent Now the complex proposition is always true, except in one case: the last row where \(A\) and \(B\) are both false. It makes sense that \(A \vee B\) is false when both sides are false. But why is it true when both sides are true? Doesn't ``Either \(A\) or \(B\)'' mean that \emph{just one} of these is true?
 
 Sometimes it does have that meaning. But sometimes it means ``Either A or B, \emph{or both}''. Consider this exchange:
 
@@ -1016,7 +998,6 @@ That says:
 Which is just a very explicit way of saying: either one or the other, but not both.
 
 We can even verify that the complex construction captures the meaning we want using a truth table. We start with an empty table, where the header lists all the formulas we use to build up to the final, complex one we're interested in:
-
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
 \(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
@@ -1028,9 +1009,7 @@ We can even verify that the complex construction captures the meaning we want us
 \(\;\) & & & & &\tabularnewline
 \bottomrule
 \end{longtable}
-
-Then we fill in the possible truth values for the simplest propositions, \(A\) and \(B\):
-
+\noindent Then we fill in the possible truth values for the simplest propositions, \(A\) and \(B\):
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
 \(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
@@ -1042,9 +1021,7 @@ F & T & & & &\tabularnewline
 F & F & & & &\tabularnewline
 \bottomrule
 \end{longtable}
-
-Next we consult the truth tables above for \(\&\) and \(\vee\) to fill in the columns at the next level of complexity:
-
+\noindent Next we consult the truth tables above for \(\&\) and \(\vee\) to fill in the columns at the next level of complexity:
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
 \(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
@@ -1056,9 +1033,7 @@ F & T & T & F & &\tabularnewline
 F & F & F & F & &\tabularnewline
 \bottomrule
 \end{longtable}
-
-Then move up to the next level of complexity. To fill in the column for \(\neg(A \wedge B)\), we consult the column for \(A \wedge B\) and apply the rules from the table for \(\neg\):
-
+\noindent Then move up to the next level of complexity. To fill in the column for \(\neg(A \wedge B)\), we consult the column for \(A \wedge B\) and apply the rules from the table for \(\neg\):
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
 \(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
@@ -1070,9 +1045,7 @@ F & T & T & F & T &\tabularnewline
 F & F & F & F & T &\tabularnewline
 \bottomrule
 \end{longtable}
-
-Finally, we consult the columns for \(A \vee B\) and \(\neg(A \wedge B)\), and the table for \(\&\), to fill in the column for \((A \vee B) \wedge \neg(A \& B)\):
-
+\noindent Finally, we consult the columns for \(A \vee B\) and \(\neg(A \wedge B)\), and the table for \(\&\), to fill in the column for \((A \vee B) \wedge \neg(A \& B)\):
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
 \(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
@@ -1091,7 +1064,6 @@ Complex constructions like this are difficult at first, but don't worry. With pr
 \section{Logical Truths \& Contradictions}\label{logical-truths-contradictions}}
 
 \newthought{Some} propositions come out true in every row of the truth table. Consider \(A \vee \neg A\) for example:
-
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
 \(A\) & \(\neg A\) & \(A \vee \neg A\)\tabularnewline
@@ -1101,11 +1073,9 @@ T & F & T\tabularnewline
 F & T & T\tabularnewline
 \bottomrule
 \end{longtable}
-
-Such propositions are especially interesting because they \emph{must} be true. Their truth is guaranteed, just as a matter of logic. So we call them \textbf{\emph{logical truths}}.
+\noindent Such propositions are especially interesting because they \emph{must} be true. Their truth is guaranteed, just as a matter of logic. So we call them \textbf{\emph{logical truths}}.
 
 The other side of this coin is propositions that are false in every row of the truth table, like \(A \wedge \neg A\):
-
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
 \(A\) & \(\neg A\) & \(A \wedge \neg A\)\tabularnewline
@@ -1115,11 +1085,9 @@ T & F & F\tabularnewline
 F & T & F\tabularnewline
 \bottomrule
 \end{longtable}
-
-These propositions are called \textbf{\emph{contradictions}}.
+\noindent These propositions are called \textbf{\emph{contradictions}}.
 
 Notice that the negation of a contradiction is a logical truth. For example, consider the truth table for \(\neg (A \wedge \neg A)\):
-
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
 \(A\) & \(\neg A\) & \(A \wedge \neg A\) & \(\neg (A \wedge \neg A)\)\tabularnewline
@@ -1134,7 +1102,6 @@ F & T & F & T\tabularnewline
 \section{Mutually Exclusivity \& Truth Tables}\label{mutually-exclusivity-truth-tables}}
 
 \newthought{Truth} tables can be used to establish that two propositions are mutually exclusive. A very simple example is the propositions \(A\) and \(\neg A\):
-
 \begin{longtable}[]{@{}cc@{}}
 \toprule
 \(A\) & \(\neg A\)\tabularnewline
@@ -1144,24 +1111,22 @@ T & F\tabularnewline
 F & T\tabularnewline
 \bottomrule
 \end{longtable}
-
-There is no row in the table where both propositions are true. And if two propositions can't both be true, they are mutually exclusive by definition.
+\noindent There is no row in the table where both propositions are true. And if two propositions can't both be true, they are mutually exclusive by definition.
 
 A slightly more complex example is the propositions \(A \vee B\) and \(\neg A \wedge \neg B\):
-
-\begin{longtable}[]{@{}cccccc@{}}
+\begin{center}
+\begin{tabular}{cccccc}
 \toprule
 \(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg A \wedge \neg B\)\tabularnewline
 \midrule
-\endhead
 T & T & F & F & T & F\tabularnewline
 T & F & F & T & T & F\tabularnewline
 F & T & T & F & T & F\tabularnewline
 F & F & T & T & F & T\tabularnewline
 \bottomrule
-\end{longtable}
-
-Again there's no row where \(A \vee B\) and \(\neg A \wedge \neg B\) are both true. So they are mutually exclusive.
+\end{tabular}
+\end{center}
+\noindent Again there's no row where \(A \vee B\) and \(\neg A \wedge \neg B\) are both true. So they are mutually exclusive.
 
 \hypertarget{entailment-equivalence}{%
 \section{Entailment \& Equivalence}\label{entailment-equivalence}}
@@ -1174,7 +1139,6 @@ Therefore, \(A\).
 \end{quote}
 
 Obviously it's not possible for the premise to be true and the conclusion false, so the argument is valid (if a bit silly). Accordingly, there is no line of the truth table where \(A \wedge B\) comes out true, yet \(A\) comes out false:
-
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
 \(A\) & \(B\) & \(A \wedge B\)\tabularnewline
@@ -1186,7 +1150,6 @@ F & T & F\tabularnewline
 F & F & F\tabularnewline
 \bottomrule
 \end{longtable}
-
 The only line where \(A \wedge B\) comes out true is the first one. And on that line \(A\) is true too. So the argument from \(A \wedge B\) to \(A\) is valid.
 
 One more example:
@@ -1198,7 +1161,6 @@ Therefore, \(B\).
 \end{quote}
 
 This argument is valid because the first premise says that at least one of the two propositions \(A\) and \(B\) must be true, and the second line says it's not \(A\). So it must be \(B\) that's true, as the conclusion asserts. And once again there is no line of the truth table where both \(A \vee B\) and \(\neg A\) are true, yet \(B\) is false:
-
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
 \(A\) & \(B\) & \(\neg A\) & \(A \vee B\)\tabularnewline
@@ -1210,7 +1172,6 @@ F & T & T & T\tabularnewline
 F & F & T & F\tabularnewline
 \bottomrule
 \end{longtable}
-
 The only line where both \(A \vee B\) and \(\neg A\) are true is the third row, and \(B\) is true on that row. So once again the truth table tells us this argument is valid.
 
 In the \protect\hyperlink{visualizing-propositions}{previous chapter} we introduced the concept of logical entailment. \(A\) logically entails \(B\) when it's impossible for \(A\) to be true and \(B\) false. When one proposition entails another, there is no line of the truth table where the first proposition is true and the second is false.
@@ -1232,7 +1193,6 @@ F & F & F & F\tabularnewline
 \end{longtable}
 
 A more complex example is the propositions \(\neg (A \vee B)\) and \(\neg A \wedge \neg B\):
-
 \begin{longtable}[]{@{}ccccccc@{}}
 \toprule
 \(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg(A \vee B)\) & \(\neg A \wedge \neg B\)\tabularnewline
@@ -1244,8 +1204,7 @@ F & T & T & F & T & F & F\tabularnewline
 F & F & T & T & F & T & T\tabularnewline
 \bottomrule
 \end{longtable}
-
-Here again the columns under these two propositions are identical.
+\noindent Here again the columns under these two propositions are identical.
 
 \hypertarget{summary}{%
 \section{Summary}\label{summary}}
@@ -1358,7 +1317,7 @@ Applied statistics is hard.\\
 \newthought{My} wife's family keeps having girls. My wife has two sisters and she and her sisters each have two daughters, with no other siblings or children. That's nine girls in a row!
 
 \begin{marginfigure}
-Note that girl and boy aren't the only two possibilities. The next child
+Note that girl and boy aren't the only possibilities. The next child
 could also be intersex, like fashion model
 \href{https://en.wikipedia.org/wiki/Hanne_Gaby_Odiele}{Hanne Gaby
 Odiele}.
@@ -1406,13 +1365,9 @@ But drawing without replacement is not a fair process, because the draws are not
 This way of thinking is called \emph{the gambler's fallacy}. A fallacy is a mistake in reasoning. The mistake here is failing to fully account for independence. These gamblers know the process in question is fair, in fact that's a key part of their reasoning. They know it's unlikely that the roulette wheel will land on black ten times in a row because a fair wheel should land on black and red equally often. But then they overlook the fact that fair also means independent, and independent means the last nine spins tell us nothing about the tenth spin.
 
 The gambler's fallacy is so seductive that it can be hard to find your way out of it. Here's one way to think about it that may help. Imagine the gambler's point of view at two different times: before the ten spins of the wheel, and after. Before, the gambler is contemplaing the likelihood of getting ten black spins in a row:
-
 \[  \_ \, \_ \,\_ \,\_ \,\_ \,\_ \,\_ \,\_ \,\_ \,\_ \, ? \]
-
 From that vantage point, the gambler is exactly right to think it's unlikely these ten spins will all land on black. But now imagine their point of view after observing (to their surprise) the first nine spins all landing black:
-
 \[ B \, B \, B \, B \, B \, B \, B \, B \, B  \, \_ \,? \]
-
 Now how likely is it these ten spins will all land black? Well, just one more spin has to land black now to fulfill this unlikely prophecy. So it's not such a long shot anymore. In fact it's a \(50\)-\(50\) shot. Although it was very unlikely the first nine spins would turn out this way, now that they have, it's perfectly possible the tenth will turn out the same.
 
 \hypertarget{ignorance-is-not-a-fallacy}{%
@@ -1834,8 +1789,6 @@ The restrictions on these two rules are essential. If you ignore them, you will 
    If a coin is fair, then the probability of getting at least one heads in
    a sequence of four tosses is quite high: above 90\%.
 
-   \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
    Therefore, if a fair coin has landed tails three times in a row, the
    next toss will probably land heads.
    \end{argument}
@@ -1978,20 +1931,19 @@ Notice, though, the first branch in a tree diagram is different. In the \(H\)-vs
 \]
 This calculation relies on the fact that \(R \wedge \neg B\) is logically equivalent to \(R\). A red marble is automatically not blue, so \(R\) is true under exactly the same circumstances as \(R \wedge \neg B\). The \protect\hyperlink{tautologies-contradictions-and-equivalent-propositions}{Equivalence Rule} thus tells us \(\p(R \wedge \neg B) = \p(R)\).
 
-\newthought{Suppose} a university has 10,000 students, and each student is studying under one of four broad headings: Humanities, Social Sciences, STEM, or Professional. Within each of these categories, the number of students with an average grade of A, B, C, or D is as follows:
-
-\begin{longtable}[]{@{}lcccc@{}}
+\newthought{Suppose} a university has 10,000 students, and each student is studying under one of four broad headings: Humanities, Social Sciences, STEM, or Professional. Within each of these categories, the number of students with an average grade of A, B, C, or D is given by the following table.
+\begin{center}
+\begin{tabular}[]{lcccc}
 \toprule
 & Humanities & Social Sciences & STEM & Professional\tabularnewline
 \midrule
-\endhead
 A & 200 & 600 & 400 & 900\tabularnewline
 B & 500 & 800 & 1600 & 900\tabularnewline
 C & 250 & 400 & 1500 & 750\tabularnewline
 D & 50 & 200 & 500 & 450\tabularnewline
 \bottomrule
-\end{longtable}
-
+\end{tabular}
+\end{center}
 What is the probability a randomly selected student will have an A average, given that they are studying either Humanities or Social Sciences?
 \[
   \begin{aligned}
@@ -2686,6 +2638,11 @@ You can also use a tree diagram. Again, the calculation will be the same. But th
 \hypertarget{chbayes}{%
 \chapter{Bayes' Theorem}\label{chbayes}}
 
+\begin{epigraph}
+\ldots in no other branch of mathematics is it so easy for experts to blunder as in probability theory.\
+---Martin Gardner
+\end{epigraph}
+
 \begin{marginfigure}
 The experiment was first published in 1971. It was performed by
 \href{https://en.wikipedia.org/wiki/Daniel_Kahneman}{Daniel Kahneman}
@@ -2944,7 +2901,7 @@ Microsoft Founder Bill Gates seems to be making a similar mistake in
 tweet}.
 \end{marginfigure}
 
-Hence the quote that opens \protect\hyperlink{the-monty-hall-problem}{Chapter 1} of this book: ``in no other branch of mathematics is it so easy for experts to blunder as in probability theory.''
+Hence the quote that opens this chapter: ``in no other branch of mathematics is it so easy for experts to blunder as in probability theory.''
 
 \hypertarget{exercises-6}{%
 \section*{Exercises}\label{exercises-6}}

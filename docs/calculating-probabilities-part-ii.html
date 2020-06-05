@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="7 Calculating Probabilities, Part II | Odds &amp; Ends" />
@@ -172,7 +171,9 @@ $$
 <li class="has-sub"><a href="probability-induction.html#probability-induction"><span class="toc-section-number">10</span> Probability &amp; Induction</a><ul>
 <li><a href="probability-induction.html#generalizing-from-observed-instances"><span class="toc-section-number">10.1</span> Generalizing from Observed Instances</a></li>
 <li><a href="probability-induction.html#real-life-is-more-complicated"><span class="toc-section-number">10.2</span> Real Life Is More Complicated</a></li>
-<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.3</span> Inference to the Best Explanation</a></li>
+<li><a href="probability-induction.html#succession"><span class="toc-section-number">10.3</span> The Rule of Succession</a></li>
+<li><a href="probability-induction.html#bayesibe"><span class="toc-section-number">10.4</span> Inference to the Best Explanation</a></li>
+<li><a href="probability-induction.html#exercises-8">Exercises</a></li>
 </ul></li>
 <li class="part"><span><b>Part II</b></span></li>
 <li class="has-sub"><a href="expected-value.html#expected-value"><span class="toc-section-number">11</span> Expected Value</a><ul>
@@ -182,7 +183,8 @@ $$
 <li><a href="expected-value.html#fair-prices"><span class="toc-section-number">11.4</span> Fair Prices</a></li>
 <li><a href="expected-value.html#other-goods"><span class="toc-section-number">11.5</span> Other Goods</a></li>
 <li><a href="expected-value.html#decision-tables"><span class="toc-section-number">11.6</span> Decision Tables</a></li>
-<li><a href="expected-value.html#exercises-8">Exercises</a></li>
+<li><a href="expected-value.html#dominance"><span class="toc-section-number">11.7</span> Dominance</a></li>
+<li><a href="expected-value.html#exercises-9">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="utility.html#utility"><span class="toc-section-number">12</span> Utility</a><ul>
 <li><a href="utility.html#subjectivity-objectivity"><span class="toc-section-number">12.1</span> Subjectivity &amp; Objectivity</a></li>
@@ -190,7 +192,7 @@ $$
 <li><a href="utility.html#choosing-scales"><span class="toc-section-number">12.3</span> Choosing Scales</a></li>
 <li><a href="utility.html#a-limitation-the-expected-utility-assumption"><span class="toc-section-number">12.4</span> A Limitation: The Expected Utility Assumption</a></li>
 <li><a href="utility.html#the-value-of-money"><span class="toc-section-number">12.5</span> The Value of Money</a></li>
-<li><a href="utility.html#exercises-9">Exercises</a></li>
+<li><a href="utility.html#exercises-10">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="challenges-to-expected-utility.html#challenges-to-expected-utility"><span class="toc-section-number">13</span> Challenges to Expected Utility</a><ul>
 <li><a href="challenges-to-expected-utility.html#the-allais-paradox"><span class="toc-section-number">13.1</span> The Allais Paradox</a></li>
@@ -198,7 +200,7 @@ $$
 <li><a href="challenges-to-expected-utility.html#prescriptive-vs.descriptive"><span class="toc-section-number">13.3</span> Prescriptive vs. Descriptive</a></li>
 <li><a href="challenges-to-expected-utility.html#the-ellsberg-paradox"><span class="toc-section-number">13.4</span> The Ellsberg Paradox</a></li>
 <li><a href="challenges-to-expected-utility.html#ellsberg-allais"><span class="toc-section-number">13.5</span> Ellsberg &amp; Allais</a></li>
-<li><a href="challenges-to-expected-utility.html#exercises-10">Exercises</a></li>
+<li><a href="challenges-to-expected-utility.html#exercises-11">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="infinity-beyond.html#infinity-beyond"><span class="toc-section-number">14</span> Infinity &amp; Beyond</a><ul>
 <li><a href="infinity-beyond.html#the-st.petersburg-paradox"><span class="toc-section-number">14.1</span> The St. Petersburg Paradox</a></li>
@@ -206,7 +208,7 @@ $$
 <li><a href="infinity-beyond.html#st.petersburgs-revenge"><span class="toc-section-number">14.3</span> St. Petersburg’s Revenge</a></li>
 <li><a href="infinity-beyond.html#pascals-wager"><span class="toc-section-number">14.4</span> Pascal’s Wager</a></li>
 <li><a href="infinity-beyond.html#responses-to-pascals-wager"><span class="toc-section-number">14.5</span> Responses to Pascal’s Wager</a></li>
-<li><a href="infinity-beyond.html#exercises-11">Exercises</a></li>
+<li><a href="infinity-beyond.html#exercises-12">Exercises</a></li>
 </ul></li>
 <li class="part"><span><b>Part III</b></span></li>
 <li class="has-sub"><a href="two-schools.html#two-schools"><span class="toc-section-number">15</span> Two Schools</a><ul>
@@ -215,18 +217,19 @@ $$
 <li><a href="two-schools.html#which-kind-of-probability"><span class="toc-section-number">15.3</span> Which Kind of Probability?</a></li>
 <li><a href="two-schools.html#frequentism"><span class="toc-section-number">15.4</span> Frequentism</a></li>
 <li><a href="two-schools.html#bayesianism"><span class="toc-section-number">15.5</span> Bayesianism</a></li>
+<li><a href="two-schools.html#exercises-13">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="beliefs-betting-rates.html#beliefs-betting-rates"><span class="toc-section-number">16</span> Beliefs &amp; Betting Rates</a><ul>
 <li><a href="beliefs-betting-rates.html#measuring-personal-probabilities"><span class="toc-section-number">16.1</span> Measuring Personal Probabilities</a></li>
 <li><a href="beliefs-betting-rates.html#things-to-watch-out-for"><span class="toc-section-number">16.2</span> Things to Watch Out For</a></li>
 <li><a href="beliefs-betting-rates.html#indirect-measurements"><span class="toc-section-number">16.3</span> Indirect Measurements</a></li>
-<li><a href="beliefs-betting-rates.html#exercises-12">Exercises</a></li>
+<li><a href="beliefs-betting-rates.html#exercises-14">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="dutch-books.html#dutch-books"><span class="toc-section-number">17</span> Dutch Books</a><ul>
 <li><a href="dutch-books.html#dutch-books-1"><span class="toc-section-number">17.1</span> Dutch Books</a></li>
 <li><a href="dutch-books.html#bankteller"><span class="toc-section-number">17.2</span> The Bankteller Fallacy</a></li>
 <li><a href="dutch-books.html#dutch-books-in-general"><span class="toc-section-number">17.3</span> Dutch Books in General</a></li>
-<li><a href="dutch-books.html#exercises-13">Exercises</a></li>
+<li><a href="dutch-books.html#exercises-15">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="priors.html#priors"><span class="toc-section-number">18</span> The Problem of Priors</a><ul>
 <li><a href="priors.html#priors-posteriors"><span class="toc-section-number">18.1</span> Priors &amp; Posteriors</a></li>
@@ -234,7 +237,7 @@ $$
 <li><a href="priors.html#the-continuous-principle-of-indifference"><span class="toc-section-number">18.3</span> The Continuous Principle of Indifference</a></li>
 <li><a href="priors.html#bertrands-paradox"><span class="toc-section-number">18.4</span> Bertrand’s Paradox</a></li>
 <li><a href="priors.html#the-problem-of-priors"><span class="toc-section-number">18.5</span> The Problem of Priors</a></li>
-<li><a href="priors.html#exercises-14">Exercises</a></li>
+<li><a href="priors.html#exercises-16">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="significance-testing.html#significance-testing"><span class="toc-section-number">19</span> Significance Testing</a><ul>
 <li><a href="significance-testing.html#coincidence"><span class="toc-section-number">19.1</span> Coincidence</a></li>
@@ -243,9 +246,9 @@ $$
 <li><a href="significance-testing.html#normal-approximation"><span class="toc-section-number">19.4</span> Normal Approximation</a></li>
 <li><a href="significance-testing.html#the-68-95-99-rule"><span class="toc-section-number">19.5</span> The 68-95-99 Rule</a></li>
 <li><a href="significance-testing.html#binomial-probabilities"><span class="toc-section-number">19.6</span> Binomial Probabilities</a></li>
-<li><a href="significance-testing.html#significance-testing-1"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
+<li><a href="significance-testing.html#foobar"><span class="toc-section-number">19.7</span> Significance Testing</a></li>
 <li><a href="significance-testing.html#warnings"><span class="toc-section-number">19.8</span> Warnings</a></li>
-<li><a href="significance-testing.html#exercises-15">Exercises</a></li>
+<li><a href="significance-testing.html#exercises-17">Exercises</a></li>
 </ul></li>
 <li class="has-sub"><a href="chlindley.html#chlindley"><span class="toc-section-number">20</span> Lindley’s Paradox</a><ul>
 <li><a href="chlindley.html#significance-subjectivity"><span class="toc-section-number">20.1</span> Significance &amp; Subjectivity</a></li>
@@ -253,7 +256,7 @@ $$
 <li><a href="chlindley.html#the-role-of-priors-in-significance-testing"><span class="toc-section-number">20.3</span> The Role of Priors in Significance Testing</a></li>
 <li><a href="chlindley.html#lindleys-paradox"><span class="toc-section-number">20.4</span> Lindley’s Paradox</a></li>
 <li><a href="chlindley.html#a-bayesian-analysis"><span class="toc-section-number">20.5</span> A Bayesian Analysis</a></li>
-<li><a href="chlindley.html#exercises-16">Exercises</a></li>
+<li><a href="chlindley.html#exercises-18">Exercises</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="has-sub"><a href="cheat-sheet.html#cheat-sheet"><span class="toc-section-number">A</span> Cheat Sheet</a><ul>
@@ -284,6 +287,27 @@ $$
 <li><a href="the-problem-of-induction.html#the-dilemma">The Dilemma</a></li>
 <li><a href="the-problem-of-induction.html#the-problem-of-induction-vs.the-grue-paradox">The Problem of Induction vs. the Grue Paradox</a></li>
 <li><a href="the-problem-of-induction.html#probability-theory-to-the-rescue">Probability Theory to the Rescue?</a></li>
+<li><a href="the-problem-of-induction.html#exercises-19">Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="solutions-to-selected-exercises.html#solutions-to-selected-exercises"><span class="toc-section-number">E</span> Solutions to Selected Exercises</a><ul>
+<li><a href="solutions-to-selected-exercises.html#chapter-1">Chapter 1</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-2">Chapter 2</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-3">Chapter 3</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-4">Chapter 4</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-5">Chapter 5</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-6">Chapter 6</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-7">Chapter 7</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-8">Chapter 8</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-9">Chapter 9</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-11">Chapter 11</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-12">Chapter 12</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-13">Chapter 13</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-14">Chapter 14</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-16">Chapter 16</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-17">Chapter 17</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-18">Chapter 18</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-19">Chapter 19</a></li>
+<li><a href="solutions-to-selected-exercises.html#chapter-20">Chapter 20</a></li>
 </ul></li>
 </ul>
 </div>
@@ -308,8 +332,8 @@ $$
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-67"></span>
-<img src="_main_files/figure-html/unnamed-chunk-67-1.png" alt="The Negation Rule. $\p(\neg A) = 1 - \p(A)$." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-61"></span>
+<img src="_main_files/figure-html/unnamed-chunk-61-1.png" alt="The Negation Rule. $\p(\neg A) = 1 - \p(A)$." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 7.1: The Negation Rule. <span class="math inline">\(\p(\neg A) = 1 - \p(A)\)</span>.<!--</p>-->
 <!--</div>--></span>
@@ -329,7 +353,7 @@ Sometimes we really want to know the probability of <span class="math inline">\(
 </div>
 <div id="the-general-addition-rule" class="section level2">
 <h2><span class="header-section-number">7.2</span> The General Addition Rule</h2>
-<p><span class="newthought">The</span> Addition Rule for calculating <span class="math inline">\(\p(A \vee B)\)</span> depends on <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> being mutually exclusive. What if they’re not? Then we can use:</p>
+<p>The Addition Rule for calculating <span class="math inline">\(\p(A \vee B)\)</span> depends on <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> being mutually exclusive. What if they’re not? Then we can use:</p>
 <dl>
 <dt>The General Addition Rule</dt>
 <dd><p><span class="math inline">\(\p(A \vee B) = \p(A) + \p(B) - \p(A \wedge B)\)</span>.</p>
@@ -339,8 +363,8 @@ Sometimes we really want to know the probability of <span class="math inline">\(
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-68"></span>
-<img src="_main_files/figure-html/unnamed-chunk-68-1.png" alt="The General Addition Rule in an Euler diagram." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-62"></span>
+<img src="_main_files/figure-html/unnamed-chunk-62-1.png" alt="The General Addition Rule in an Euler diagram." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 7.2: The General Addition Rule in an Euler diagram.<!--</p>-->
 <!--</div>--></span>
@@ -378,7 +402,7 @@ In algebraic terms this is:
 \]</span>
 And this makes sense. If there is no <span class="math inline">\(A \wedge B\)</span> region, that means <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive. So the old Addition Rule applies.</p>
 <p>That’s why we call the new rule the <em>General</em> Addition Rule. It applies in general, even when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not mutually exclusive. And in the special case where they are mutually exclusive, it gives the same result as the Addition Rule we already learned.</p>
-<p><span class="newthought">A</span> tree diagram also works to explain the General Addition Rule. Consider Figure <a href="calculating-probabilities-part-ii.html#fig:gatree">7.3</a>, where we start with branches for <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span>, then subdivide into branches for <span class="math inline">\(B\)</span> and <span class="math inline">\(\neg B\)</span>.</p>
+<p><span class="newthought">A tree</span> diagram also works to explain the General Addition Rule. Consider Figure <a href="calculating-probabilities-part-ii.html#fig:gatree">7.3</a>, where we start with branches for <span class="math inline">\(A\)</span> and <span class="math inline">\(\neg A\)</span>, then subdivide into branches for <span class="math inline">\(B\)</span> and <span class="math inline">\(\neg B\)</span>.</p>
 <div class="figure"><span id="fig:gatree"></span>
 <p class="caption marginnote shownote">
 Figure 7.3: Tree diagram with the three <span class="math inline">\(A \vee B\)</span> leaves marked
@@ -390,7 +414,7 @@ Figure 7.3: Tree diagram with the three <span class="math inline">\(A \vee B\)</
 </div>
 <div id="the-general-multiplication-rule" class="section level2">
 <h2><span class="header-section-number">7.3</span> The General Multiplication Rule</h2>
-<p><span class="newthought">How</span> can we calculate <span class="math inline">\(\p(A \wedge B)\)</span> in general?</p>
+<p>How can we calculate <span class="math inline">\(\p(A \wedge B)\)</span> in general?</p>
 <dl>
 <dt>The General Multiplication Rule</dt>
 <dd><p><span class="math inline">\(\p(A \wedge B) = \p(A \given B) \p(B).\)</span></p>
@@ -406,17 +430,17 @@ Figure 7.3: Tree diagram with the three <span class="math inline">\(A \vee B\)</
 \]</span>
 Which is precisely the Multiplication Rule.</p>
 <p>So we now have two rules for <span class="math inline">\(\wedge\)</span>. The first one only applies when the two sides of the <span class="math inline">\(\wedge\)</span> are independent. The second applies whether they’re independent or not. The second rule ends up being the same as the first one when they are independent.</p>
-<p><span class="newthought">A</span> tree diagram helps us understand this rule too. Recall this problem from <a href="conditional-probability.html#conditional-probability">Chapter 6</a>, with two urns of coloured marbles:</p>
+<p><span class="newthought">A tree</span> diagram helps us understand this rule too. Recall this problem from <a href="conditional-probability.html#conditional-probability">Chapter 6</a>, with two urns of coloured marbles:</p>
 <ul>
 <li>Urn X contains 3 black marbles, 1 white.</li>
 <li>Urn Y contains 1 black marble, 3 white.</li>
 </ul>
 <p>I flip a fair coin to decide which urn to draw from, heads for Urn X and tails for Urn Y. Then I draw one marble at random.</p>
-<div class="figure"><span id="fig:unnamed-chunk-70"></span>
+<div class="figure"><span id="fig:unnamed-chunk-64"></span>
 <p class="caption marginnote shownote">
 Figure 7.4: Tree diagram for an urn problem
 </p>
-<img src="_main_files/figure-html/unnamed-chunk-70-7.png" alt="Tree diagram for an urn problem" width="672"  />
+<img src="_main_files/figure-html/unnamed-chunk-64-7.png" alt="Tree diagram for an urn problem" width="672"  />
 </div>
 <p>Now suppose we want to know the probability the coin will land tails and the marble drawn will be white, <span class="math inline">\(\p(T \wedge W)\)</span>. The General Multiplication Rule tells us the answer is:
 <span class="math display">\[
@@ -436,14 +460,14 @@ Black hole warning: notice that the General Multiplication Rule depends on <span
 </div>
 <div id="laplaces-urn-puzzle" class="section level2">
 <h2><span class="header-section-number">7.4</span> Laplace’s Urn Puzzle</h2>
-<p><span class="newthought">The</span> same urn scenario was used by <a href="logic.html#strength">18th Century mathematician Laplace</a> in one of his favourite puzzles. He asked what happens if we do <em>two</em> draws, with replacement. What’s the probability both draws will come up black?</p>
+<p>The same urn scenario was used by <a href="logic.html#strength">18th Century mathematician Laplace</a> in one of his favourite puzzles. He asked what happens if we do <em>two</em> draws, with replacement. What’s the probability both draws will come up black?</p>
 <p>It’s tempting to say <span class="math inline">\(1/4\)</span>. The probability of drawing a black marble on each draw is <span class="math inline">\(1/2\)</span>. So it <em>seems</em> the probability of two blacks is just <span class="math inline">\(1/2 \times 1/2 = 1/4\)</span>.</p>
 <p>But the correct answer is actually <span class="math inline">\(5/16\)</span>. Why? Let’s use a probability tree again.</p>
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-72"></span>
-<img src="_main_files/figure-html/unnamed-chunk-72-1.png" alt="Building a probability tree to solve Laplace's urn puzzle" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-72-2.png" alt="Building a probability tree to solve Laplace's urn puzzle" width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-66"></span>
+<img src="_main_files/figure-html/unnamed-chunk-66-1.png" alt="Building a probability tree to solve Laplace's urn puzzle" width="672"  /><img src="_main_files/figure-html/unnamed-chunk-66-2.png" alt="Building a probability tree to solve Laplace's urn puzzle" width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 7.5: Building a probability tree to solve Laplace’s urn puzzle<!--</p>-->
 <!--</div>--></span>
@@ -478,7 +502,7 @@ Now we can apply the Addition Rule to calcualte <span class="math inline">\(\p(B
 </div>
 <div id="the-law-of-total-probability" class="section level2">
 <h2><span class="header-section-number">7.5</span> The Law of Total Probability</h2>
-<p><span class="newthought">This</span> kind of calculation comes up a lot. Since it would be tedious to figure it out from scratch every time, we make a general rule instead:</p>
+<p>This kind of calculation comes up a lot. Since it would be tedious to figure it out from scratch every time, we make a general rule instead:</p>
 <dl>
 <dt>The Law of Total Probability</dt>
 <dd><p><span class="math inline">\(\p(A) = \p(A \given B) \p(B) + \p(A \given \neg B) \p(\neg B)\)</span>.</p>
@@ -488,8 +512,8 @@ Now we can apply the Addition Rule to calcualte <span class="math inline">\(\p(B
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-73"></span>
-<img src="_main_files/figure-html/unnamed-chunk-73-1.png" alt="The Law of Total Probability calculates the size of the $A$ region by summing its two part." width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-67"></span>
+<img src="_main_files/figure-html/unnamed-chunk-67-1.png" alt="The Law of Total Probability calculates the size of the $A$ region by summing its two part." width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 7.6: The Law of Total Probability calculates the size of the <span class="math inline">\(A\)</span> region by summing its two part.<!--</p>-->
 <!--</div>--></span>
@@ -507,8 +531,8 @@ Which is precisely the Law of Total Probability.</p>
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-74"></span>
-<img src="_main_files/figure-html/unnamed-chunk-74-1.png" alt="The Law of Total Probability in a tree diagram" width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-68"></span>
+<img src="_main_files/figure-html/unnamed-chunk-68-1.png" alt="The Law of Total Probability in a tree diagram" width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 7.7: The Law of Total Probability in a tree diagram<!--</p>-->
 <!--</div>--></span>
@@ -525,7 +549,7 @@ Black hole warning: notice that the Law of Total Probability depends on <span cl
 </div>
 <div id="example" class="section level2">
 <h2><span class="header-section-number">7.6</span> Example</h2>
-<p><span class="newthought">Every</span> day Professor X either drives her car to campus or takes the bus. Mostly she drives, but one time in four she takes the bus. When she drives, she’s on time <span class="math inline">\(80\%\)</span> of the time. When she takes the bus, she’s on-time <span class="math inline">\(90\%\)</span> of the time.</p>
+<p>Every day Professor X either drives her car to campus or takes the bus. Mostly she drives, but one time in four she takes the bus. When she drives, she’s on time <span class="math inline">\(80\%\)</span> of the time. When she takes the bus, she’s on-time <span class="math inline">\(90\%\)</span> of the time.</p>
 <p>What is the probability she’ll be on time for class tomorrow?</p>
 <p>First let’s solve this by just applying the Law of Total Probability directly:
 <span class="math display">\[
@@ -555,8 +579,8 @@ Putting all the pieces together:
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:unnamed-chunk-76"></span>
-<img src="_main_files/figure-html/unnamed-chunk-76-5.png" alt="A probability tree for Professor X" width="672"  />
+<div class="figure">--><span id="fig:unnamed-chunk-70"></span>
+<img src="_main_files/figure-html/unnamed-chunk-70-5.png" alt="A probability tree for Professor X" width="672"  />
 <!--
 <p class="caption marginnote">-->Figure 7.8: A probability tree for Professor X<!--</p>-->
 <!--</div>--></span>
@@ -659,6 +683,40 @@ Then use the Negation Rule which tells us:
 <span class="math display">\[ \p(B) = 1 - \p(\neg B). \]</span>
 And use the Addition Rule to get:
 <span class="math display">\[ \p(A \wedge B) = \p(A) - \p(A \wedge \neg B).\]</span></p></li>
+<li><p>Three friends get together and tell each other their birthdays. If each person’s birthday is independent of the others, what is the probability that they all have different birthdays? Assume birthdays are randomly distributed, and ignore leap years; each friend has a <span class="math inline">\(1/365\)</span> chance of being born on a given day.</p></li>
+<li><p>An urn has two marbles, one black and one white. We will do repeated random draws, with replacement. But every time we draw a white marble, another white marble will be added to the urn for the next draw. Suppose we do <span class="math inline">\(5\)</span> draws. What is the probability they will all be white?</p></li>
+<li><p>Consider the inequality <span class="math inline">\(\p(A) &lt; \p(A \vee B)\)</span>. Which of the following is correct?</p>
+<ol style="list-style-type: lower-alpha">
+<li>This inequality always holds.</li>
+<li>This inequality only holds sometimes: when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive.</li>
+<li>This inequality only holds sometimes: when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are compatible (not mutually exclusive).</li>
+<li>This inequality only holds sometimes: when <span class="math inline">\(\p(\neg A \wedge B) &gt; 0\)</span>.</li>
+<li>This inequality never holds.</li>
+</ol></li>
+<li><p>Consider the following two statements.</p>
+<ol style="list-style-type: lower-roman">
+<li>If <span class="math inline">\(\p(A \given B) = 2/3\)</span> and <span class="math inline">\(\p(A \given \neg B) = 2/3\)</span>, then <span class="math inline">\(\p(A) = 2/3\)</span>.</li>
+<li>If <span class="math inline">\(\p(A) = 2/3\)</span>, then <span class="math inline">\(\p(A \given B) = 2/3\)</span> and <span class="math inline">\(\p(A \given \neg B) = 2/3\)</span>.</li>
+</ol>
+<p>Assuming all conditional probabilities are well-defined, which of these statements is true? Both, neither, or just one (which one)?</p></li>
+<li><p>Consider the following two assignments of probabilities.</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\p(X \wedge Y) = 1/4\)</span>, <span class="math inline">\(\p(X \wedge \neg Y) = 1/4\)</span>, <span class="math inline">\(\p(\neg X) = 1/2\)</span>.</li>
+<li><span class="math inline">\(\p(A \wedge \neg B) = 1/3\)</span>, <span class="math inline">\(\p(A) = 1/2\)</span>, <span class="math inline">\(\p(B) = 1/4\)</span>.</li>
+</ol>
+<p>Which of them violate the laws of probability: both, neither, or just one (which one)?</p></li>
+<li><p>Consider the following two assignments of probabilities.</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\p(A) = 1/3\)</span>, <span class="math inline">\(\p(A \wedge B) = 1/9\)</span>, <span class="math inline">\(\p(\neg B \given A) = 2/9\)</span>.</li>
+<li><span class="math inline">\(\p(X \given Y) = 1/3\)</span>, <span class="math inline">\(\p(X \given \neg Y) = 1/2\)</span>, <span class="math inline">\(\p(X) = 2/3\)</span>.</li>
+</ol>
+<p>Which of them violate the laws of probability: both, neither, or just one (which one)?</p></li>
+<li><p>Consider the following two assignments of probabilities:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\p(A) = 4/5\)</span>, <span class="math inline">\(\p(B) = 1/5\)</span>, <span class="math inline">\(\p(\neg A \wedge B) = 3/5\)</span>.</li>
+<li><span class="math inline">\(\p(\neg X) = 1/10\)</span>, <span class="math inline">\(\p(\neg Y) = 9/10\)</span>, <span class="math inline">\(\p(X \wedge Y) = 0\)</span>.</li>
+</ol>
+<p>Which of them violate the laws of probability: both, neither, or just one (which one)?</p></li>
 </ol>
 
 </div>

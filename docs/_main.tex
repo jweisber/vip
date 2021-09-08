@@ -43,6 +43,7 @@
 
 % citations
 
+
 % pandoc syntax highlighting
 
 % longtable
@@ -192,10 +193,11 @@
 \newtheorem{example}{Example}[chapter]
 \theoremstyle{definition}
 \newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
-\let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
 
 \maketitle
@@ -634,7 +636,7 @@ Therefore, Confucius was born somewhere.
 \includegraphics{_main_files/figure-latex/entailment-1} \caption[Logical entailment]{Logical entailment}\label{fig:entailment}
 \end{marginfigure}
 
-In this case we say that the first proposition \textbf{\emph{logically entails}} the second. In terms of an Euler diagram, he first circle is contained entirely in the second (Figure \ref{fig:entailment}). Because there is no possible situation where the first proposition is true yet the second false.
+In this case we say that the first proposition \textbf{\emph{logically entails}} the second. In terms of an Euler diagram, the first circle is contained entirely in the second (Figure \ref{fig:entailment}). Because there is no possible situation where the first proposition is true yet the second false.
 
 What if an argument has multiple premises? For example:
 
@@ -834,7 +836,9 @@ What makes one explanation better than another? That turns out to be a very hard
     Suppose another family has three children. We don't know whether any of them have the same birth-season. How many possibilities are there in this case?
   \end{enumerate}
 \item
-  Suppose \(A\) and \(B\) are compatible, and that \(B\) and \(C\) are compatible. Does that mean \(A\) and \(C\) are compatible? If yes, justify your answer. If no, describe a counterexample (an example where it's not true).
+  Suppose \(A\) and \(B\) are compatible, and \(B\) and \(C\) are compatible. Does that mean \(A\) and \(C\) are compatible? If yes, justify your answer. If no, describe a counterexample (an example where \(A\) and \(B\) are compatible, and \(B\) and \(C\) are compatible, but \(A\) and \(C\) are \emph{not} compatible).
+\item
+  Suppose \(A\) logically entails \(B\), and \(B\) logically entails \(C\). Does that mean \(A\) logically entails \(C\)? If yes, justify your answer. If no, describe a counterexample (an example where \(A\) logically entails \(B\), and \(B\) logically entails \(C\), but \(A\) does \emph{not} logically entail \(C\)).
 \end{enumerate}
 
 \hypertarget{truth-tables}{%
@@ -868,12 +872,12 @@ The three connectives just listed are the only ones we'll need in this book. Eac
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule
-Name & English & Symbol & Example\tabularnewline
+Name & English & Symbol & Example \\
 \midrule
 \endhead
-conjunction & and & \(\wedge\) & \(A \wedge B\)\tabularnewline
-disjunction & either/or & \(\vee\) & \(A \vee B\)\tabularnewline
-negation & it's not true that & \(\neg\) & \(\neg A\)\tabularnewline
+conjunction & and & \(\wedge\) & \(A \wedge B\) \\
+disjunction & either/or & \(\vee\) & \(A \vee B\) \\
+negation & it's not true that & \(\neg\) & \(\neg A\) \\
 \bottomrule
 \end{longtable}
 
@@ -959,15 +963,15 @@ The truth of a complex proposition built using our three connectives depends on 
 \begin{longtable}[]{@{}cc@{}}
 \caption{\label{tab:unnamed-chunk-23}Truth table for \(\neg\)}\tabularnewline
 \toprule
-\(A\) & \(\neg A\)\tabularnewline
+\(A\) & \(\neg A\) \\
 \midrule
 \endfirsthead
 \toprule
-\(A\) & \(\neg A\)\tabularnewline
+\(A\) & \(\neg A\) \\
 \midrule
 \endhead
-T & F\tabularnewline
-F & T\tabularnewline
+T & F \\
+F & T \\
 \bottomrule
 \end{longtable}
 
@@ -976,17 +980,17 @@ Slightly more complicated is the rule for \(\&\):
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:unnamed-chunk-24}Truth table for \(\wedge\)}\tabularnewline
 \toprule
-\(A\) & \(B\) & \(A \wedge B\)\tabularnewline
+\(A\) & \(B\) & \(A \wedge B\) \\
 \midrule
 \endfirsthead
 \toprule
-\(A\) & \(B\) & \(A \wedge B\)\tabularnewline
+\(A\) & \(B\) & \(A \wedge B\) \\
 \midrule
 \endhead
-T & T & T\tabularnewline
-T & F & F\tabularnewline
-F & T & F\tabularnewline
-F & F & F\tabularnewline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
 \bottomrule
 \end{longtable}
 
@@ -999,17 +1003,17 @@ The truth table for \(\vee\) (``either/or'') is a little more surprising:
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:unnamed-chunk-25}Truth table for \(\vee\)}\tabularnewline
 \toprule
-\(A\) & \(B\) & \(A \vee B\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) \\
 \midrule
 \endfirsthead
 \toprule
-\(A\) & \(B\) & \(A \vee B\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) \\
 \midrule
 \endhead
-T & T & T\tabularnewline
-T & F & T\tabularnewline
-F & T & T\tabularnewline
-F & F & F\tabularnewline
+T & T & T \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
 \bottomrule
 \end{longtable}
 
@@ -1036,13 +1040,13 @@ We can even verify that the complex construction captures the meaning we want, b
 
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\) \\
 \midrule
 \endhead
-\(\;\) & & & & &\tabularnewline
-\(\;\) & & & & &\tabularnewline
-\(\;\) & & & & &\tabularnewline
-\(\;\) & & & & &\tabularnewline
+\(\;\) & & & & & \\
+\(\;\) & & & & & \\
+\(\;\) & & & & & \\
+\(\;\) & & & & & \\
 \bottomrule
 \end{longtable}
 
@@ -1050,13 +1054,13 @@ Then we fill in the possible truth values for the simplest propositions, \(A\) a
 
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\) \\
 \midrule
 \endhead
-T & T & & & &\tabularnewline
-T & F & & & &\tabularnewline
-F & T & & & &\tabularnewline
-F & F & & & &\tabularnewline
+T & T & & & & \\
+T & F & & & & \\
+F & T & & & & \\
+F & F & & & & \\
 \bottomrule
 \end{longtable}
 
@@ -1064,13 +1068,13 @@ Next we consult the truth tables above for \(\&\) and \(\vee\) to fill in the co
 
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\) \\
 \midrule
 \endhead
-T & T & T & T & &\tabularnewline
-T & F & T & F & &\tabularnewline
-F & T & T & F & &\tabularnewline
-F & F & F & F & &\tabularnewline
+T & T & T & T & & \\
+T & F & T & F & & \\
+F & T & T & F & & \\
+F & F & F & F & & \\
 \bottomrule
 \end{longtable}
 
@@ -1078,13 +1082,13 @@ Then move up to the next level of complexity. To fill in the column for \(\neg(A
 
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\) \\
 \midrule
 \endhead
-T & T & T & T & F &\tabularnewline
-T & F & T & F & T &\tabularnewline
-F & T & T & F & T &\tabularnewline
-F & F & F & F & T &\tabularnewline
+T & T & T & T & F & \\
+T & F & T & F & T & \\
+F & T & T & F & T & \\
+F & F & F & F & T & \\
 \bottomrule
 \end{longtable}
 
@@ -1092,13 +1096,13 @@ Finally, we consult the columns for \(A \vee B\) and \(\neg(A \wedge B)\), and t
 
 \begin{longtable}[]{@{}cccccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\)\tabularnewline
+\(A\) & \(B\) & \(A \vee B\) & \(A \& B\) & \(\neg(A \wedge B\)) & \((A \vee B) \wedge \neg (A \wedge B)\) \\
 \midrule
 \endhead
-T & T & T & T & F & F\tabularnewline
-T & F & T & F & T & T\tabularnewline
-F & T & T & F & T & T\tabularnewline
-F & F & F & F & T & F\tabularnewline
+T & T & T & T & F & F \\
+T & F & T & F & T & T \\
+F & T & T & F & T & T \\
+F & F & F & F & T & F \\
 \bottomrule
 \end{longtable}
 
@@ -1111,11 +1115,11 @@ Some propositions come out true in every row of the truth table. Consider \(A \v
 
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
-\(A\) & \(\neg A\) & \(A \vee \neg A\)\tabularnewline
+\(A\) & \(\neg A\) & \(A \vee \neg A\) \\
 \midrule
 \endhead
-T & F & T\tabularnewline
-F & T & T\tabularnewline
+T & F & T \\
+F & T & T \\
 \bottomrule
 \end{longtable}
 
@@ -1125,11 +1129,11 @@ The other side of this coin is propositions that are false in every row of the t
 
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
-\(A\) & \(\neg A\) & \(A \wedge \neg A\)\tabularnewline
+\(A\) & \(\neg A\) & \(A \wedge \neg A\) \\
 \midrule
 \endhead
-T & F & F\tabularnewline
-F & T & F\tabularnewline
+T & F & F \\
+F & T & F \\
 \bottomrule
 \end{longtable}
 
@@ -1139,11 +1143,11 @@ Notice that the negation of a contradiction is a logical truth. For example, con
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-\(A\) & \(\neg A\) & \(A \wedge \neg A\) & \(\neg (A \wedge \neg A)\)\tabularnewline
+\(A\) & \(\neg A\) & \(A \wedge \neg A\) & \(\neg (A \wedge \neg A)\) \\
 \midrule
 \endhead
-T & F & F & T\tabularnewline
-F & T & F & T\tabularnewline
+T & F & F & T \\
+F & T & F & T \\
 \bottomrule
 \end{longtable}
 
@@ -1154,11 +1158,11 @@ Truth tables can be used to establish that two propositions are mutually exclusi
 
 \begin{longtable}[]{@{}cc@{}}
 \toprule
-\(A\) & \(\neg A\)\tabularnewline
+\(A\) & \(\neg A\) \\
 \midrule
 \endhead
-T & F\tabularnewline
-F & T\tabularnewline
+T & F \\
+F & T \\
 \bottomrule
 \end{longtable}
 
@@ -1169,17 +1173,17 @@ A slightly more complex example is the pair of propositions \(A \vee B\) and \(\
 \begin{longtable}[]{@{}cccccc@{}}
 \caption{\label{tab:avbnaanb}The propositions \(A \vee B\) and \(\neg A \wedge \neg B\) are mutually exclusive.}\tabularnewline
 \toprule
-\(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg A \wedge \neg B\)\tabularnewline
+\(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg A \wedge \neg B\) \\
 \midrule
 \endfirsthead
 \toprule
-\(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg A \wedge \neg B\)\tabularnewline
+\(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg A \wedge \neg B\) \\
 \midrule
 \endhead
-T & T & F & F & T & F\tabularnewline
-T & F & F & T & T & F\tabularnewline
-F & T & T & F & T & F\tabularnewline
-F & F & T & T & F & T\tabularnewline
+T & T & F & F & T & F \\
+T & F & F & T & T & F \\
+F & T & T & F & T & F \\
+F & F & T & T & F & T \\
 \bottomrule
 \end{longtable}
 
@@ -1197,13 +1201,13 @@ Obviously it's not possible for the premise to be true and the conclusion false,
 
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \wedge B\)\tabularnewline
+\(A\) & \(B\) & \(A \wedge B\) \\
 \midrule
 \endhead
-T & T & T\tabularnewline
-T & F & F\tabularnewline
-F & T & F\tabularnewline
-F & F & F\tabularnewline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
 \bottomrule
 \end{longtable}
 
@@ -1221,13 +1225,13 @@ This argument is valid because the first premise says that at least one of the t
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-\(A\) & \(B\) & \(\neg A\) & \(A \vee B\)\tabularnewline
+\(A\) & \(B\) & \(\neg A\) & \(A \vee B\) \\
 \midrule
 \endhead
-T & T & F & T\tabularnewline
-T & F & F & T\tabularnewline
-F & T & T & T\tabularnewline
-F & F & T & F\tabularnewline
+T & T & F & T \\
+T & F & F & T \\
+F & T & T & T \\
+F & F & T & F \\
 \bottomrule
 \end{longtable}
 
@@ -1241,13 +1245,13 @@ We say such propositions are \textbf{\emph{logically equivalent}}. In terms of t
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-\(A\) & \(B\) & \(A \wedge B\) & \(B \wedge A\)\tabularnewline
+\(A\) & \(B\) & \(A \wedge B\) & \(B \wedge A\) \\
 \midrule
 \endhead
-T & T & T & T\tabularnewline
-T & F & F & F\tabularnewline
-F & T & F & F\tabularnewline
-F & F & F & F\tabularnewline
+T & T & T & T \\
+T & F & F & F \\
+F & T & F & F \\
+F & F & F & F \\
 \bottomrule
 \end{longtable}
 
@@ -1255,13 +1259,13 @@ A more complex example is the propositions \(\neg (A \vee B)\) and \(\neg A \wed
 
 \begin{longtable}[]{@{}ccccccc@{}}
 \toprule
-\(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg(A \vee B)\) & \(\neg A \wedge \neg B\)\tabularnewline
+\(A\) & \(B\) & \(\neg A\) & \(\neg B\) & \(A \vee B\) & \(\neg(A \vee B)\) & \(\neg A \wedge \neg B\) \\
 \midrule
 \endhead
-T & T & F & F & T & F & F\tabularnewline
-T & F & F & T & T & F & F\tabularnewline
-F & T & T & F & T & F & F\tabularnewline
-F & F & T & T & F & T & T\tabularnewline
+T & T & F & F & T & F & F \\
+T & F & F & T & T & F & F \\
+F & T & T & F & T & F & F \\
+F & F & T & T & F & T & T \\
 \bottomrule
 \end{longtable}
 
@@ -1305,7 +1309,7 @@ Logically equivalent propositions entail one another. When two propositions have
     \end{aligned}
   \]
 
-  translate each of the following into logicese (e.g. \(\neg A \vee B\)).
+  translate each of the following into logicese (e.g.~\(\neg A \vee B\)).
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
@@ -1350,17 +1354,17 @@ Logically equivalent propositions entail one another. When two propositions have
 
   \begin{longtable}[]{@{}ccccc@{}}
   \toprule
-  \(A\) & \(B\) & \(C\) & \(B \wedge C\) & \(A \vee (B \wedge C)\)\tabularnewline
+  \(A\) & \(B\) & \(C\) & \(B \wedge C\) & \(A \vee (B \wedge C)\) \\
   \midrule
   \endhead
-  T & T & T & &\tabularnewline
-  T & T & F & &\tabularnewline
-  T & F & T & &\tabularnewline
-  T & F & F & &\tabularnewline
-  F & T & T & &\tabularnewline
-  F & T & F & &\tabularnewline
-  F & F & T & &\tabularnewline
-  F & F & F & &\tabularnewline
+  T & T & T & & \\
+  T & T & F & & \\
+  T & F & T & & \\
+  T & F & F & & \\
+  F & T & T & & \\
+  F & T & F & & \\
+  F & F & T & & \\
+  F & F & F & & \\
   \bottomrule
   \end{longtable}
 \item
@@ -1435,7 +1439,7 @@ A clear example of independence is \textbf{\emph{sampling with replacement}}. Su
 
 Even if you were to draw ten white balls in a row, the eleventh draw would still be a \(50\)-\(50\) shot! It would just be a coincidence that you drew ten white balls in a row. Because there's always an even mix of black and white marbles, and you're always picking one at random.
 
-But now imagine sampling \textbf{\emph{without replacement}}. The situation is the same, except now you set aside each ball you draw rather than put it back. Now the draws are \textbf{\emph{dependent}}. If you draw a black ball on the first draw, the odds of black on the next draw go down. There are only \(49\) black balls in the urn now, vs. \(50\) white.
+But now imagine sampling \textbf{\emph{without replacement}}. The situation is the same, except now you set aside each ball you draw rather than put it back. Now the draws are \textbf{\emph{dependent}}. If you draw a black ball on the first draw, the odds of black on the next draw go down. There are only \(49\) black balls in the urn now, vs.~\(50\) white.
 
 \begin{marginfigure}
 \includegraphics{_main_files/figure-latex/eikosex-1} \caption[Example of an eikosogram]{Example of an eikosogram.}\label{fig:eikosex}
@@ -1467,6 +1471,15 @@ But drawing without replacement is not a fair process, because the draws are not
 
 Gambling often involves fair processes: fair dice, fair roulette wheels, fair decks of cards, etc. But people sometimes forget that fair processes are independent. If a roulette wheel comes up black nine times in a row, they figure it's ``due'' for red. Or if they get a bunch of bad hands in a row at poker, they figure they're due for a good one soon.
 
+\begin{marginfigure}
+``Simply cannot stop thinking about a girl I knew who dated a guy she
+couldn't STAND---all because his ex died in a plane crash, \& her
+biggest fear was dying in a plane crash, \& she figured there was no way
+the universe would let both of this guy's girlfriends die in a plane
+crash''
+---\href{https://twitter.com/isabelzawtun/status/1329537047837675522?s=20}{@isabelzawtun}.
+\end{marginfigure}
+
 This way of thinking is called \emph{the gambler's fallacy}. A fallacy is a mistake in reasoning. The mistake here is failing to fully account for independence. These gamblers know the process in question is fair, in fact that's a key part of their reasoning. They know it's unlikely that the roulette wheel will land on black ten times in a row because a fair wheel should land on black and red equally often. But then they overlook the fact that fair also means independent, and independent means the last nine spins tell us nothing about the tenth spin.
 
 The gambler's fallacy is so seductive that it can be hard to find your way out of it. Here's one way to think about it that may help. Imagine the gambler's point of view at two different times: before the ten spins of the wheel, and after. Before, the gambler is contemplaing the likelihood of getting ten black spins in a row:
@@ -1488,7 +1501,7 @@ The answer: it's not a mistake. It \emph{would} be a mistake if you knew the coi
 
 The gambler's fallacy only occurs when you know a process is fair, and then you fail to reason accordingly. If you don't know whether a process is fair, then you aren't making a logical error by reasoning according to a different assumption.
 
-So, is the gambler's fallacy at work if my wife's family expects a boy next? As it turns out, \href{https://stat.duke.edu/~dalene/chance/chanceweb/144.rodgers.pdf}{the process that determines the sex of a child is pretty much fair}.\footnote{The question isn't completely settled though, as far as I could tell from my (not very thorough) research.} So the correct answer to our opening question was Answer 3.
+So, is the gambler's fallacy at work if my wife's family expects a boy next? As it turns out, \href{https://doi.org/10.1080/09332480.2001.10542293}{the process that determines the sex of a child is pretty much fair}.\footnote{The question isn't completely settled though, as far as I could tell from my (not very thorough) research.} So the correct answer to our opening question was Answer 3.
 
 Most people don't know about the relevant research, though. They may (like me) only know a bit from high school biology about how sex is usually determined at conception. But it's still possible for all they know that some people's eggs are more likely to select sperm cells with an X chromosome, for example.
 
@@ -1706,17 +1719,17 @@ The problem is that \(M\) and \(A\) are not mutually exclusive. It could rain al
 Only use the Addition Rule on mutually exclusive propositions.
 \end{warning}
 
-\hypertarget{exclusivity-vs.independence}{%
-\section{Exclusivity vs.~Independence}\label{exclusivity-vs.independence}}
+\hypertarget{exclusivity-vs.-independence}{%
+\section{Exclusivity vs.~Independence}\label{exclusivity-vs.-independence}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-49-1} \caption[Mutually exclusive propositions don't overlap]{Mutually exclusive propositions don't overlap}\label{fig:unnamed-chunk-49}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-50-1} \caption[Mutually exclusive propositions don't overlap]{Mutually exclusive propositions don't overlap}\label{fig:unnamed-chunk-50}
 \end{marginfigure}
 
 Exclusivity and independence can be hard to keep straight at first. One way to keep track of the difference is to remember that mutually exclusive propositions don't overlap, but independent propositions do. Independence means the truth of one proposition doesn't affect the chance of the other. So if you find out that \(A\) is true, \(B\) still has the same chance of being true. Which means there have to be some \(B\) possibilities within the \(A\) circle. (Unless the probability of \(A\) was zero to start with, but our official definition of independence in the next chapter will rule this case out by hypothsis.)
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-50-1} \caption[Independent propositions do overlap (unless one of them has zero probability)]{Independent propositions do overlap (unless one of them has zero probability).}\label{fig:unnamed-chunk-50}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-51-1} \caption[Independent propositions do overlap (unless one of them has zero probability)]{Independent propositions do overlap (unless one of them has zero probability).}\label{fig:unnamed-chunk-51}
 \end{marginfigure}
 
 So independence and exclusivity are very different. Exclusive propositions are not independent, and independent propositions are not exclusive.
@@ -1727,7 +1740,7 @@ Another marker that may help you keep these two concepts straight: exclusivity i
 \section{Tautologies, Contradictions, and Equivalent Propositions}\label{tautologies-contradictions-and-equivalent-propositions}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-51-1} \caption[The Tautology Rule]{The Tautology Rule. Every point falls in either the $A$ region or the $\neg A$ region, so $\p(A \vee \neg A) = 1$.}\label{fig:unnamed-chunk-51}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-52-1} \caption[The Tautology Rule]{The Tautology Rule. Every point falls in either the $A$ region or the $\neg A$ region, so $\p(A \vee \neg A) = 1$.}\label{fig:unnamed-chunk-52}
 \end{marginfigure}
 
 A tautology is a proposition that must be true, so its probability is always 1.
@@ -1775,18 +1788,18 @@ In this way of doing things, rather than consider the probability that a proposi
 If you're used to seeing probability presented this way, there's an easy way to translate into logic-ese. For any event \(E\), there's the corresponding proposition that event \(E\) occurs. And you can translate the usual set operations into logic as follows:
 
 \begin{longtable}[]{@{}cc@{}}
-\caption{\label{tab:unnamed-chunk-52}Translating between events and propositions}\tabularnewline
+\caption{\label{tab:unnamed-chunk-53}Translating between events and propositions}\tabularnewline
 \toprule
-Events & Propositions\tabularnewline
+Events & Propositions \\
 \midrule
 \endfirsthead
 \toprule
-Events & Propositions\tabularnewline
+Events & Propositions \\
 \midrule
 \endhead
-\(E^c\) & \(\sim\! A\)\tabularnewline
-\(E \cap F\) & \(A \,\&\, B\)\tabularnewline
-\(E \cup F\) & \(A \vee B\)\tabularnewline
+\(E^c\) & \(\sim\! A\) \\
+\(E \cap F\) & \(A \,\&\, B\) \\
+\(E \cup F\) & \(A \vee B\) \\
 \bottomrule
 \end{longtable}
 
@@ -1929,6 +1942,14 @@ The restrictions on these two rules are essential. If you ignore them, you will 
   You have a biased coin, where each toss has a \(3/5\) chance of landing heads. But each toss is independent of the others. Suppose you're going to flip the coin \(1,000\) times. The first 998 tosses all land tails. What is the probability at least one of the last two flips will be tails?
 \item
   There are \(3\) empty buckets lined up. Someone takes \(4\) apples and places each one in a bucket. The placement of each apple is random and independent of the others. What is the probability that the first two buckets end up with no apples?
+\item
+  Suppose three cards are stacked in order: jack on top, queen in the middle, king on the bottom. If we shuffle them randomly, what is the probability the queen will still be in the middle when we're done? Assume shuffling makes every possible ordering of the cards equally likely. Hint: how many ways are there to assign each card a place in the stack? How many of these have the queen in the middle?
+\item
+  At University X, all courses meet once a week for 3 hours. At the beginning of the semester, the registrar assigns each course a time slot at random: they pick a random weekday and then flip a fair coin to decide on morning (9 a.m. -- 12 p.m.) vs.~afternoon (1 p.m. -- 4 p.m.).
+
+  Conflicts are allowed: students can sign up for two (or more) classes scheduled at the same time.
+
+  So far Axl has signed up for 2 classes that do not conflict. If he chooses a 3rd class at random, what is the probability it will introduce a conflict?
 \end{enumerate}
 
 \hypertarget{conditional-probability}{%
@@ -1944,7 +1965,7 @@ We call this kind of probability \textbf{\emph{conditional probability}}. But ho
 \section{Calculating Conditional Probability}\label{calculating-conditional-probability}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-54-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-54-2} \caption[Conditional probability in a fair die roll]{Conditional probability in a fair die roll}\label{fig:unnamed-chunk-54}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-55-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-55-2} \caption[Conditional probability in a fair die roll]{Conditional probability in a fair die roll}\label{fig:unnamed-chunk-55}
 \end{marginfigure}
 
 Suppose I roll a fair, six-sided die behind a screen. You can't see the result, but I tell you it's an even number. What's the probability it's also a ``high'' number: either a \(4\), \(5\), or \(6\)?
@@ -2035,13 +2056,13 @@ This calculation relies on the fact that \(R \wedge \neg B\) is logically equiva
 
 \begin{longtable}[]{@{}lcccc@{}}
 \toprule
-& Humanities & Social Sciences & STEM & Professional\tabularnewline
+& Humanities & Social Sciences & STEM & Professional \\
 \midrule
 \endhead
-A & 200 & 600 & 400 & 900\tabularnewline
-B & 500 & 800 & 1600 & 900\tabularnewline
-C & 250 & 400 & 1500 & 750\tabularnewline
-D & 50 & 200 & 500 & 450\tabularnewline
+A & 200 & 600 & 400 & 900 \\
+B & 500 & 800 & 1600 & 900 \\
+C & 250 & 400 & 1500 & 750 \\
+D & 50 & 200 & 500 & 450 \\
 \bottomrule
 \end{longtable}
 
@@ -2135,7 +2156,7 @@ In other words, a trio of propositions is independent if each pair of them is in
 
 You may be wondering: is part (ii) of this definition really necessary? If each pair of propositions is independent, then the multiplication rule applies to any two of them. Doesn't this guarantee that it applies to all three together?
 
-Curiously, the answer is no. Suppose someone has equal chances of having been born in the spring, summer, fall, or winter. Let \(A\) say that they were born in either spring or summer; let \(B\) say they were born in either summer or fall; and let \(C\) say they were born in either fall or winter. Pairwise these propositions are all independent. But \(\p(A \wedge B \wedge C) = 0\) by the Contradiction rule, since there is no season shared by all three propositions; they cannot all be true. And yet \(\p(A)\p(B)\p(C) = 1/8\).
+Curiously, the answer is no. Suppose someone has equal chances of having been born in the spring, summer, fall, or winter. Let \(A\) say that they were born in either spring or summer; let \(B\) say they were born in either summer or fall; and let \(C\) say they were born in either fall or spring. Pairwise these propositions are all independent. But \(\p(A \wedge B \wedge C) = 0\) by the Contradiction rule, since there is no season shared by all three propositions; they cannot all be true. And yet \(\p(A)\p(B)\p(C) = 1/8\).
 
 \hypertarget{ch6ex}{%
 \section*{Exercises}\label{ch6ex}}
@@ -2315,6 +2336,11 @@ Curiously, the answer is no. Suppose someone has equal chances of having been bo
 \item
   Prove that the following equation always holds, assuming the conditional probabilities are well-defined:
   \[ \frac{\p(A \given B)}{\p(B \given A)} = \frac{\p(A)}{\p(B)}. \]
+\item
+  Does the equation \(\p(A \given B) = \p(\neg B \given \neg A)\) always hold, assuming both conditional probabilities are both well-defined? If yes, prove that it does. If no, draw an eikosogram where it fails to hold.
+\item
+  Suppose an urn contains 30 black marbles and 70 white. We randomly draw 5 marbles with replacement. Let \(A\) be the proposition that \(3\) of the first \(4\) draws are black, and let \(B\) be the proposition that the \(5\)\textsuperscript{th} draw is black. Calculate the following quantity:
+  \[ \frac{Pr(A \,\vert\, B)}{Pr(B \,\vert\, A)} \frac{Pr(B)}{Pr(A)}. \]
 \end{enumerate}
 
 \hypertarget{calculating-probabilities-part-2}{%
@@ -2335,7 +2361,7 @@ In this chapter we'll learn new, more powerful rules for \(\vee\) and \(\wedge\)
 \section{The Negation Rule}\label{the-negation-rule}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-58-1} \caption[The Negation Rule]{The Negation Rule. $\p(\neg A) = 1 - \p(A)$.}\label{fig:unnamed-chunk-58}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-59-1} \caption[The Negation Rule]{The Negation Rule. $\p(\neg A) = 1 - \p(A)$.}\label{fig:unnamed-chunk-59}
 \end{marginfigure}
 
 If there's a 70\% chance of rain, then there's a 30\% chance it won't rain. In symbols, if \(\p(R) = .7\) then \(\p(\neg R) = .3\). So the rule for \(\p(\neg A)\) is:
@@ -2366,7 +2392,7 @@ The Addition Rule for calculating \(\p(A \vee B)\) depends on \(A\) and \(B\) be
 This rule always applies, whether \(A\) and \(B\) are mutually exclusive or not.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-59-1} \caption[The General Addition Rule in an Euler diagram]{The General Addition Rule in an Euler diagram.}\label{fig:unnamed-chunk-59}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-60-1} \caption[The General Addition Rule in an Euler diagram]{The General Addition Rule in an Euler diagram.}\label{fig:unnamed-chunk-60}
 \end{marginfigure}
 
 To understand the rule, consider an Euler diagram where \(A\) and \(B\) are not mutually exclusive. In terms of colour, the size of the \(A \vee B\)-region is:
@@ -2412,13 +2438,7 @@ That's why we call the new rule the \emph{General} Addition Rule. It applies in 
 \includegraphics{_main_files/figure-latex/gatree-1} \caption[Tree diagram with the three $A \vee B$ leaves marked]{Tree diagram with the three $A \vee B$ leaves marked}\label{fig:gatree}
 \end{figure}
 
-There are three leaves where \(A \vee B\) is true, marked with emoji. If we add \(\p(A) + \p(B)\), we're adding the two leaves where \(A\) is true (
-\includegraphics[width=0.15in]{img/emoji_shades_small} and
-\includegraphics[width=0.15in]{img/emoji_hearts_small} ) to the two leaves where \(B\) is true (
-\includegraphics[width=0.15in]{img/emoji_shades_small} and
-\includegraphics[width=0.15in]{img/emoji_nerd_small} ). So we've double-counted the \(A \wedge B\) leaf (
-\includegraphics[width=0.15in]{img/emoji_shades_small} ). To get \(\p(A \vee B)\) then, we have to subtract one of those \(A \wedge B\) leaves (
-\includegraphics[width=0.15in]{img/emoji_shades_small} ).
+There are three leaves where \(A \vee B\) is true, marked with asterisks. If we add \(\p(A) + \p(B)\), we're adding the two leaves where \(A\) is true (* and **) to the two leaves where \(B\) is true (* and ***). So we've double-counted the \(A \wedge B\) leaf (*). To get \(\p(A \vee B)\) then, we have to subtract one of those \(A \wedge B\) leaves (*).
 
 \newthought{There} is a catch to the General Addition Rule. You need to know \(\p(A \wedge B)\) in order to apply it. Sometimes that information is given to us. But when it's not, we have to figure it out somehow. If \(A\) and \(B\) are mutually exclusive, then it's easy: \(\p(A \wedge B) = 0\). Or, if they're independent, then we can calculate \(\p(A \wedge B) = \p(A) \times \p(B)\). But in other cases we have to turn elsewhere.
 
@@ -2458,7 +2478,7 @@ So we now have two rules for \(\wedge\). The first one only applies when the two
 I flip a fair coin to decide which urn to draw from, heads for Urn X and tails for Urn Y. Then I draw one marble at random.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-61-7} \caption[Tree diagram for an urn problem]{Tree diagram for an urn problem}\label{fig:unnamed-chunk-61}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-61-1} \caption[Tree diagram for an urn problem]{Tree diagram for an urn problem}\label{fig:unnamed-chunk-61}
 \end{figure}
 
 Now suppose we want to know the probability the coin will land tails and the marble drawn will be white, \(\p(T \wedge W)\). The General Multiplication Rule tells us the answer is:
@@ -2488,14 +2508,14 @@ It's tempting to say \(1/4\). The probability of drawing a black marble on each 
 But the correct answer is actually \(5/16\). Why? Let's use a probability tree again.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-63-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-63-2} \caption[Building a probability tree to solve Laplace's urn puzzle]{Building a probability tree to solve Laplace's urn puzzle}\label{fig:unnamed-chunk-63}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-63-1} \caption[Building a probability tree to solve Laplace's urn puzzle]{Building a probability tree to solve Laplace's urn puzzle}\label{fig:unnamed-chunk-63}
 \end{marginfigure}
 
 Depending on how the coin lands, you could end up drawing either from Urn X or from Urn Y, with equal probability.
 
-If you end up drawing from Urn X, the probability of a black marble on any given draw is \(3/4\). Because the draws are independent (we're drawing with replacement), the probability they'll both come up black is \(3/4 \times 3/4 = 9/16\).
+If you end up drawing from Urn X, the probability of a black marble on any given draw is \(3/4\). We're drawing with replacement, so this doesn't change on the second draw. The probability both draws will come up black is thus \(3/4 \times 3/4 = 9/16\).
 
-If instead you end up drawing from Urn Y, the probability of a black marble on any given draw is \(1/4\). The draws are still independent though, so the chance of both being black in this case is \(1/4 \times 1/4 = 1/16\).
+If instead you end up drawing from Urn Y, the probability of a black marble on any given draw is \(1/4\). And this doesn't change on the second draw since we're drawing with replacement. So the chance of both being black in this case is \(1/4 \times 1/4 = 1/16\).
 
 So the probability of drawing two black marbles from Urn X is:
 \[
@@ -2535,7 +2555,7 @@ This kind of calculation comes up a lot. Since it would be tedious to figure it 
 There's an intuitive idea at work here. To figure out how likely \(A\) is, consider how likely it would be if \(B\) were true, and how likely it would be if \(B\) were false. Then weight each of those hypothetical possibilities according to their probabilities.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-64-7} \caption[The Law of Total Probability calculates the size of the $A$ region by summing its two parts]{The Law of Total Probability calculates the size of the $A$ region by summing its two parts.}\label{fig:unnamed-chunk-64}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-64-1} \caption[The Law of Total Probability calculates the size of the $A$ region by summing its two parts]{The Law of Total Probability calculates the size of the $A$ region by summing its two parts.}\label{fig:unnamed-chunk-64}
 \end{marginfigure}
 
 We can also use an Euler diagram. The size of the \(A\) region is the sum of the \(A \wedge B\) region and the \(A \wedge \neg B\) region: \(\color{bookpurple}{\blacksquare}\color{black}{} + \color{bookred}{\blacksquare}\color{black}{}\). And each of those regions can be calculated using the General Multiplication Rule. For example, \(\p(A \wedge B) = \p(A \given B) \p(B)\). So in algebraic terms we have:
@@ -2553,9 +2573,7 @@ Which is precisely the Law of Total Probability.
 \includegraphics{_main_files/figure-latex/unnamed-chunk-65-1} \caption[The Law of Total Probability in a tree diagram]{The Law of Total Probability in a tree diagram}\label{fig:unnamed-chunk-65}
 \end{marginfigure}
 
-We can also use a tree diagram to illustrate the same reasoning. There are two leaves where \(A\) is true, marked with emoji. To get the probability of each leaf we multiply across the branches (that's the General Multiplication Rule). And then to get the total probability for \(A\), we add up the two leaves: \(\p(A) =\)
-\includegraphics[width=0.15in]{img/emoji_shades_small} \(+\)
-\includegraphics[width=0.15in]{img/emoji_hearts_small} . Once again the result is the Law of Total Probability:
+We can also use a tree diagram to illustrate the same reasoning. There are two leaves where \(A\) is true, marked with asterisks. To get the probability of each leaf we multiply across the branches (that's the General Multiplication Rule). And then to get the total probability for \(A\), we add up the two leaves: \(\p(A) = * + **\). Once again the result is the Law of Total Probability:
 \[
   \p(A) = \p(A \given B) \p(B) + \p(A \given \neg B) \p(\neg B).
 \]
@@ -2600,7 +2618,7 @@ Putting all the pieces together:
 Notice that we didn't just get the same answer, we ended up doing the same calculation too. Our second approach just reconstructed from scratch the reasoning behind the Law of Total Probability. It's a very good idea to understand the rationale behind the Law of Total Probability. But once you get used to the formula, it's also fine to skip straight to applying it directly.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-67-3} \caption[A probability tree for Professor X]{A probability tree for Professor X}\label{fig:unnamed-chunk-67}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-67-1} \caption[A probability tree for Professor X]{A probability tree for Professor X}\label{fig:unnamed-chunk-67}
 \end{marginfigure}
 
 You can also use a tree diagram. Again, the calculation will be the same. But the diagram may help you get started, and it helps you check that you've applied the formula correctly too.
@@ -2864,13 +2882,31 @@ You can also use a tree diagram. Again, the calculation will be the same. But th
   \end{enumerate}
 
   Which of them violate the laws of probability: both, neither, or just one (which one)?
+\item
+  In April of 2021 during the Covid-19 pandemic, concerns arose about the safety of one of the vaccines. At the time \(7\) million people had already received this vaccine, a few of whom developed dangerous bloodclots. One of these people had already died as a result.
+
+  \begin{marginfigure}
+  This exercise is based on
+  \href{https://twitter.com/NateSilver538/status/1381968804004065299}{a
+  tweet of Nate Silver's}
+  \end{marginfigure}
+
+  Suppose at the time there was a \(1/100\) chance of getting Covid-19 without the vaccine, and only a \(1/1,000\) chance with the vaccine. And suppose unvaccinated people who got Covid-19 died in \(1/150\) cases, while those who'd had the vaccine only died in \(1/500\) cases.
+
+  What then was the probability of dying, either from a vaccine-induced blood clot or from Covid-19, if you did take the vaccine? What was the probability if you didn't? (Assume no other vaccines were available.)
+\item
+  Prove that if \(\p(B) = 1\), then \(\p(A \wedge B) = \p(A)\).
+\item
+  Prove that \(\p(A \wedge B) \geq \p(A) + \p(B) - 1\).
+\item
+  Prove that \(\p(A \wedge B \wedge C) = \p(A) \p(B \given A) \p(C \given B \wedge A)\) as long as the two conditional probabilities are well-defined.
 \end{enumerate}
 
 \hypertarget{chbayes}{%
 \chapter{Bayes' Theorem}\label{chbayes}}
 
 \begin{epigraph}
-\ldots{}in no other branch of mathematics is it so easy for experts to
+\ldots in no other branch of mathematics is it so easy for experts to
 blunder as in probability theory.\\
 ---Martin Gardner
 \end{epigraph}
@@ -2982,7 +3018,7 @@ And now we have everything we need to plug into Bayes' Theorem:
 This is the same answer we got with our grid diagram (Figure \ref{fig:taxigrid}). And notice, it's also the answer we'd get from a tree diagram too (Figure \ref{fig:taxitree}).
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/taxitree-1} \caption[Tree diagram for the taxicab problem]{Tree diagram for the taxicab problem. Since $\p(B \wedge W) = .12$ and $\p(W) = .12 + .17$, the definition of conditional probability yields $\p(B \given W) = 12/29$.}\label{fig:taxitree}
+\includegraphics{_main_files/figure-latex/taxitree-1} \caption[A tree diagram for the taxicab problem]{A tree diagram for the taxicab problem. We calculate $\p(B \wedge W) = .12$ and $\p(W) = .12 + .17$, then use the definition of conditional probability to get $\p(B \given W) = 12/29$.}\label{fig:taxitree}
 \end{marginfigure}
 
 \hypertarget{understanding-bayes-theorem}{%
@@ -2997,7 +3033,7 @@ And plug that back into the first equation:
 This proves that Bayes' theorem is correct. But it also suggests a way of understanding it visually, with an Euler diagram.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-72-1} \caption[An Euler diagram for visualizing Bayes' theorem]{An Euler diagram for visualizing Bayes' theorem}\label{fig:unnamed-chunk-72}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-73-1} \caption[An Euler diagram for visualizing Bayes' theorem]{An Euler diagram for visualizing Bayes' theorem}\label{fig:unnamed-chunk-73}
 \end{marginfigure}
 
 \newthought{We've} talked before about \(\p(A \given B)\) being the portion of the \(B\) region that's inside the \(A\) region. The purple portion of the blue \(B\) circle, in other words:
@@ -3367,7 +3403,7 @@ So \(\p(A \given B_1 \wedge B_2) = 0.245 / (0.245 + 0.02)\), which is the same a
 
 Let's try a different sort of problem with multiple conditions. Recall the taxicab problem from \protect\hyperlink{chbayes}{Chapter 8}:
 
-\BeginKnitrBlock{problem}
+\begin{problem}
 A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. You are given the following data:
 
 \begin{enumerate}
@@ -3380,7 +3416,7 @@ A cab was involved in a hit and run accident at night. Two cab companies, the Gr
 \end{enumerate}
 
 What is the probability that the cab involved in the accident was blue rather green?
-\EndKnitrBlock{problem}
+\end{problem}
 
 We saw it's only about \(41\%\) likely the cab was really blue, even with the witness' testimony. But what if there had been two witnesses, both saying the cab was blue?
 
@@ -3707,6 +3743,17 @@ These are some pretty hairy formulas, so memorizing them probably isn't a good i
   \end{itemize}
 
   Assume all conditional probabilities are well-defined. If the statement is true, prove that it is. If it's not true, give a counterexample (use a standard setup like a deck of playing cards or marbles in an urn, and clearly specify which outcomes correspond to each of \(H\), \(E\), and \(F\)).
+\item
+  Suppose we are sampling \emph{without} replacement from an urn of \(10\) marbles: \(4\) red and \(6\) green.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Is \(\p(R_1 \wedge G_2 \wedge R_3) = \p(R_1 \wedge R_2 \wedge G_3)\)?
+  \item
+    Do such identities always hold? In other words, does the order in which various colours are drawn matter to the probability, or does it only matter how many of each colour are drawn? Prove your answer.
+  \end{enumerate}
 \end{enumerate}
 
 \hypertarget{probability-induction}{%
@@ -3859,7 +3906,7 @@ What about the last term in Bayes' theorem though, the denominator \(\p(E)\)? It
 
 
 \begin{marginfigure}
-\includegraphics[width=2.12in]{img/moon} \caption[The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.]{The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.}\label{fig:unnamed-chunk-85}
+\includegraphics[width=2.12in]{img/moon} \caption[The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.]{The hammer/feather experiment was performed on the moon in 1971. See the \href{https://bit.ly/1KLQzOB}{full video here}.}\label{fig:unnamed-chunk-86}
 \end{marginfigure}
 
 Scientists love theories that explain the unexplained. For example, Newton's theory of physics is able to explain why a heavy object and a light object, like a hammer and feather, fall to the ground at the same speed as long as there's no air resistance. If you'd never performed this experiment before, you'd probably expect the hammer to fall faster. You'd be surprised to find that the hammer and feather actually hit the ground at the same time. That Newton's theory explains this surprising fact strongly supports his theory.
@@ -3867,7 +3914,7 @@ Scientists love theories that explain the unexplained. For example, Newton's the
 So the ability to explain surprising facts is a third virtue of a good explanation. And this virtue corresponds to our third term in Bayes' theorem:
 
 \begin{marginfigure}
-\includegraphics[width=2in]{img/vacuum} \caption[The hammer/feather experiment has also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.]{The hammer/feather experiment has also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.}\label{fig:unnamed-chunk-86}
+\includegraphics[width=2in]{img/vacuum} \caption[The hammer/feather experiment has also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.]{The hammer/feather experiment has also been performed in vacuum chambers here on earth. A beautifully filmed example is \href{https://bit.ly/10hw8mP}{available on YouTube}, courtesy of the BBC.}\label{fig:unnamed-chunk-87}
 \end{marginfigure}
 
 \begin{enumerate}
@@ -4007,6 +4054,13 @@ According to this analysis then, each term in Bayes' theorem corresponds to a vi
 \hypertarget{expected-value}{%
 \chapter{Expected Value}\label{expected-value}}
 
+\begin{epigraph}
+\emph{Doctor Senator}: Hubris to think that you can control things.
+That's why God created tornadoes. To remind us.\\
+\emph{Loy Cannon}: Yeah. But you can raise the odds.\\
+---\emph{Fargo}, ``Raddopiarlo''
+\end{epigraph}
+
 \newthought{We've} learned a lot about using probability to draw conclusions, but what about making decisions? A lot of reasoning is \emph{practical}: it's not just about what to believe, it's about what to \emph{do}. Once you know how likely the various possible outcomes of a decision are, how do you make your choice?
 
 \begin{problem}
@@ -4100,7 +4154,7 @@ Well, a rectangle's area can be enlarged by increasing either its width or its h
 So the expected value formula answers our opening question by giving equal weight to the two competing factors. Width (probability) and height (payoff) are treated the same: neither one is given greater weight. We just multiply one against the other and take the total area that results.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/expnegpos-9} \caption[A gamble with one negative payoff, one positive]{A gamble with one negative payoff, one positive}\label{fig:expnegpos}
+\includegraphics{_main_files/figure-latex/expnegpos-1} \caption[A gamble with one negative payoff, one positive]{A gamble with one negative payoff, one positive}\label{fig:expnegpos}
 \end{marginfigure}
 
 \newthought{When} an outcome loses money and the dolllar amount is negative, the diagram extends below the \(x\)-axis. We colour this region red, to indicate that its area is to be subtracted, rather than added.
@@ -4127,7 +4181,7 @@ Given an act \(A\) with possible consequences \(\$x_1, \$x_2, \ldots, \$x_n\), t
 \end{description}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-89-1} \caption[A gamble with three possible outcomes]{A gamble with three possible outcomes}\label{fig:unnamed-chunk-89}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-91-1} \caption[A gamble with three possible outcomes]{A gamble with three possible outcomes}\label{fig:unnamed-chunk-91}
 \end{marginfigure}
 
 For example, suppose a fair die will be rolled and you will win \$1 if it lands on a low number, \$2 if it's a middling number. If it's a high number, you lose \$3. Then:
@@ -4193,7 +4247,7 @@ hour drive.
 \end{problem}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-91-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-91-2} \caption[Take the train to Ottawa or drive?]{Take the train to Ottawa or drive?}\label{fig:unnamed-chunk-91}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-93-1} \includegraphics{_main_files/figure-latex/unnamed-chunk-93-2} \caption[Take the train or drive?]{Take the train or drive?}\label{fig:unnamed-chunk-93}
 \end{marginfigure}
 
 If all you care about is spending as little time on the road as possible, should you take the train or drive?
@@ -4228,11 +4282,11 @@ A decision table has a row for each option and a column for each possible outcom
 
 \begin{longtable}[]{@{}lccc@{}}
 \toprule
-& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\)\tabularnewline
+& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) \\
 \midrule
 \endhead
-\(A\) & \(\$3\) & \(\$1\) & \(-\$1\)\tabularnewline
-\(B\) & \(\$3\) & \(-\$3\) & \(\$0\)\tabularnewline
+\(A\) & \(\$3\) & \(\$1\) & \(-\$1\) \\
+\(B\) & \(\$3\) & \(-\$3\) & \(\$0\) \\
 \bottomrule
 \end{longtable}
 
@@ -4240,11 +4294,11 @@ We can also put the probability in each cell:
 
 \begin{longtable}[]{@{}lccc@{}}
 \toprule
-& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\)\tabularnewline
+& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) \\
 \midrule
 \endhead
-\(A\) & \(1/3\), \(\$3\) & \(1/3\), \(\$1\) & \(1/3\), \(-\$1\)\tabularnewline
-\(B\) & \(1/3\), \(\$3\) & \(1/3\), \(-\$3\) & \(1/3\), \(\$0\)\tabularnewline
+\(A\) & \(1/3\), \(\$3\) & \(1/3\), \(\$1\) & \(1/3\), \(-\$1\) \\
+\(B\) & \(1/3\), \(\$3\) & \(1/3\), \(-\$3\) & \(1/3\), \(\$0\) \\
 \bottomrule
 \end{longtable}
 
@@ -4252,11 +4306,11 @@ Now calculating expected values is just a matter of multiplying the numbers with
 
 \begin{longtable}[]{@{}lcccc@{}}
 \toprule
-& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) & Expected Value\tabularnewline
+& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) & Expected Value \\
 \midrule
 \endhead
-\(A\) & \(1/3\), \(\$3\) & \(1/3\), \(\$1\) & \(1/3\), \(-\$1\) & \(\$1\)\tabularnewline
-\(B\) & \(1/3\), \(\$3\) & \(1/3\), \(-\$3\) & \(1/3\), \(\$0\) & \(\$0\)\tabularnewline
+\(A\) & \(1/3\), \(\$3\) & \(1/3\), \(\$1\) & \(1/3\), \(-\$1\) & \(\$1\) \\
+\(B\) & \(1/3\), \(\$3\) & \(1/3\), \(-\$3\) & \(1/3\), \(\$0\) & \(\$0\) \\
 \bottomrule
 \end{longtable}
 
@@ -4264,11 +4318,11 @@ Now calculating expected values is just a matter of multiplying the numbers with
 
 \begin{longtable}[]{@{}lcccc@{}}
 \toprule
-& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) & Expected Value\tabularnewline
+& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) & Expected Value \\
 \midrule
 \endhead
-\(A\) & \(1/6\), \(\$3\) & \(1/6\), \(\$1\) & \(4/6\), \(-\$1\) & \(\$0\)\tabularnewline
-\(B\) & \(1/3\), \(\$3\) & \(1/3\), \(-\$3\) & \(1/3\), \(\$0\) & \(\$0\)\tabularnewline
+\(A\) & \(1/6\), \(\$3\) & \(1/6\), \(\$1\) & \(4/6\), \(-\$1\) & \(\$0\) \\
+\(B\) & \(1/3\), \(\$3\) & \(1/3\), \(-\$3\) & \(1/3\), \(\$0\) & \(\$0\) \\
 \bottomrule
 \end{longtable}
 
@@ -4281,11 +4335,11 @@ Once in a while you can avoid calculating expected values altogether. Consider t
 
 \begin{longtable}[]{@{}lccc@{}}
 \toprule
-& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\)\tabularnewline
+& \(1\) or \(2\) & \(3\) or \(4\) & \(5\) or \(6\) \\
 \midrule
 \endhead
-\(A\) & \(\$3\) & \(\$1\) & \(-\$1\)\tabularnewline
-\(B\) & \(\$1\) & \(\$0\) & \(-\$3\)\tabularnewline
+\(A\) & \(\$3\) & \(\$1\) & \(-\$1\) \\
+\(B\) & \(\$1\) & \(\$0\) & \(-\$3\) \\
 \bottomrule
 \end{longtable}
 
@@ -4295,11 +4349,11 @@ Not quite. Suppose you're deciding whether to study for your midterm, and your r
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
-& A & No A\tabularnewline
+& A & No A \\
 \midrule
 \endhead
-Don't Study & \(\$100\) & \(\$0\)\tabularnewline
-Study & \(\$50\) & \(-\$50\)\tabularnewline
+Don't Study & \(\$100\) & \(\$0\) \\
+Study & \(\$50\) & \(-\$50\) \\
 \bottomrule
 \end{longtable}
 
@@ -4672,7 +4726,7 @@ According to standard decision theory, the right choice is the act that has the 
 \hypertarget{subjectivity-objectivity}{%
 \section{Subjectivity \& Objectivity}\label{subjectivity-objectivity}}
 
-People have different desires, needs, and interests. Some value friendship most, others value family more. Some prioritize professional success, others favour activism. Some people like eighties music, others prefer hip-hop---and still others, to my constant surprise, enjoy reggae.
+People have different desires, needs, and interests. Some value friendship most, others value family more. Some prioritize professional success, others favour activism. Some people like eighties music, others prefer hip-hop---and still others, to my constant surprise, enjoy opera.
 
 So the value of a decision's outcome depends on the person. It is \emph{subjective}. And that raises a big question: if utility is subjective, how can we measure it objectively? Does it even make sense to treat personal tastes and preferences using mathematical equations?
 
@@ -4701,7 +4755,7 @@ This is a question about your personal tastes. Some people really like salad, th
 Let's suppose your answer is \(\p(P) \geq 1/3\). That is, you'd need at least a \(1/3\) chance at the pizza to risk getting celery instead of salad. Since celery is the worst option, let's say it has utility zero: \(\u(C)=0\). And since pizza is the best option, let's say it has utility one: \(\u(P)=1\). What is the utility of salad \(\u(S)\) then?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-102-1} \caption[A utility scale for lunch options]{A utility scale for lunch options}\label{fig:unnamed-chunk-102}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-104-1} \caption[A utility scale for lunch options]{A utility scale for lunch options}\label{fig:unnamed-chunk-104}
 \end{marginfigure}
 
 We know that you're willing to trade the salad for the gamble when the probability of winning pizza is at least \(1/3\). So if \(\p(P) = 1/3\), the utility of salad is the same as the expected utility of the gamble: \(\u(S) = \EU(G)\). Therefore:
@@ -4718,7 +4772,7 @@ So salad has utility \(1/3\) for you.
 Hey look! We just took something personal and subjective and gave it a precise, objective measurement. We've managed to quantify your lunch preferences.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-103-1} \caption[A friend's utility scale for lunch options]{A friend's utility scale for lunch options}\label{fig:unnamed-chunk-103}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-105-1} \caption[A friend's utility scale for lunch options]{A friend's utility scale for lunch options}\label{fig:unnamed-chunk-105}
 \end{marginfigure}
 
 \newthought{Now imagine} your friend gives a different answer. They'd need at least a \(2/3\) chance at the pizza to risk ending up with celery instead of salad. So for them, \(\u(S) = \EU(G)\) when \(\p(P) = 2/3\). So now the calculation goes:
@@ -4784,7 +4838,7 @@ Why does this method work? Because our subject is indifferent between having opt
 \newthought{I find} it helps to think of this method as marking every point on our utility scale with a gamble, which we can use for comparisons.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/uscale-9} \caption[A utility scale with some points of comparison chosen for display]{A utility scale with some points of comparison chosen for display: $u = 7/8$, $2/3$, $1/2$, and $1/6$}\label{fig:uscale}
+\includegraphics{_main_files/figure-latex/uscale-1} \caption[A utility scale with some points of comparison chosen for display]{A utility scale with some points of comparison chosen for display: $u = 7/8$, $2/3$, $1/2$, and $1/6$}\label{fig:uscale}
 \end{marginfigure}
 
 For every utility value \(u\) between \(0\) and \(1\), there's a gamble whose expected utility is also \(u\). To find such a gamble, we make the possible payoffs \(B\) and \(W\), and we set \(\p(B) = u\) and \(\p(W) = 1 - u\).
@@ -4797,13 +4851,13 @@ Now to find the utility of an outcome---whether it's a salad, a Carribbean vacat
 \section{Choosing Scales}\label{choosing-scales}}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-105-9} \caption[The best possible gamble]{The best possible gamble}\label{fig:unnamed-chunk-105}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-107-1} \caption[The best possible gamble]{The best possible gamble}\label{fig:unnamed-chunk-107}
 \end{marginfigure}
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-106-9} \caption[An intermediate gamble]{An intermediate gamble}\label{fig:unnamed-chunk-106}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-108-1} \caption[An intermediate gamble]{An intermediate gamble}\label{fig:unnamed-chunk-108}
 \end{marginfigure}
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-107-9} \caption[The worst possible gamble]{The worst possible gamble}\label{fig:unnamed-chunk-107}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-109-1} \caption[The worst possible gamble]{The worst possible gamble}\label{fig:unnamed-chunk-109}
 \end{marginfigure}
 
 Our method for quantifying utility assumes that \(\u(W) = 0\) and \(\u(B) = 1\). What justifies this assumption? It's actually a bit arbitrary. We could measure someone's utilities on a scale from \(0\) to \(10\) instead. Or \(-1\) to \(1\), or any interval.
@@ -4869,7 +4923,7 @@ For me, I'd only be willing to take the gamble if \(\p(\$100) \geq .85\). So, fo
   \end{aligned}
 \]
 
-Notice how this fits with what we said earlier about the value of additional money. At least for me, \(\$100\) isn't twice as valuable as \(\$50\). In fact it's not even really close to being twice as valuable. A gain of \(\$50\) is almost as good as a gain of \(\$100\): it's \(.85\) utils vs. \(1\) util.
+Notice how this fits with what we said earlier about the value of additional money. At least for me, \(\$100\) isn't twice as valuable as \(\$50\). In fact it's not even really close to being twice as valuable. A gain of \(\$50\) is almost as good as a gain of \(\$100\): it's \(.85\) utils vs.~\(1\) util.
 
 But what about you: how does a gain of \(\$50\) compare to a gain of \(\$100\) in your life?
 
@@ -5096,11 +5150,11 @@ But what about you: how does a gain of \(\$50\) compare to a gain of \(\$100\) i
 
   \begin{longtable}[]{@{}lll@{}}
   \toprule
-  & \(H\) & \(T\)\tabularnewline
+  & \(H\) & \(T\) \\
   \midrule
   \endhead
-  \(A\) & \(a_1\) & \(a_2\)\tabularnewline
-  \(B\) & \(b_1\) & \(b_2\)\tabularnewline
+  \(A\) & \(a_1\) & \(a_2\) \\
+  \(B\) & \(b_1\) & \(b_2\) \\
   \bottomrule
   \end{longtable}
 
@@ -5139,7 +5193,7 @@ Suppose you must choose between two options.
 \begin{itemize}
 \tightlist
 \item
-  \(1A\): \(\$1\) million dollars, guaranteed.
+  \(1A\): \(\$1\) million, guaranteed.
 \item
   \(1B\): a gamble\ldots{}
 
@@ -5201,16 +5255,16 @@ To see why, let's first write out the expected utility formula for each option:
 \[
   \begin{aligned}
      \EU(1A) &= \u(\$1M),\\
-     \EU(1B) &= .89 \times \u(\$1M) + .1 \times \u(\$5M) + .01 \times \u(\$0M),\\
-     \EU(2A) &= .89 \times \u(\$0M) + .11 \times \u(\$1M),\\
-     \EU(2B) &= .9 \times \u(\$0M) + .1 \times\u(\$5M).
+     \EU(1B) &= .89 \times \u(\$1M) + .1 \times \u(\$5M) + .01 \times \u(\$0),\\
+     \EU(2A) &= .89 \times \u(\$0) + .11 \times \u(\$1M),\\
+     \EU(2B) &= .9 \times \u(\$0) + .1 \times\u(\$5M).
   \end{aligned}
 \]
 Now a little arithmetic will show that we get the same result when we subtract the first two formulas and the second two:
 \[
   \begin{aligned}
-    \EU(1A) - \EU(1B) &= -.01 \times \u(\$0M) + .11 \times \u(\$1M) - .1 \times \u(\$5M),\\
-    \EU(2A) - \EU(2B) &= -.01 \times \u(\$0M) + .11 \times \u(\$1M) - .1 \times \u(\$5M).\\
+    \EU(1A) - \EU(1B) &= -.01 \times \u(\$0) + .11 \times \u(\$1M) - .1 \times \u(\$5M),\\
+    \EU(2A) - \EU(2B) &= -.01 \times \u(\$0) + .11 \times \u(\$1M) - .1 \times \u(\$5M).
   \end{aligned}
 \]
 Notice how both formulas are exactly the same. The difference in expected value between the first two options is exactly the same as the difference in value between the second two options. Which means if you're making decisions using the expected utility rule, you can't prefer the A option in the first decision and the B option in the second.
@@ -5219,10 +5273,10 @@ Notice how both formulas are exactly the same. The difference in expected value 
 
 In \protect\hyperlink{utility}{Chapter 12} we noted that the difference in utility between \(\$0\) and \(\$1\) million might be larger for some people than for others. Could these individual priorities explain why some people prefer \(1A\) over \(1B\) yet \(2B\) over \(2A\)?
 
-No.~In the Allais paradox, the way you personally value money is actually irrelevant. It doesn't matter how much you value \(\$1\) million vs. \(\$0\). Our calculations made no assumptions about the numerical values of \(\u(\$0)\), \(\u(\$1M)\), and \(\u(\$5M)\). We left those terms untouched, treating them as unknown placeholders. Whatever your personal utilities are, there's just no way to prefer \(1A\) over \(1B\) and \(2B\) over \(2A\), if you're following the expected utility rule.
+No.~In the Allais paradox, the way you personally value money is actually irrelevant. It doesn't matter how much you value \(\$1\) million vs.~\(\$0\). Our calculations made no assumptions about the numerical values of \(\u(\$0)\), \(\u(\$1M)\), and \(\u(\$5M)\). We left those terms untouched, treating them as unknown placeholders. Whatever your personal utilities are, there's just no way to prefer \(1A\) over \(1B\) and \(2B\) over \(2A\), if you're following the expected utility rule.
 
 \begin{marginfigure}
-\includegraphics[width=0.91in]{img/allais} \caption[Maurice Allais (1911--2010), photograph by Harcourt Studios]{Maurice Allais (1911--2010), photograph by Harcourt Studios}\label{fig:unnamed-chunk-109}
+\includegraphics[width=0.91in]{img/allais} \caption[Maurice Allais (1911--2010), photograph by Harcourt Studios]{Maurice Allais (1911--2010), photograph by Harcourt Studios}\label{fig:unnamed-chunk-111}
 \end{marginfigure}
 \begin{marginfigure}
 Leonard Savage (1917--1971) was an American staistician and
@@ -5238,28 +5292,28 @@ When Savage first encountered Allais' example, he did exactly what most people d
 
 Savage responded by acknowledging that people are tempted to make exactly the choices Allais predicted. But, he pointed out, people sometimes make irrational choices. And Allais' example brings out our irrational temptations, Savage argued.
 
-To make his case, Savage cast the example in concrete terms. Imagine a random ticket will be drawn from a hat containing tickets numbered \(\#1\) through \(\#100\). The outcome of each options is determined according to Table \ref{tab:allaishat}.
+To make his case, Savage cast the example in concrete terms. Imagine a random ticket will be drawn from a hat containing tickets numbered \(1\) through \(100\). The outcome of each options is determined according to Table \ref{tab:allaishat}.
 
 \begin{longtable}[]{@{}lccc@{}}
 \caption{\label{tab:allaishat}Savage's presentation of the Allais paradox}\tabularnewline
 \toprule
-& \(\#1\) & \(\#2\)--\(11\) & \(\#12\)--\(100\)\tabularnewline
+& \(\#1\) & \(\#2\)--\(11\) & \(\#12\)--\(100\) \\
 \midrule
 \endfirsthead
 \toprule
-& \(\#1\) & \(\#2\)--\(11\) & \(\#12\)--\(100\)\tabularnewline
+& \(\#1\) & \(\#2\)--\(11\) & \(\#12\)--\(100\) \\
 \midrule
 \endhead
-\(1A\) & \$1M & \$1M & \$1M\tabularnewline
-\(1B\) & \$0 & \$5M & \$1M\tabularnewline
-\(2A\) & \$1M & \$1M & \$0\tabularnewline
-\(2B\) & \$0 & \$5M & \$0\tabularnewline
+\(1A\) & \$1M & \$1M & \$1M \\
+\(1B\) & \$0 & \$5M & \$1M \\
+\(2A\) & \$1M & \$1M & \$0 \\
+\(2B\) & \$0 & \$5M & \$0 \\
 \bottomrule
 \end{longtable}
 
 In the first row you're guaranteed to get \(\$1\) million. In the second row you have a \(1\%\) chance of getting nothing, an \(89\%\) chance of getting \(\$1\) million, and a \(10\%\) chance of getting \(\$5\) million. And so on.
 
-Viewed this way, we can see that there's no difference between \(1A\) and \(1B\) if the ticket drawn is one of \(\#12\)--\(100\). And likewise for \(2A\) vs. \(2B\). So you must choose based on what will happen if the ticket drawn is \(\#1\) or one of \(\#2\)--\(11\). In other words, you should ignore the third column and just look at the first two.
+Viewed this way, we can see that there's no difference between \(1A\) and \(1B\) if the ticket drawn is one of \(\#12\)--\(100\). And likewise for \(2A\) vs.~\(2B\). So you must choose based on what will happen if the ticket drawn is \(\#1\) or one of \(\#2\)--\(11\). In other words, you should ignore the third column and just look at the first two.
 
 But in the first two columns, choosing 1A over \(1B\) is the same as choosing \(2A\) over \(2B\). So, to be consistent, you must choose \(2A\) if you chose 1A.
 
@@ -5268,7 +5322,7 @@ Thus, Savage argued, we can see that the expected utility rule is correct once w
 \newthought{Here's} another way of thinking about Savage's argument. If you choose \(2B\) over \(2A\), then you must be willing to accept a \(1\%\) chance of getting nothing in exchange for a \(10\%\) chance at \(\$5\) million. But if you're willing to make that trade, then you should be willing to give up option 1A and take option \(1B\) instead.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/allais1-1} \includegraphics{_main_files/figure-latex/allais1-2} \caption[A graphical depiction of options $1A$ and $1B$ in the Allais paradox]{A graphical depiction of options $1A$ and $1B$ in the Allais paradox}\label{fig:allais1}
+\includegraphics{_main_files/figure-latex/allais1-1} \includegraphics{_main_files/figure-latex/allais1-2} \caption[Options $1A$ and $1B$ in the Allais paradox]{Options $1A$ and $1B$ in the Allais paradox}\label{fig:allais1}
 \end{marginfigure}
 
 \newthought{Visualizing} the problem is also informative. Figure \ref{fig:allais1} shows Allais' first choice, between \(1A\) and \(1B\). Notice how the riskiness of choosing \(1B\) is much less noticeable in this format than the potential upside. The \(10\%\) chance of winning \(\$5\) million jumps right out at you. Whereas the \(1\%\) chance of winding up with nothing is barely noticeable.
@@ -5297,14 +5351,14 @@ How does this principle apply to the Allais paradox? Interpret \(E\) this way:
 
 Then imagine someone who chose \(1A\) over \(1B\). Would it make sense for them to choose \(2B\) over \(2A\)?
 
-Well, first imagine they know \(E\) is true: they know one of tickets \(\#12\)--\(100\) will be drawn. Then they wouldn't prefer \(2B\) over \(2A\). They wouldn't care about \(2B\) vs. \(2A\) because they'll get \(\$0\) either way.
+Well, first imagine they know \(E\) is true: they know one of tickets \(\#12\)--\(100\) will be drawn. Then they wouldn't prefer \(2B\) over \(2A\). They wouldn't care about \(2B\) vs.~\(2A\) because they'll get \(\$0\) either way.
 
-Next imagine they know \(E\) isn't true: they know one of tickets \(\#1\)--\(11\) will be drawn instead. Then they still wouldn't prefer \(2B\) over \(2A\). They chose \(1A\) over \(1B\), so they prefer not to take a small risk of getting \(\$0\) in order to have a chance at \(\$5\) million. And that's exactly the same tradeoff they're considering with \(2A\) vs. \(2B\).
+Next imagine they know \(E\) isn't true: they know one of tickets \(\#1\)--\(11\) will be drawn instead. Then they still wouldn't prefer \(2B\) over \(2A\). They chose \(1A\) over \(1B\), so they prefer not to take a small risk of getting \(\$0\) in order to have a chance at \(\$5\) million. And that's exactly the same tradeoff they're considering with \(2A\) vs.~\(2B\).
 
 So the Sure-thing Principle says they should choose \(2A\) over \(2B\) if they chose \(1A\) over \(1B\). They wouldn't choose \(2B\) if they knew \(E\) was true, and they wouldn't choose it if they knew \(E\) was false. So, even when they don't know whether \(E\) is true or false, they should still choose \(2A\).
 
-\hypertarget{prescriptive-vs.descriptive}{%
-\section{Prescriptive vs.~Descriptive}\label{prescriptive-vs.descriptive}}
+\hypertarget{prescriptive-vs.-descriptive}{%
+\section{Prescriptive vs.~Descriptive}\label{prescriptive-vs.-descriptive}}
 
 Some decision theorists use the expected utility formula to \emph{describe} the way people make choices. If you want to predict when people will buy/sell a stock, for example, you might use the expected utility formula to describe what people will do.
 
@@ -5351,7 +5405,7 @@ Like in the Allais paradox, this popular combination of choices violates the exp
 
 
 \begin{marginfigure}
-\includegraphics[width=1.67in]{img/ellsberg} \caption[Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross.)]{Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross.)}\label{fig:unnamed-chunk-112}
+\includegraphics[width=1.67in]{img/ellsberg} \caption[Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross.)]{Daniel Ellsberg (b. \(1931\)) is most famous as the leaker of \href{https://bit.ly/1Lgsq2D}{the Pentagon Papers}. The 2017 movie \href{https://bit.ly/2CcHs8v}{\emph{The Post}} tells that story, with Ellsberg portrayed by actor Matthew Rhys. (Photograph by Bernd Gross.)}\label{fig:unnamed-chunk-114}
 \end{marginfigure}
 
 Instead let's think about what this puzzle is showing us.
@@ -5368,19 +5422,19 @@ But in the Ellsberg paradox, you never know the outcome. The most you can know i
 Is this preference for known risks rational? Well, it violates Savage's Sure-thing Principle. View Ellsberg's dilemma as a table:
 
 \begin{longtable}[]{@{}lccc@{}}
-\caption{\label{tab:unnamed-chunk-113}The Ellsberg paradox}\tabularnewline
+\caption{\label{tab:unnamed-chunk-115}The Ellsberg paradox}\tabularnewline
 \toprule
-& Red & Black & White\tabularnewline
+& Red & Black & White \\
 \midrule
 \endfirsthead
 \toprule
-& Red & Black & White\tabularnewline
+& Red & Black & White \\
 \midrule
 \endhead
-\(1A\) & \(\$100\) & \(\$0\) & \(\$0\)\tabularnewline
-\(1B\) & \(\$0\) & \(\$100\) & \(\$0\)\tabularnewline
-\(2A\) & \(\$100\) & \(\$0\) & \(\$100\)\tabularnewline
-\(2B\) & \(\$0\) & \(\$100\) & \(\$100\)\tabularnewline
+\(1A\) & \(\$100\) & \(\$0\) & \(\$0\) \\
+\(1B\) & \(\$0\) & \(\$100\) & \(\$0\) \\
+\(2A\) & \(\$100\) & \(\$0\) & \(\$100\) \\
+\(2B\) & \(\$0\) & \(\$100\) & \(\$100\) \\
 \bottomrule
 \end{longtable}
 
@@ -5590,11 +5644,11 @@ Most decision theorists find this reasoning compelling. But some turn it on its 
 
   \begin{longtable}[]{@{}llll@{}}
   \toprule
-  & \(T_1\) & \(T_2\) & \(T_3\)\tabularnewline
+  & \(T_1\) & \(T_2\) & \(T_3\) \\
   \midrule
   \endhead
-  \(A\) & \(a_1\) & \(a_2\) & \(a_3\)\tabularnewline
-  \(B\) & \(b_1\) & \(b_2\) & \(b_3\)\tabularnewline
+  \(A\) & \(a_1\) & \(a_2\) & \(a_3\) \\
+  \(B\) & \(b_1\) & \(b_2\) & \(b_3\) \\
   \bottomrule
   \end{longtable}
 
@@ -5611,6 +5665,10 @@ Most decision theorists find this reasoning compelling. But some turn it on its 
   \end{itemize}
 
   Then use those assumptions to show that \(EU(A) > EU(B)\).
+\item
+  Suppose two gambles \(A\) and \(B\) depend on the flip of a fair coin. Gamble \(A\) wins \(\$1\) if heads, and loses \(\$1\) otherwise. Gamble \(B\) is similar, except you win \(\$100\) if heads, lose \(\$100\) otherwise.
+
+  Is it possible to have \(EU(A) > EU(B)\)? If not, prove that it's impossible. If it is possible, describe a utility function \(U(\$x) = y\) that makes this inequality hold.
 \end{enumerate}
 
 \hypertarget{infinity-beyond}{%
@@ -5618,8 +5676,8 @@ Most decision theorists find this reasoning compelling. But some turn it on its 
 
 \newthought{Infinity} poses a different sort of challenge to expected utility. In this chapter we'll meet two famous examples.
 
-\hypertarget{the-st.petersburg-paradox}{%
-\section{The St.~Petersburg Paradox}\label{the-st.petersburg-paradox}}
+\hypertarget{the-st.-petersburg-paradox}{%
+\section{The St.~Petersburg Paradox}\label{the-st.-petersburg-paradox}}
 
 Suppose I'm going to flip a fair coin, and I'm going to keep flipping it until it lands heads. When it does, the game is over.
 
@@ -5678,7 +5736,7 @@ The St.~Petersburg game was invented by the mathematician Nicolaus Bernoulli in 
 His solution: replace monetary value with real value, \emph{utility} in other words. \protect\hyperlink{utility}{Recall} that the more money you have, the less value additional money brings. So even though the payoffs in the St.~Petersburg game double from \(\$2\) to \(\$4\) to \(\$8\) etc., the \emph{real} value doesn't double. It grows more slowly.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/logutil-9} \caption[Bernoulli's logarithmic utility function]{Bernoulli's logarithmic utility function}\label{fig:logutil}
+\includegraphics{_main_files/figure-latex/logutil-1} \caption[Bernoulli's logarithmic utility function]{Bernoulli's logarithmic utility function}\label{fig:logutil}
 \end{marginfigure}
 
 What is the real value of money then? How much utility does a gain of \(\$x\) bring? Bernoulli proposed that utility increases ``logarithmically'' with money. In terms of dollars, \(\u(\$x)=\log(x)\). Look at Figure \ref{fig:logutil} to see what this looks like.
@@ -5693,8 +5751,8 @@ The difference this makes to the St.~Petersburg game is displayed in Figure \ref
 
 So if Bernoulli is right about the utility of money, the fair price for the St.~Petersburg game is only about \(\$4\). And in fact that's about what most people say they would pay.
 
-\hypertarget{st.petersburgs-revenge}{%
-\section{St.~Petersburg's Revenge}\label{st.petersburgs-revenge}}
+\hypertarget{st.-petersburgs-revenge}{%
+\section{St.~Petersburg's Revenge}\label{st.-petersburgs-revenge}}
 
 Unfortunately, although Bernoulli was probably right that money decreases in value the more of it you have, that doesn't actually solve the paradox. Because we can just modify the game so that the monetary payoffs grow even faster.
 
@@ -5739,7 +5797,7 @@ But others don't find this response plausible. There may be a limit on how much 
 \section{Pascal's Wager}\label{pascals-wager}}
 
 \begin{marginfigure}
-\includegraphics[width=1in]{img/pascal} \caption[Blaise Pascal (1623--1662)]{Blaise Pascal (1623--1662)}\label{fig:unnamed-chunk-115}
+\includegraphics[width=1in]{img/pascal} \caption[Blaise Pascal (1623--1662)]{Blaise Pascal (1623--1662)}\label{fig:unnamed-chunk-117}
 \end{marginfigure}
 
 The modern theory of probability has a curious origin. It started with Blaise Pascal, a French mathematician and philosopher living in the \(1600\)s. Pascal had a friend who was an avid gambler, and who came to him for advice on gambling problems. Pascal discussed these problems in letters with another famous mathematician, Pierre de Fermat. Out of their correspondence, the concept of expected value was born.
@@ -5759,15 +5817,15 @@ So Pascal figured the decision problem looks something like this:
 \begin{longtable}[]{@{}lcc@{}}
 \caption{\label{tab:wager2x2}Pascal's Wager}\tabularnewline
 \toprule
-& God Exists & God Doesn't Exist\tabularnewline
+& God Exists & God Doesn't Exist \\
 \midrule
 \endfirsthead
 \toprule
-& God Exists & God Doesn't Exist\tabularnewline
+& God Exists & God Doesn't Exist \\
 \midrule
 \endhead
-Believe & \(+\infty\) & \(-10\)\tabularnewline
-Don't Believe & \(-\infty\) & \(+10\)\tabularnewline
+Believe & \(+\infty\) & \(-10\) \\
+Don't Believe & \(-\infty\) & \(+10\) \\
 \bottomrule
 \end{longtable}
 
@@ -5821,17 +5879,17 @@ So the correct decision table looks more like this:
 \begin{longtable}[]{@{}lcccc@{}}
 \caption{\label{tab:manygods}Pascal's Wager with many gods. The \ldots{} stands in for the many different gods that might exist, each of which has its own column. There is also a row for each of these possible gods, since we have the option to believe in that god.}\tabularnewline
 \toprule
-& Catholic God Exists & Anti-Catholic God Exists & \ldots{} & No God Exists\tabularnewline
+& Catholic God Exists & Anti-Catholic God Exists & \ldots{} & No God Exists \\
 \midrule
 \endfirsthead
 \toprule
-& Catholic God Exists & Anti-Catholic God Exists & \ldots{} & No God Exists\tabularnewline
+& Catholic God Exists & Anti-Catholic God Exists & \ldots{} & No God Exists \\
 \midrule
 \endhead
-Believe Catholic & \(+\infty\) & \(-\infty\) & \ldots{} & \(-10\)\tabularnewline
-Believe Anti-Catholic & \(-\infty\) & \(+\infty\) & \ldots{} & \(-10\)\tabularnewline
-\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ddots\) & \(\vdots\)\tabularnewline
-Don't Believe & \(-\infty\) & \(+\infty\) & \ldots{} & \(+10\)\tabularnewline
+Believe Catholic & \(+\infty\) & \(-\infty\) & \ldots{} & \(-10\) \\
+Believe Anti-Catholic & \(-\infty\) & \(+\infty\) & \ldots{} & \(-10\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ddots\) & \(\vdots\) \\
+Don't Believe & \(-\infty\) & \(+\infty\) & \ldots{} & \(+10\) \\
 \bottomrule
 \end{longtable}
 
@@ -5967,7 +6025,7 @@ So \(\infty - \infty\) is not a well-defined quantity.
     one in ten trillion
   \end{enumerate}
 \item
-  According to the many gods objection, Pascal's Wager argument fails to account for the possibility of other gods besides the Catholic conception. What happens to Pascal's decision table when other gods are included? Circle one answer.
+  According to the many gods objection, Pascal's Wager argument fails to account for the possibility of other gods besides the Catholic conception. What happens to Pascal's decision table when other gods are included? Choose one.
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
@@ -6027,13 +6085,13 @@ So \(\infty - \infty\) is not a well-defined quantity.
 \chapter{Two Schools}\label{two-schools}}
 
 \begin{epigraph}
-To understand God's thoughts we must study statistics, for these are the
-measure of His purpose.\\
----attributed to Florence Nightingale
+As a statistician, there's a big secret that I think the public needs to
+know. Statisticians don't all agree on what probability is!\\
+---Kareem Carr
 \end{epigraph}
 
 \begin{marginfigure}
-\includegraphics[width=1.83in]{img/flanders} \caption[Ned Flanders informs us that, well sir, there are two schools of thought on the matter]{Ned Flanders informs us that, well sir, there are two schools of thought on the matter.}\label{fig:unnamed-chunk-117}
+\includegraphics[width=1.83in]{img/flanders} \caption[Ned Flanders informs us that, well sir, there are two schools of thought on the matter]{Ned Flanders informs us that, well sir, there are two schools of thought on the matter.}\label{fig:unnamed-chunk-119}
 \end{marginfigure}
 
 \newthought{What} does the word ``probability'' mean? There are two competing philosophies of probability, and two very different schools of statistics to go with them.
@@ -6052,7 +6110,7 @@ This is probably the most common way of understanding ``probability.'' You may e
 
 But many statements about probability don't fit the frequency mold, not very well at least.
 
-Consider the statement, ``the probability the dinosaurs were wiped out by a meteor is \(90\%\).'' Does this mean \(90\%\) of the times dinosaurs existed on earth, they were wiped out? They only existed once! This probability is about an event that doesn't repeat. So there's no frequency with which it happens.
+Consider the statement, ``the probability the dinosaurs were wiped out by a meteor is \(90\%\).'' Does this mean \(90\%\) of the times dinosaurs existed on earth, they were wiped out by a meteor? They only existed once! This probability is about an event that doesn't repeat. So there's no frequency with which it happens.
 
 Here's another example: ``humans are probably the main cause of our changing climate.'' Does that mean most of the time, when climate change happens, humans are the cause? Humans haven't even been around for most of the climate changes in Earth's history. So again: this doesn't seem to be a statement about the frequency with which humans cause global warming.
 
@@ -6068,6 +6126,13 @@ Which kind of probability are scientists using when they use probability theory?
 There is a deep divide among scientists on this issue, especially statisticians.
 
 The \emph{frequentists} think that science deals in the first kind of probability, frequency. This interpretation has the appeal of being conrete and objective, since we can observe and count how often something happens. And science is all about observation and objectivity, right?
+
+\begin{marginfigure}
+When YouTuber
+\href{https://en.wikipedia.org/wiki/Dream_(YouTuber)}{Dream} was accused
+of cheating in a Minecraft speedrun record, his appeal was rejected for
+illegitimately mixing a frequentist approach with a Bayesian analysis.
+\end{marginfigure}
 
 The \emph{Bayesians} think instead that science deals in the second kind of probability, belief-type probability. Science is supposed to tell us what to believe given our evidence, after all. So it has to go beyond just the frequencies we've observed, and say what beliefs those observations support.
 
@@ -6202,7 +6267,7 @@ If it doesn't rain, I'll lose \(\$2\). To find my \textbf{\emph{fair betting rat
 \]
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-119-1} \caption[A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size]{A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$.}\label{fig:unnamed-chunk-119}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-122-1} \caption[A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size]{A bet that pays $\$1$ if you win and costs $\$2$ if you lose, is fair when the blue and red regions have equal size: when the probability of winning is $2/3$.}\label{fig:unnamed-chunk-122}
 \end{marginfigure}
 
 A person's betting rate reflects their degree of confidence. The more confident they are of winning, the more they'll be willing to risk losing. In this example my betting rate is \(2/3\) because I'm \(2/3\) confident it will rain. That's my personal probability: \(\p(R) = 2/3\).
@@ -6212,7 +6277,7 @@ Notice that a bet at two-to-one odds has zero expected value given my personal p
 This makes sense: it's a fair bet from my point of view, after all.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-120-1} \caption[A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$]{A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$.}\label{fig:unnamed-chunk-120}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-123-1} \caption[A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$]{A bet that pays $\$9$ if you win and costs $\$1$ if you lose is fair when the probability of winning is $1/10$.}\label{fig:unnamed-chunk-123}
 \end{marginfigure}
 
 What if I were less confident in rain, say just \(1/10\) confident? Then I'd be willing to stake much less. I'd need you to put down at least \(\$9\) before I'd put down even \(\$1\). Only then would the bet have \(0\) expected value:
@@ -6250,7 +6315,7 @@ You can memorize this formula, but personally, I prefer to apply the recipe. It 
 
 Personal probabilities aren't revealed by just any old betting rate a person will accept. They're exposed by the person's \emph{fair} betting rates.
 
-Consider: I'd take a bet where you pay me a million dollars of it rains today, and I pay you just \(\$1\) otherwise. But that's because I think this bet is \emph{advantageous}. I don't think this is a fair bet, which is why I'd only take one side of it. I wouldn't take the reverse deal, where I win \(\$1\) if it rains and I pay you a million dollars if it does. That's a terrible deal from my point of view!
+Consider: I'd take a bet where you pay me a million dollars if it rains today, and I pay you just \(\$1\) otherwise. But that's because I think this bet is \emph{advantageous}. I don't think this is a fair bet, which is why I'd only take one side of it. I wouldn't take the reverse deal, where I win \(\$1\) if it rains and I pay you a million dollars if it does. That's a terrible deal from my point of view!
 
 So you can't just look at a bet a person is willing to accept. You have to look at a bet they're willing to accept \emph{because they think it's fair}.
 
@@ -6332,9 +6397,9 @@ We have to be careful though. This technique only works if the subject's betting
     What is Li's personal probability that Musk will be elected? (Assume his personal probabilities obey the laws of probability.)
   \end{enumerate}
 \item
-  Sam thinks the Saskatchewan Roughriders will win the next Grey Cup game. She's confident enough that she regards the following deal as fair: if they win, you pay her \(\$3\), otherwise she'll pay you \(\$7\).
+  Sam thinks the Saskatchewan Roughriders will win the next Grey Cup game. She's confident enough that she regards the following deal as fair: if they win, you pay her \(\$2\), otherwise she'll pay you \(\$8\).
 
-  Suppose Sam equates money with utility: for her, the utility of gaining \(\$3\) is \(3\), the utility of losing \(\$7\) is \(-7\), and so on.
+  Suppose Sam equates money with utility: for her, the utility of gaining \(\$2\) is \(2\), the utility of losing \(\$8\) is \(-8\), and so on.
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
@@ -6343,7 +6408,7 @@ We have to be careful though. This technique only works if the subject's betting
     What is Sam's personal probability that the Roughriders will win the Grey Cup?
   \end{enumerate}
 
-  Sam thinks the Roughriders will have an even better chance in the snow. If it snows during the game, she will regard the following deal as fair: if the Roughriders win, you pay her \(\$3\), otherwise she'll pay you \(\$12\).
+  Sam thinks the Roughriders will have an even better chance in the snow. If it snows during the game, she will regard the following deal as fair: if the Roughriders win, you pay her \(\$1\), otherwise she'll pay you \(\$9\).
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
@@ -6414,7 +6479,7 @@ We have to be careful though. This technique only works if the subject's betting
   \item
     Now what is Freya's personal probability for snow tomorrow?
   \item
-    Before she checked the forecast, what was Freya's personal probability that the forecast would predict snow and be right.
+    Before she checked the forecast, what was Freya's personal probability that the forecast would predict snow and be right?
   \end{enumerate}
 \item
   Ben's favourite TV show is \emph{Community}. He thinks it's so good they'll make a movie of it. In fact, he's so confident that he thinks the following is a fair deal: he pays you \(\$8\) if they don't make it into a movie and you pay him \(\$1\) if they do. Assume Ben equates money with utility.
@@ -6465,6 +6530,10 @@ report}, Sep.~2, 1805
 
 The Bayesian answer uses a special betting strategy. If someone violates the laws of probability, we can use this strategy to take advantage of them. We can sucker them into a deal that will lose them money no matter what.
 
+\begin{marginfigure}
+``A bet is a tax on bullshit.'' ---Alex Tabarrok
+\end{marginfigure}
+
 For example, suppose Sam violates a very simple rule of probability. His personal probability in the proposition \(2+2=4\) is only \(9/10\), when it should be \(1\). (Because it's impossible for \(2+2\) to be anything other than \(4\).) Sam has violated the laws of probability, so he'll be willing to accept a very bad deal, as follows.
 
 We put two marbles into an empty bucket, and then two more. We then offer Sam the following deal: we pay him \(90\)¢, and in exchange he pays us \(\$1\) if the bucket has a total of \(4\) marbles in it.
@@ -6499,7 +6568,7 @@ This problem was devised by the same psychologists who studied
 Amos Tversky. This one is from a 1983 study of theirs.
 \end{marginfigure}
 
-\BeginKnitrBlock{problem}
+\begin{problem}
 Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?
 
 \begin{enumerate}
@@ -6510,7 +6579,7 @@ Linda is 31 years old, single, outspoken, and very bright. She majored in philos
 \item
   Linda is a bank teller and is active in the feminist movement.
 \end{enumerate}
-\EndKnitrBlock{problem}
+\end{problem}
 
 In psychology experiments, almost everyone chooses (2). But that can't be right, and you don't need to know anything about Linda to prove it.
 
@@ -6546,18 +6615,18 @@ Thinking through a Dutch book can be tricky, but a table like \ref{tab:banktelle
 \begin{longtable}[]{@{}llrrr@{}}
 \caption{\label{tab:banktellerdb}A Dutch book for the bank teller fallacy}\tabularnewline
 \toprule
-& & \(B \wedge F\) & \(B \wedge \neg F\) & \(\neg B\)\tabularnewline
+& & \(B \wedge F\) & \(B \wedge \neg F\) & \(\neg B\) \\
 \midrule
 \endfirsthead
 \toprule
-& & \(B \wedge F\) & \(B \wedge \neg F\) & \(\neg B\)\tabularnewline
+& & \(B \wedge F\) & \(B \wedge \neg F\) & \(\neg B\) \\
 \midrule
 \endhead
-Bet \(1\) & Investment & \(\$0.20\) & \(\$0.20\) & \(\$0.20\)\tabularnewline
-& Return & \(-\$1.00\) & \(-\$1.00\) & \(\$0.00\)\tabularnewline
-Bet \(2\) & Investment & \(-\$0.25\) & \(-\$0.25\) & \(-\$0.25\)\tabularnewline
-& Return & \(\$1.00\) & \(\$0.00\) & \(\$0.00\)\tabularnewline
-Net & & \(-\$0.05\) & \(-\$1.05\) & \(-\$0.05\)\tabularnewline
+Bet \(1\) & Investment & \(\$0.20\) & \(\$0.20\) & \(\$0.20\) \\
+& Return & \(-\$1.00\) & \(-\$1.00\) & \(\$0.00\) \\
+Bet \(2\) & Investment & \(-\$0.25\) & \(-\$0.25\) & \(-\$0.25\) \\
+& Return & \(\$1.00\) & \(\$0.00\) & \(\$0.00\) \\
+Net & & \(-\$0.05\) & \(-\$1.05\) & \(-\$0.05\) \\
 \bottomrule
 \end{longtable}
 
@@ -6603,20 +6672,20 @@ So we can make a Dutch book against Suzy. In this case she's overconfident in bo
 The end result is that Suzy loses \(10\)¢ no matter what. At the beginning she pays us \(\$0.70 + \$0.40 = \$1.10\). Then she wins back \(\$1\), either for the bet on \(E\) or for the bet on \(\neg E\). But in the end, she still has a net loss of \(10\)¢.
 
 \begin{longtable}[]{@{}llrr@{}}
-\caption{\label{tab:unnamed-chunk-126}A Dutch book for Suzy the Scientist}\tabularnewline
+\caption{\label{tab:unnamed-chunk-130}A Dutch book for Suzy the Scientist}\tabularnewline
 \toprule
-& & \(E\) & \(\neg E\)\tabularnewline
+& & \(E\) & \(\neg E\) \\
 \midrule
 \endfirsthead
 \toprule
-& & \(E\) & \(\neg E\)\tabularnewline
+& & \(E\) & \(\neg E\) \\
 \midrule
 \endhead
-Bet \(1\) & Investment & \(-\$0.70\) & \(-\$0.70\)\tabularnewline
-& Return & \(\$1.00\) & \(\$0.00\)\tabularnewline
-Bet \(2\) & Investment & \(-\$0.40\) & \(-\$0.40\)\tabularnewline
-& Return & \(\$0.00\) & \(\$1.00\)\tabularnewline
-Net & & \(-\$0.10\) & \(-\$0.10\)\tabularnewline
+Bet \(1\) & Investment & \(-\$0.70\) & \(-\$0.70\) \\
+& Return & \(\$1.00\) & \(\$0.00\) \\
+Bet \(2\) & Investment & \(-\$0.40\) & \(-\$0.40\) \\
+& Return & \(\$0.00\) & \(\$1.00\) \\
+Net & & \(-\$0.10\) & \(-\$0.10\) \\
 \bottomrule
 \end{longtable}
 
@@ -6652,7 +6721,7 @@ Net & & \(-\$0.10\) & \(-\$0.10\)\tabularnewline
     An explanation why these bets will lead to a sure loss for Marco no matter what.
   \end{itemize}
 \item
-  Maya is the star of her high school hockey team. My personal probably that she'll go to university on an athletic scholarship is \(3/5\). But because she doesn't like schoolwork, my personal probability that she'll go to university is \(1/3\). Explain how to make a Dutch book against me.
+  Maya is the star of her high school hockey team. My personal probability that she'll go to university on an athletic scholarship is \(3/5\). But because she doesn't like schoolwork, my personal probability that she'll go to university is \(1/3\). Explain how to make a Dutch book against me.
 \item
   Saia isn't sure what grade she'll get in her statistics class. But she thinks the following deals are all fair:
 
@@ -6734,7 +6803,29 @@ Net & & \(-\$0.10\) & \(-\$0.10\)\tabularnewline
     Neither is true.
   \end{enumerate}
 \item
-  True or false: if someone has personal probabilities \(\p(A \wedge B) = \p(A \vee B)\), then they can be Dutch booked.
+  Suppose \(A\) and \(B\) are compatible propositions. True or false: if someone has personal probabilities \(\p(A \wedge B) = \p(A \vee B)\), then they can be Dutch booked.
+\item
+  Suppose a fair coin will be flipped twice. You and I have flipped this coin many times before, so we know that it is fair. But Frank doesn't know about our experiments; in fact he suspects the coin is not fair. His personal probabilities are as follows:
+  \begin{align*}
+  \p(H_1 \wedge H_2) &= 3/10, \\
+  \p(H_1 \wedge T_2) &= 2/10, \\
+  \p(T_1 \wedge H_2) &= 2/10, \\
+  \p(T_1 \wedge T_2) &= 3/10.
+  \end{align*}
+  Assume we can only make two bets with Frank, a bet on \(H_1\) and a bet on \(H_2\). The stake for each bet must be \(\$1\). What is the most we can win from him in a Dutch book? In other words, what is the maximum amount we can guarantee we will win from him? (Note that this is different from the maximum we \emph{might} win from him if we get lucky with the coin flips.)
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \(\$1\)
+  \item
+    \(\$0.50\)
+  \item
+    \(\$0.40\)
+  \item
+    \(\$0\): we cannot make a Dutch book against Frank
+  \end{enumerate}
 \end{enumerate}
 
 \hypertarget{priors}{%
@@ -6774,7 +6865,7 @@ For example, imagine I'm going to roll a six-sided die behind a screen so you ca
 Also before I tell you the result, what is your personal probability that the die will land on a high number \emph{given that it lands on an even number}? Let's assume your answer here is \(\pr(H \given E) = 2/3\).
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-128-1} \caption[Prior vs]{Prior vs. posterior probabilities in a die-roll problem. $H$ $=$ the die landed $4$, $5$, or $6$. $E$ $=$ the die landed even. $Pr(H) = 1/2$, $Pr^*(H) = 2/3$.}\label{fig:unnamed-chunk-128}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-132-1} \caption[Prior vs]{Prior vs. posterior probabilities in a die-roll problem. $H$ $=$ the die landed $4$, $5$, or $6$. $E$ $=$ the die landed even. $Pr(H) = 1/2$, $Pr^*(H) = 2/3$.}\label{fig:unnamed-chunk-132}
 \end{marginfigure}
 
 Now I roll the die and I tell you it did in fact land even. What is your new personal probability that it landed on a high number? Following the Conditionalization rule, \(\po(H) = \pr(H \given E) = 2/3\).
@@ -6828,7 +6919,7 @@ In the die example, there are six possible outcomes. So each would have prior pr
 Here's one more example. In North American roulette, the wheel has \(38\) pockets, \(2\) of which are green: zero (\(\mathtt{0}\)) and double-zero (\(\mathtt{00}\)). If you don't know whether the wheel is fair, what should your prior probability be that the ball will land in a green pocket?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-130-9} \caption[A North American roulette wheel]{A North American roulette wheel}\label{fig:unnamed-chunk-130}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-134-1} \caption[A North American roulette wheel]{A North American roulette wheel}\label{fig:unnamed-chunk-134}
 \end{marginfigure}
 
 According to the Principle of Indifference, each space has equal probability, \(1/38\). So \(\pr(G) = 1/19\):
@@ -6853,7 +6944,7 @@ If there is an interval of possible outcomes from \(a\) to \(b\), the probabilit
 \end{description}
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-131-1} \caption[The continuous version of the Principle of Indifference]{The continuous version of the Principle of Indifference: $Pr(H)$ is the length of the $c$-to-$d$ interval divided by the length of the whole $a$-to-$b$ interval.}\label{fig:unnamed-chunk-131}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-135-1} \caption[The continuous version of the Principle of Indifference]{The continuous version of the Principle of Indifference: $Pr(H)$ is the length of the $c$-to-$d$ interval divided by the length of the whole $a$-to-$b$ interval.}\label{fig:unnamed-chunk-135}
 \end{marginfigure}
 
 The idea is that the prior probability of a hypothesis \(H\) is just the proportion of possibilities where \(H\) occurs. If the full range of possibilities goes from \(a\) to \(b\), and the subrange of \(H\) possibilities is from \(c\) to \(d\), then we just calculate how big that subrange is compared to the whole range.
@@ -6872,7 +6963,7 @@ That seems reasonable, but now suppose we rephrase the question. What is the pro
 But the answer should have been the same as before: it's the same question, just rephrased! If the sides are between \(1\) and \(2\) feet long, that's the same as the area being between \(1\) ft\(^2\) and \(4\) ft\(^2\).
 
 \begin{marginfigure}
-\includegraphics[width=1.33in]{img/bertrand} \caption[Joseph Bertrand (1822--1900) presented this paradox in $1889$]{Joseph Bertrand (1822--1900) presented this paradox in $1889$. He used a different example though. Our example, which is easier to understand, comes from  Bas van Fraassen.}\label{fig:unnamed-chunk-132}
+\includegraphics[width=1.33in]{img/bertrand} \caption[Joseph Bertrand (1822--1900) presented this paradox in $1889$]{Joseph Bertrand (1822--1900) presented this paradox in $1889$. He used a different example though. Our example, which is easier to understand, comes from  Bas van Fraassen.}\label{fig:unnamed-chunk-136}
 \end{marginfigure}
 
 So which answer is right, \(1/2\) or \(3/8\)? It depends on which dimension we apply the Principle of Indifference to: length vs.~area. And there doesn't seem to be any principled way of deciding which dimension to use. So we don't have a principled way to apply the Principle of Indifference.
@@ -7015,7 +7106,7 @@ So what's the right way, according to frequentism? The next two chapters introdu
 \chapter{Significance Testing}\label{significance-testing}}
 
 \begin{epigraph}
-\ldots{}it's really more intelligent to be able to simplify things than
+\ldots it's really more intelligent to be able to simplify things than
 to complicate them. Even if some people think it makes you look
 stupid.\\
 ---Eugenia Cheng
@@ -7035,7 +7126,7 @@ That's the rough idea behind the most popular frequentist approach to hypothesis
 \newthought{Suppose} your friend likes to do magic tricks. Their favourite trick involves flipping a special coin and predicting how it will land. You're curious how the trick is done, and you suspect the coin is biased. So you flip it \(100\) times to see what happens. It lands heads \(67\) out of \(100\) times. Does that mean the coin is biased after all? Or is \(67\) heads out of \(100\) flips within the realm of plausibility for a fair coin?
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/binom100-9} \caption[The probability of getting $k$ heads out of $100$ flips of a fair coin]{The probability of getting $k$ heads out of $100$ flips of a fair coin.}\label{fig:binom100}
+\includegraphics{_main_files/figure-latex/binom100-1} \caption[The probability of getting $k$ heads out of $100$ flips of a fair coin]{The probability of getting $k$ heads out of $100$ flips of a fair coin.}\label{fig:binom100}
 \end{marginfigure}
 
 Figure \ref{fig:binom100} shows the probability for each number of heads we might get, if the coin is fair. Notice how unlikely \(67\) heads is, compared to say \(50\) heads, or even compared to \(60\) heads. So it seems like a stretch to just write off our \(67\) heads as a coincidence. Plausibly, the coin is biased toward heads.
@@ -7045,7 +7136,7 @@ What if we'd gotten only \(65\) heads though? Or just \(60\)? At what point do w
 A common convention is to draw the line at \(95\%\) probability. If a coin is fair, then \(95\%\) of the time it will land heads between \(40\) and \(60\) times out of \(100\) tosses. That's not obvious by the way: I used a computer to find that \(40\)-to-\(60\) range. But we'll come back to these calculations in a bit.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/binom100fences-9} \caption[In $95\%$ of cases, a fair coin will land heads between $40$ and $60$ times out of $100$ flips]{In $95\%$ of cases, a fair coin will land heads between $40$ and $60$ times out of $100$ flips. If the number of heads falls outside that range, we conclude the coin is not fair.}\label{fig:binom100fences}
+\includegraphics{_main_files/figure-latex/binom100fences-1} \caption[In $95\%$ of cases, a fair coin will land heads between $40$ and $60$ times out of $100$ flips]{In $95\%$ of cases, a fair coin will land heads between $40$ and $60$ times out of $100$ flips. If the number of heads falls outside that range, we conclude the coin is not fair.}\label{fig:binom100fences}
 \end{figure}
 
 The key idea for now is this. The hypothesis that the coin is fair fails the test if the number of heads falls \emph{outside} the \(40\)-to-\(60\) range. As Figure \ref{fig:binom100fences} illustrates, we'll reject the fair hypothesis if the outcome of our experiment is one of the red ones.
@@ -7053,7 +7144,7 @@ The key idea for now is this. The hypothesis that the coin is fair fails the tes
 We call the result of an experiment \textbf{\emph{statistically significant}} when it falls outside the \(95\%\) range. So the red outcomes in Figure \ref{fig:binom100fences} are statistically significant, the blue ones are not.
 
 \begin{marginfigure}
-\includegraphics[width=0.89in]{img/fisher} \caption[Ronald A]{Ronald A. Fisher (1890--1962) was a key figure in establishing the ideas behind statistical significance.}\label{fig:unnamed-chunk-135}
+\includegraphics[width=0.89in]{img/fisher} \caption[Ronald A]{Ronald A. Fisher (1890--1962) was a key figure in establishing the ideas behind statistical significance.}\label{fig:unnamed-chunk-139}
 \end{marginfigure}
 
 The idea behind this terminology is that a red outcome tells us something about our hypothesis that the coin is fair. In particular it tells us something negative: the hypothesis is not looking good. Because \(67\) heads would be a big coincidence if the hypothesis were true.
@@ -7068,7 +7159,7 @@ In fact we don't have to make \(95\%\) the cutoff. In some sciences it's customa
 To be explicit about what cutoff we're using, we describe the result as statistically significant \emph{at such-and-such a level}. For example, if we're using the \(95\%\) cutoff, we say the result is \textbf{\emph{significant at the \(.05\) level}}. And if we're using the \(99\%\) cutoff, we say the result is \textbf{\emph{significant at the \(.01\) level}}. And so on.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/binom100fences99-9} \caption[In $99\%$ of cases, a fair coin will land heads between $37$ and $63$ times out of $100$ flips]{In $99\%$ of cases, a fair coin will land heads between $37$ and $63$ times out of $100$ flips.}\label{fig:binom100fences99}
+\includegraphics{_main_files/figure-latex/binom100fences99-1} \caption[In $99\%$ of cases, a fair coin will land heads between $37$ and $63$ times out of $100$ flips]{In $99\%$ of cases, a fair coin will land heads between $37$ and $63$ times out of $100$ flips.}\label{fig:binom100fences99}
 \end{marginfigure}
 
 Different sciences have different conventions about where to put the cutoff. Social sciences like psychology typically use the \(95\%\) cutoff. Only when the outcome of a study is significant at the \(.05\) level is the hypothesis rejected. But medical and physical sciences often use a stricter cutoff like \(99\%\). A finding has to be significant at the \(.01\) level to disprove a hypothesis then.
@@ -7085,7 +7176,7 @@ We'll come back in \protect\hyperlink{chlindley}{the next chapter} for a deeper 
 You may have noticed that the probabilities in our hundred-flips experiment look a lot like the famous ``bell curve.'' In fact they line up almost perfectly, as Figure \ref{fig:napprox} illustrates.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/napprox-9} \caption[A bell curve (red) overlayed on the true probabilities (blue)]{A bell curve (red) overlayed on the true probabilities (blue).}\label{fig:napprox}
+\includegraphics{_main_files/figure-latex/napprox-1} \caption[A bell curve (red) overlayed on the true probabilities (blue)]{A bell curve (red) overlayed on the true probabilities (blue).}\label{fig:napprox}
 \end{marginfigure}
 
 \begin{marginfigure}
@@ -7497,7 +7588,7 @@ We'll deepen our understanding of this point in \protect\hyperlink{chlindley}{th
     The result \textbf{is} significant at the \(.01\) level if \(k > 32\).
   \end{enumerate}
 \item
-  Suppose \(200\) people are lined up side-by-side, each one holding a fair coin. Each person flips their coin \(64\) times; every time it lands heads they step \(1\) meter forward, each time it lands tails they step \(1\) meter backward. Use a normal approximation to answer the following question: after everyone finishes their \(64\) steps, approximately how many people will be standing between \(4\) and \(8\) meters behind the starting line?
+  Suppose \(200\) people are lined up side-by-side, each one holding a fair coin. Each person flips their coin \(64\) times; every time it lands heads they step \(1\) meter forward, each time it lands tails they step \(1\) meter backward. Use a normal approximation to answer the following question: after everyone finishes their \(64\) steps, approximately how many people will be standing between \(8\) and \(16\) meters behind the starting line?
 \item
   Suppose we are testing the null hypothesis that a coin is fair: \(p = 1/2\). We do \(n\) flips and observe \(k\) heads; it turns out \(k\) is greater than the expected mean \(\mu = n/2\). In fact \(k\) is more than \(3\) standard deviations above the mean: \(k > \mu + 3 \sigma\). Which of the following must be true then?
 
@@ -7515,6 +7606,8 @@ We'll deepen our understanding of this point in \protect\hyperlink{chlindley}{th
   \item
     Not enough information is given.
   \end{enumerate}
+\item
+  Your friend is testing the hypothesis that a coin tends to land heads \(40\%\) of the time, with the tosses independent. They flip the coin repeatedly, and \(48\%\) of the flips land heads. If this result is statistically significant at the \(.05\) level, they must have flipped the coin more than \(n\) times. What is \(n\)? Use a normal approximation, and give the highest value of \(n\) supported by the information given.
 \end{enumerate}
 
 \hypertarget{chlindley}{%
@@ -7606,7 +7699,7 @@ From a Bayesian point of view, significance testing focuses on just one term in 
 So significance testing is based on a mistake, according to Bayesian critics. It ignores essential \protect\hyperlink{baserate}{base rate} information, namely how many of the hypotheses we study are true. And this can lead to very wrong results, as we learned from the taxicab problem in \protect\hyperlink{chbayes}{Chapter} \ref{chbayes}.
 
 \begin{marginfigure}
-\includegraphics[width=0.58in]{img/jeffreys} \caption[Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$]{Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox.}\label{fig:unnamed-chunk-149}
+\includegraphics[width=0.58in]{img/jeffreys} \caption[Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$]{Harold Jeffreys (1891--1989) first raised the problem known as Lindley's paradox in $1939$. Dennis Lindley labeled it a paradox in $1957$, hence the name. It is sometimes called the Jeffreys-Lindley paradox.}\label{fig:unnamed-chunk-153}
 \end{marginfigure}
 
 This critique of frequentism is sharpened by a famous problem known as Lindley's paradox.
@@ -7631,7 +7724,7 @@ Intuitively, this result fits much better with the \(50\%\) hypothesis than the 
 But if she uses significance testing, she won't get this result. In fact she'll get an \emph{impossible} result. Let's see how.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-151-1} \caption[The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$]{The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$.}\label{fig:unnamed-chunk-151}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-155-1} \caption[The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$]{The result $k = 36$ out of $n = 48$ is easily statistically significant for the null hypothesis $p = .25$.}\label{fig:unnamed-chunk-155}
 \end{marginfigure}
 
 Our florist starts by testing the hypothesis that \(25\%\) of the bulbs in the shipment are red. She calculates \(\mu\) and \(\sigma\):
@@ -7644,7 +7737,7 @@ Our florist starts by testing the hypothesis that \(25\%\) of the bulbs in the s
 The \(99\%\) range is \(12 \pm (3)(3)\), or from \(3\) to \(21\). Her finding of \(k = 36\) is nowhere close to this range, so the result is significant at the \(.01\) level. She rejects the \(25\%\) hypothesis.
 
 \begin{marginfigure}
-\includegraphics{_main_files/figure-latex/unnamed-chunk-152-1} \caption[The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$]{The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$.}\label{fig:unnamed-chunk-152}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-156-1} \caption[The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$]{The result $k = 36$ out of $n = 48$ is also statistically significant for the null hypothesis $p = .5$.}\label{fig:unnamed-chunk-156}
 \end{marginfigure}
 
 So far so good, but what if she tests the \(50\%\) hypothesis too? She calculates the new \(\mu\) and \(\sigma\):
@@ -7815,13 +7908,13 @@ There are three connectives: \(\neg\) (negation), \(\wedge\) (conjunction), and 
 
 \begin{longtable}[]{@{}ccccc@{}}
 \toprule
-\(A\) & \(B\) & \(\neg A\) & \(A \wedge B\) & \(A \vee B\)\tabularnewline
+\(A\) & \(B\) & \(\neg A\) & \(A \wedge B\) & \(A \vee B\) \\
 \midrule
 \endhead
-T & T & F & T & T\tabularnewline
-T & F & F & F & T\tabularnewline
-F & T & T & F & T\tabularnewline
-F & F & T & F & F\tabularnewline
+T & T & F & T & T \\
+T & F & F & F & T \\
+F & T & T & F & T \\
+F & F & T & F & F \\
 \bottomrule
 \end{longtable}
 \item[Logical Truth (Tautology)]
@@ -8005,7 +8098,7 @@ Let's start with one of the easier laws to derive.
 \(\p(\neg A) = 1 - \p(A)\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 To prove this rule, start by noticing that \(A \vee \neg A\) is a logical truth. So we can reason as follows:
 \[
@@ -8015,7 +8108,7 @@ To prove this rule, start by noticing that \(A \vee \neg A\) is a logical truth.
   \p(\neg A)         &= 1 - \p(A)         & \mbox{ by algebra.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 The little square indicates the end of the proof. Notice how each line of our proof is justified by either applying an axiom or using basic algebra. This ensures it's a valid deductive argument.
 
@@ -8026,7 +8119,7 @@ Now we can use the Negation rule to establish the flipside of the Tautology rule
 If \(A\) is a contradiction then \(\p(A) = 0\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 Notice that if \(A\) is a contradiction, then \(\neg A\) must be a tautology. So \(\p(\neg A) = 1\). Therefore:
 \[
@@ -8036,7 +8129,7 @@ Notice that if \(A\) is a contradiction, then \(\neg A\) must be a tautology. So
         &= 0              & \mbox{by arithmetic.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 \hypertarget{conditional-probability-the-multiplication-rule}{%
 \section*{Conditional Probability \& the Multiplication Rule}\label{conditional-probability-the-multiplication-rule}}
@@ -8056,7 +8149,7 @@ From this definition we can derive the following theorem.
 If \(\p(B) > 0\), then \(\p(A \wedge B) = \p(A \given B)\p(B)\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 \[
   \begin{aligned}
@@ -8065,7 +8158,7 @@ If \(\p(B) > 0\), then \(\p(A \wedge B) = \p(A \given B)\p(B)\).
   \p(A \wedge B)      &= \p(A \given B)\p(B)          & \mbox{ by algebra.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 Notice that the first step in this proof wouldn't make sense if we didn't assume from the beginning that \(\p(B) > 0\). That's why the theorem begins with the qualifier, ``If \(\p(B) > 0\)\ldots{}''.
 
@@ -8080,7 +8173,7 @@ Next we'll prove the Equivalence rule and the General Addition rule. These proof
 When \(A\) and \(B\) are logically equivalent, \(\p(A) = \p(B)\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 Suppose that \(A\) and \(B\) are logically equivalent. Then \(\neg A\) and \(B\) are mutually exclusive: if \(B\) is true then \(A\) must be true, hence \(\neg A\) false. So \(B\) and \(\neg A\) can't both be true.
 
@@ -8107,7 +8200,7 @@ Combining the previous two equations we get:
     \p(A) &= \p(B) & \mbox{ by algebra}.
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 Now we can use this theorem to derive the General Addition rule.
 
@@ -8116,7 +8209,7 @@ Now we can use this theorem to derive the General Addition rule.
 \(\p(A \vee B) = \p(A) + \p(B) - \p(A \wedge B)\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 Start with the observation that \(A \vee B\) is logically equivalent to:
 \[ (A \wedge \neg B) \vee (A \wedge B) \vee (\neg A \wedge B). \]
@@ -8156,7 +8249,7 @@ Putting the previous four equations together, we can then derive:
                  &= \p(A) + \p(B) - \p(A \wedge B) & \mbox{by algebra.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 \hypertarget{total-probability-bayes-theorem}{%
 \section*{Total Probability \& Bayes' Theorem}\label{total-probability-bayes-theorem}}
@@ -8171,16 +8264,16 @@ If \(0 < \p(B) < 1\), then
 \[ \p(A) = \p(A \given B)\p(B) + \p(A \given  \neg B)\p(\neg B). \]
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 \[
   \begin{aligned}
     \p(A) &= \p((A \wedge B) \vee (A \wedge \neg B)) & \mbox{ by Equivalence}\\
-          &= \p(A \wedge B) + (A \wedge \neg B) & \mbox{ by Additivity}\\
+          &= \p(A \wedge B) + \p(A \wedge \neg B) & \mbox{ by Additivity}\\
           &= \p(A \given B)\p(B) + \p(A \given \neg B)\p(\neg B) & \mbox{ by Multiplication.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 Notice, the last line of this proof only makes sense if \(\p(B) > 0\) and \(\p(\neg B) > 0\). That's the same as \(0 < \p(B) < 1\), which is why the theorem begins with the condition: ``If \(0 < \p(B) < 1\)\ldots{}''.
 
@@ -8192,7 +8285,7 @@ If \(\p(A),\p(B)>0\), then
 \[ \p(A \given B) = \p(A)\frac{\p(B \given A)}{\p(B)}. \]
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 \[
   \begin{aligned}
@@ -8201,7 +8294,7 @@ If \(\p(A),\p(B)>0\), then
               &= \p(A)\frac{\p(B \given A)}{\p(B)} & \mbox{by algebra.}\\
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 And next the long version:
 
@@ -8211,7 +8304,7 @@ If \(1 > \p(A) > 0\) and \(\p(B)>0\), then
 \[ \p(A \given B) = \frac{\p(A)\p(B \given A)}{\p(A)\p(B \given A) + \p(\neg A)\p(B \given \neg A)}. \]
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 \[
   \begin{aligned}
@@ -8220,7 +8313,7 @@ If \(1 > \p(A) > 0\) and \(\p(B)>0\), then
       &= \frac{\p(A)\p(B \given A)}{\p(A)\p(B \given A) + \p(\neg A)\p(B \given \neg A)} & \mbox{by Total Probability.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 \hypertarget{independence-1}{%
 \section*{Independence}\label{independence-1}}
@@ -8240,7 +8333,7 @@ Now we can state and prove the Multiplication rule.
 If \(A\) is independent of \(B\), then \(\p(A \wedge B) = \p(A)\p(B)\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 Suppose \(A\) is independent of \(B\). Then:
 \[
@@ -8250,7 +8343,7 @@ Suppose \(A\) is independent of \(B\). Then:
     \p(A \wedge B) &= \p(A) \p(B)          &  \mbox{ by algebra.}
 \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 Finally, we prove another useful fact about independence, namely that it goes both ways.
 
@@ -8259,7 +8352,7 @@ Finally, we prove another useful fact about independence, namely that it goes bo
 If \(A\) is independent of \(B\), then \(B\) is independent of \(A\).
 \end{description}
 
-\BeginKnitrBlock{proof}
+\begin{proof}
 \iffalse{} {Proof. } \fi{}
 To derive this fact, suppose \(A\) is independent of \(B\). Then:
 \[
@@ -8270,7 +8363,7 @@ To derive this fact, suppose \(A\) is independent of \(B\). Then:
     \p(B \given A)               &= \p(B)       & \mbox{ by definition.}
   \end{aligned}
 \]
-\EndKnitrBlock{proof}
+\end{proof}
 
 We've now established that the laws of probability used in this book can be derived from the three axioms we began with.
 
@@ -8293,7 +8386,7 @@ It seems like a fundamental principle of scientific inquiry that we expect the u
 \addcontentsline{toc}{section}{A Gruesome Concept}
 
 \begin{marginfigure}
-\includegraphics[width=0.74in]{img/goodman} \caption[Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s]{Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s.}\label{fig:unnamed-chunk-165}
+\includegraphics[width=0.74in]{img/goodman} \caption[Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s]{Nelson Goodman (1906--1988) discovered the grue paradox in the $1940$s and '$50$s.}\label{fig:unnamed-chunk-169}
 \end{marginfigure}
 
 But in the \(1940\)s, Nelson Goodman discovered a problem with the Principle of Induction. To illustrate the problem he invented a very curious concept, \emph{grue}.
@@ -8307,7 +8400,7 @@ There is a second way for an object to be grue: some blue objects are grue. Not 
 As usual, it helps to have a diagram: see Figure \ref{fig:gruegraph}. Here is the official definition of grue.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/gruegraph-9} \caption[The definition of grue]{The definition of grue}\label{fig:gruegraph}
+\includegraphics{_main_files/figure-latex/gruegraph-1} \caption[The definition of grue]{The definition of grue}\label{fig:gruegraph}
 \end{figure}
 
 \begin{description}
@@ -8373,7 +8466,7 @@ Here's one very natural answer. The problem with grue is that it's \emph{disjunc
 But the beauty of Goodman's puzzle is the neat way it exposes the flaw in this answer. It allows us to make `green' the disjunctive concept instead! How? We start by building grue a friend, a concept to fill in the missing spaces in our original diagram. We'll call it \emph{bleen}: see Figure \ref{fig:gruebleengraph}.
 
 \begin{figure}
-\includegraphics{_main_files/figure-latex/gruebleengraph-9} \caption[Defining bleen, a counterpart to grue]{Defining bleen, a counterpart to grue}\label{fig:gruebleengraph}
+\includegraphics{_main_files/figure-latex/gruebleengraph-1} \caption[Defining bleen, a counterpart to grue]{Defining bleen, a counterpart to grue}\label{fig:gruebleengraph}
 \end{figure}
 
 Now we can define green in terms of grue and bleen.
@@ -8426,6 +8519,66 @@ There is even more to the similarity between these two paradoxes. Both paradoxes
 
 To this day, we do not have an answer to the question: which language is the right one to use, and why?
 
+\hypertarget{exercises-19}{%
+\section*{Exercises}\label{exercises-19}}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Suppose you have a large urn of emeralds, and you want to compare the following two hypotheses:
+  \begin{align*}
+  H_1 &= \text{all the emeralds in the urn are green,}\\
+  H_2 &= \text{all the emeralds in the urn are grue.}
+  \end{align*}
+  You draw \(10\) emeralds from the urn, and all \(10\) are green. Assuming the two hypotheses have the same prior probability, how do their posterior probabilities compare?
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \(\p(H_1 \given E) > \p(H_2 \given E)\)
+  \item
+    \(\p(H_1 \given E) < \p(H_2 \given E)\)
+  \item
+    \(\p(H_1 \given E) = \p(H_2 \given E)\)
+  \end{enumerate}
+\item
+  Suppose you are exploring the relationship between temperature and pressure for a newly discovered gas. You have a sample of the gas in a container where you can control the temperature. So you try \(8\) different temperatures, and measure the pressure at each temperature. The results look like the points in Figure \ref{fig:curvefitting}, where the \(x\)-axis is temperature and the \(y\)-axis is pressure.
+
+  You want to compare two hypotheses about the true relationship between pressure and temperature, portrayed with dashes in Figure \ref{fig:curvefitting}:
+  \begin{align*}
+  H_1 &= \text{the straight line,}\\
+  H_2 &= \text{the oscillating curve.}
+  \end{align*}
+  Assuming the two hypotheses have the same prior probability, how do their posterior probabilities compare?
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \(\p(H_1 \given E) > \p(H_2 \given E)\)
+  \item
+    \(\p(H_1 \given E) < \p(H_2 \given E)\)
+  \item
+    \(\p(H_1 \given E) = \p(H_2 \given E)\)
+  \end{enumerate}
+\item
+  Write a short essay (\(3\)--\(4\) paragraphs) explaining the grue paradox. Your essay should include all of the following:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    a clear, accurate explanation of the Principle of Induction,
+  \item
+    a clear, accurate explanation of the concept grue,
+  \item
+    a clear, accurate explanation of the challenge grue poses for the Principle of Induction, and
+  \item
+    a clear, accurate explanation of the ``disjunctivitis'' solution to the paradox, and Goodman's reply to that solution.
+  \end{itemize}
+\end{enumerate}
+
 \hypertarget{the-problem-of-induction}{%
 \chapter{The Problem of Induction}\label{the-problem-of-induction}}
 
@@ -8449,7 +8602,7 @@ We noted in \protect\hyperlink{logic}{Chapter 2} that there are two kinds of arg
 Could we give an inductive argument for the Principle of Induction? At first it seems we could. Scientists have been using inductive reasoning for millenia, often with great success. Indeed, it seems humans, and other creatures too, have relied on it for much longer, and could not have survived without it. So the Principle of Induction has a very strong track record. Isn't that a good argument for believing it's correct?
 
 \begin{marginfigure}
-\includegraphics[width=1.33in]{img/hume} \caption[David Hume (1711--1776) raised the problem of induction in $1739$]{David Hume (1711--1776) raised the problem of induction in $1739$. Our presentation of it here is somewhat modernized from his original argument.}\label{fig:unnamed-chunk-169}
+\includegraphics[width=1.33in]{img/hume} \caption[David Hume (1711--1776) raised the problem of induction in $1739$]{David Hume (1711--1776) raised the problem of induction in $1739$. Our presentation of it here is somewhat modernized from his original argument.}\label{fig:unnamed-chunk-173}
 \end{marginfigure}
 
 No, because the argument is circular. It uses the Principle of Induction to justify believing in the Principle of Induction. Consider that the argument we are attempting looks like this:
@@ -8469,8 +8622,8 @@ Thankfully, our universe hasn't been so mischievous. We get surprised now and ag
 
 Nature \emph{could} have been mischievous, totally unpredictable. It is not a necessary truth that the unobserved must resemble the observed. And so it seems there cannot be a deductive argument for the Principle of Induction. Because such an argument would establish the principle as a necessary truth.
 
-\hypertarget{the-problem-of-induction-vs.the-grue-paradox}{%
-\section*{The Problem of Induction vs.~the Grue Paradox}\label{the-problem-of-induction-vs.the-grue-paradox}}
+\hypertarget{the-problem-of-induction-vs.-the-grue-paradox}{%
+\section*{The Problem of Induction vs.~the Grue Paradox}\label{the-problem-of-induction-vs.-the-grue-paradox}}
 \addcontentsline{toc}{section}{The Problem of Induction vs.~the Grue Paradox}
 
 If you read \protect\hyperlink{grue}{Appendix} \ref{grue}, you know of another famous problem with the Principle of Induction: the grue paradox. (If you haven't read that chapter, you might want to skip this section.)
@@ -8552,8 +8705,8 @@ Both assumptions are consistent with the laws of probability. So those laws don'
 
 In the \(280\) years since this challenge was first raised by David Hume, no answer has gained general acceptance.
 
-\hypertarget{exercises-19}{%
-\section*{Exercises}\label{exercises-19}}
+\hypertarget{exercises-20}{%
+\section*{Exercises}\label{exercises-20}}
 \addcontentsline{toc}{section}{Exercises}
 
 \begin{enumerate}
@@ -8575,10 +8728,94 @@ In the \(280\) years since this challenge was first raised by David Hume, no ans
   \item
     None of the above.
   \end{enumerate}
+\item
+  Write a short essay (\(3\)--\(4\) paragraphs) explaining the problem of induction. Your essay should include all of the following:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    a clear, accurate explanation of the Principle of Induction,
+  \item
+    a clear, accurate explanation of the dilemma we face in justifying the Principle of Induction,
+  \item
+    a clear, accurate explanation of the challenge for the deductive horn of this dilemma, and
+  \item
+    a clear, accurate explanation of the challenge for the inductive horn of the dilemma.
+  \end{itemize}
+\item
+  A coin will be tossed \(3\) times, so the number of heads could be \(0\), \(1\), \(2\), or \(3\). Suppose all \(4\) of these possibilities are equally likely. Moreover, any two sequences with the same number of heads are also equally likely. For example, \(\p(H_1 \wedge H_2 \wedge T_3) = \p(T_1 \wedge H_2 \wedge H_3)\). Answer each of the following.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    What is \(\p(H_2 \given H_1)\)?
+  \item
+    What is \(\p(H_3 \given H_1 \wedge H_2)\)?
+  \end{enumerate}
+
+  Now suppose we do \(4\) tosses instead of \(3\). The prior probabilities follow the same rules: all possible numbers of heads are equally likely, and any two sequences with the same number of heads are equally likely.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{2}
+  \tightlist
+  \item
+    If the first \(n\) tosses come up heads, what is the probability the next toss will come up heads? In other words, give a formula for \(\p(H_{n+1} \given H_1 \wedge \ldots \wedge H_n)\) in terms of \(n\).
+  \item
+    What if only \(k\) out of the first \(n\) tosses land heads, then what formula gives the probability of heads on the next toss?
+  \end{enumerate}
+\item
+  Suppose a computer program prints out a stream of A's and B's. After observing the sequence A, A, B, we want to know the probability of an A next.
+
+  Our friend Charlie suggests we reason as follows. We are going to observe \(4\) characters total. Before we observed any characters, there were \(5\) possibilities: the total number of As could turn out to be \(0\), \(1\), \(2\), \(3\), or \(4\). And all of these possibilities are equally likely. So each has prior probability \(1/5\).
+
+  Some of these possibilities can be subdivided. For example, there are \(4\) ways to get \(3\) A's:
+
+  A, A, A, B\\
+  A, A, B, A\\
+  A, B, A, A\\
+  B, A, A, A
+
+  So each of these sequences gets \(1/4\) of \(1/5\), in other words prior probability \(1/20\).
+
+  According to Charlie's way of reasoning, what is the probability the \(4\)th character will be an A, given that the first \(3\) were A, A, B?
+\item
+  In this chapter we considered a coin to be flipped \(3\) times, with the same prior probability for every possible sequence of heads/tails. Now suppose the coin will be flipped some very large number of times, \(n\). And again suppose the prior probability is the same for every possible sequence of heads/tails. Prove that no matter how many times the coin lands heads, the probability of heads on the next toss is still \(1/2\). In other words, prove that \(\p(H_{k+1} \given H_1 \wedge \ldots \wedge H_{k}) = 1/2\) no matter how large \(k\) gets.
+\item
+  Suppose a coin will be flipped \(3\) times. There are \(2^3 = 8\) possible sequences of heads/tails that we might get. Find a way of assigning prior probabilities to these \(8\) sequences so that, the more heads we observe, the \emph{less} likely it becomes we'll get heads on the next toss. In other words, assign a prior probability to each sequence so that \(\p(H_2 \given H_1) < \p(H_2)\) and \(\p(H_3 \given H_2 \wedge H_1) < \p(H_3 \given H_1)\).
+\item
+  Suppose a coin will be flipped \(4\) times. Recall the two different ways of assigning a probability to each possible sequence of heads and tails discussed in the chapter:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Scheme 1: all possible sequences have the same probability.
+  \item
+    Scheme 2: all possible \emph{frequencies} (numbers of heads) have the same probability, and all sequences that share the same frequency have the same probability.
+  \end{itemize}
+
+  According to each scheme, how probable is each of the following propositions?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(A =\) All tosses will land the same way.\\
+  \item
+    \(B =\) The number of heads and tails will be the same.
+  \end{itemize}
+
+  Now answer the same question with \(10\) tosses instead of \(4\).
 \end{enumerate}
 
 \hypertarget{solutions-to-selected-exercises}{%
 \chapter{Solutions to Selected Exercises}\label{solutions-to-selected-exercises}}
+
+\begin{epigraph}
+To understand God's thoughts we must study statistics, for these are the
+measure of His purpose.\\
+---attributed to Florence Nightingale
+\end{epigraph}
 
 \hypertarget{chapter-1}{%
 \section*{Chapter 1}\label{chapter-1}}
@@ -8880,7 +9117,7 @@ To derive this formula, start with the short form of Bayes' theorem for \(\p(X \
 \vspace{.5em}
 
 \noindent
-\emph{Exercise 5.} (a) \(2/3\), (b) \(3/5\).
+\emph{Exercise 5.} (a) \(3/5\), (b) \(2/3\).
 
 \vspace{.5em}
 
@@ -8970,12 +9207,12 @@ To derive this formula, start with the short form of Bayes' theorem for \(\p(X \
 \vspace{.5em}
 
 \noindent
-\emph{Exercise 3.} \(2/5\)
+\emph{Exercise 3.} (a) \(5/6\), (b) \(1/3\), (c) \(2/5\)
 
 \vspace{.5em}
 
 \noindent
-\emph{Exercise 4.} \(2/9\)
+\emph{Exercise 4.} (a) \(1/2\), (b) \(1/3\), (c) \(2/3\), (d) \(2/9\)
 
 \hypertarget{chapter-17}{%
 \section*{Chapter 17}\label{chapter-17}}
